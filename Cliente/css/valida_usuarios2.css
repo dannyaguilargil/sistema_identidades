@@ -1,0 +1,20 @@
+.centrar{
+  text-align: center;
+    
+}
+.imagen{
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    align-items: center;
+}
+.registro{
+    text-align: right;
+}
+.emerge{
+    width: 130px;
+}
+.salida{
+   
+    margin-left: 5px;
+}

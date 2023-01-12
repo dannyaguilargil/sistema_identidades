@@ -1,0 +1,36 @@
+.centrar{
+    display: flex;
+    
+    justify-content: center;
+    margin-top: 30px;
+    align-items: center;
+}
+.imagen{
+    display: flex;
+    
+    justify-content: center;
+    margin-top: 5px;
+    align-items: center;
+}
+footer{
+    text-align: right;
+    position: absolute;
+    bottom: 0px;
+    right: 2px;
+}
+input{
+    width: 290px;  
+}
+
+.obs{
+    width: 380px;
+}
+.centrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.user{
+    padding-right: 30px;
+}

@@ -1,0 +1,137 @@
+body{
+    background: #0e9754;
+}
+h3{
+    text-align: center;
+}
+.containe{
+   background: #0e9754;
+}
+.conn{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    align-items: center;
+}
+.bnn{
+    margin-top: 20px;
+    margin-left: 40%;
+    margin-bottom: 20px;
+}
+.centrar{
+    display: flex;
+    background: #0e9754;
+    justify-content: center;
+    margin-top: 30px;
+    align-items: center;
+}
+.centrar1{
+    display: flex;
+    
+    justify-content: center;
+   
+    align-items: center;
+}
+/* estilo del carousel*/
+#slidesshowImg{
+    width: 21.961932650073205vw;
+    height: 21.961932650073205vw;
+    object-fit: cover;
+    object-position: bottom;
+    padding: 0px;
+    
+}
+#id3{
+    text-align: center;
+}
+.cajas{
+    background: #0e9754;
+    border-color: #0e9754;
+    border-style: dotted;
+    border-radius: 0.7320644216691069vw;
+    color: black;
+    padding-left: 1.4641288433382138vw;
+    
+}
+.imgs_cajitas{
+    width: 8.784773060029282vw;
+    height: 8.784773060029282vw;
+  
+}
+
+footer{
+    border-radius: 20px;
+    background: grey;
+    
+}
+form{
+    text-align: center;
+}
+input{
+    width:20%;
+}
+.titulo1{
+    font-size: 38px;
+    padding-top: 10px;
+}
+.TT{
+text-align: left;
+margin-left: 10px;
+width: 100%;
+}
+.TT3{
+    
+    width: 100%;
+    }
+.TT2{
+    text-align: left;
+    margin-left: 30px;
+    width: 100%;
+    }
+.TT1{
+    text-align: left;
+    margin-right: 20%;
+    width: 100%;
+    }
+.contt{
+    margin-top: 20px;
+    margin-left: 5%;
+    display: flex;
+}
+.textoI{
+    width: 250px;
+    margin-top: 5px;
+   margin-left: 30px;
+    align-items: center;
+    margin-bottom: 30px;
+    justify-content: left;
+}
+.textoI1{
+    display: flex;
+    margin-top: 25px;
+    align-items: center;
+}
+
+.form-contro{
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+.imagen{
+    display: flex;
+    
+    justify-content: center;
+    margin-top: 5px;
+    align-items: center;
+}
+/*
+colores : #97d700
+
+*/
+.btn-white{
+    border-color: #0e9754;
+    border-style: dotted;
+}
+.salida{
+   
+    margin-left: 5px;
+}

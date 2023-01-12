@@ -1,0 +1,31 @@
+.centrar{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    align-items: center;
+}
+.imagen{
+    display: flex;
+    
+    justify-content: center;
+    margin-top: 5px;
+    align-items: center;
+}
+label{
+
+    color:#8EB937;
+}
+.boton{
+    display: flex;
+    
+    justify-content: center;
+    margin-top: 5px;
+    align-items: center;
+}
+.TT1{
+    color: black;
+}
+.ultimo{
+    position: absolute;
+    top: 5px;
+}

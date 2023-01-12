@@ -1,0 +1,32 @@
+.centrar{
+    display: flex;
+    
+    justify-content: center;
+    margin-top: 30px;
+    align-items: center;
+    
+}
+.imagen{
+    display: flex;
+    
+    justify-content: center;
+    margin-top: 5px;
+    align-items: center;
+}
+label{
+
+    color: black;
+}
+.boton{
+    display: flex;
+    
+    justify-content: center;
+    margin-top: 5px;
+    align-items: center;
+}
+.TT1{
+    color: black;
+}
+input{
+    width: 100px;
+}
