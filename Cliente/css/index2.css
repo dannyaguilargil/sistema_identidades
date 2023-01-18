@@ -9,7 +9,7 @@
     
     justify-content: center;
     margin-top: 5px;
-    margin-left: 40%;
+    margin-left: 41%;
     align-items: center;
     justify-content: left;
 }
@@ -52,7 +52,7 @@
 
 
 /*media queries adaptandolo a movil */
-@media screen and (max-width: 480px){
+@media screen and (max-width: 800px){
     .escudo{
         display: none;
     }
@@ -73,6 +73,7 @@
     }
     .imagen{
         /* display: flex; */
+        margin-left: 20%;
         text-align: center;
     }
     .textoI{
