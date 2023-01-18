@@ -2,7 +2,7 @@
 session_start();
 
 ?>
-
+<!-- FORMULARIO TEMPORAL DE VALIDAR USUARIOS -->
 
 <!DOCTYPE html>
 <!--SOLICITUD_USUARIO A LA BASE DE DATOS-->

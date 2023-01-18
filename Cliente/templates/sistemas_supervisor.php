@@ -48,7 +48,15 @@ session_start();
                <?php $tomador=$_SESSION['nombre'] ?>
               </div>
 
+              <?php //DEBO MOSTRAR OPCION DE SUPERVISOR
+                if ($tomador=='LUCAS AUGUSTO LIENDO ROMERO'){
+                  ?><a class="nav-link" href="sistemas_supervisor_admin.php" style="color: green;">SUPERVISOR</a><?php
+                }
+                else{
+                  ?><a class="nav-link" href="sistemas_solicitud_usuario.php" style="color: green">SOLICITAR</a><?php
+                }
 
+              ?>
           
               <div class="form-check form-switch">
                 <label class="form-check-label" for="flexSwitchCheckChecked" style="color: white;">Modo oscuro</label>
