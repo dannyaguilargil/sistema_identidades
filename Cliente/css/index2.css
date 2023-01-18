@@ -36,8 +36,8 @@
     /* ME SIRVE POR SI QUIERO METER UN TEXTO AQUI */
 }
 .escudoverde{
-    width: 400px;
-    height: 400px;
+    width: 61.633281972265024vh; /* 400px adaptacion responsive */
+    height: 61.633281972265024vh; /* 400px adaptacion responsive */
 }
 .izquierdo{
     text-align: center;
@@ -46,8 +46,8 @@
     top: 2%;
 }
 .izquierdoimg{
-    width: 400px;
-    height: 400px;
+    width: 61.633281972265024vh; /* 400px adaptacion responsive */
+    height: 61.633281972265024vh; /* 400px adaptacion responsive */
 }
 
 
