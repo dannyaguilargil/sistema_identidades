@@ -72,15 +72,17 @@ include 'Servidor/conexion.php';
         $select = mysqli_query($mysqli, "SELECT nombre,password,rol FROM usuarios_registrados WHERE nombre = '$nombre' AND password = '$password'");
         $num_row = mysqli_num_rows($select);
         $row = mysqli_fetch_array($select);
-        
-            
+
+        /* VALIDACION DE USUARIO SI NO ESTA EN LA BASE DE DATOS
+        */
+        if($num_row != 1){
+            ?> <center style="color:red;">  <?php  echo "USUARIO NO EXISTENTE"; ?></center> <?php
+        }
 
         if($num_row == 1){
             $_SESSION['nombre']=$row['nombre'];
             $_SESSION['rol']=$row['rol'];
             //header("Location: index2.php");
- 
-
             if (isset($_SESSION['rol'])){
 
                 switch ($_SESSION['rol']) {
@@ -103,6 +105,11 @@ include 'Servidor/conexion.php';
                     break;
 
                 } 
+ 
+
+
+
+
 
                 }else{
 
