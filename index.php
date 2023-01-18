@@ -76,7 +76,7 @@ include 'Servidor/conexion.php';
         /* VALIDACION DE USUARIO SI NO ESTA EN LA BASE DE DATOS
         */
         if($num_row != 1){
-            ?> <center style="color:red;">  <?php  echo "USUARIO NO EXISTENTE"; ?></center> <?php
+            ?> <center style="color:red;">  <?php  echo "ERROR DE USUARIO"; ?></center> <?php
         }
 
         if($num_row == 1){

@@ -163,7 +163,7 @@ session_start();
 
                 <div class="col">
                 <label for="direccion" class="emerge">Direccion:</label> <br>
-                <input type="text" name="direccion" id="direccion" name="direccion" class="emerge" required>
+                <input type="text" id="direccion" name="direccion" class="emerge" required>
                 </div>
 
                 <div class="col">
