@@ -8,16 +8,16 @@ $cargo = $_POST["cargo"];
 $fechafinalcontrato = $_POST["fechafinalcontrato"];
 $supervisor = $_POST["supervisor"];
 $email = $_POST["email"];
-$administrador = $_POST["administrador"];
+$rol = $_POST["administrador"];
 
-if(isset($POST['registro'])){
+//if(isset($POST['registro'])){
 
-$sql="INSERT INTO usuarios_registrados (nombre,cedula,cargo,fechafinalcontrato,supervisor,email,rol,password) VALUES('$nombre',$cedula,'$cargo','$fechafinalcontrato','$supervisor','$email','$administrador',cedula)";
+$sql="INSERT INTO usuarios_registrados(nombre,cedula,cargo,fechafinalcontrato,supervisor,email,rol,password) VALUES('$nombre',$cedula,'$cargo','$fechafinalcontrato','$supervisor','$email','$rol',cedula)";
 $resultado=$mysqli ->query($sql);
 
 if($resultado>0){
 
-   $sql2="DELETE FROM solicitud_usuario WHERE cedula = $cedula;";
+  $sql2="DELETE FROM solicitud_usuario WHERE cedula = $cedula;";
    $resultado=$mysqli ->query($sql2);
     //ELIMINARLO DEL STANDBY
 
@@ -25,7 +25,8 @@ if($resultado>0){
 //echo '<script type ="text/JavaScript">';  
 //echo 'alert("REGISTRO AGEGADO")';  
 //echo '</script>';  
-}}
+//}
+}
 //exit();
 
 

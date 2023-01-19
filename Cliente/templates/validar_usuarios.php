@@ -1,3 +1,4 @@
+<!-- VOY A PERMITIR PRIMERO REGISTRAR ESE USUARIO VALIDADO-->
 <?php
 session_start();
 
@@ -42,22 +43,26 @@ session_start();
               
               </div>
 
-
+              
               
               <div class="user" style="color: white;">
                 <?php $tomador=$_SESSION['nombre']?>
                 Bienvenido <?php echo $_SESSION['nombre']; ?>
                 <?//php echo $tomador; ?>
               </div>
-             
+              
+              
+
               <div class="form-check form-switch">
                 <label class="form-check-label" for="flexSwitchCheckChecked" style="color:white;">Modo oscuro</label>
                 <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
-                
+               
             </div>
             <a class="btn btn-light fas fa-sign-out-alt" href="../../Servidor/logout.php"></a>
             </div>
           
+
+           
           </nav>
          
                     
@@ -67,6 +72,7 @@ session_start();
     
     <div class="imagen">
         <img  src="../imgs/logoimsaludrecortado.png"  alt="" style="width: 200px; text-align: center;">
+        
     </div>
 
 
@@ -82,17 +88,16 @@ session_start();
                   $emailr='';
                   $rolr='';
 
-
             ?>
-
-
+                    <div class="row">
+                    <div class="col">
+                    <div class="container">
             <?php
             include '../../Servidor/conexion.php';
             $consulta="SELECT * from solicitud_usuario";
             $resultado=mysqli_query($mysqli,$consulta);
                     if($resultado){ while($row = $resultado->fetch_array()){
                         $nombrer = $row['nombre'];
-                        
                         $cedular = $row['cedula'];
                         $cargor = $row['cargo'];
                         $fechafinalcontrator = $row['fechafinalcontrato'];
@@ -100,10 +105,11 @@ session_start();
                         $emailr = $row['email'];
                         $rolr = $row['rol'];
                         
-                        $aux= $nombrer;
+                        //$aux= $nombrer;
                         ?>
                     
                     <?php
+                    //muestro resultados de validacion de usuario
                   }
                     
                   } ?>
@@ -114,19 +120,19 @@ session_start();
 
                       <!-- TRAERME LOS DATOS CON DIVS PARA EVITAR ERROR DE CONSULTA Y VALIDADOR-->
                       <!--   -->
-                    <div class="row">
-                    <div class="col">
-                    <div class="container">
+                   
                     <input type="text" name="nombre" id="nombre" class="emerge" value="<?php echo $nombrer?>">
                     <input type="text" name="cedula" id="cedula" class="emerge" value="<?php echo $cedular?>">
                     <input type="text" name="cargo" id="cargo" class="emerge" value="<?php  echo $cargor?>">
                     <input type="text" name="fechafinalcontrato" id="fechafinalcontrato" class="emerge" value="<?php echo $fechafinalcontrator?>">
                     <input type="text" name="supervisor" id="supervisor" class="emerge" value="<?php echo $supervisorr?>">
+                    <!-- OCULTO PARA LA GESTION RESPONSIVE
                     <input type="text" name="email" id="email" class="emerge" value="<?php echo $emailr?>">
-                    <input type="text" name="administrador" id="administrador" class="emerge" value="<?php echo $rolr?>">
-                    
+                  -->
+
                     <button type="submit" class="fa-sharp fa-solid fa-check btn btn-success" name="registro" id="registro"  onclick="envio();"></button>
                     <button  class="fa-sharp fa-solid fa-x btn btn-danger" name="eliminar" id="eliminar" onclick="detenerr();"></button>
+
                      <br> <br>
                     </div>
                    
@@ -144,15 +150,16 @@ session_start();
 
 
       <script>
-        function detener(){
+        function detenerr(){
           const form= document.getElementById("envio");
 
           form.addEventListener("submit", function(event){
             console.log(event);
             event.preventDefault();
+            alert("EN DESAROLLO ")
           }
           )
-          window.location="../../Servidor/eliminar_usuarios_validadosjs.php";
+         // window.location="../../Servidor/eliminar_usuarios_validadosjs.php";
 
 
           
