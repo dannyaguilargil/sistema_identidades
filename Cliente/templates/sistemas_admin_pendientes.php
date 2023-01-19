@@ -104,7 +104,9 @@ session_start();
                    ?>   
 
         
-            
+            <?php if($nombrer==''){
+            ?><center style="color: grey;"> <b> <?php echo "No hay solicitudes actuales"; }?> </b>
+
             </center> 
             <div class="container form-control form-control" >
             <h5 class="centrar">Solicitud de sistemas</h5>
@@ -143,8 +145,9 @@ session_start();
 
 
 
-        <?php if($cedular==''){
-            ?><center style="color: grey;"> <b> <?php echo "No hay solicitudes actuales"; }?> </b>
+          
+
+
                 <fieldset><b>Informacion general del colaborador</b></fieldset> 
                 <div class="row">
                 <div class="col">

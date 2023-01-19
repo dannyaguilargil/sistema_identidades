@@ -1,6 +1,6 @@
 <?php
 session_start();
-//POR AHORA ME INTERESA ACEPTARLO, REGISTRARLO Y ENVIARLO AL ADMINISTRADOR, LUEGO QUE ELIMINE ESA SOLICITUD
+//POR AHORA ME INTERESA ELIMINAR LA SOLICITU CUANDO LLEGA AL SUPERVISOR
 
 ?>
 
@@ -229,18 +229,21 @@ session_start();
                 <div class="col">
                 <button class="btn btn-success" onclick="envio();">Validarlo</button>
                 </div>
+                </form>
 
                 <div class="col">
                 <button class="btn btn-danger" onclick="envio();">Rechazarlo</button>
                 </div>
 
-
               </div>
 
 
-              <!-- AQUI DEBE IR LA CONSULTA DEPENDIENDO DEL TIPO DE SUPERVISOR -->
+           
 
-            </form>
+           
+
+                  
+
 
           </div>
           </div>

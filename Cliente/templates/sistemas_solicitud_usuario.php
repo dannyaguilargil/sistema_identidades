@@ -230,7 +230,7 @@ session_start();
                
                 <div class="col">
                 <label for="observaciones" class="emerge">Observaciones</label> <br>
-                <input type="text" name="observaciones" id="observaciones" class="obs emerge"> 
+                <input type="text" name="observaciones" id="observaciones" class="obs emerge" placeholder="DIGITE PARA QUE REQUIERE EL PERMISO?"> 
                 </div>
 
                 <br> <br> <br>
