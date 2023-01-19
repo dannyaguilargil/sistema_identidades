@@ -55,7 +55,7 @@ session_start();
               <!--ANTIGUO EJEMPLO DE MODO OSCURO -->
               <div class="form-check form-switch">
               <input class="form-check-input" type="checkbox" role="switch"  id="checkbox" onclick="setDarkMode();">
-              <label class="form-check-label" for="checkbox">Modo oscuro</label>
+              <label class="form-check-label" for="checkbox"></label>
                  
                </div>
                
