@@ -24,7 +24,7 @@
 <div class="centrar">
         <div class="centrar1 col-sm-8 col-md-8 col-lg-8 col-xl-8">
             <div class="container form-control form-control" >
-            
+            <a class="btn btn-warning fas fa-user-lock" href="../../index.php"></a>
             
             <center>
                 <h4>Solicitud de usuario</h4> <br>

@@ -1,6 +1,6 @@
 <?php
 require('../Cliente/docs/fpdf.php');
-
+//ARCHIVO QUE GENERA EL PDF PARA Y PAZ Y SALVO
 
 class PDF extends FPDF
 {
@@ -14,7 +14,7 @@ function Header()
     // Movernos a la derecha
     $this->Cell(80);
     // Título
-    $this->Cell(30,10,'Title',1,0,'C');
+    $this->Cell(30,10,'IMSALUD',1,0,'C');
     // Salto de línea
     $this->Ln(20);
 }

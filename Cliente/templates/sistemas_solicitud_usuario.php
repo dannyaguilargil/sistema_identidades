@@ -51,11 +51,18 @@ session_start();
               </div>
 
           
+
+              <!--ANTIGUO EJEMPLO DE MODO OSCURO -->
               <div class="form-check form-switch">
-                <label class="form-check-label" for="flexSwitchCheckChecked">Modo oscuro</label>
-                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"> 
+              <input class="form-check-input" type="checkbox" role="switch"  id="checkbox" onclick="setDarkMode();">
+              <label class="form-check-label" for="checkbox">Modo oscuro</label>
+                 
                </div>
-            
+               
+
+
+
+       
             <a class="btn btn-light fas fa-sign-out-alt" href="../../Servidor/logout.php"></a>
             </div>
           
@@ -267,6 +274,35 @@ session_start();
       }
      </script>
 
+
+      <script>
+        //setDarkMode
+        console.log("se ejecuto script")
+        if(localStorage.getItem('theme') == 'dark'){
+          setDarkMode();
+
+            if(document.getElementById('checkbox').checked){
+              localStorage.setItem('checkbox', true)
+            }
+        }
+
+
+        function setDarkMode(){
+          console.log("se ejecuto script 2")
+          let isDark = document.body.classList.toggle('darkmode');
+
+
+          if(isDark){
+            setDarkMode.checked = true;
+            localStorage.setItem('theme', 'dark');
+            document.getElementById('checkbox').setAttribute('checked', 'checked');
+          }
+          else{
+            setDarkMode.checked = true;
+            localStorage.removeItem('theme', 'dark');
+          }
+        }
+      </script>
 
       <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
       <script src="../js/main.js"></script>

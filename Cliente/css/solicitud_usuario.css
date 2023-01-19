@@ -1,3 +1,6 @@
+*{
+    background-color: f8f8f8;
+}
 .centrar{
     display: flex;
     
@@ -33,4 +36,30 @@ input{
 }
 .user{
     padding-right: 30px;
+}
+
+/* MODO DARK*/
+.darkmode{
+    background-color: #292929;
+    color: white;
+}
+.darkmode nav{
+    background-color: #292929;
+    color: white;
+}
+.darkmode body{
+    background-color: #292929;
+    color: white;
+}
+/* ESTE DARKMODE SOLO APLICA PARA EL TITULO DE CENTRAR
+.darkmode .centrar{
+    background-color: #292929;
+    color: white;
+}
+*/
+.darkmode .navbar{
+    color: green;
+}
+.form-check{
+    cursor: pointer;
 }
