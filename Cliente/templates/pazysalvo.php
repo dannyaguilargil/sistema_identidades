@@ -82,8 +82,8 @@ session_start();
         <div class="imagen">
             <img  src="../imgs/logoimsaludrecortado.png"  alt="" style="width: 200px; text-align: center;">
         </div>
-        
-            <h6 class="TT2">Generar paz y salvo</h6> 
+        <br>
+            <center><h6 class="">Generar paz y salvo</h6> </center>
             <!-- AQUI DEBO CARGAR LOS DATOS ANTERIORES DEL MISMO USUARIO-->
 
             <form action="../../Servidor/pazysalvoregistrar_solicitud.php" method="POST">
@@ -109,16 +109,39 @@ $resultado=mysqli_query($mysqli,$consulta);
     
         } 
 ?>
+
+<?php
+//GENERADOR DEL BOTON DE DESCARGA DEL PDF
+$rfid='';
+$equipos='';
+$revocar_permisos='';
+
+
+// CODIGO PHP PARA HACER LA CONSULTA Y REVISAR SI LOS EQUIPOS Y RFID FUERON GENERADOS
+$consulta="SELECT * from pazysalvo_aprobar WHERE nombre = '$tomador';";
+$resultado=mysqli_query($mysqli,$consulta);
+if($resultado){ while($row = $resultado->fetch_array()){
+ $rfid = $row['rfid'];
+ $equipos = $row['equipos'];
+ $revocar_permisos = $row['revocar_permisos'];
+}
+
+} 
+?>
+
+
+
+
             <div class="contt">
 
             <div class="textoI">
               <div class="textoI1">
-                <label for="nombre" class="TT3">Nombre: </label>
+                <label for="nombre" class="">Nombre</label>
                 <input type="text" class="form-control" name="nombre" id="nombre" value="<?php echo $nombrer?>"><br>
               </div>
               
               <div class="textoI1">
-                <label  for="cedula"  class="TT3">Cedula: </label>
+                <label  for="cedula"  class="">Cedula</label>
                 <input type="text" class="form-control" name="cedula" id="cedula" value="<?php echo $cedular ?>"><br>
               </div>
 
@@ -130,17 +153,62 @@ $resultado=mysqli_query($mysqli,$consulta);
 
             <div class="textoI1">
                 <label for="revocar_permisos">Revocar permisos</label>
-                <input class="check" name="revocar_permisos" id="revocar_permisos" type="checkbox" value="SI" required>
+                <?php
+                //CODIGO PHP PARA DESABILITAR EL DISABLED O HABILITARLO
+                if($revocar_permisos=='SI' or $revocar_permisos=='INACTIVO'){
+                  ?><input class="check"  type="checkbox"  value="" disabled checked>
+                  <?php
+                }
+                else{
+                  ?><input class="check"  type="checkbox" value="" >
+                  <?php
+                }
+
+
+                ?>
+
+
+                
               </div>
               
               <div class="textoI1">
                 <label for="">Entrega de tarjeta RFID</label>
-                <input class="check"  type="checkbox" value="" disabled>
+                <input class="check"  type="checkbox" value=""
+                <?php
+                //AQUI VAN VALIDACIONES DE LOS SELECTED
+                if($rfid=='SI' && $cedular=$cedular){
+                  ?><input class="check"  type="checkbox"  value="" disabled checked>
+                  <?php
+                }
+                else{
+                  ?><input class="check"  type="checkbox" value="" disabled>
+                  <?php
+                }
+
+
+                ?>
+                
+                
+                
               </div>
              
+              <!-- CHECKED ES PARA HABILIAR EL BOTON DE CHEK -->
               <div class="textoI1">
                 <label for="">Entrega de equipos en buen estado</label>
-                <input class="check" type="checkbox" value="" disabled>
+               
+                <?php
+                //AQUI VAN VALIDACIONES DE LOS SELECTED
+                if($equipos=='SI' && $cedular=$cedular){
+                  ?><input class="check"  type="checkbox"  value="" disabled checked>
+                  <?php
+                }
+                else{
+                  ?><input class="check"  type="checkbox" value="" disabled>
+                  <?php
+                }
+
+
+                ?>
               </div>
 
 
@@ -151,20 +219,7 @@ $resultado=mysqli_query($mysqli,$consulta);
           </div>
 
               <!--BOTON QUE APARECE SOLO SI EL PAZ Y SALVO ESTA APROBADO -->
-
-              <?php
-              $rfid='';
-              // CODIGO PHP PARA HACER LA CONSULTA Y REVISAR SI LOS EQUIPOS Y RFID FUERON GENERADOS
-              $consulta="SELECT * from pazysalvo_aprobar WHERE nombre = '$tomador';";
-              $resultado=mysqli_query($mysqli,$consulta);
-              if($resultado){ while($row = $resultado->fetch_array()){
-               $rfid = $row['rfid'];
-               $equipos = $row['equipos'];
-
-          }
-    
-        } 
-
+          <?php
 
               if($rfid=='SI'){
                 ?> <a target="_blank" href="https://docs.google.com/document/d/1yp0Fu8mMA876BwtjqOdXLxIuyVPXAFLB/edit?usp=sharing&ouid=105725441180783245508&rtpof=true&sd=true" class="btn btn-warning">Descargar</a><?php

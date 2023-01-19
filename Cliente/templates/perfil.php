@@ -82,7 +82,7 @@ session_start();
             <img  src="../imgs/logoimsaludrecortado.png"  alt="" style="width: 200px; text-align: center;">
         </div>
         <br>
-            <h6 class="TT2">Modificacion de datos del perfil</h6> 
+            <center><h6 class=""><b>Modificacion de datos del perfil</b></h6> </center>
             <!-- AQUI DEBO CARGAR LOS DATOS ANTERIORES DEL MISMO USUARIO-->
 
             <form action="../../Servidor/actualizar_usuario_perfil.php" method="POST">
@@ -116,20 +116,21 @@ session_start();
 
             <div class="textoI">
               <div class="textoI1">
-                <label for="nombre" class="TT3">Nombre: </label>
+                <label for="nombre" class="">Nombre</label>
                 <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Digite nombre" value="<?php echo $nombrer;?>"><br>
               </div>
               
              
               
               <div class="textoI1">
-                <label for="cargo" class="TT3">Cargo: </label>
+                <label for="cargo" class="">Cargo</label>
                 <input type="text" class="form-control" name="cargo" id="cargo" placeholder="Digite cargo" value="<?php echo $cargor;?>"><br>
               </div>
 
 
               <div class="textoI1">
-                <label class="TT3">Contraseña anterior:</label>
+                <!-- EN EL LABEL IBA EL ESTILO TT3 PERO SE VE MUY SEPARADO-->
+                <label class=""><b>Contraseña anterior</b></label>
                 <input type="password" class="form-control" name="telefono" id="telefono1" placeholder="Digite actual"><br>
               </div>
 
@@ -137,17 +138,17 @@ session_start();
 
             <div class="textoI">
               <div class="textoI1">
-                <label for="fechafinalcontrato" class="TT3">Fecha final de contrato </label>
+                <label for="fechafinalcontrato" class="">Fecha final de contrato</label>
                 <input type="date" class="form-control" name="fechafinalcontrato" id="fechafinalcontrato" value="<?php echo $fechafinalcontrator;?>"><br>
               </div>
               
               <div class="textoI1">
-                <label for="supervisor" class="TT3">Supervisor: </label>
+                <label for="supervisor" class="">Supervisor</label>
                 <input type="text" class="form-control" name="supervisor" id="supervisor" placeholder="Supervisor" value="<?php echo $supervisorr;?>"><br>
               </div>
               
               <div class="textoI1">
-                <label for="password" class="TT3">Contraseña nueva:</label>
+                <label for="password" class=""><b>Contraseña nueva</b></label>
                 <input type="password" class="form-control" name="password" id="password" placeholder="Digite nueva">
                 
               </div>
@@ -159,7 +160,7 @@ session_start();
           </div>
 
             
-              <button type="submit" class="text-center btn btn-success bnn" onclick="envio()">Modificar</button>
+              <center><button type="submit" class="text-center btn btn-success" onclick="envio()">Modificar</button></center>
               
             
             </div>

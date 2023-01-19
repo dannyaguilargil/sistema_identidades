@@ -104,8 +104,7 @@ session_start();
                    ?>   
 
         
-            <?php if($nombrer==''){
-            ?><center style="color: grey;"> <b> <?php echo "No hay solicitudes actuales"; }?> </b>
+            
 
             </center> 
             <div class="container form-control form-control" >
@@ -115,18 +114,28 @@ session_start();
             <form action="../../Servidor/registrar_solicitud_admin.php" method="POST">
 
 
-                <!--
-                  CONSULTAS PARA EL FORMULARIO 
-                  $resultado = $conn->query($sql);
-                  $num_rows = $resultado->num_rows:
-
-                  -->
-
+               
 
 
                  
 
-                <?php include '../../Servidor/conexion.php'; ?>
+                <?php include '../../Servidor/conexion.php'; 
+
+
+                $nombrer = '';
+                $cedular = 0;
+                $cargor = '';
+                $tiposolicitudr = '';
+                $aplicativor = '';
+                $observacionesr = '';
+
+
+
+                ?>
+
+
+
+
                 
                 <?php $consulta="SELECT * from sistema_validado_supervisor;";
                 $resultado=mysqli_query($mysqli,$consulta);
@@ -146,7 +155,8 @@ session_start();
 
 
           
-
+              <?php if($nombrer==''){
+              ?><center style="color: grey;"> <b> <?php echo "No hay solicitudes actuales"; }?> </b>
 
                 <fieldset><b>Informacion general del colaborador</b></fieldset> 
                 <div class="row">

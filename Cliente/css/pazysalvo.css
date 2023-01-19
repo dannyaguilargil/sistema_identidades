@@ -101,15 +101,15 @@ width: 100%;
 .textoI{
     width: 250px;
     margin-top: 5px;
-   margin-left: 30px;
+   margin-left: 10px;
     align-items: center;
     margin-bottom: 30px;
     justify-content: left;
 }
 .textoI1{
     display: flex;
-    margin-top: 25px;
-    align-items: center;
+    margin-top: 15px;
+  
 }
 
 .form-contro{

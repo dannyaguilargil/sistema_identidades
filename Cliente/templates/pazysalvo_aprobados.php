@@ -28,7 +28,7 @@
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#" style="">Sistemas aprobados</a></li>
             <li><a class="dropdown-item" href="sistemas_admin_pendientes.php">Sistemas pendientes</a></li>
-            <li><a class="dropdown-item" href="#">Revisar permisos</a></li>
+            <li><a class="dropdown-item" href="permisos.php">Revisar permisos</a></li>
             <li><a class="dropdown-item" href="#">Notificar sistema aprobado</a></li>
             <li><a class="dropdown-item" href="sistemas_supervisor_admin.php">Opcion de supervisor</a></li>
           </ul>
