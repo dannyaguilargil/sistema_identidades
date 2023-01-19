@@ -31,10 +31,10 @@ session_start();
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="sistemas_admin_aprobados.php" style="">Sistemas aprobados</a></li>
-            <li><a class="dropdown-item" href="sistemas_admin_pendientes.php">Sistemas pendientes</a></li>
+            <li><a class="dropdown-item" href="sistemas_admin_pendientes.php">Sistemas pendientes de aprobacion</a></li>
             <li><a class="dropdown-item" href="permisos.php">Revisar permisos</a></li>
             <li><a class="dropdown-item" href="notificar_sistema.php">Notificar sistema aprobado</a></li>
-            <li><a class="dropdown-item" href="sistemas_supervisor_admin.php">Opcion de supervisor</a></li>
+            <li><a class="dropdown-item" href="sistemas_supervisor_admin.php">Supervisor</a></li>
           </ul>
       <!--  </li> -->
 
@@ -65,7 +65,7 @@ session_start();
 
 
               <div class="user" style="color: white">
-              Supervisor ADMIN! <?php echo $_SESSION['nombre']; ?>
+              SUPER ADMIN! <?php echo $_SESSION['nombre']; ?>
              <?php $tomador=$_SESSION['nombre'] ?>
               </div>
 

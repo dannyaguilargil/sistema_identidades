@@ -47,6 +47,8 @@ if ($num_rows > 0) {
         $html .= '<td>' . $row['rfid'] . '</td>';
         $html .= '<td>' . $row['equipos'] . '</td>';
         $html .= '<td>' . $row['revocar_permisos'] . '</td>';
+        //AQUI POR ULTIMO DEBE PERMITIR VER EL PDF QUE SE GENERO DE CASA USUARIO
+        $html .= '<td>' . $row['revocar_permisos'] . '</td>';
         $html .= '</tr>';
     }
 } else {
