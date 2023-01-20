@@ -113,15 +113,6 @@ session_start();
     ?>
 
 
-    
-
-
-
-
-
-
-
-
    <!-- SEGUNDA CONSULTA DE PHP SOLO PARA TRERME LA FECHA FINAL DE CONTRATO DEL USUARIO SOLICITANTE-->
   <?php
   include '../../Servidor/conexion.php';

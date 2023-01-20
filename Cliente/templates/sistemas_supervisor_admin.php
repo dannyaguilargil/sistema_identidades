@@ -103,6 +103,7 @@ session_start();
     $tiposolicitudr = '';
     $aplicativor = '';
     $observacionesr = '';
+    $idr = 0;
   
    
    $consulta="SELECT * from solicitud_sistema WHERE supervisor = '$tomador';";
@@ -114,6 +115,7 @@ session_start();
           $tiposolicitudr = $row['tiposolicitud'];
           $aplicativor = $row['aplicativo'];
           $observacionesr = $row['observaciones'];
+          $idr = $row['id'];
           }
     
         } 
@@ -138,20 +140,22 @@ session_start();
    
        } 
   
+       $totalr = ''; 
+     //CONSULTA PARA LA NOTIFICACIONES 
+    //SELECT COUNT(*) FROM solicitud_sistema;
+    $consulta3="SELECT COUNT(*) from solicitud_sistema;";
+    $resultado3=mysqli_query($mysqli,$consulta3);
+        if($resultado3){ while($row = $resultado3->fetch_array()){
+           $totalr = $row['COUNT(*)'];
+           }
+     
+         } 
   
-  
-  
-  
-  
+
   ?>
 
         
   
-
-
-
-
-
 
     <div class="centrar">
         <div class="centrar1 col-sm-10 col-md-10 col-lg-10 col-xl-10">
@@ -159,14 +163,13 @@ session_start();
 
             <?php if($nombrer==''){
             ?><center style="color: grey;"> <b> <?php echo "No hay solicitudes actuales"; }?> </b>
-            
             </center> 
 
           <div class="notificador">
           <button type="button" class="btn btn-primary position-relative">
            Total
           <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-          99+
+          <?php echo $totalr; ?>
           <span class="visually-hidden">unread messages</span>
           </span>
           </button>
@@ -224,8 +227,8 @@ session_start();
 
                 <div class="row">
                 <div class="col">
-                <label for="">Permisos hasta:</label> <br>
-                <input type="text" value="<?php echo $fechafinalcontrator ?>">
+                <label for="id">Id de solicitud:</label> <br>
+                <input type="text" name="id" id="id" value="<?php echo $idr ?>">
                 </div>
 
 
@@ -237,7 +240,8 @@ session_start();
 
                 <div class="col">
                 <label for=""></label> <br>
-            
+                <label for="">Permisos hasta:</label> <br>
+                <input type="text" value="<?php echo $fechafinalcontrator ?>">
                 </div>
                 </div>
 
@@ -253,20 +257,21 @@ session_start();
                 </div>
 
                 <div class="col">
-                <button class="btn btn-success" onclick="envio();">Validarlo</button>
+                <button type="submit"  class="btn btn-success" name="registro" id="registro" onclick="envio();">Validarlo</button>
                 </div>
-
+                
                 <div class="col">
-                <button class="btn btn-danger" onclick="envio();">Rechazarlo</button>
+                <button type="submit" class="btn btn-danger"  name="eliminar" id="eliminar"  onclick="envio();">Rechazarlo</button>
                 </div>
 
 
+                </form>
               </div>
 
 
               <!-- AQUI DEBE IR LA CONSULTA DEPENDIENDO DEL TIPO DE SUPERVISOR -->
 
-            </form>
+            
 
           </div>
           </div>
