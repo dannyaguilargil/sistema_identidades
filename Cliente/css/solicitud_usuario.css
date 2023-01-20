@@ -1,5 +1,9 @@
 *{
     background-color: f8f8f8;
+ 
+}
+.container-fliud a{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .centrar{
     display: flex;

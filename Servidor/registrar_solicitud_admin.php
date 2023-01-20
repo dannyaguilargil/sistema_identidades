@@ -40,7 +40,7 @@ $resultado=$mysqli ->query($sql2);
 if($resultado>0){
    
 
-echo header("Location:../Cliente/templates/sistemas_admin_pendientes.php");
+echo header("Location:../Cliente/templates/notificar_sistema.php");
 
 
 //exit();

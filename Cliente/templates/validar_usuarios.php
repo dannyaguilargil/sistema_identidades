@@ -24,17 +24,17 @@ session_start();
     <header class="">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-              <a class="navbar-brand " href="gestion_usuario.php">Usuarios</a>
+              <a class="navbar-brand " href="validar_usuarios.php">Accesos</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="sistemas_admin.php">Sistemas</a>
+                    <a class="nav-link" aria-current="page" href="sistemas_admin_pendientes.php">Sistemas</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="pazysalvo_acceso.php" disabled>Paz y salvo</a>
+                    <a class="nav-link" href="pazysalvo_admin.php" disabled>Paz y salvo</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="perfil.php" disabled>Mi perfil</a>

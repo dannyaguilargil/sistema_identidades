@@ -21,25 +21,7 @@ session_start();
 
             <div class="container-fluid">
 
-           <!-- <li class="nav-item dropdown"> -->
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color=green;background:white;">
-            Sistemas
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="sistemas_admin_aprobados.php" style="">Sistemas aprobados</a></li>
-            <li><a class="dropdown-item" href="sistemas_admin_pendientes.php">Sistemas pendientes</a></li>
-            <li><a class="dropdown-item" href="permisos.php">Revisar permisos</a></li>
-            <li><a class="dropdown-item" href="notificar_sistema.php">Notificar sistema aprobado</a></li>
-            <li><a class="dropdown-item" href="sistemas_supervisor_admin.php">Opcion de supervisor</a></li>
-            <li><a class="dropdown-item" href="sistemas_admin_solicitud.php">Opcion de solicitud</a></li>
-          </ul>
-      <!--  </li> -->
-
-
-
-
-
-              <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="perfil_admin.php">Mi perfil</a>
@@ -54,26 +36,23 @@ session_start();
                   <li class="nav-item">
                     <a class="nav-link" href="gestion_usuario.php" disabled>Gestion de usuarios</a>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="sistemas_admin_pendientes.php" disabled>Sistema pendientes</a>
+                  </li>
                 </ul>
               </div>
           
-
+      
               <div class="user" style="color: white">
-              ADMIN <?php echo $_SESSION['nombre']; ?>
-             <?php $tomador=$_SESSION['nombre'] ?>
+              <span class="typed"></span>  <?php echo $_SESSION['nombre']; ?>
+               <?php $tomador=$_SESSION['nombre'] ?>
               </div>
 
-              <!-- AQUI LO QUIERO CAMBIAR POR EL BOTONSITO 
+          
               <div class="form-check form-switch">
-                <label class="form-check-label" for="flexSwitchCheckChecked" style="color: white;">Modo oscuro</label>
+                <label class="form-check-label" for="flexSwitchCheckChecked" style="color: white;"></label>
                 <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"> 
                </div>
-                -->
-              <!--  <input id="bdark" type="button" onclick="mododark()" value="modo dark"> -->
- 
-
-
-    
             
                <a class="btn btn-light fas fa-sign-out-alt" href="../../Servidor/logout.php"></a>
             </div>

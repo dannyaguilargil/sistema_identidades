@@ -20,21 +20,22 @@ session_start();
 <body>
   
     <header class="">
+      <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
             <div class="container-fluid">
-              <a class="navbar-brand " href="login.html">Sistemas</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <a class="navbar-brand" href="sistemas_solicitud_usuario.php">Sistemas</a>
+              <button class=" navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
 
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="perfil.php">Mi perfil</a>
+                    <a class="far fa-user-cog nav-link" aria-current="page" href="perfil.php">Mi perfil</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="pazysalvo.php" disabled>Paz y salvo</a>
+                    <a class="fas fa-id-card nav-link" href="pazysalvo.php" disabled>Paz y salvo</a>
                   </li>
                 </ul>
               </div>
