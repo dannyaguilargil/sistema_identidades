@@ -21,7 +21,7 @@ $tomador='';
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="../css/gestion_usuarios.css">
     <link rel="icon" href="imgs/logoimsaludrecortado.ico">
-    <title>Iniciar Sesion</title>
+    <title>Gestion de permisos</title>
 </head>
 <body>
 <header class="">
@@ -78,7 +78,7 @@ $tomador='';
 
              
               <div class="form-check form-switch">
-                <label class="form-check-label" for="flexSwitchCheckChecked" style="color: white;">Modo oscuro</label>
+                <label class="form-check-label" for="flexSwitchCheckChecked" style="color: white;"></label>
                 <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"> 
                </div>
                <a class="btn btn-light fas fa-sign-out-alt" href="../../Servidor/logout.php"></a>
@@ -181,7 +181,7 @@ $tomador='';
                     <td><?php echo $tiposolicitud; ?></td>
                     <td><?php echo $aplicativo; ?></td>
                     <td><?php echo $fechafinalcontrato; ?></td>
-                    <td><span style="color:yellow;"><?php echo $revocar_permisos; ?> </span></td>
+                    <td><span style="color:red;"><?php echo $revocar_permisos; ?> </span></td>
                     </tr>
 
 
