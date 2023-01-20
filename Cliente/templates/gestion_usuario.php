@@ -235,7 +235,7 @@ Sistemas
 
 
     <main>
-        <div class="container py-4 text-center">
+        <div class="container py-1 text-center">
 
             <div class="row justify-content-md-center">
                 <div class="col-md-4">
@@ -245,7 +245,7 @@ Sistemas
                     </form>
                 </div>
             </div>
-            <div class="row py-4">
+            <div class="row py-1">
                 <div class="col">
                     <table class="table table-success table-striped">
                         <thead>

@@ -22,6 +22,6 @@ echo '</script>';
 //exit();
 
 }else{
-    echo 'EROOR AL ELIMINAR REPUESTO';
+    echo 'EROOR AL ELIMINAR USUARIO';
 }
 ?>
