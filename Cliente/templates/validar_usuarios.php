@@ -125,7 +125,7 @@ session_start();
                     <input type="text" name="cedula" id="cedula" class="emerge" value="<?php echo $cedular?>">
                     <input type="text" name="cargo" id="cargo" class="emerge" value="<?php  echo $cargor?>">
                     <input type="text" name="fechafinalcontrato" id="fechafinalcontrato" class="emerge" value="<?php echo $fechafinalcontrator?>">
-                    <input type="text" name="supervisor" id="supervisor" class="" value="<?php echo $supervisorr?>">
+                    <input type="text" name="supervisor" id="supervisor" class="emerge" value="<?php echo $supervisorr?>">
                     <!-- OCULTO PARA LA GESTION RESPONSIVE
                     <input type="text" name="email" id="email" class="emerge" value="<?php echo $emailr?>">
                   -->

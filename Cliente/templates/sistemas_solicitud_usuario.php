@@ -162,10 +162,11 @@ session_start();
                 </div>
                 </div>
 
+                <!-- error en el celular validar-->
                 <div class="row">
                 <div class="col">
-                <label for="celular" class="emerge"> Celular:</label><br>
-                <input type="text" name="celular" id="celular" class="emerge" required>
+                <label for="celular" class="emerge"> Celular:</label> <br>
+                <input type="number" name="celular" id="celular" class="emerge">
                 </div>
 
                 <div class="col">

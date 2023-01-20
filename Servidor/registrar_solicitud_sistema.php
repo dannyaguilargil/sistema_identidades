@@ -19,7 +19,7 @@ $tiposolicitud = $_POST["tiposolicitud"];
 $aplicativo = $_POST["aplicativo"];
 $observaciones = $_POST["observaciones"];
 
-$sql="INSERT INTO solicitud_sistema (nombre,tipodocumento,cedula,lugarexpedicion,sexo,telefono,celular,direccion,cargo,supervisor,correo,ubicacion_laboral,tiposolicitud,aplicativo,observaciones) VALUES('$nombre','$tipodocumento',$cedula,'$lugarexpedicion','$sexo',$telefono,$celular,'$direccion','$cargo','$supervisor','$correo','$ubicacion_laboral','$tiposolicitud','$aplicativo','$observaciones')";
+$sql="INSERT INTO solicitud_sistema (nombre,tipodocumento,cedula,lugarexpedicion,sexo,telefono,celular,direccion,cargo,supervisor,correo,ubicacion_laboral,tiposolicitud,aplicativo,observaciones) VALUES('$nombre','$tipodocumento',$cedula,'$lugarexpedicion','$sexo',$telefono,'$celular','$direccion','$cargo','$supervisor','$correo','$ubicacion_laboral','$tiposolicitud','$aplicativo','$observaciones')";
 
 $resultado=$mysqli ->query($sql);
 
