@@ -59,7 +59,7 @@ session_start();
               ?>
           
               <div class="form-check form-switch">
-                <label class="form-check-label" for="flexSwitchCheckChecked" style="color: white;">Modo oscuro</label>
+                <label class="form-check-label" for="flexSwitchCheckChecked" style="color: white;"></label>
                 <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"> 
                </div>
             
@@ -102,6 +102,7 @@ session_start();
           $tiposolicitudr = $row['tiposolicitud'];
           $aplicativor = $row['aplicativo'];
           $observacionesr = $row['observaciones'];
+          $idr = $row['id'];
           }
     
         } 
@@ -149,6 +150,24 @@ session_start();
             ?><center style="color: grey;"> <b> <?php echo "No hay solicitudes actuales"; }?> </b>
             
             </center> 
+
+
+          <div class="notificador">
+          <button type="button" class="btn btn-primary position-relative">
+           Total
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          99+
+          <span class="visually-hidden">unread messages</span>
+          </span>
+          </button>
+          </div>
+
+
+
+
+
+
+
             <div class="container form-control form-control" >
             <h5 class="centrar">Solicitud de sistemas</h5>
             <form action="../../Servidor/registrar_solicitud_supervisor.php" method="POST">
@@ -198,8 +217,9 @@ session_start();
 
                 <div class="row">
                 <div class="col">
-                <label for="">Permisos hasta:</label> <br>
-                <input type="text" value="<?php echo $fechafinalcontrator ?>">
+                <label for="">Id de solicitud:</label> <br>
+                <input type="text" value="<?php echo $idr ?>">
+              
                 </div>
 
 
@@ -210,7 +230,8 @@ session_start();
 
 
                 <div class="col">
-                <label for=""></label> <br>
+                <label for="">Permisos hasta:</label> <br>
+                <input type="text" value="<?php echo $fechafinalcontrator ?>">
             
                 </div>
                 </div>

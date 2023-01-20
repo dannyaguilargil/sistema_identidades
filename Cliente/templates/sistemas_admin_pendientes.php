@@ -104,9 +104,23 @@ session_start();
                    ?>   
 
         
+              
+          <div class="notificador">
+          <button type="button" class="btn btn-primary position-relative">
+           Total
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          99+
+          <span class="visually-hidden">unread messages</span>
+          </span>
+          </button>
+          </div>
+
+
+
+
             
 
-            </center> 
+            
             <div class="container form-control form-control" >
             <h5 class="centrar">Solicitud de sistemas</h5>
 
