@@ -233,6 +233,10 @@ Sistemas
     <img  src="../imgs/logocompleto.png"  alt="" style="width: 150px; text-align: center;height: 50px">
     </div>
 
+    <center>
+      <br>
+   <h5>Gestion de usuarios</h5> 
+  </center>
 
     <main>
         <div class="container py-1 text-center">
@@ -269,6 +273,19 @@ Sistemas
         </div>
     </main>
 
+    <!--
+    <footer>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+          </nav>
+      </footer>
+-->
     <script>
         /* Llamando a la función getData() */
         getData()

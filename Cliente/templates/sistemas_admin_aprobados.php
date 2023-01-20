@@ -98,7 +98,7 @@ session_start();
   </center>
 
     <main>
-        <div class="container py-4 text-center">
+        <div class="container py-2 text-center">
 
             <div class="row justify-content-md-center">
                 <div class="col-md-4">
@@ -108,7 +108,7 @@ session_start();
                     </form>
                 </div>
             </div>
-            <div class="row py-4">
+            <div class="row py-2">
                 <div class="col">
                     <table class="table table-success table-striped">
                         <thead>
