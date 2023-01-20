@@ -239,7 +239,6 @@ session_start();
 
 
                 <div class="col">
-                <label for=""></label> <br>
                 <label for="">Permisos hasta:</label> <br>
                 <input type="text" value="<?php echo $fechafinalcontrator ?>">
                 </div>

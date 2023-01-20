@@ -70,7 +70,7 @@ session_start();
 
           
               <div class="form-check form-switch">
-                <label class="form-check-label" for="flexSwitchCheckChecked" style="color: white;">Modo oscuro</label>
+                <label class="form-check-label" for="flexSwitchCheckChecked" style="color: white;"></label>
                 <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"> 
                </div>
             
@@ -91,6 +91,10 @@ session_start();
 
 
         <?php
+
+            include '../../Servidor/conexion.php';
+            
+            
                         $nombrer = '';
                         $cedular = 0;
                         $cargor = '';
@@ -101,19 +105,31 @@ session_start();
                         //
                         $fechafinalcontrator = '';
                         $supervisorr = '';
+
+
+
+
+
+
+
+                        $totalr = ''; 
+                        //CONSULTA PARA LA NOTIFICACIONES 
+                       //SELECT COUNT(*) FROM sistema_validado_supervisor;
+                       $consulta3="SELECT COUNT(*) from sistema_validado_supervisor;";
+                       $resultado3=mysqli_query($mysqli,$consulta3);
+                           if($resultado3){ while($row = $resultado3->fetch_array()){
+                              $totalr = $row['COUNT(*)'];
+                              }
+                        
+                            } 
+
+
+
                    ?>   
 
         
               
-          <div class="notificador">
-          <button type="button" class="btn btn-primary position-relative">
-           Total
-          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-          99+
-          <span class="visually-hidden">unread messages</span>
-          </span>
-          </button>
-          </div>
+         
 
 
 
@@ -121,11 +137,7 @@ session_start();
             
 
             
-            <div class="container form-control form-control" >
-            <h5 class="centrar">Solicitud de sistemas</h5>
-
-
-            <form action="../../Servidor/registrar_solicitud_admin.php" method="POST">
+       
 
 
                
@@ -133,7 +145,7 @@ session_start();
 
                  
 
-                <?php include '../../Servidor/conexion.php'; 
+                <?php
 
 
                 $nombrer = '';
@@ -142,13 +154,12 @@ session_start();
                 $tiposolicitudr = '';
                 $aplicativor = '';
                 $observacionesr = '';
+                $observaciones_supervisorr = '';
+                $idr = 0;
 
 
 
                 ?>
-
-
-
 
                 
                 <?php $consulta="SELECT * from sistema_validado_supervisor;";
@@ -161,6 +172,7 @@ session_start();
                 $aplicativor = $row['aplicativo'];
                 $observacionesr = $row['observaciones'];
                 $observaciones_supervisorr = $row['observaciones_supervisor'];
+                $idr = $row['id'];
                 }
    
                 } 
@@ -171,6 +183,28 @@ session_start();
           
               <?php if($nombrer==''){
               ?><center style="color: grey;"> <b> <?php echo "No hay solicitudes actuales"; }?> </b>
+              </center>
+
+
+          <div class="notificador">
+          <button type="button" class="btn btn-warning position-relative">
+          Total
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          <?php echo $totalr; ?>
+          <span class="visually-hidden">unread messages</span>
+          </span>
+          </button>
+          </div>
+
+
+
+
+
+            <div class="container form-control form-control" >
+            <h5 class="centrar">Solicitud de sistemas</h5>
+
+
+            <form action="../../Servidor/registrar_solicitud_admin.php" method="POST">
 
                 <fieldset><b>Informacion general del colaborador</b></fieldset> 
                 <div class="row">
@@ -228,8 +262,8 @@ session_start();
                 <!-- -->
                 <div class="row">
                 <div class="col">
-                <label for="">Permisos hasta:</label> <br>
-                <input type="text"  name="fechafinalcontrato" id="fechafinalcontrato" placeholder="fecha final del permiso" value="<?php echo $fechafinalcontrator?>">
+                <label for="">Id:</label> <br>
+                <input type="text"  name="id" id="id"  value="<?php echo $idr?>">
                 </div>
 
                 <div class="col">
@@ -238,7 +272,8 @@ session_start();
                 </div>
 
                 <div class="col">
-             
+                <label for="">Permisos hasta:</label> <br>
+                <input type="text"  name="fechafinalcontrato" id="fechafinalcontrato" placeholder="fecha final del permiso" value="<?php echo $fechafinalcontrator?>">
                 </div>
                 </div>
 
@@ -254,28 +289,29 @@ session_start();
                 </div>
 
                 <div class="col">
-                <button class="btn btn-success">Aprobarlo</button>
+                <button type="submit" class="btn btn-success" name="registro" id="registro">Aprobarlo</button>
                 </div>
 
                 <div class="col">
-                <button class="btn btn-danger">Rechazarlo</button>
+                <button type="submit" class="btn btn-danger" name="eliminar" id="eliminar">Rechazarlo</button>
                 </div>
 
 
-
+                </form>
               </div>
 
 
-              <!-- AQUI DEBE IR LA CONSULTA DEPENDIENDO DEL TIPO DE SUPERVISOR -->
 
-            </form>
+           
 
 
             </div>
           </div>
           </div>
-        </div>
-</div>
+  </div>
+
+
+  
 
       
       <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
@@ -283,6 +319,6 @@ session_start();
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>
-    <!-- SI EL SISTEMA FUE VALIDADO DEBERIA GENERAR UNA ALERTA PARA NOTIFICARLE, NOTIFICARLE ES OPCIONAL-->
+   
 </html>
 
