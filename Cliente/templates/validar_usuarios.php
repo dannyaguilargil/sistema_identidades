@@ -121,17 +121,19 @@ session_start();
                       <!-- TRAERME LOS DATOS CON DIVS PARA EVITAR ERROR DE CONSULTA Y VALIDADOR-->
                       <!--   -->
                    
-                    <input type="text" name="nombre" id="nombre" class="emerge" value="<?php echo $nombrer?>">
+                    <input type="text" name="nombre" id="nombre" class="" value="<?php echo $nombrer?>">
                     <input type="text" name="cedula" id="cedula" class="emerge" value="<?php echo $cedular?>">
                     <input type="text" name="cargo" id="cargo" class="emerge" value="<?php  echo $cargor?>">
                     <input type="text" name="fechafinalcontrato" id="fechafinalcontrato" class="emerge" value="<?php echo $fechafinalcontrator?>">
-                    <input type="text" name="supervisor" id="supervisor" class="emerge" value="<?php echo $supervisorr?>">
+                    <input type="text" name="supervisor" id="supervisor" class="" value="<?php echo $supervisorr?>">
                     <!-- OCULTO PARA LA GESTION RESPONSIVE
                     <input type="text" name="email" id="email" class="emerge" value="<?php echo $emailr?>">
                   -->
+                    <input type="text" name="rol" id="rol" class="emerge" value="<?php echo $rolr?>">
+
 
                     <button type="submit" class="fa-sharp fa-solid fa-check btn btn-success" name="registro" id="registro"  onclick="envio();"></button>
-                    <button  class="fa-sharp fa-solid fa-x btn btn-danger" name="eliminar" id="eliminar" onclick="detenerr();"></button>
+                    <button type="submit" class="fa-sharp fa-solid fa-x btn btn-danger" name="eliminar" id="eliminar" onclick="envio2();"></button>
 
                      <br> <br>
                     </div>
@@ -186,9 +188,15 @@ session_start();
 
       <script>
       function envio(){
-        alert("ENVIO EXITOSO");
+        alert("SE AGREGARA EL USUARIO");
       }
      
+      
+      <script>
+      function envio2(){
+        alert("SE ELIMINARA AL USUARIO");
+      }
+
      </script>
       <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
        <script src="https://kit.fontawesome.com/9ea064c718.js" crossorigin="anonymous"></script>
