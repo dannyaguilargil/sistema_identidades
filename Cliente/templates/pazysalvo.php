@@ -86,7 +86,7 @@ session_start();
             <center><h6 class="">Generar paz y salvo</h6> </center>
             <!-- AQUI DEBO CARGAR LOS DATOS ANTERIORES DEL MISMO USUARIO-->
 
-            <form action="../../Servidor/pazysalvoregistrar_solicitud.php" method="POST">
+           
 
 
 <!--
@@ -130,7 +130,7 @@ if($resultado){ while($row = $resultado->fetch_array()){
 ?>
 
 
-
+          <form action="../../Servidor/pazysalvoregistrar_solicitud.php" method="POST">
 
             <div class="contt">
 
@@ -160,7 +160,7 @@ if($resultado){ while($row = $resultado->fetch_array()){
                   <?php
                 }
                 else{
-                  ?><input class="check"  type="checkbox" value="" >
+                  ?><input class="check"  type="checkbox" name="revocar_permisos" value="SI" id="revocar_permisos">
                   <?php
                 }
 
@@ -222,10 +222,15 @@ if($resultado){ while($row = $resultado->fetch_array()){
           <?php
 
               if($rfid=='SI'){
-                ?> <a target="_blank" href="https://docs.google.com/document/d/1yp0Fu8mMA876BwtjqOdXLxIuyVPXAFLB/edit?usp=sharing&ouid=105725441180783245508&rtpof=true&sd=true" class="btn btn-warning">Descargar</a><?php
+                ?> 
+                <!-- ANTIGUO DESCARGA DEL PAZ Y SALVO
+                <a target="_blank" href="../../Servidor/generapdf.php" class="btn btn-warning">Descargar</a>
+              -->
+                <button type="submit" class="btn btn-warning" name="generar" id="generar">Descargar paz y salvo</button>
+                <?php
               }
               else{
-                ?><button type="submit"  class="text-left btn btn-success" onclick="envio()">Solicitar</button> <?php
+                ?><button type="submit"  class="text-left btn btn-success" onclick="envio()" name="solicitar" id="solicitar">Solicitar</button> <?php
               }
              
 ?>

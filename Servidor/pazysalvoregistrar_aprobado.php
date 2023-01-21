@@ -9,7 +9,7 @@ $rfid = $_POST["rfid"];
 $equipos = $_POST["equipos"];
 
 
-$sql="UPDATE pazysalvo_aprobar SET rfid='$rfid',equipos='$equipos' WHERE cedula = $cedula;";
+$sql="UPDATE pazysalvo_aprobar SET rfid='$rfid',equipos='$equipos',revocar_permisos='SI' WHERE cedula = $cedula;";
 $resultado=$mysqli ->query($sql);
 
 if($resultado>0){

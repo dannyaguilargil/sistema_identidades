@@ -24,20 +24,20 @@ session_start();
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="perfil_admin.php">Mi perfil</a>
+                    <a class="far fa-user-cog nav-link" aria-current="page" href="perfil_admin.php">Mi perfil</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="pazysalvo_admin.php" disabled>Paz y salvo</a>
+                    <a class="fas fa-id-card nav-link" href="pazysalvo_admin.php" disabled>Paz y salvo</a>
                   </li>
 
                   <li class="nav-item">
-                    <a class="nav-link" href="validar_usuarios.php" disabled>Accesos</a>
+                    <a class="far fa-user-check nav-link" href="validar_usuarios.php" disabled>Accesos</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="gestion_usuario.php" disabled>Gestion de usuarios</a>
+                    <a class="fas fa-users nav-link" href="gestion_usuario.php" disabled>Gestion de usuarios</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="sistemas_admin_pendientes.php" disabled>Sistema pendientes</a>
+                    <a class="far fa-user-md-chat nav-link" href="sistemas_admin_pendientes.php" disabled>Sistema pendientes</a>
                   </li>
                 </ul>
               </div>
@@ -83,7 +83,7 @@ session_start();
             <img  src="../imgs/logoimsaludrecortado.png"  alt="" style="width: 200px; text-align: center;">
         </div>
         <br>
-            <h6 class="TT2">Modificacion de datos del perfil</h6> 
+            <center><h6 class=""><b>Modificacion de datos del perfil</b></h6> </center>
             <!-- AQUI DEBO CARGAR LOS DATOS ANTERIORES DEL MISMO USUARIO-->
 
             <form action="../../Servidor/actualizar_usuario_perfil.php" method="POST">
@@ -160,7 +160,7 @@ session_start();
           </div>
 
             
-              <button type="submit" class="text-center btn btn-success bnn" onclick="envio()">Modificar</button>
+          <center><button type="submit" class="text-center btn btn-success" onclick="envio()">Modificar</button></center>
               
             
             </div>

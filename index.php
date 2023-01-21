@@ -18,14 +18,13 @@ include 'Servidor/conexion.php';
 <body">
   <br> <br>
 
-<div class="centrar">
+<div class="container centrar">
        
             <div class="imagen">
             <img  src="Cliente/imgs/logocompleto.png"  alt="" style="width: 170px; text-align: center;height: 70px">
             </div> 
             <!-- <h3 class="text-center">Iniciar sesion</h3> -->
-                <br> 
-            <div class="textoI">
+            <div class="form-control textoI">
             <form action="index.php" method="post">
             <label class="TT" for="nombre">Usuario</label>
             <input type="text" class="form-control" name="nombre" id="nombre" required><br>

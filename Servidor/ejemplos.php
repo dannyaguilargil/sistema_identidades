@@ -1,22 +1,13 @@
 <?php
 require('../Cliente/docs/fpdf.php');
 
-
-
-//CODIGO QUE GENERA EL PDF
-//$nombre = '';
-//$cedula = 0;
-//$revocar_permisos = '';
-
-
-
-
-
 class PDF extends FPDF
 {
 // Cabecera de página
 
+function primercabecer(){
 
+}
 
 
 function Header()
@@ -102,7 +93,6 @@ $pdf->Cell(20,10,utf8_decode('Linea nacional gratuita 018000118950'));
 $pdf->Ln(4);
 $pdf->Cell(67);
 $pdf->Cell(20,10,utf8_decode('http://.imsalud.gov.co'));
-$pdf->Ln(4);
-$pdf->Write(1,$nombre);
+
 $pdf->Output();
 ?>
