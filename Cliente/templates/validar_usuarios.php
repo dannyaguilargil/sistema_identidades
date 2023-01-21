@@ -24,20 +24,20 @@ session_start();
     <header class="">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-              <a class="navbar-brand " href="validar_usuarios.php">Accesos</a>
+              <a class="far fa-user-check navbar-brand " href="validar_usuarios.php">Accesos</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="sistemas_admin_pendientes.php">Sistemas</a>
+                    <a class="fas fa-phone-laptop nav-link" aria-current="page" href="sistemas_admin_pendientes.php">Sistemas</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="pazysalvo_admin.php" disabled>Paz y salvo</a>
+                    <a class="fas fa-id-card nav-link" href="pazysalvo_admin.php" disabled>Paz y salvo</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="perfil.php" disabled>Mi perfil</a>
+                    <a class="far fa-user-cog nav-link" href="perfil.php" disabled>Mi perfil</a>
                   </li>
                 </ul>
               
@@ -54,7 +54,7 @@ session_start();
               
 
               <div class="form-check form-switch">
-                <label class="form-check-label" for="flexSwitchCheckChecked" style="color:white;">Modo oscuro</label>
+                <label class="form-check-label" for="flexSwitchCheckChecked" style="color:white;"></label>
                 <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
                
             </div>

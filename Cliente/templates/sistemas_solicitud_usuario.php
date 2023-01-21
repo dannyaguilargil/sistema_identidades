@@ -24,7 +24,7 @@ session_start();
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
             <div class="container-fluid">
-              <a class="navbar-brand" href="sistemas_solicitud_usuario.php">Sistemas</a>
+              <a class="fas fa-phone-laptop navbar-brand" href="sistemas_solicitud_usuario.php">Sistemas</a>
               <button class=" navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -53,11 +53,10 @@ session_start();
 
           
 
-              <!--ANTIGUO EJEMPLO DE MODO OSCURO -->
+              <!-- EJEMPLO DE MODO OSCURO -->
               <div class="form-check form-switch">
               <input class="form-check-input" type="checkbox" role="switch"  id="checkbox" onclick="setDarkMode();">
               <label class="form-check-label" for="checkbox"></label>
-                 
                </div>
                
 
@@ -146,7 +145,7 @@ session_start();
                 <div class="row">
                 <div class="col">
                 <label for="lugarexpedicion" class="emerge">Lugar  de expedicion:</label> <br>
-                <input type="text" name="lugarexpedicion" id="lugarexpedicion" class="emerge" required>
+                <input type="text" name="lugarexpedicion" id="lugarexpedicion" class="emerge" placeholder="Digite ciudad" required>
                 </div>
 
                 <div class="col">
@@ -159,7 +158,7 @@ session_start();
 
                 <div class="col">
                 <label for="telefono" class="emerge">Telefono fijo:</label> <br>
-                <input type="text" name="telefono" id="telefono" class="emerge" required> 
+                <input type="text" name="telefono" id="telefono" class="emerge" placeholder="Digite telefono fijo" required> 
                 </div>
                 </div>
 
@@ -167,12 +166,12 @@ session_start();
                 <div class="row">
                 <div class="col">
                 <label for="celular" class="emerge"> Celular:</label> <br>
-                <input type="number" name="celular" id="celular" class="emerge">
+                <input type="number" name="celular" id="celular" class="emerge" placeholder="Digite celular">
                 </div>
 
                 <div class="col">
                 <label for="direccion" class="emerge">Direccion:</label> <br>
-                <input type="text" id="direccion" name="direccion" class="emerge" required>
+                <input type="text" id="direccion" name="direccion" class="emerge" required placeholder="Digite direccion de residencia">
                 </div>
 
                 <div class="col">
@@ -194,7 +193,7 @@ session_start();
 
                 <div class="col">
                 <label for="ubicacion_laboral" class="emerge">Ubicacion laboral:</label><br>
-                <input type="text" name="ubicacion_laboral" id="ubicacion_laboral" class="emerge"> 
+                <input type="text" name="ubicacion_laboral" id="ubicacion_laboral" class="emerge" placeholder="Ubicacion laboral o area"> 
                 </div>
                </div>
                 
@@ -232,7 +231,7 @@ session_start();
                
                 <div class="col">
                 <label for="observaciones" class="emerge">Observaciones</label> <br>
-                <input type="text" name="observaciones" id="observaciones" class="obs emerge" placeholder="DIGITE PARA QUE REQUIERE EL PERMISO?"> 
+                <input style="color: green;" type="text" name="observaciones" id="observaciones" class="obs emerge" placeholder="Digite para que requiere el permiso del sistema?"> 
                 </div>
 
                 <br> <br> <br>
@@ -241,8 +240,9 @@ session_start();
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
                     <label class="form-check-label" for="flexCheckChecked">
-                      Acepto tratamiento de datos
-                    </label>
+                      Acepto tratamiento de datos  <a class="btn btn-white fad fa-eye" href="https://www.imsalud.gov.co/web/gobierno-digital/politicas-de-proteccion-de-datos-personales/"   target="_blank" ></a>
+                    </label> <br>
+                   
                   </div>
                 </div>
 

@@ -6,8 +6,6 @@ session_start();
 
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -17,6 +15,7 @@ session_start();
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="../css/perfil.css">
+     <link rel="icon" href="imgs/logoimsaludrecortado.ico">
     <title>Datos de Usuario</title>
 </head>
 <body>
@@ -24,7 +23,7 @@ session_start();
         <nav class="navbar navbar-expand-lg navbar-light bg-light" >
 
             <div class="container-fluid">
-              <a class="navbar-brand " href="login.html">Mi perfil</a>
+              <a class="far fa-user-cog navbar-brand " href="perfil.php">Mi perfil</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -32,25 +31,26 @@ session_start();
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="sistemas_solicitud_usuario.php">Sistemas</a>
+                    <a class="fas fa-phone-laptop nav-link" aria-current="page" href="sistemas_solicitud_usuario.php">Sistemas</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="pazysalvo.php" disabled>Paz y salvo</a>
+                    <a class="fas fa-id-card nav-link" href="pazysalvo.php" disabled>Paz y salvo</a>
+                  
                   </li>
                 </ul>
               </div>
             
               <div class="user">
-                <?php $tomador=$_SESSION['nombre']?>
-               <!--  Bienvenido  --><?php //echo $_SESSION['nombre']; ?>
+              <?php $tomador=$_SESSION['nombre']?>
+                <span class="typed"></span>  <?php echo $_SESSION['nombre'];?>
                 <?//php echo $tomador; ?>
               </div>
 
-          
+              <!-- EJEMPLO DE MODO OSCURO -->
               <div class="form-check form-switch">
-                <label class="form-check-label" for="flexSwitchCheckChecked">Modo oscuro</label>
-                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"> 
-               </div>
+              <input class="form-check-input" type="checkbox" role="switch"  id="checkbox" onclick="setDarkMode();">
+              <label class="form-check-label" for="checkbox"></label>
+              </div>
             
             <a class="btn btn-light fas fa-sign-out-alt" href="../../Servidor/logout.php"></a>
             </div>
@@ -182,11 +182,42 @@ session_start();
 
 
 
+<script>
+        //setDarkMode
+        console.log("se ejecuto script")
+        if(localStorage.getItem('theme') == 'dark'){
+          setDarkMode();
+
+            if(document.getElementById('checkbox').checked){
+              localStorage.setItem('checkbox', true)
+            }
+        }
+
+
+        function setDarkMode(){
+          console.log("se ejecuto script 2")
+          let isDark = document.body.classList.toggle('darkmode');
+
+
+          if(isDark){
+            setDarkMode.checked = true;
+            localStorage.setItem('theme', 'dark');
+            document.getElementById('checkbox').setAttribute('checked', 'checked');
+          }
+          else{
+            setDarkMode.checked = true;
+            localStorage.removeItem('theme', 'dark');
+          }
+        }
+      </script>
 
 <!---->
 
 
-
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/repetirdiv.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 
 </body>

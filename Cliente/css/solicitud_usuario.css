@@ -3,7 +3,7 @@
  
 }
 .container-fliud a{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .centrar{
     display: flex;
@@ -39,7 +39,7 @@ input{
     
 }
 .user{
-    padding-right: 30px;
+    padding-right: 26px;
 }
 
 /* MODO DARK*/
@@ -67,3 +67,4 @@ input{
 .form-check{
     cursor: pointer;
 }
+/* FINALIZA MODO DARK*/

@@ -82,7 +82,7 @@
             
 
             <div class="boton">
-                <button type="submit" class="text-center btn btn-success" onclick="envio();">Solicitar</button>
+                <button type="submit" class="fas fa-user-md text-center btn btn-success" onclick="envio();">Solicitar</button>
             </div>
             <!--
              <h3 class="text-center">Iniciar sesion</h3> 
