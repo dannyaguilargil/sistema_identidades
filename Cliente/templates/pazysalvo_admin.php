@@ -19,15 +19,15 @@
             <div class="container-fluid">
 
            <!-- <li class="nav-item dropdown"> -->
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color=green;background:white;">
+          <a class="fas fa-phone-laptop nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color=green;background:white;">
             Sistemas
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#" style="">Sistemas aprobados</a></li>
-            <li><a class="dropdown-item" href="sistemas_admin_pendientes.php">Sistemas pendientes</a></li>
-            <li><a class="dropdown-item" href="#">Revisar permisos</a></li>
-            <li><a class="dropdown-item" href="#">Notificar sistema aprobado</a></li>
-            <li><a class="dropdown-item" href="sistemas_supervisor_admin.php">Opcion de supervisor</a></li>
+            <li><a class="fas fa-hospital-user dropdown-item" href="#" style="">Sistemas aprobados</a></li>
+            <li><a class="far fa-user-md-chat dropdown-item" href="sistemas_admin_pendientes.php">Sistemas pendientes</a></li>
+            <li><a class="fal fa-user-shield dropdown-item" href="#">Revisar permisos</a></li>
+            <li><a class="fas fa-comment-medical dropdown-item" href="#">Notificar sistema aprobado</a></li>
+            <li><a class="fas fa-user-hard-hat dropdown-item" href="sistemas_supervisor_admin.php">Opcion de supervisor</a></li>
           </ul>
       <!--  </li> -->
 
@@ -54,7 +54,7 @@
 
           
               <div class="form-check form-switch">
-                <label class="form-check-label" for="flexSwitchCheckChecked" style="color: white;">Modo oscuro</label>
+                <label class="form-check-label" for="flexSwitchCheckChecked" style="color: white;"></label>
                 <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"> 
                </div>
             

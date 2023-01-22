@@ -29,11 +29,11 @@ session_start();
             Sistemas
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="sistemas_admin_aprobados.php" style="">Sistemas aprobados</a></li>
-            <li><a class="dropdown-item" href="sistemas_admin_pendientes.php">Sistemas pendientes</a></li>
-            <li><a class="dropdown-item" href="permisos.php">Revisar permisos</a></li>
-            <li><a class="dropdown-item" href="notificar_sistema.php">Notificar sistema aprobado</a></li>
-            <li><a class="dropdown-item" href="sistemas_supervisor_admin.php">Opcion de supervisor</a></li>
+            <li><a class="fas fa-phone-laptop fas fa-hospital-user dropdown-item" href="sistemas_admin_aprobados.php" style="">Sistemas aprobados</a></li>
+            <li><a class="far fa-user-md-chat dropdown-item" href="sistemas_admin_pendientes.php">Sistemas pendientes</a></li>
+            <li><a class="fal fa-user-shield dropdown-item" href="permisos.php">Revisar permisos</a></li>
+            <li><a class="fas fa-comment-medical dropdown-item" href="notificar_sistema.php">Notificar sistema aprobado</a></li>
+            <li><a class="fas fa-user-hard-hat dropdown-item" href="sistemas_supervisor_admin.php">Opcion de supervisor</a></li>
             <li><a class="dropdown-item" href="sistemas_admin_solicitud.php">Opcion de solicitud</a></li>
           </ul>
       <!--  </li> -->
@@ -65,13 +65,13 @@ session_start();
 
 
               <div class="user" style="color: white">
-              ACCESO! <?php echo $_SESSION['nombre']; ?>
+              ADMINISTRADOR! <?php echo $_SESSION['nombre']; ?>
              <?php $tomador=$_SESSION['nombre'] ?>
               </div>
 
           
               <div class="form-check form-switch">
-                <label class="form-check-label" for="flexSwitchCheckChecked" style="color: white;">Modo oscuro</label>
+                <label class="form-check-label" for="flexSwitchCheckChecked" style="color: white;"></label>
                 <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"> 
                </div>
             

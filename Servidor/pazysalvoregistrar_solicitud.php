@@ -30,12 +30,39 @@ elseif (isset($_POST['generar'])){
 
 require('../Cliente/docs/fpdf.php');
 
+//FECHA ACTUAL
+$fechaActual = date('d-m-Y');
+$fechaEntera = time();
+$anio = date("Y", $fechaEntera);
+$mes = date("m", $fechaEntera);
+$dia = date("d", $fechaEntera);
 
 
-//CODIGO QUE GENERA EL PDF
-//$nombre = '';
-//$cedula = 0;
-//$revocar_permisos = '';
+if($mes==01){
+    $mes='ENERO';
+}
+elseif($mes==02){
+    $mes='FEBRERO';
+}
+elseif($mes==03){
+    $mes='MARZO';
+}
+elseif($mes==04){
+    $mes='ABRIL';
+}
+elseif($mes==05){
+    $mes='MAYO';
+}
+elseif($mes==06){
+    $mes='JUNIO';
+}
+elseif($mes==07){
+    $mes='JULIO';
+}//
+//elseif($mes==08){
+//    $mes='AGOSTO';
+//}
+
 
 
 
@@ -78,7 +105,7 @@ function Footer()
     // Arial italic 8
     $this->SetFont('Arial','I',8);
     // Número de página
-    $this->Cell(0,10,utf8_decode('Page ').$this->PageNo().'/{nb}',0,0,'C');
+    $this->Cell(0,10,utf8_decode('Sistema de identidad ©').$this->PageNo().'/{nb}',0,0,'C');
 }
 }
 
@@ -103,13 +130,13 @@ $pdf->SetFont('Arial','B',12);
 $pdf->Cell(20,10,utf8_decode('HACE CONSTAR'));
 $pdf->Ln(20);
 $pdf->SetFont('Arial','',10);
-$pdf->Cell(20,10,utf8_decode('Que, revisado el contrato de prestacion de servicios N° $NUMERO asignado al contratista $NOMBRE'));
+$pdf->Cell(20,10,utf8_decode('Que, revisado el contrato de prestacion de servicios  asignado al contratista '.$nombre));
 $pdf->Ln(4);
-$pdf->Cell(20,10,utf8_decode('Con cedula de ciudadania $CEDULA  presenta terminacion en el perodo $FECHA, por lo tanto'));
+$pdf->Cell(20,10,utf8_decode('Con cedula de ciudadania '.$cedula.'  presenta terminacion en el perodo de ' .$mes.' por lo tanto se expide el presente '));
 $pdf->Ln(4);
-$pdf->Cell(20,10,utf8_decode('se expide el presente certificado para tramite de cuentas y procesos que se requieran.'));
+$pdf->Cell(20,10,utf8_decode('certificado para tramite de cuentas y procesos que se requieran en la entidad.'));
 $pdf->Ln(25);
-$pdf->Cell(20,10,utf8_decode('$FECHAACTUAL'));
+$pdf->Cell(20,10,utf8_decode('San josé de Cúcuta '.$dia. ' de '.$mes.' del '.$anio));
 $pdf->Ln(50);
 $pdf->Cell(55);
 $pdf->Cell(20,10,utf8_decode('LUCAS AUGUSTO LIENDO ROMERO '));
@@ -132,7 +159,6 @@ $pdf->Ln(4);
 $pdf->Cell(67);
 $pdf->Cell(20,10,utf8_decode('http://.imsalud.gov.co'));
 $pdf->Ln(4);
-$pdf->Write(1,$nombre);
 $pdf->Output();
 
 

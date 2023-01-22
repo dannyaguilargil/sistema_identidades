@@ -1,15 +1,6 @@
 <?php
 require('../Cliente/docs/fpdf.php');
-
-
-
-//CODIGO QUE GENERA EL PDF
-//$nombre = '';
-//$cedula = 0;
-//$revocar_permisos = '';
-
-
-
+$nombre = 'Danny Stiveens Aguilar Gil';
 
 
 class PDF extends FPDF
@@ -74,7 +65,8 @@ $pdf->SetFont('Arial','B',12);
 $pdf->Cell(20,10,utf8_decode('HACE CONSTAR'));
 $pdf->Ln(20);
 $pdf->SetFont('Arial','',10);
-$pdf->Cell(20,10,utf8_decode('Que, revisado el contrato de prestacion de servicios N° $NUMERO asignado al contratista $NOMBRE'));
+$pdf->Cell(20,10,utf8_decode('Que, revisado el contrato de prestacion de servicios N° $NUMERO asignado al contratista '.$nombre));
+// $pdf->Write(10,"jeje".$nombre);
 $pdf->Ln(4);
 $pdf->Cell(20,10,utf8_decode('Con cedula de ciudadania $CEDULA  presenta terminacion en el perodo $FECHA, por lo tanto'));
 $pdf->Ln(4);

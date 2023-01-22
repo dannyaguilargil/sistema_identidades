@@ -47,11 +47,12 @@ session_start();
 
 
 
-          
+            <!-- NO QUIERO MODO OSCURO EN PAZ Y SALVO 
               <div class="form-check form-switch">
-                <label class="form-check-label" for="flexSwitchCheckChecked">Modo oscuro</label>
+                <label class="form-check-label" for="flexSwitchCheckChecked"></label>
                 <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"> 
                </div>
+-->
             
                <a class="btn btn-light fas fa-sign-out-alt" href="../../Servidor/logout.php"></a>
             </div>
