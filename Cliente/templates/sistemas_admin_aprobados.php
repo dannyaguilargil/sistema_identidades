@@ -58,7 +58,7 @@ session_start();
                     <a class="nav-link" href="validar_usuarios.php" disabled>Accesos</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="gestion_usuario.php" disabled>Gestion de usuarios</a>
+                    <a class="nav-link" href="gestionar_usuarios.php" disabled>Gestion de usuarios</a>
                   </li>
                 </ul>
               </div>
@@ -110,7 +110,7 @@ session_start();
             </div>
             <div class="row py-2">
                 <div class="col">
-                    <table class="table table-success table-striped">
+                    <table class="table table-light table-striped">
                         <thead>
                             <th>ID</th>
                             <th>NOMBRE</th>

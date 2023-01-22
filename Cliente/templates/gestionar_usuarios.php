@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
 <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +12,7 @@
 </head>
 
 <body>
+
 
 <header class="">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -50,7 +50,7 @@ Sistemas
         <a class="far fa-user-check nav-link" href="validar_usuarios.php" disabled>Accesos</a>
       </li>
       <li class="nav-item">
-        <a class="fas fa-users nav-link" href="gestionar_usuarios.php" disabled>Gestion de usuarios</a>
+        <a class="fas fa-users nav-link" href="gestion_usuario.php" disabled>Gestion de usuarios</a>
       </li>
     </ul>
   </div>
@@ -225,42 +225,64 @@ Sistemas
           </nav>
          
                     
-    </header>
+</header>
 
 
 
-    <div class="imagen">
-    <img  src="../imgs/logocompleto.png"  alt="" style="width: 150px; text-align: center;height: 50px">
+<div class="imagen">
+    <img  src="../imgs/logocompleto.png"  alt="" style="width: 130px; text-align: center;height: 50px">
     </div>
+
 
     <center>
       <br>
    <h5>Gestion de usuarios</h5> 
   </center>
 
-    <main>
-        <div class="container py-1 text-center">
 
-            <div class="row justify-content-md-center">
-                <div class="col-md-4">
-                    <form action="" method="post">
-                        <label for="campo">Buscar: </label>
-                        <input type="text" name="campo" id="campo">
-                    </form>
+    <main>
+        <div class="container py-4 text-center">
+
+            <div class="row g-4">
+
+                <div class="col-auto">
+                    <label for="num_registros" class="col-form-label">Mostrar: </label>
+                </div>
+
+                <div class="col-auto">
+                    <select name="num_registros" id="num_registros" class="form-select">
+                        <option value="10">10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select>
+                </div>
+
+                <div class="col-auto">
+                    <label for="num_registros" class="col-form-label">registros </label>
+                </div>
+
+                <div class="col-5"></div>
+
+                <div class="col-auto">
+                    <label for="campo" class="col-form-label">Buscar: </label>
+                </div>
+                <div class="col-auto">
+                    <input type="text" name="campo" id="campo" class="form-control">
                 </div>
             </div>
-            <div class="row py-1">
+
+            <div class="row py-4">
                 <div class="col">
-                    <table class="table table-success table-striped">
+                    <table class="table table-sm table-bordered">
                         <thead>
-                            <th>NOMBRE</th>
-                            <th>CEDULA</th>
-                            <th>SUPERVISOR</th>
-                            <th>FECHAFINALCONTRATO</th>
-                            <th>SUPERVISOR</th>
-                            <th>EMAIL</th>
-                            <th>ROL</th>
-                           
+                            <th>Nombre</th>
+                            <th>Cedula</th>
+                            <th>Cargo</th>
+                            <th>Fecha final contrato</th>
+                            <th>Supervisor</th>
+                            <th>Email</th>
+                            <th>Rol</th>
                         </thead>
 
                         <!-- El id del cuerpo de la tabla. -->
@@ -270,43 +292,56 @@ Sistemas
                     </table>
                 </div>
             </div>
-        </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <label id="lbl-total"></label>
+                </div>
+
+            <div class="col-6" id="nav-paginacion"></div>
+            </div>
+            </div>
     </main>
 
-    <!--
-    <footer>
-        <nav aria-label="Page navigation example">
-            <ul class="pagination">
-              <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item"><a class="page-link" href="#">Next</a></li>
-            </ul>
-          </nav>
-      </footer>
--->
     <script>
+        let paginaActual = 1
         /* Llamando a la función getData() */
-        getData()
+        getData(paginaActual)
 
         /* Escuchar un evento keyup en el campo de entrada y luego llamar a la función getData. */
-        document.getElementById("campo").addEventListener("keyup", getData)
+        document.getElementById("campo").addEventListener("keyup", function() {
+            getData(1)
+        }, false)
+        document.getElementById("num_registros").addEventListener("change", function() {
+            getData(paginaActual)
+        }, false)
+
 
         /* Peticion AJAX */
-        function getData() {
+        function getData(pagina) {
             let input = document.getElementById("campo").value
+            let num_registros = document.getElementById("num_registros").value
             let content = document.getElementById("content")
-            let url = "../../Servidor/load.php"
+
+            if (pagina != null) {
+                paginaActual = pagina
+            }
+
+            let url = "load.php"
             let formaData = new FormData()
             formaData.append('campo', input)
+            formaData.append('registros', num_registros)
+            formaData.append('pagina', paginaActual)
 
             fetch(url, {
                     method: "POST",
                     body: formaData
                 }).then(response => response.json())
                 .then(data => {
-                    content.innerHTML = data
+                    content.innerHTML = data.data
+                    document.getElementById("lbl-total").innerHTML = 'Mostrando ' + data.totalFiltro +
+                        ' de ' + data.totalRegistros + ' registros'
+                    document.getElementById("nav-paginacion").innerHTML = data.paginacion
                 }).catch(err => console.log(err))
         }
     </script>

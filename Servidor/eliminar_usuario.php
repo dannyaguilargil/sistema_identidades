@@ -15,7 +15,7 @@ if($resultado>0){
 //alerta de que se agrego el registro
 
 
-header("Location:../Cliente/templates/gestion_usuario.php");
+header("Location:../Cliente/templates/gestionar_usuarios.php");
 echo '<script type ="text/JavaScript">';  
 echo 'alert("REGISTRO ELIMINADO")';  
 echo '</script>';  

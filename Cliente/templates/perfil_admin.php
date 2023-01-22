@@ -34,7 +34,7 @@ session_start();
                     <a class="far fa-user-check nav-link" href="validar_usuarios.php" disabled>Accesos</a>
                   </li>
                   <li class="nav-item">
-                    <a class="fas fa-users nav-link" href="gestion_usuario.php" disabled>Gestion de usuarios</a>
+                    <a class="fas fa-users nav-link" href="gestionar_usuarios.php" disabled>Gestion de usuarios</a>
                   </li>
                   <li class="nav-item">
                     <a class="far fa-user-md-chat nav-link" href="sistemas_admin_pendientes.php" disabled>Sistema pendientes</a>

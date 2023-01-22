@@ -55,7 +55,7 @@ session_start();
                     <a class="nav-link" href="validar_usuarios.php" disabled>Accesos</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="gestion_usuario.php" disabled>Gestion de usuarios</a>
+                    <a class="nav-link" href="gestionar_usuarios.php" disabled>Gestion de usuarios</a>
                   </li>
                 </ul>
               </div>

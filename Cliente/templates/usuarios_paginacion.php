@@ -1,46 +1,68 @@
 <!DOCTYPE html>
-<!--SOLICITUD_USUARIO A LA BASE DE DATOS-->
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="../css/gestion_usuarios.css">
     <link rel="icon" href="imgs/logoimsaludrecortado.ico">
-    <title>Iniciar Sesion</title>
+    <title>Gestion de usuarios</title>
 </head>
+
 <body>
-  
-    <header class="">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-              <a class="navbar-brand " href="login.html">Usuarios</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="sistemas_admin.php
-                    ">Sistemas</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="contacto.html" disabled>Paz y salvo</a>
-                  </li>
-                </ul>
-              
-              </div>
+
+<header class="">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+<div class="container-fluid">
+
+<!-- <li class="nav-item dropdown"> -->
+<a class="fas fa-phone-laptop nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color=green;background:white;">
+Sistemas
+</a>
+<ul class="dropdown-menu">
+<li><a class="fas fa-hospital-user dropdown-item" href="sistemas_admin_aprobados.php" style="">Sistemas aprobados</a></li>
+<li><a class="far fa-user-md-chat dropdown-item" href="sistemas_admin_pendientes.php">Sistemas pendientes</a></li>
+<li><a class="fal fa-user-shield dropdown-item" href="permisos.php">Revisar permisos</a></li>
+<li><a class="fas fa-comment-medical dropdown-item" href="notificar_sistema.php">Notificar sistema aprobado</a></li>
+<li><a class="fas fa-user-hard-hat dropdown-item" href="sistemas_supervisor_admin.php">Opcion de supervisor</a></li>
+<li><a class="dropdown-item" href="sistemas_admin_solicitud.php">Opcion de solicitud</a></li>
+</ul>
+<!--  </li> -->
+
+
+
+
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="far fa-user-cog nav-link" aria-current="page" href="perfil_admin.php">Mi perfil</a>
+      </li>
+      <li class="nav-item">
+        <a class="fas fa-id-card nav-link" href="pazysalvo_admin.php" disabled>Paz y salvo</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="far fa-user-check nav-link" href="validar_usuarios.php" disabled>Accesos</a>
+      </li>
+      <li class="nav-item">
+        <a class="fas fa-users nav-link" href="gestion_usuario.php" disabled>Gestion de usuarios</a>
+      </li>
+    </ul>
+  </div>
           
 
 
-
+<a href="validar_usuarios.php" type="button" class="fas fa-user-check btn btn-secondary"></a>
   <!--GESTION PARA AGREGAR USUARIO -->
 <!-- modales-->
-<button type="button" class="modals btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal1" data-bs-whatever="@mdo">+</button> 
-<button type="button" class="modals btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2" data-bs-whatever="@fat">A</button>
-<button type="button" class="modals btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal3" data-bs-whatever="@getbootstrap">-</button> 
+<button type="button" class="fas fa-user-plus modals btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal1" data-bs-whatever="@mdo"></button> 
+<button type="button" class="fas fa-user-edit modals btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2" data-bs-whatever="@fat"></button>
+<button type="button" class="fas fa-user-times modals btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal3" data-bs-whatever="@getbootstrap"></button> 
 
 
 <!-- FIN DE MODALES --> 
@@ -143,7 +165,8 @@
            <label for="dnuevo" class="emerge col-form-label">Campo nuevo:</label>
            <input type="text" class="emerge dnuevo" id="dnuevo" name="dnuevo">
          </div>
-
+         <br>
+        <label for=""><i>Si desea cambiar la contraseña el campo es: password</i></label>
       
      </div>
      <div class="modal-footer">
@@ -194,7 +217,7 @@
 
 -->
             
-            <a class="btn btn-light fas fa-user" href="login.html"></a>
+            <a class="btn btn-light fas fa-sign-out-alt" href="../../Servidor/logout.php"></a>
             
 
             </div>
@@ -205,102 +228,165 @@
     </header>
 
 
-    
     <div class="imagen">
-        <img  src="../imgs/logoimsaludrecortado.png"  alt="" style="width: 200px; text-align: center;">
+    <img  src="../imgs/logocompleto.png"  alt="" style="width: 150px; text-align: center;height: 50px">
+    </div>
+<br>
+    <!--
+
+    <center>
+   <h5>Gestion de usuarios</h5> 
+  </center>
+-->
+
+    <!-- AQUI IRA LA SECCION DE MOSTRAR EL CONTENIDO 10,20,50,100 -->
+
+  
+
+
+  
+<div class="row justify-content-md-center">
+
+  <div class="col-auto">
+                    <label for="num_registros" class="col-form-label">Mostrar:</label>
+  </div>
+
+    <div class="col-auto">
+                    <select name="num_registros" id="num_registros" class="form-select">
+                        <option value="10">10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select>
+   </div>
+
+   <div class="col-auto">
+                    <label for="num_registros" class="col-form-label">registros </label>
     </div>
 
 
 
-<div class="centrar">
+
+                <div class="col-md-4">
+                    <form action="" method="post">
+                        <input clas="form-control" type="text" name="campo" id="campo">
+                    </form>
+                </div>
+          
+
+
+</div>
+
+
+    <main>
+        <div class="container py-1 text-center">
+            <div class="row py-1">
+                <div class="col">
+                    <table class="table table-success table-striped">
+                        <thead>
+                            <th>NOMBRE</th>
+                            <th>CEDULA</th>
+                            <th>SUPERVISOR</th>
+                            <th>FECHAFINALCONTRATO</th>
+                            <th>SUPERVISOR</th>
+                            <th>EMAIL</th>
+                            <th>ROL</th>
+                           
+                        </thead>
+
+                        <!-- El id del cuerpo de la tabla. -->
+                        <tbody id="content">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+<!-- AQUI VA PAGINACION -->
+
+<div class="row">
+                <div class="col-6">
+                    <label id="lbl-total"></label>
+                    PAGINACION
+                </div>
+
+            <div class="col-6" id="nav-paginacion"></div>
+            </div>
+ </div>
+
+<!--FIN DE PAGINACION -->
+</main>
+
+
+
+<!-- script viejo de busqueda -->
+<!-- Optimizandolo para paginacion -->
+    <script>
+       let paginaActual = 1
+        /* Llamando a la función getData() */
+        getData(paginaActual)
+
+        /* Escuchar un evento keyup en el campo de entrada y luego llamar a la función getData. */
+        document.getElementById("campo").addEventListener("keyup", function() {
+          getData(1)
+        }, false)
+        document.getElementById("num_registros").addEventListener("change", function() {
+            getData(paginaActual)
+        }, false)
+        //
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        /* Peticion AJAX */
+        function getData(pagina) {
+
+
+            let input = document.getElementById("campo").value
+            let num_registros = document.getElementById("num_registros").value
+            let content = document.getElementById("content")
+            let url = "../../Servidor/load.php" 
+
+
+            if (pagina != null) {
+                paginaActual = pagina
+            }
         
-        <div class="centrar1 col-sm-10 col-md-10 col-lg-10 col-xl-10">
-        <input type="search" name="" id="">
-        <button>Busqueda</button>
-            <div class="container form-control form-control" >
-            <div class="row">
-                
-
-      
-           
-            <table class="table table-success table-striped">
-            <form action="">   
-
-                    <tr class="tre">
-                    <th>NOMBRE</th>
-                    <th>CEDULA</th>
-                    <th>CARGO</th>
-                    <th>PERIODO</th>
-                    <th>SUPERVISOR</th>
-                    <th>EMAIL</th>
-                    <th>ROL</th>
-                 
-                    </tr>
 
 
-
-            <?php
-            include '../../Servidor/conexion.php';
-            $consulta="SELECT * from usuarios_registrados";
-            $resultado=mysqli_query($mysqli,$consulta);
-                    if($resultado){ while($row = $resultado->fetch_array()){
-                        $nombre = $row['nombre'];
-                        $cedula = $row['cedula'];
-                        $cargo = $row['cargo'];
-                        $fechafinalcontrato = $row['fechafinalcontrato'];
-                        $supervisor = $row['supervisor'];
-                        $email = $row['email'];
-                        $rol = $row['rol'];
-                        //$ima
-                
-                        ?>
-                        
-                    <tr>
-                    <td><b><?php echo $nombre;?></b></td>
-                    <td><b><?php echo $cedula; ?></b></td>
-                    <td><?php echo $cargo; ?></td>
-                    <td><?php echo $fechafinalcontrato;?></td>
-                    <td><?php echo $supervisor; ?></td>
-                    <td><?php echo $email; ?></td>
-                    <td><?php echo $rol; ?></td>
-                    
-                  
-                     </td>
-                    </tr>
-                    <?php 
-                    }
-                    
-                     }  ?>
-               
-
-               </form>   
-            </table>
-           
-
-                    
-              
-         
-          </div>
-          </div>
-          </div>
-          </div>
+            //AQUI YA NO FUNCIONA
+           // let url = "load.php"
+            let formaData = new FormData()
+            formaData.append('campo', input)
+            formaData.append('registros', num_registros)
+            formaData.append('pagina', paginaActual)
 
 
-      <footer>
-        <nav aria-label="Page navigation example">
-            <ul class="pagination">
-              <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item"><a class="page-link" href="#">Next</a></li>
-            </ul>
-          </nav>
-      </footer>
+            fetch(url, {
+                    method: "POST",
+                    body: formaData
+                }).then(response => response.json())
+                .then(data => {
+                    content.innerHTML = data
+                    document.getElementById("lbl-total").innerHTML = 'Mostrando ' + data.totalFiltro +
+                        ' de ' + data.totalRegistros + ' registros'
+                    document.getElementById("nav-paginacion").innerHTML = data.paginacion
+                }).catch(err => console.log(err))
+        }
+
+
+    </script>
+<!-- SCRIPT VIEJO DE BUSQUEDA -->
 
 
 
 
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    </body>
+
+    <!-- Bootstrap core JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</body>
+
 </html>
