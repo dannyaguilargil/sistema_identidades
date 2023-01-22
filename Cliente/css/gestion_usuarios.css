@@ -1,6 +1,5 @@
 .centrar{
     display: flex;
-    
     justify-content: center;
     margin-top: 30px;
     align-items: center;
@@ -8,7 +7,6 @@
 }
 .imagen{
     display: flex;
-    
     justify-content: center;
     margin-top: 5px;
     align-items: center;
@@ -49,3 +47,8 @@ input{
     text-align: center;
     color: black;
 }
+/* PENDIENTE PADDING
+.fa-sign-out-alt{
+    padding-right: 20px;
+}
+*/
