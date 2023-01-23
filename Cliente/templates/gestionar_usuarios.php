@@ -20,7 +20,7 @@
 <div class="container-fluid">
 
 <!-- <li class="nav-item dropdown"> -->
-<a class="fas fa-phone-laptop nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color=green;background:white;">
+<a class="fas fa-phone-laptop nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="background:white;color:black">
 Sistemas
 </a>
 <ul class="dropdown-menu">
@@ -217,7 +217,7 @@ Sistemas
 
 -->
             
-            <a class="btn btn-light fas fa-sign-out-alt" href="../../Servidor/logout.php"></a>
+            <a class="btn btn-light fas fa-sign-out-alt" href="../../Servidor/logout.php" style="padding: 4px;margin-right: 4px;"></a>
             
 
             </div>
