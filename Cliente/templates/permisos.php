@@ -20,7 +20,7 @@ $tomador='';
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="../css/gestion_usuarios.css">
-    <link rel="icon" href="imgs/logoimsaludrecortado.ico">
+    <link rel="icon" href="../imgs/escudito.ico">
     <title>Gestion de permisos</title>
 </head>
 <body>
@@ -30,15 +30,15 @@ $tomador='';
             <div class="container-fluid">
 
            <!-- <li class="nav-item dropdown"> -->
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color=green;background:white;">
+          <a class="fas fa-phone-laptop nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="background: white; color:black;">
             Sistemas
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="sistemas_admin_aprobados.php" style="">Sistemas aprobados</a></li>
-            <li><a class="dropdown-item" href="sistemas_admin_pendientes.php">Sistemas pendientes</a></li>
-            <li><a class="dropdown-item" href="permisos.php">Revisar permisos</a></li>
-            <li><a class="dropdown-item" href="notificar_sistema.php">Notificar sistema aprobado</a></li>
-            <li><a class="dropdown-item" href="sistemas_supervisor_admin.php">Opcion de supervisor</a></li>
+            <li><a class="fas fa-hospital-user dropdown-item" href="sistemas_admin_aprobados.php" style="">Sistemas aprobados</a></li>
+            <li><a class="far fa-user-md-chat dropdown-item" href="sistemas_admin_pendientes.php">Sistemas pendientes</a></li>
+            <li><a class="fal fa-user-shield dropdown-item" href="permisos.php">Revisar permisos</a></li>
+            <li><a class="fas fa-comment-medical dropdown-item" href="notificar_sistema.php">Notificar sistema aprobado</a></li>
+            <li><a class="fas fa-user-hard-hat dropdown-item" href="sistemas_supervisor_admin.php">Opcion de supervisor</a></li>
           </ul>
       <!--  </li> -->
 
@@ -49,17 +49,17 @@ $tomador='';
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="perfil.php">Mi perfil</a>
+                    <a class="far fa-user-cog nav-link" aria-current="page" href="perfil.php">Mi perfil</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="pazysalvo.php" disabled>Paz y salvo</a>
+                    <a class="fas fa-id-card nav-link" href="pazysalvo.php" disabled>Paz y salvo</a>
                   </li>
 
                   <li class="nav-item">
-                    <a class="nav-link" href="validar_usuarios.php" disabled>Accesos</a>
+                    <a class="far fa-user-check nav-link" href="validar_usuarios.php" disabled>Accesos</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="gestionar_usuarios.php" disabled>Gestion de usuarios</a>
+                    <a class="fas fa-users nav-link" href="gestionar_usuarios.php" disabled>Gestion de usuarios</a>
                   </li>
                 </ul>
               </div>

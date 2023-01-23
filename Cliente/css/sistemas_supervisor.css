@@ -82,5 +82,7 @@ input{
     color: rgb(41, 160, 41);
     
 }
-
+.darkmode .carita{
+    color: white;
+}
 /* FINALIZA MODO DARK*/

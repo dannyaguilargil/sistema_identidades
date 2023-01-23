@@ -16,8 +16,8 @@ include '../../Servidor/conexion.php';
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="../css/valida_usuarios2.css">
-    <link rel="icon" href="imgs/logoimsaludrecortado.ico">
-    <title>Iniciar Sesion</title>
+    <link rel="icon" href="../imgs/escudito.ico">
+    <title>Validar usuarios</title>
 </head>
 <body>
   
@@ -74,12 +74,12 @@ include '../../Servidor/conexion.php';
 
     
     <div class="imagen">
-        <img  src="../imgs/logoimsaludrecortado.png"  alt="" style="width: 200px; text-align: center;">
+        <img  src="../imgs/logocompleto.png"  alt="" style="width: 200px; text-align: center;">
         
     </div>
 <br>
     <center>
-      <h5>Gestion de Accesos al sistema</h5>
+      <h5>Gestión de Accesos al sistema</h5>
     </center>
 <br>
 
@@ -293,7 +293,7 @@ include '../../Servidor/conexion.php';
 
           form.addEventListener("submit", e=>{
          
-            if(nombre.value.length<10){
+            if(nombre.value.length<6){
               console.log("entro al condicional")
               e.preventDefault()
               swal("NO ENVIADO!", "NO HAY USUARIOS PENDIENTES!", "error");

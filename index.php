@@ -12,7 +12,7 @@ include 'Servidor/conexion.php';
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="Cliente/css/index2.css">
-    <link rel="icon" href="Cliente/imgs/logoimsaludrecortado.ico">
+    <link rel="icon" href="Cliente/imgs/escudito.ico">
     <title>Iniciar Sesion</title>
 </head>
 <body">
@@ -26,9 +26,9 @@ include 'Servidor/conexion.php';
             <!-- <h3 class="text-center">Iniciar sesion</h3> -->
             <div class="form-control textoI">
             <form action="index.php" method="post">
-            <label class="TT" for="nombre">Usuario</label>
+            <label class="TT" for="nombre"><b>Usuario</b></label>
             <input type="text" class="form-control" name="nombre" id="nombre" required><br>
-            <label class="TT" form="password">Contraseña</label>
+            <label class="TT" form="password"><b>Contraseña</b></label>
             <input type="password" class="form-control" name="password" id="password" required><br>
             
 
@@ -36,7 +36,7 @@ include 'Servidor/conexion.php';
 
             
             <div class="boton">
-            <input type="submit" class="text-center btn btn-success" name="login" value="login">
+            <input type="submit" class="text-center btn btn-success" name="login" value="Login"> <!--negrilla -->
             </div> <br>
             <p><a  class="TT1" href="Cliente/templates/login_acceso.php" id="" style="color: grey;">Solicitar usuario</a></p>
             </form>

@@ -15,7 +15,8 @@ session_start();
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="../css/pazysalvo.css">
-    <title>Datos de Usuario</title>
+    <link rel="icon" href="../imgs/escudito.ico">
+    <title>Paz y salvo</title>
 </head>
 <body>
     <header class="">
@@ -68,7 +69,7 @@ session_start();
     
    
 
-
+<br> <br> 
 
 <div class="centrar">
 
@@ -84,7 +85,7 @@ session_start();
             <img  src="../imgs/logoimsaludrecortado.png"  alt="" style="width: 200px; text-align: center;">
         </div>
         <br>
-            <center><h6 class="">Generar paz y salvo</h6> </center>
+            <center><h6 class="">Generar paz y salvo</h6></center>
             <!-- AQUI DEBO CARGAR LOS DATOS ANTERIORES DEL MISMO USUARIO-->
 
            
@@ -227,7 +228,7 @@ if($resultado){ while($row = $resultado->fetch_array()){
                 <!-- ANTIGUO DESCARGA DEL PAZ Y SALVO
                 <a target="_blank" href="../../Servidor/generapdf.php" class="btn btn-warning">Descargar</a>
               -->
-                <button type="submit" class="btn btn-warning" name="generar" id="generar">Descargar paz y salvo</button>
+                <button type="submit" class="btn btn-success" name="generar" id="generar"><b>Descargar paz y salvo</b></button>
                 <?php
               }
               else{

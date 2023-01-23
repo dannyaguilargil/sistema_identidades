@@ -67,7 +67,7 @@ try {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="../css/notificar_sistema.css">
-    <link rel="icon" href="imgs/logoimsaludrecortado.ico">
+    <link rel="icon" href="../imgs/escudito.ico">
     <title>Notificar sistema</title>
 </head>
 <body>
@@ -78,7 +78,7 @@ try {
             <div class="container-fluid">
 
            <!-- <li class="nav-item dropdown"> -->
-          <a class="fas fa-phone-laptop  nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color=green;background:white;">
+          <a class="fas fa-phone-laptop  nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="background:white; color:black;">
             Sistemas
           </a>
           <ul class="dropdown-menu">
@@ -233,7 +233,7 @@ try {
                 </div>
 
                 <div class="col">
-                <button class="btn btn-warning">Notificar</button>
+                <button class="btn btn-success">Notificar</button>
                 </div>
 
 

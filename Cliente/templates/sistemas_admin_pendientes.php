@@ -33,7 +33,7 @@ if($totalr<1){
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="../css/solicitud_usuario.css">
-    <link rel="icon" href="imgs/logoimsaludrecortado.ico">
+    <link rel="icon" href="../imgs/escudito.ico">
     <title>Sistemas administrador</title>
 </head>
 <body>
@@ -44,7 +44,7 @@ if($totalr<1){
             <div class="container-fluid">
 
            <!-- <li class="nav-item dropdown"> -->
-          <a class="fas fa-phone-laptop  nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color=green;background:white;">
+          <a class="fas fa-phone-laptop  nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="background:white;color:black;">
             Sistemas
           </a>
           <ul class="dropdown-menu">
@@ -190,7 +190,7 @@ if($totalr<1){
 
 
           <div class="container notificador">
-          <button type="button" class="btn btn-warning position-relative">
+          <button type="button" class="btn btn-success position-relative"> <!-- negrilla -->
           Total
           <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
           <?php echo $totalr; ?>

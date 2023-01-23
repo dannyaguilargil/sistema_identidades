@@ -15,7 +15,7 @@ session_start();
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="../css/solicitud_usuario.css">
-    <link rel="icon" href="imgs/logoimsaludrecortado.ico">
+    <link rel="icon" href="../imgs/escudito.ico">
     <title>Solicitar sistema supervisor</title>
 </head>
 <body>
@@ -23,10 +23,10 @@ session_start();
 <header class="">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
-            <div class="container-fluid">
+            <div class="container-fluid" style="">
 
            <!-- <li class="nav-item dropdown"> -->
-          <a class="fas fa-phone-laptop nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color=green;background:white;">
+          <a class="fas fa-phone-laptop nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" style="color: black; background: white;">
             Sistemas
           </a>
           <ul class="dropdown-menu">
@@ -82,6 +82,7 @@ session_start();
          
                     
     </header>
+    
 
     <div class="imagen">
     <img  src="../imgs/logocompleto.png"  alt="" style="width: 130px; text-align: center;height: 50px">
@@ -166,7 +167,7 @@ session_start();
             </center> 
 
           <div class="container notificador">
-          <button type="button" class="btn btn-primary position-relative">
+          <button type="button" class="btn btn-success position-relative">
            Total
           <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
           <?php echo $totalr; ?>

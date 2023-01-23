@@ -15,8 +15,8 @@ session_start();
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="../css/valida_usuarios2.css">
-    <link rel="icon" href="imgs/logoimsaludrecortado.ico">
-    <title>Iniciar Sesion</title>
+    <link rel="icon" href="../imgs/escudito.ico">
+    <title>Validar usuarios pruebas</title>
 </head>
 <body>
   
