@@ -20,7 +20,7 @@
             <div class="container-fluid">
 
            <!-- <li class="nav-item dropdown"> -->
-          <a class="fas fa-phone-laptop nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color=green;background:white;">
+          <a class="fas fa-phone-laptop nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="background: white; color:black;">
             Sistemas
           </a>
           <ul class="dropdown-menu">
@@ -37,15 +37,15 @@
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="perfil_admin.php">Mi perfil</a>
+                    <a class="far fa-user-cog nav-link" aria-current="page" href="perfil_admin.php">Mi perfil</a>
                   </li>
                  
 
                   <li class="nav-item">
-                    <a class="nav-link" href="validar_usuarios.php" disabled>Accesos</a>
+                    <a class="fas fa-id-card nav-link" href="validar_usuarios.php" disabled>Accesos</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="gestionar_usuarios.php" disabled>Gestion de usuarios</a>
+                    <a class="fas fa-users nav-link" href="gestionar_usuarios.php" disabled>Gestion de usuarios</a>
                   </li>
                 </ul>
               </div>
@@ -78,18 +78,15 @@
 <div class="centrar">
 
 
- 
 
-        <div class="centrar1 col-sm-6 col-md-6 col-lg-6 col-xl-6">
 
-         
-   <div class="form-control form-contro" >
-    <p>
-    <a class="btn btn-warning" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+<div class="centrar1 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+<div class="form-control form-contro" >
+    <a class="btn btn-outline-dark" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
     Solicitudes
     </a>
-    <a href="pazysalvo_aprobados.php" class="btn btn-success">Ver aprobados</a>
-    </p>
+    <a href="pazysalvo_aprobados.php" class="btn btn-outline-dark">Ver aprobados</a>
+  
 
 
     
@@ -121,11 +118,13 @@ echo $cedula; ?> <br> <?php
 
   </div>
 </div>
+
+
             <!-- AQUI VA UN POPUP QUE SE DESLIZA PARA VER QUIEN SOLICITO PAZ Y SALVO-->
             <!-- Y CON ESA CEDULA SE LE APRUEBA  -->
 <br>
       
-            <h5 class="TT2">Generar paz y salvo</h5> 
+          
             <!-- AQUI DEBO CARGAR LOS DATOS ANTERIORES DEL MISMO USUARIO-->
 
             <div class="contt">
@@ -134,11 +133,11 @@ echo $cedula; ?> <br> <?php
 
 
 
-            <div class="textoI">
+            <div class="">
                 
-              <div class="textoI1">
-                <label class="TT3" for="cedula">Cedula: </label>
-                <input type="text" class="form-control" name="cedula" id="cedula"><br>
+              <div class="">
+                <label class="TT3" for="cedula">Cedula: </label> <br>
+                <input type="text" class="form-control" name="cedula" id="cedula" required><br>
               </div>
 
             <!-- AQUI DEBO HACERLO CON AJAX PARA HCER LA BUSQUEDA AUTOMATICA Y SABER QUE USUARIO ES-->
@@ -146,18 +145,21 @@ echo $cedula; ?> <br> <?php
 
             <div class="textoI">
               
-              <div class="textoI1">
-                <label for="rfid">Entrega de tarjeta RFID</label>
+              <div class="">
+                <label for="rfid">Entrega de tarjeta RFID</label> 
                 <input type="checkbox" value="SI" name="rfid" id="rfid" selected required>
               </div>
-             
-              <div class="textoI1">
-                <label for="equipos">Entrega de equipos en buen estado</label>
+             <br>
+              <div class="">
+                <label for="equipos">Entrega de equipos</label>
                 <input type="checkbox" value="SI" name="equipos" id="equipos" selected required>
               </div>
+
+
+              
+              <button type="submit" class=" btn btn-danger bnn" onclick="moddatos()">Generar</button>
               </div>
               
-              <button type="submit" class="text-center btn btn-danger bnn" onclick="moddatos()">Generar</button>
               
 
       

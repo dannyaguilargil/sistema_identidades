@@ -23,15 +23,15 @@
             <div class="container-fluid">
 
            <!-- <li class="nav-item dropdown"> -->
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color=green;background:white;">
+          <a class="fas fa-phone-laptop nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="background:white;color:black;">
             Sistemas
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#" style="">Sistemas aprobados</a></li>
-            <li><a class="dropdown-item" href="sistemas_admin_pendientes.php">Sistemas pendientes</a></li>
-            <li><a class="dropdown-item" href="permisos.php">Revisar permisos</a></li>
-            <li><a class="dropdown-item" href="#">Notificar sistema aprobado</a></li>
-            <li><a class="dropdown-item" href="sistemas_supervisor_admin.php">Opcion de supervisor</a></li>
+            <li><a class="fas fa-phone-laptop dropdown-item" href="sistemas_admin_aprobados.php" style="">Sistemas aprobados</a></li>
+            <li><a class="fas fa-hospital-user dropdown-item" href="sistemas_admin_pendientes.php">Sistemas pendientes</a></li>
+            <li><a class="far fa-user-md-chat dropdown-item" href="permisos.php">Revisar permisos</a></li>
+            <li><a class="fas fa-comment-medical dropdown-item" href="notificar_sistema.php">Notificar sistema aprobado</a></li>
+            <li><a class="fas fa-user-hard-hat dropdown-item" href="sistemas_supervisor_admin.php">Opcion de supervisor</a></li>
           </ul>
       <!--  </li> -->
 
@@ -40,18 +40,18 @@
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="perfil_admin.php">Mi perfil</a>
+                    <a class="far fa-user-cog nav-link" aria-current="page" href="perfil_admin.php">Mi perfil</a>
                   </li>
                  
 
                   <li class="nav-item">
-                    <a class="nav-link" href="validar_usuarios.php" disabled>Accesos</a>
+                    <a class="far fa-user-check nav-link nav-link" href="validar_usuarios.php" disabled>Accesos</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="gestionar_usuarios.php" disabled>Gestion de usuarios</a>
+                    <a class="fas fa-users nav-link nav-link" href="gestionar_usuarios.php" disabled>Gestion de usuarios</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="pazysalvo_admin.php" disabled>Generar Paz y salvo</a>
+                    <a class="fas fa-id-card nav-link" href="pazysalvo_admin.php" disabled>Generar Paz y salvo</a>
                   </li>
                 </ul>
               </div>
@@ -61,7 +61,7 @@
 
           
               <div class="form-check form-switch">
-                <label class="form-check-label" for="flexSwitchCheckChecked" style="color: white;">Modo oscuro</label>
+                <label class="form-check-label" for="flexSwitchCheckChecked" style="color: white;"></label>
                 <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"> 
                </div>
             
