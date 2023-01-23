@@ -37,7 +37,10 @@ include '../../Servidor/conexion.php';
                     <a class=" nav-link" href="pazysalvo_admin.php" disabled>Paz y salvo</a>
                   </li>
                   <li class="nav-item">
-                    <a class=" nav-link" href="perfil.php" disabled>Mi perfil</a>
+                    <a class=" nav-link" href="perfil_admin.php" disabled>Mi perfil</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class=" nav-link" href="gestionar_usuarios.php" disabled>Gestion de usuarios</a>
                   </li>
                 </ul>
               
@@ -293,7 +296,7 @@ include '../../Servidor/conexion.php';
             if(nombre.value.length<10){
               console.log("entro al condicional")
               e.preventDefault()
-              swal("NO ENVIADO!", "DIGITE NOMBRE COMPLETO!", "error");
+              swal("NO ENVIADO!", "NO HAY USUARIOS PENDIENTES!", "error");
              
             }
             else{
