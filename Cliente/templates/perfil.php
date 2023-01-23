@@ -1,6 +1,22 @@
 <?php
-
 session_start();
+include '../../Servidor/conexion.php'; 
+$tomador=$_SESSION['nombre'];
+$rolex=$_SESSION['rol'];
+
+//VALIDACION DEL ROL Y NOMBRE DE USUARIO POR SEGURIDAD POR FORMULARIO CON EL FIN DE ACCESOS NO AUTORIZADOS
+$totalr = ''; 
+$consulta3="SELECT COUNT(*) FROM usuarios_registrados WHERE nombre='$tomador';";
+$resultado3=mysqli_query($mysqli,$consulta3);
+   if($resultado3){ while($row = $resultado3->fetch_array()){
+      $totalr = $row['COUNT(*)'];
+      }
+    } 
+if($totalr<1){
+  header("Location: ../../index.php");
+}
+  
+//VALIDACION DEL ROL Y NOMBRE DE USUARIO POR SEGURIDAD
 
 
 

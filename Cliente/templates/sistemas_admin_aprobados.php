@@ -1,9 +1,24 @@
 <?php
 session_start();
 
+include '../../Servidor/conexion.php'; 
+$tomador=$_SESSION['nombre'];
+//$_SESSION['rol']='rol'
+$rolex=$_SESSION['rol'];
 
+//VALIDACION DEL ROL Y NOMBRE DE USUARIO POR SEGURIDAD POR FORMULARIO CON EL FIN DE ACCESOS NO AUTORIZADOS
+$totalr = ''; 
+$consulta3="SELECT COUNT(*) FROM usuarios_registrados WHERE nombre='$tomador';";
+$resultado3=mysqli_query($mysqli,$consulta3);
+   if($resultado3){ while($row = $resultado3->fetch_array()){
+      $totalr = $row['COUNT(*)'];
+      }
+    } 
+if($totalr<1){
+  header("Location: ../../index.php");
+}
 
-
+//echo $rol;
 ?>
 
 
@@ -66,14 +81,14 @@ session_start();
             
 
             
-
+<!--
 
               <div class="user" style="color: white">
-              ADMIN! <?php echo $_SESSION['nombre']; ?>
-             <?php $tomador=$_SESSION['nombre'] ?>
+              ADMIN! <?php// echo $_SESSION['nombre']; ?>
+             <?php// $tomador=$_SESSION['nombre'] ?>
               </div>
 
-          
+-->
               <div class="form-check form-switch">
                 <label class="form-check-label" for="flexSwitchCheckChecked" style="color: white;"></label>
                 <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"> 
