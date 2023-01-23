@@ -360,7 +360,7 @@ if($totalr<1){
             else{
               alert("ENVIADO CORRECTAMENTE SE LE NOTIFICARA AL ADMINISTRADOR");
               
-           
+            }
           })
       
         

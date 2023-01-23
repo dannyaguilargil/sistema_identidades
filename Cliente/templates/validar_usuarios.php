@@ -1,7 +1,7 @@
 <!-- VOY A PERMITIR PRIMERO REGISTRAR ESE USUARIO VALIDADO-->
 <?php
 session_start();
-
+include '../../Servidor/conexion.php'; 
 ?>
 
 
@@ -74,10 +74,43 @@ session_start();
         <img  src="../imgs/logoimsaludrecortado.png"  alt="" style="width: 200px; text-align: center;">
         
     </div>
-
-
 <br>
-<form action="../../Servidor/registrar_usuarios_validados.php" method="POST" class="container form-control" id="envio">
+    <center>
+      <h5>Gestion de Accesos al sistema</h5>
+    </center>
+<br>
+
+
+
+<?php
+    $totalr = ''; 
+  
+    //CONSULTA PARA LA NOTIFICACIONES 
+    //SELECT COUNT(*) FROM solicitud_sistema;
+    $consulta3="SELECT COUNT(*) from solicitud_usuario;";
+    $resultado3=mysqli_query($mysqli,$consulta3);
+        if($resultado3){ while($row = $resultado3->fetch_array()){
+           $totalr = $row['COUNT(*)'];
+           }
+     
+         } 
+  
+  ?>
+
+
+
+<div class="container notificador">
+          <button type="button" class="btn btn-dark position-relative">
+           En cola
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          <?php echo $totalr; ?>
+          <span class="visually-hidden">unread messages</span>
+          </span>
+          </button>
+</div>
+
+
+<form action="../../Servidor/registrar_usuarios_validados.php" method="POST" class="container form-control" id="form">
            
 
             <?php $nombrer='';
@@ -115,25 +148,74 @@ session_start();
                   } ?>
 
                   <?php if($nombrer==''){
-                  ?><center style="color: grey;"> <b> <?php echo "No hay solicitudes actuales"; }?> </b>
-                  </center> 
+                  ?><center style="color: grey;"> <b class=""> <?php echo "No hay solicitudes actuales"; }?> </b>
+              </center> 
+
 
                       <!-- TRAERME LOS DATOS CON DIVS PARA EVITAR ERROR DE CONSULTA Y VALIDADOR-->
                       <!--   -->
+                      <br>
                    
-                    <input type="text" name="nombre" id="nombre" class="" value="<?php echo $nombrer?>">
-                    <input type="text" name="cedula" id="cedula" class="emerge" value="<?php echo $cedular?>">
-                    <input type="text" name="cargo" id="cargo" class="emerge" value="<?php  echo $cargor?>">
-                    <input type="text" name="fechafinalcontrato" id="fechafinalcontrato" class="emerge" value="<?php echo $fechafinalcontrator?>">
-                    <input type="text" name="supervisor" id="supervisor" class="emerge" value="<?php echo $supervisorr?>">
+                      <div class="row">
+                      <div class="col">
+                      <label class="">Nombre:</label> <br>
+                      <input type="text" name="nombre" id="nombre" class="emerge" value="<?php echo $nombrer?>">
+                      </div>
+
+                      <div class="col">
+                      <label class="">Cedula:</label> <br>
+                      <input type="text" name="cedula" id="cedula" class="emerge" value="<?php echo $cedular?>">
+                      </div>
+
+                      <div class="col">
+                      <label class="">Cargo:</label> <br>
+                      <input type="text" name="cargo" id="cargo" class="emerge" value="<?php  echo $cargor?>">
+                      </div>
+
+
+                      
+
+                      <div class="col">
+                        <br>
+                      <button type="submit" class="fa-sharp fa-solid fa-check btn btn-success" name="registro" id="registro"  onclick="envio();"></button>
+                      
+                      </div>
+
+
+                      
+                      </div>
+
+                      <br>
+                      <div class="row">
+                      <div class="col">
+                      <label class="">Fecha final de contrato:</label> <br>
+                      <input type="text" name="fechafinalcontrato" id="fechafinalcontrato" class="emerge" value="<?php echo $fechafinalcontrator?>">
+                      </div>
+
+                      <div class="col">
+                      <label class="">Supervisor:</label> <br>
+                      <input type="text" name="supervisor" id="supervisor" class="emerge" value="<?php echo $supervisorr?>">
+                      </div>
+
+                      <div class="col">
+                      <label class="">Rol:</label> <br>
+                      <input type="text" name="rol" id="rol" class="emerge" value="<?php echo $rolr?>">
+                      </div>
+
+                      <div class="col">
+                        <br>
+                      <button type="submit" class="fa-sharp fa-solid fa-x btn btn-danger" name="eliminar" id="eliminar" onclick="envio();"></button>
+                      </div>
+                      </div>
+
+                    
+                    
+                    
                     <!-- OCULTO PARA LA GESTION RESPONSIVE
                     <input type="text" name="email" id="email" class="emerge" value="<?php echo $emailr?>">
                   -->
-                    <input type="text" name="rol" id="rol" class="emerge" value="<?php echo $rolr?>">
 
 
-                    <button type="submit" class="fa-sharp fa-solid fa-check btn btn-success" name="registro" id="registro"  onclick="envio();"></button>
-                    <button type="submit" class="fa-sharp fa-solid fa-x btn btn-danger" name="eliminar" id="eliminar" onclick="envio2();"></button>
 
                      <br> <br>
                     </div>
@@ -186,11 +268,48 @@ session_start();
 
 
 
-      <script>
+    <script>
       function envio(){
-        alert("SE AGREGARA EL USUARIO");
+          console.log("se ejecuto envio alerta 1");
+          const nombre = document.getElementById("nombre");
+         // const form = document.getElementById("form")
+        //  const tipodocumento = document.getElement("tipodocumento")
+        //  const cedula = document.getElementById("cedula")
+        //  const lugarexpedicion = document.getElementById("lugarexpedicion")
+        //  const sexo = document.getElementById("sexo")
+       // const telefono = document.getElementById("telefono")
+       // const celular = document.getElementById("celular")
+      //  const direccion = document.getElementById("direccion")
+        //  const cargo = document.getElementById("cargo")
+        //  const supervisor = document.getElementById("supervisor")
+        //  const correo = document.getElementById("correo")
+       // const ubicacion_laboral = document.getElementById("ubicacion_laboral")
+        //  const tiposolicitud = document.getElementById("tiposolicitud")
+        //  const aplicativo = document.getElementById("aplicativo")
+       // const observaciones = document.getElementById("observaciones")
+
+          form.addEventListener("submit", e=>{
+         
+            if(nombre.value.length<10){
+              console.log("entro al condicional")
+              e.preventDefault()
+              swal("NO ENVIADO!", "DIGITE NOMBRE COMPLETO!", "error");
+             
+            }
+            else{
+              alert("ENVIADO CORRECTAMENTE");
+              
+            }
+          });
+      
+        
+
+        
       }
-     
+
+
+     </script>
+
       
       <script>
       function envio2(){
@@ -198,6 +317,8 @@ session_start();
       }
 
      </script>
+      
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
       <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
        <script src="https://kit.fontawesome.com/9ea064c718.js" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

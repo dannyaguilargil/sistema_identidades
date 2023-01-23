@@ -112,17 +112,18 @@ session_start();
 
 
                   
-
+                  
                     <input type="text" name="nombre" id="nombre" class="emerge" value="<?php echo $nombrer?>">
                     <input type="text" name="cedula" id="cedula" class="emerge" value="<?php echo $cedular?>">
                     <input type="text" name="cargo" id="cargo" class="emerge" value="<?php  echo $cargor?>">
                     <input type="text" name="fechafinalcontrato" id="fechafinalcontrato" class="emerge" value="<?php echo $fechafinalcontrator?>">
                     <input type="text" name="supervisor" id="supervisor" class="emerge" value="<?php echo $supervisorr?>">
                     <input type="text" name="email" id="email" class="emerge" value="<?php echo $emailr?>">
-                    <input type="text" name="administrador" id="administrador" class="emerge" value="<?php echo $rolr?>">
+                    <input type="text" name="rol" id="rol" class="emerge" value="<?php echo $rolr?>">
                     
-                    <button type="submit" class="fa-sharp fa-solid fa-check btn btn-success" id="registro"  onclick="envio();"></button>
-                    <button  class="fa-sharp fa-solid fa-x btn btn-danger" id="registro" onclick="detener();"></button>
+                    <button type="submit" class="fa-sharp fa-solid fa-check btn btn-success" name="registro" id="registro"  onclick="envio();"></button>
+                    <button type="submit" class="fa-sharp fa-solid fa-x btn btn-danger" name="eliminar" id="eliminar" onclick="envio2();"></button>
+
                      <br> <br>
                     
                    
