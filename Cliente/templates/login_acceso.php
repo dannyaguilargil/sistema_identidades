@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
     <link rel="stylesheet" href="../css/estilos_login_acceso.css">
     <link rel="icon" href="imgs/logoimsaludrecortado.ico">
     <title>Iniciar Sesion</title>
@@ -16,7 +17,7 @@
 
     
     <div class="imagen">
-        <img  src="../imgs/logoimsaludrecortado.png"  alt="" style="width: 200px; text-align: center;">
+        <img  src="../imgs/logocompleto.png"  alt="" style="width: 200px; text-align: center;">
     </div>
 
 
@@ -27,7 +28,7 @@
             <a class="btn btn-warning fas fa-user-lock" href="../../index.php"></a>
             
             <center>
-                <h4>Solicitud de usuario</h4> <br>
+                <h5>Solicitud de usuario</h5> <br>
             </center>
             
             <form  action="../../Servidor/solicitud_usuario.php" method="POST">
@@ -124,13 +125,18 @@
 
 <script>
       function envio(){
-        alert("ENVIO EXITOSO");
+        //swal("Click on either the button or outside the modal.")
+//.then((value) => {
+//  swal(`The returned value is: ${value}`);
+//});
+
+alert("SE ENVIO CORRECTAMENTE, SE NOTIFICARA AL ADMINISTRADOR");
       }
      
      </script>
         
-    
-
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 </body>
