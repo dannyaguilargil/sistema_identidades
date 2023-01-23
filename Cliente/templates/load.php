@@ -92,7 +92,7 @@ if ($num_rows > 0) {
     }
 } else {
     $output['data'] .= '<tr>';
-    $output['data'] .= '<td colspan="7">Sin resultados</td>';
+    $output['data'] .= '<td colspan="7"><span class="fas fa-do-not-enter">Sin resultados</span></td>';
     $output['data'] .= '</tr>';
 }
 

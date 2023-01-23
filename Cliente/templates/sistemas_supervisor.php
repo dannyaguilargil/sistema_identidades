@@ -176,7 +176,7 @@ if($totalr<1){
             </center> 
 
 
-          <div class="notificador">
+          <div class="container notificador">
           <button type="button" class="btn btn-primary position-relative">
            Total
           <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">

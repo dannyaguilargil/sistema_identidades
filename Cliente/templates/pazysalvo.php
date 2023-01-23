@@ -136,14 +136,14 @@ if($resultado){ while($row = $resultado->fetch_array()){
             <div class="contt">
 
             <div class="textoI">
-              <div class="textoI1">
-                <label for="nombre" class="">Nombre</label>
-                <input type="text" class="form-control" name="nombre" id="nombre" value="<?php echo $nombrer?>"><br>
+              <div class="">
+                <label for="nombre" class="">Nombre</label> 
+                <input  style="text-align: center;" type="text" class="form-control" name="nombre" id="nombre" value="<?php echo $nombrer?>"> <br>
               </div>
               
-              <div class="textoI1">
+              <div class="">
                 <label  for="cedula"  class="">Cedula</label>
-                <input type="text" class="form-control" name="cedula" id="cedula" value="<?php echo $cedular ?>"><br>
+                <input style="text-align: center;" type="text" class="form-control" name="cedula" id="cedula" value="<?php echo $cedular ?>">
               </div>
 
            </div>

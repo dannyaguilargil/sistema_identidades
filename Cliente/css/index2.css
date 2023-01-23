@@ -8,14 +8,14 @@
     /* display: flex; */
     
     justify-content: center;
-    margin-top: 5px;
-    margin-left: 41%;
+    margin-top: 0.76103500761035vh; /*5px*/
+    margin-left: 73.82039573820396vh; /* 41 %  490px*/
     align-items: center;
     justify-content: left;
 }
 .textoI{
-    width: 250px;
-    margin-top: 20px;
+    width: 38.051750380517504vh; /* 250 px */
+    margin-top: 3.0441400304414vh; /* 20px */
     margin-left: 40%;
     align-items: center;
     justify-content: center;
@@ -84,4 +84,11 @@
         text-align: center;
     }
    
+}
+.form-control{
+    border-color: rgb(41, 160, 41);
+    border-style: dashed;
+}
+.form-control input{
+    border-style: solid;
 }

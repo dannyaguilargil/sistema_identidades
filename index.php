@@ -75,7 +75,7 @@ include 'Servidor/conexion.php';
         /* VALIDACION DE USUARIO SI NO ESTA EN LA BASE DE DATOS
         */
         if($num_row != 1){
-            ?> <center style="color:red;">  <?php  echo "ERROR DE CREDENCIALES"; ?></center> <?php
+            ?> <center style="color:red;"> <b class="fal fa-frown-open"> <?php  echo "ERROR DE CREDENCIALES"; ?></center></b> <?php
         }
 
         if($num_row == 1){

@@ -189,7 +189,7 @@ if($totalr<1){
               </center> 
 
 
-          <div class="notificador">
+          <div class="container notificador">
           <button type="button" class="btn btn-warning position-relative">
           Total
           <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
@@ -204,6 +204,7 @@ if($totalr<1){
 
 
             <div class="container form-control form-control" >
+              
             <h5 class="centrar">Solicitud de sistemas</h5>
 
 

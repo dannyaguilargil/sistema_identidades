@@ -31,6 +31,7 @@ if($totalr<1){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">    
     <link rel="stylesheet" href="../css/solicitud_usuario.css">
     <link rel="icon" href="imgs/logoimsaludrecortado.ico">
     <title>Solicitar sistema</title>
@@ -75,7 +76,7 @@ if($totalr<1){
               <!-- EJEMPLO DE MODO OSCURO -->
               <div class="form-check form-switch">
               <input class="form-check-input" type="checkbox" role="switch"  id="checkbox" onclick="setDarkMode();">
-              <label class="form-check-label" for="checkbox"></label>
+              <label class="fas fa-moon form-check-label" for="checkbox"></label>
                </div>
                
 
@@ -100,7 +101,7 @@ if($totalr<1){
             <h5 class="centrar">Solicitud de sistemas</h5>
 
 
-            <form action="../../Servidor/registrar_solicitud_sistema.php" method="POST">
+            <form action="../../Servidor/registrar_solicitud_sistema.php" method="POST" id="form">
 
 
                 <!--
@@ -250,14 +251,14 @@ if($totalr<1){
                
                 <div class="col">
                 <label for="observaciones" class="emerge">Observaciones</label> <br>
-                <input style="color: green;" type="text" name="observaciones" id="observaciones" class="obs emerge" placeholder="Digite para que requiere el permiso del sistema?"> 
+                <input style="color: green; height: 40px;" type="text" name="observaciones" id="observaciones" class="obs emerge" placeholder="Digite para que requiere el permiso del sistema?" required> 
                 </div>
 
                 <br> <br> <br>
                 <div class="row">
                 <div class="col">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked required>
                     <label class="form-check-label" for="flexCheckChecked">
                       Acepto tratamiento de datos  <a class="btn btn-white fad fa-eye" href="https://www.imsalud.gov.co/web/gobierno-digital/politicas-de-proteccion-de-datos-personales/"   target="_blank" ></a>
                     </label> <br>
@@ -266,14 +267,16 @@ if($totalr<1){
                 </div>
 
                 <div class="col">
-                <button class="btn btn-success" onclick="envio();">Solicitar</button>
+                <button class="btn btn-success" type="submit" onclick="envio();">Solicitar</button>
                 </div>
 
 
                 <div class="col">
-                
+                <p class="warnings"></p>
                 </div>
                 </div>
+
+              
 
             </form>
 
@@ -293,8 +296,79 @@ if($totalr<1){
 
      <script>
       function envio(){
-        alert("ENVIO EXITOSO");
+          console.log("se ejecuto envio alerta 1");
+          const nombre = document.getElementById("nombre");
+          const form = document.getElementById("form")
+        //  const tipodocumento = document.getElement("tipodocumento")
+        //  const cedula = document.getElementById("cedula")
+          const lugarexpedicion = document.getElementById("lugarexpedicion")
+        //  const sexo = document.getElementById("sexo")
+        const telefono = document.getElementById("telefono")
+        const celular = document.getElementById("celular")
+        const direccion = document.getElementById("direccion")
+        //  const cargo = document.getElementById("cargo")
+        //  const supervisor = document.getElementById("supervisor")
+        //  const correo = document.getElementById("correo")
+        const ubicacion_laboral = document.getElementById("ubicacion_laboral")
+        //  const tiposolicitud = document.getElementById("tiposolicitud")
+        //  const aplicativo = document.getElementById("aplicativo")
+        const observaciones = document.getElementById("observaciones")
+
+          form.addEventListener("submit", e=>{
+         
+            if(nombre.value.length<10){
+              console.log("entro al condicional")
+              e.preventDefault()
+              swal("NO ENVIADO!", "DIGITE NOMBRE COMPLETO!", "error");
+             
+            }
+            else if(lugarexpedicion.value.length<4){
+              console.log("entro al condicional")
+              e.preventDefault()
+              swal("NO ENVIADO!", "DIGITE LUGAR DE EXPEDICION!", "error");
+             
+            }
+            else if(telefono.value.length<5){
+              console.log("entro al condicional")
+              e.preventDefault()
+              swal("NO ENVIADO!", "DIGITE TELEFONO!", "error");
+             
+            } 
+            else if(celular.value.length<7){
+              console.log("entro al condicional")
+              e.preventDefault()
+              swal("NO ENVIADO!", "DIGITE CELULAR!", "error");
+             
+            } else if(direccion.value.length<8){
+              console.log("entro al condicional")
+              e.preventDefault()
+              swal("NO ENVIADO!", "DIGITE DIRECCION COMPLETA!", "error");
+             
+            }else if(ubicacion_laboral.value.length<4){
+              console.log("entro al condicional")
+              e.preventDefault()
+              swal("NO ENVIADO!", "DIGITE UBICACION LABORAL!", "error");
+             
+            }
+            else if(observaciones.value.length<15){
+              console.log("entro al condicional")
+              e.preventDefault()
+              swal("NO ENVIADO!", "DIGITE COMO MINIMO 15 CARACTERES EN OBSERVACIONES!", "error");
+             
+            }
+          
+            else{
+              alert("ENVIADO CORRECTAMENTE SE LE NOTIFICARA AL ADMINISTRADOR");
+            }
+           
+          })
+      
+        
+
+        
       }
+
+
      </script>
 
 
@@ -327,6 +401,8 @@ if($totalr<1){
         }
       </script>
 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
       <script src="../js/main.js"></script>
       <script src="../js/repetirdiv.js"></script>

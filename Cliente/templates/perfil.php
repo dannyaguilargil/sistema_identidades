@@ -49,7 +49,7 @@ session_start();
               <!-- EJEMPLO DE MODO OSCURO -->
               <div class="form-check form-switch">
               <input class="form-check-input" type="checkbox" role="switch"  id="checkbox" onclick="setDarkMode();">
-              <label class="form-check-label" for="checkbox"></label>
+              <label class="fas fa-moon form-check-label" for="checkbox"></label>
               </div>
             
             <a class="btn btn-light fas fa-sign-out-alt" href="../../Servidor/logout.php"></a>
@@ -63,29 +63,10 @@ session_start();
 
 
 
-    
-   
 
 
-
-<div class="centrar">
-
-
- 
-
-        <div class="centrar1 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-
-         
-            <div class="form-control form-contro" >
-
-        <div class="imagen">
-            <img  src="../imgs/logoimsaludrecortado.png"  alt="" style="width: 200px; text-align: center;">
-        </div>
-        <br>
-            <center><h6 class=""><b>Modificacion de datos del perfil</b></h6> </center>
             <!-- AQUI DEBO CARGAR LOS DATOS ANTERIORES DEL MISMO USUARIO-->
 
-            <form action="../../Servidor/actualizar_usuario_perfil.php" method="POST">
 
             <?php include '../../Servidor/conexion.php'; 
             //codigo php para carga datos del perfil y luego ser modificados
@@ -108,66 +89,96 @@ session_start();
 
 
 
+<div class="centrar">
+  <div class="centrar1 col">
+    <form action="../../Servidor/actualizar_usuario_perfil.php" method="POST"  id="formulario">
+       <div class="container form-control" >
 
 
 
+       
 
-            <div class="contt">
 
-            <div class="textoI">
-              <div class="textoI1">
+        <div class="imagen">
+            <img  src="../imgs/logoimsaludrecortado.png"  alt="" style="width: 200px; text-align: center;">
+        </div>
+       <br>
+
+            <center><h6 class=""><b>Modificacion de datos del perfil</b></h6> </center>
+
+<br>
+
+        <div class="row">
+
+
+            <div class="col">
+              <div class="">
                 <label for="nombre" class="">Nombre</label>
                 <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Digite nombre" value="<?php echo $nombrer;?>"><br>
               </div>
+            </div>
               
-             
-              
-              <div class="textoI1">
+              <div class="col">
                 <label for="cargo" class="">Cargo</label>
                 <input type="text" class="form-control" name="cargo" id="cargo" placeholder="Digite cargo" value="<?php echo $cargor;?>"><br>
               </div>
+                  
 
 
-              <div class="textoI1">
-                <!-- EN EL LABEL IBA EL ESTILO TT3 PERO SE VE MUY SEPARADO-->
-                <label class=""><b>Contraseña anterior</b></label>
-                <input type="password" class="form-control" name="telefono" id="telefono1" placeholder="Digite actual"><br>
+              <div class="col">
+                <label for="supervisor" class="">Supervisor</label>
+                <input type="text" class="form-control" name="supervisor" id="supervisor" placeholder="Supervisor" value="<?php echo $supervisorr;?>"><br>
               </div>
 
-           </div>
 
-            <div class="textoI">
-              <div class="textoI1">
+             
+        </div>
+
+
+          <div class="row">
+              <div class="col">
                 <label for="fechafinalcontrato" class="">Fecha final de contrato</label>
                 <input type="date" class="form-control" name="fechafinalcontrato" id="fechafinalcontrato" value="<?php echo $fechafinalcontrator;?>"><br>
               </div>
               
-              <div class="textoI1">
-                <label for="supervisor" class="">Supervisor</label>
-                <input type="text" class="form-control" name="supervisor" id="supervisor" placeholder="Supervisor" value="<?php echo $supervisorr;?>"><br>
+             
+          <!-- CAMBIOS EN LA VALIDACION DE LAS DOS CONTRASEÑAS -->
+          <div class="col" id=grupo__password>
+              <label class="" for="password">Cambio de contraseña</label>
+              <div class="formulario__grupo-input">
+                <input type="password" class="form-control formulario__input" name="password" id="password" placeholder="Digite contraseña nueva">
+                <i class="formulario__validacion-estado fas fa-time-circle"></i>
+              </div>
+              <p class="formulario__input-error">La contraseña debe ser de 4 a 12 digitos</p> 
+           </div>
+           <!-- CAMBIOS EN LA VALIDACION DE LAS DOS CONTRASEÑAS -->
+
+
+
+
+              <!-- CAMBIOS EN LA VALIDACION DE LAS DOS CONTRASEÑAS -->
+              <div class="col" id=grupo__password2>
+                <label for="password2" class="">Cambio de contraseña</label>
+                <div class="formulario__grupo-input">
+                <input type="password" class="form-control formulario__input" name="password2" id="password2" placeholder="Repetir contraseña nueva">
+                <i class="formulario__validacion-estado fas fa-time-circle"></i>
+                </div>
+                <p class="formulario__input-error">Ambas contraseñas deben ser iguales</p> 
               </div>
               
-              <div class="textoI1">
-                <label for="password" class=""><b>Contraseña nueva</b></label>
-                <input type="password" class="form-control" name="password" id="password" placeholder="Digite nueva">
-                
+                    <!--CAMBIOS EN LA VALIDACION DE LAS DOS CONTRASEÑAS -->
+              
               </div>
-              
-        
-              
+           
+         
 
-            </div>
-          </div>
-
-            
-              <center><button type="submit" class="text-center btn btn-success" onclick="envio()">Modificar</button></center>
-              
-            
-            </div>
-            </form>
+            <br>
+            <center><button type="submit" class="formulario__btn text-center btn btn-success" onclick="envio()">Modificar</button></center>
+          
         </div>
-
-      </div>
+    </form>
+  </div>
+</div>
 
         
 
@@ -213,7 +224,10 @@ session_start();
 
 <!---->
 
-
+  <script src="../js/formulario.js"></script>
+  <!--
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+      -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script src="../js/main.js"></script>
   <script src="../js/repetirdiv.js"></script>
