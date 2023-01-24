@@ -204,8 +204,7 @@ session_start();
                 </div>
                 </div>
 
-
-                <br> 
+                <br>
                 <h6><b>Sistema de informacion requerido</b></h6> 
                 <div class="row">
                 <div class="col">

@@ -99,7 +99,6 @@ if($totalr<1){
             Sistemas
           </a>
           <ul class="dropdown-menu">
-            <li><a class="fas fa-hospital-user dropdown-item" href="sistemas_admin_aprobados.php" style="">Sistemas aprobados</a></li>
             <li><a class="far fa-user-md-chat dropdown-item" href="sistemas_admin_pendientes.php">Sistemas pendientes</a></li>
             <li><a class="fal fa-user-shield dropdown-item" href="permisos.php">Revisar permisos</a></li>
             <li><a class="fas fa-comment-medical dropdown-item" href="notificar_sistema.php">Notificar sistema aprobado</a></li>
@@ -125,6 +124,9 @@ if($totalr<1){
                   </li>
                   <li class="nav-item">
                     <a class="fas fa-users nav-link" href="gestionar_usuarios.php" disabled>Gestion de usuarios</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="fas fa-hospital-user nav-link" href="sistemas_admin_aprobados.php" disabled target="_blank">Sistemas aprobados</a>
                   </li>
                 </ul>
               </div>

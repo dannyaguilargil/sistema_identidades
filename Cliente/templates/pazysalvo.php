@@ -37,7 +37,7 @@ if($totalr<1){
         <nav class="navbar navbar-expand-lg navbar-light bg-light" >
 
             <div class="container-fluid">
-              <a class="fas fa-id-card navbar-brand " href="login.html">Paz y salvo</a>
+              <a class="fas fa-id-card navbar-brand " href="pazysalvo.php">Paz y salvo</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -146,7 +146,7 @@ if($resultado){ while($row = $resultado->fetch_array()){
 ?>
 
 
-          <form action="../../Servidor/pazysalvoregistrar_solicitud.php" method="POST">
+          <form action="../../Servidor/pazysalvoregistrar_solicitud.php" method="POST" id="form">
 
             <div class="contt">
 
@@ -172,11 +172,11 @@ if($resultado){ while($row = $resultado->fetch_array()){
                 <?php
                 //CODIGO PHP PARA DESABILITAR EL DISABLED O HABILITARLO
                 if($revocar_permisos=='SI' or $revocar_permisos=='INACTIVO'){
-                  ?><input class="check"  type="checkbox"  value="" disabled checked>
+                  ?><input class="check"  type="checkbox"  value="SI" disabled checked id="revoca_permisos">
                   <?php
                 }
                 else{
-                  ?><input class="check"  type="checkbox" name="revocar_permisos" value="SI" id="revocar_permisos">
+                  ?><input class="check"  type="checkbox" name="revocar_permisos" value="SI" id="revocar_permisos" onclick="envioo();">
                   <?php
                 }
 
@@ -285,14 +285,46 @@ if($resultado){ while($row = $resultado->fetch_array()){
 
 
 
-<!---->
+<!---
 <script>
       function envio(){
         alert("PAZ Y SALVO SOLICITADO");
       }
      </script>
+    -->
+
+<script>
+      function envio(){
+          console.log("se ejecuto envio alerta 1");
+          const revoca_permisos = document.getElementById("revoca_permisos");
 
 
+          form.addEventListener("submit", e=>{
+         
+            if(revoca_permisos.value.length>1){
+              console.log("entro al condicional")
+              e.preventDefault()
+              swal("NO ENVIADO!", "YA REALIZO SOLICITUD, EL ADMINISTRADOR DEBE APROBAR EL PAZ Y SALVO!", "error");
+             
+            }
+          
+            else{
+              alert("ENVIADO CORRECTAMENTE SE LE NOTIFICARA AL ADMINISTRADOR");
+              
+            }
+          })
+      
+        
+
+        
+      }
+
+
+     </script>
+
+
+
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
       <script src="../js/main.js"></script>
       <script src="../js/repetirdiv.js"></script>

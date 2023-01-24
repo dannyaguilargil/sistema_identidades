@@ -1,0 +1,94 @@
+*{
+    background-color: f8f8f8;
+ 
+}
+.container-fliud a{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.centrar{
+    display: flex;
+    
+    justify-content: center;
+    margin-top: 30px;
+    align-items: center;
+}
+.imagen{
+    display: flex;
+    
+    justify-content: center;
+    margin-top: 5px;
+    align-items: center;
+}
+footer{
+    text-align: right;
+    position: absolute;
+    bottom: 0px;
+    right: 2px;
+}
+input{
+    width: 220px;  
+}
+
+.obs{
+    width: 380px;
+}
+.centrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.user{
+    padding-right: 26px;
+}
+
+/* MODO DARK*/
+.darkmode{
+    background-color: #292929;
+    color: white;
+}
+.darkmode nav{
+    background: #292929;
+    color: white;
+}
+.darkmode body{
+    background-color: #292929;
+    color: white;
+}
+/* ESTE DARKMODE SOLO APLICA PARA EL TITULO DE CENTRAR
+.darkmode .centrar{
+    background-color: #292929;
+    color: white;
+}
+*/
+.darkmode .navbar{
+    color: green;
+}
+.form-check{
+    cursor: pointer;
+}
+
+.darkmode .form-control{
+    background-color: #292929;
+    color: white;
+    /*
+    border-color: rgb(41, 160, 41);
+    */
+    border-color: white;
+    border-style: outset;
+}
+.darkmode .form-control hr{
+    color: rgb(23, 226, 23);
+    border-style: dotted;
+}
+.darkmode .navbar .navbar-expand-lg .navbar-light .bg-light{
+    color: rgb(41, 160, 41);
+    
+}
+.darkmode .carita{
+    color: white;
+}
+/* FINALIZA MODO DARK*/
+li a :hover{
+    color: rgb(41, 160, 41);
+}

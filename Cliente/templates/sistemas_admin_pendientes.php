@@ -32,7 +32,7 @@ if($totalr<1){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="../css/solicitud_usuario.css">
+    <link rel="stylesheet" href="../css/sistemas_admin_pendientes.css">
     <link rel="icon" href="../imgs/escudito.ico">
     <title>Sistemas administrador</title>
 </head>
@@ -89,9 +89,10 @@ if($totalr<1){
               </div>
 
           
+              <!-- EJEMPLO DE MODO OSCURO -->
               <div class="form-check form-switch">
-                <label class="form-check-label" for="flexSwitchCheckChecked" style="color: white;"></label>
-                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"> 
+              <input class="form-check-input" type="checkbox" role="switch"  id="checkbox" onclick="setDarkMode();">
+              <label class="form-check-label" for="checkbox"></label>
                </div>
             
                <a class="btn btn-light fas fa-sign-out-alt" href="../../Servidor/logout.php"></a>
@@ -185,7 +186,7 @@ if($totalr<1){
 
           
               <?php if($nombrer==''){
-              ?><center style="color: grey;"> <b class="fas fa-comment-alt-smile"> <?php echo "No hay solicitudes actuales"; }?> </b>
+              ?><center style="color: grey;"> <b class="carita fas fa-comment-alt-smile"> <?php echo "No hay solicitudes actuales"; }?> </b>
               </center> 
 
 
@@ -315,7 +316,35 @@ if($totalr<1){
   </div>
 
 
-  
+    
+<script>
+        //setDarkMode
+        console.log("se ejecuto script")
+        if(localStorage.getItem('theme') == 'dark'){
+          setDarkMode();
+
+            if(document.getElementById('checkbox').checked){
+              localStorage.setItem('checkbox', true)
+            }
+        }
+
+
+        function setDarkMode(){
+          console.log("se ejecuto script 2")
+          let isDark = document.body.classList.toggle('darkmode');
+
+
+          if(isDark){
+            setDarkMode.checked = true;
+            localStorage.setItem('theme', 'dark');
+            document.getElementById('checkbox').setAttribute('checked', 'checked');
+          }
+          else{
+            setDarkMode.checked = true;
+            localStorage.removeItem('theme', 'dark');
+          }
+        }
+      </script>
 
       
       <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>

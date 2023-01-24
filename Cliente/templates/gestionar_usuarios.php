@@ -262,7 +262,9 @@ Sistemas
                     <label for="num_registros" class="col-form-label">registros </label>
                 </div>
 
-                <div class="col-5"></div>
+                <div class="col-5">
+               
+                </div>
 
                 <div class="col-auto">
                     <label for="campo" class="col-form-label">Buscar: </label>
