@@ -24,10 +24,10 @@
             Sistemas
           </a>
           <ul class="dropdown-menu">
-            <li><a class="fas fa-hospital-user dropdown-item" href="#" style="">Sistemas aprobados</a></li>
+            <li><a class="fas fa-hospital-user dropdown-item" href="sistemas_admin_aprobados.php" style="">Sistemas aprobados</a></li>
             <li><a class="far fa-user-md-chat dropdown-item" href="sistemas_admin_pendientes.php">Sistemas pendientes</a></li>
-            <li><a class="fal fa-user-shield dropdown-item" href="#">Revisar permisos</a></li>
-            <li><a class="fas fa-comment-medical dropdown-item" href="#">Notificar sistema aprobado</a></li>
+            <li><a class="fal fa-user-shield dropdown-item" href="permisos.php">Revisar permisos</a></li>
+            <li><a class="fas fa-comment-medical dropdown-item" href="permisos.php">Notificar sistema aprobado</a></li>
             <li><a class="fas fa-user-hard-hat dropdown-item" href="sistemas_supervisor_admin.php">Opcion de supervisor</a></li>
           </ul>
       <!--  </li> -->

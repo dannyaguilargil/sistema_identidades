@@ -105,7 +105,7 @@ function Footer()
     // Arial italic 8
     $this->SetFont('Arial','I',8);
     // Número de página
-    $this->Cell(0,10,utf8_decode('Sistema de identidad ©').$this->PageNo().'/{nb}',0,0,'C');
+    $this->Cell(0,10,utf8_decode('Sistema de identidad id:$01 ©').$this->PageNo().'/{nb}',0,0,'C');
 }
 }
 

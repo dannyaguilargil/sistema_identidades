@@ -54,8 +54,7 @@ try {
      echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}"; 
 }
 */
-session_start();
-$tomador='';
+
 include '../../Servidor/conexion.php'; 
 $tomador=$_SESSION['nombre'];
 //$_SESSION['rol']='rol'

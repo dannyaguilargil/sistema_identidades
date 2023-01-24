@@ -95,6 +95,6 @@ $pdf->Ln(4);
 $pdf->Cell(67);
 $pdf->Cell(20,10,utf8_decode('http://.imsalud.gov.co'));
 $pdf->Ln(4);
-$pdf->Write(1,$nombre);
+$pdf->Write(1,$nombre.'Id: 01');
 $pdf->Output();
 ?>

@@ -68,7 +68,7 @@ if($totalr<1){
                     <a class="far fa-user-cog nav-link" aria-current="page" href="perfil.php">Mi perfil</a>
                   </li>
                   <li class="nav-item">
-                    <a class="fas fa-id-card nav-link" href="pazysalvo.php" disabled>Paz y salvo</a>
+                    <a class="fas fa-id-card nav-link" href="pazysalvo_admin.php" disabled>Paz y salvo</a>
                   </li>
 
                   <li class="nav-item">
