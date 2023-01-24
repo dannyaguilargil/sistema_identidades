@@ -36,22 +36,46 @@
             <div class="row">
             
                 <div class="col">
-                    <label class="TT">Nombre</label>
+                    <label class="TT">Primer Nombre</label>
                     <input type="text" class="form-control" name="nombre" id="nombre" required><br>
                 </div>
 
                 <div class="col">
-                    <label class="TT">Cargo</label>
-                    <input type="text" class="form-control" name="cargo" id="cargo" required><br>
+                    <label class="TT">Segundo Nombre</label>
+                    <input type="text" class="form-control" name="cargo" id="cargo"><br>
                 </div>
 
                 <div class="col">
-                    <label class="TT">Fecha final de contrato</label>
-                    <input type="date" class="form-control" name="fechafinalcontrato" id="fechafinalcontrato" required><br>
+                    <label class="TT">Primer apellido</label>
+                    <input type="text" class="form-control" name="fechafinalcontrato" id="fechafinalcontrato" required><br>
                 </div>
 
+
+                <div class="col">
+                    <label class="TT">Segundo apellido</label>
+                    <input type="text" class="form-control" name="fechafinalcontrato" id="fechafinalcontrato"><br>
+                </div>
+            </div>
+            <div class="row">
+            
+            <div class="col">
+                <label class="TT">Nombre</label>
+                <input type="text" class="form-control" name="nombre" id="nombre" required><br>
             </div>
 
+            <div class="col">
+                <label class="TT">Cargo</label>
+                <input type="text" class="form-control" name="cargo" id="cargo" required><br>
+            </div>
+
+            
+
+
+            <div class="col">
+                <label class="TT">Fecha final de contrato</label>
+                <input type="text" class="form-control" name="fechafinalcontrato" id="fechafinalcontrato" required><br>
+            </div>
+        </div>
 
             <div class="row">
                 <div class="col">
@@ -71,16 +95,6 @@
 
             </div>
 
-            <div class="form-check form-switch">
-                <label class="form-check-label" for="rol">Administrador</label>
-                <input class="form-check-input" type="checkbox" role="switch" id="rol" name="rol" value="ADMINISTRADOR">
-                
-            </div>
-            <div class="form-check form-switch">
-                <label class="form-check-label" for="rol">Supervisor</label>
-                <input class="form-check-input" type="checkbox" role="switch" id="rol" name="rol" value="SUPERVISOR">
-                
-            </div>
             
 
             <div class="boton">

@@ -46,15 +46,15 @@ include 'Servidor/conexion.php';
         </div>
 </div>
 
-
+<!--
 
 <div class="izquierdo">
     
     <img class="izquierdoimg" src="Cliente/imgs/izquierdo.gif" alt="">
 </div>
+-->
 
-
-<div class="escudo">
+<div class="izquierdo">
     
     <img class="escudoverde" src="Cliente/imgs/escudo.gif" alt="">
 </div>
@@ -154,18 +154,17 @@ include 'Servidor/conexion.php';
 ?>
 
 
-<!--
+
 <footer >
         
+ <center>
 <div class="container ultimo">
-
-<img class="fondo" src="Cliente/imgs/footer.png" alt="" srcset="">
+Todo los derechos reservados E.S.E IMSALUD / SISTEMAS
 
 </div>
-            
+</center>        
         
 </footer>
--->
 </body>
 </html>
 
