@@ -90,69 +90,67 @@ if($totalr<1){
 <body>
   
 <header class="">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-
-            <div class="container-fluid">
-
-           <!-- <li class="nav-item dropdown"> -->
-          <a class="fas fa-phone-laptop  nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="background:white; color:black;">
-            Sistemas
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="far fa-user-md-chat dropdown-item" href="sistemas_admin_pendientes.php">Sistemas pendientes</a></li>
-            <li><a class="fal fa-user-shield dropdown-item" href="permisos.php">Revisar permisos</a></li>
-            <li><a class="fas fa-comment-medical dropdown-item" href="notificar_sistema.php">Notificar sistema aprobado</a></li>
-            <li><a class="fas fa-user-hard-hat dropdown-item" href="sistemas_supervisor_admin.php">Opcion de supervisor</a></li>
-          </ul>
-      <!--  </li> -->
-
-
-
-
-
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="far fa-user-cog nav-link" aria-current="page" href="perfil_admin.php">Mi perfil</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="fas fa-id-card nav-link" href="pazysalvo.php" disabled>Paz y salvo</a>
-                  </li>
-
-                  <li class="nav-item">
-                    <a class="far fa-user-check nav-link" href="validar_usuarios.php" disabled>Accesos</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="fas fa-users nav-link" href="gestionar_usuarios.php" disabled>Gestion de usuarios</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="fas fa-hospital-user nav-link" href="sistemas_admin_aprobados.php" disabled target="_blank">Sistemas aprobados</a>
-                  </li>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+       
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+           
+            
+            
+              <li class="nav-item dropdown">
+                <a class="fas fa-phone-laptop nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Sistemas
+                </a>
+                <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Pendientes</a></li>
+                  <li><a class="dropdown-item" target="_blank" href="sistemas_solicitud_supervisor.php">Solicitud</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" target="_blank" href="notificar_sistema.php">Notificar</a></li>
                 </ul>
-              </div>
-            
+              </li>
 
             
+              <li class="nav-item dropdown">
+                <a class="fas fa-id-card nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Paz y salvo
+                </a>
+                <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="pazysalvo_admin.php">Pendientes</a></li>
+                  <li><a class="dropdown-item" target="_blank" href="pazysalvo_aprobados.php">Aprobados</a></li>
+                </ul>
+              </li>
+                
+
+              <li class="nav-item dropdown">
+                <a class="fas fa-user-cog nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Usuarios
+                </a>
+                <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Pendientes</a></li>
+                  <li><a class="dropdown-item" href="usuarios.php">Registrados</a></li>
+                </ul>
+              </li>
 
 
-              <div class="user" style="color: white">
-              NOTIFICADOR! <?php echo $_SESSION['nombre']; ?>
-             <?php $tomador=$_SESSION['nombre'] ?>
-              </div>
 
-          
-              <div class="form-check form-switch">
-                <label class="form-check-label" for="flexSwitchCheckChecked" style="color: white;"></label>
-                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"> 
-               </div>
-            
-               <a class="btn btn-light fas fa-sign-out-alt" href="../../Servidor/logout.php"></a>
-            </div>
-          
-          </nav>
-         
+            </ul>
+            <a class="far fa-user-cog navbar-brand " href="perfil_admin.php">Mi perfil</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            <a class="btn btn-light fas fa-sign-out-alt" href="../../Servidor/logout.php"></a>
+
+          </div>
+        </div>
+      </nav>
+      <!--NAVBAR-->
                     
-    </header>
+</header>
+
 
     <div class="imagen">
     <img  src="../imgs/logocompleto.png"  alt="" style="width: 130px; text-align: center;height: 50px">

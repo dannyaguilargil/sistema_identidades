@@ -20,6 +20,12 @@ include 'Servidor/conexion.php';
 
 <div class="container centrar">
        
+
+
+
+
+
+
             <div class="imagen">
             <img  src="Cliente/imgs/logocompleto.png"  alt="" style="width: 170px; text-align: center;height: 70px">
             </div> 
@@ -38,7 +44,8 @@ include 'Servidor/conexion.php';
             <div class="boton">
             <input type="submit" class="text-center btn btn-success" name="login" value="Login"> <!--negrilla -->
             </div> <br>
-            <p><a  class="TT1" href="Cliente/templates/login_acceso.php" id="" style="color: grey;">Solicitar usuario</a></p>
+        
+            <a  class="" href="Cliente/templates/login_acceso.php" id="" style="color: grey;">Para solicitar usuario de  gestion de identidades primero registrese aqui.</a>
             </form>
             
           
@@ -91,11 +98,11 @@ include 'Servidor/conexion.php';
                     break;
             
                     case "SUPERVISOR":		
-                    header("Location: Cliente/templates/sistemas_supervisor.php");
+                    header("Location: Cliente/templates/supervisa.php");
                     break;
                     
                     case "ADMINISTRADOR":		
-                    header("Location: Cliente/templates/sistemas_admin_pendientes.php");
+                    header("Location: Cliente/templates/administra.php");
                     break;
                     
                     case "ACCESO":		
@@ -105,11 +112,6 @@ include 'Servidor/conexion.php';
 
                 } 
  
-
-
-
-
-
                 }else{
 
                     //HACE FALTA HACER LA VALIDACION Y NOTIFICAR SI EL USUARIO ESTA MAL Y SI NO ES ADMIN
@@ -159,7 +161,7 @@ include 'Servidor/conexion.php';
         
  <center>
 <div class="container ultimo">
-Todo los derechos reservados E.S.E IMSALUD / SISTEMAS
+Todo los derechos reservados E.S.E IMSALUD &copy / SISTEMAS
 
 </div>
 </center>        

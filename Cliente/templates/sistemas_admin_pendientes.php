@@ -107,6 +107,9 @@ if($totalr<1){
     <img  src="../imgs/logocompleto.png"  alt="" style="width: 130px; text-align: center;height: 50px">
     </div>
 
+
+       
+    <h5 class="centrar">Solicitud de sistemas</h5>
 <div class="centrar">
         <div class="centrar1 col-sm-10 col-md-10 col-lg-10 col-xl-10">
 
@@ -153,13 +156,15 @@ if($totalr<1){
 
 
                 $nombrer = '';
+                $segundonombrer = '';
+                $primerapellidor = '';
+                $segundoapellidor = '';
                 $cedular = 0;
                 $cargor = '';
                 $tiposolicitudr = '';
                 $aplicativor = '';
                 $observacionesr = '';
-                $observaciones_supervisorr = '';
-                $idr = 0;
+                $id_solicitudr = 0;
 
 
 
@@ -169,14 +174,18 @@ if($totalr<1){
                 <?php $consulta="SELECT * from sistema_validado_supervisor;";
                 $resultado=mysqli_query($mysqli,$consulta);
                 if($resultado){ while($row = $resultado->fetch_array()){
-                $nombrer = $row['nombre'];
-                $cedular = $row['cedula'];
-                $cargor = $row['cargo'];
-                $tiposolicitudr = $row['tiposolicitud'];
-                $aplicativor = $row['aplicativo'];
-                $observacionesr = $row['observaciones'];
-                $observaciones_supervisorr = $row['observaciones_supervisor'];
-                $idr = $row['id'];
+                  $nombrer = $row['nombre'];
+                  $segundonombrer = $row['segundonombre'];
+                  $primerapellidor = $row['primerapellido'];
+                  $segundoapellidor = $row['segundoapellido'];
+                  $cargor = $row['cargo'];
+                  $cedular = $row['cedula'];
+                  
+                  $tiposolicitudr = $row['tiposolicitud'];
+                  $aplicativor = $row['aplicativo'];
+                  $observacionesr = $row['observaciones'];
+                  $observaciones_supervisorr = $row['observaciones_supervisor'];
+                  $id_solicitudr = $row['id_solicitud'];
                 }
    
                 } 
@@ -189,6 +198,18 @@ if($totalr<1){
               ?><center style="color: grey;"> <b class="carita fas fa-comment-alt-smile"> <?php echo "No hay solicitudes actuales"; }?> </b>
               </center> 
 
+
+                  <!-- -->
+                  <?php $consulta2="SELECT * from usuarios_registrados WHERE cedula=$cedular;";
+                $resultado2=mysqli_query($mysqli,$consulta2);
+                if($resultado2){ while($row = $resultado2->fetch_array()){
+                $fechafinalcontrator = $row['fechafinalcontrato'];
+                $supervisorr = $row['supervisor'];
+                }
+   
+                } 
+                ?>
+                <!-- -->
 
           <div class="container notificador">
           <button type="button" class="btn btn-success position-relative"> <!-- negrilla -->
@@ -204,35 +225,64 @@ if($totalr<1){
 
 
 
-            <div class="container form-control form-control" >
-              
-            <h5 class="centrar">Solicitud de sistemas</h5>
+<div class="container form-control form-control" >
+           
 
 
-            <form action="../../Servidor/registrar_solicitud_admin.php" method="POST">
+  <form action="../../Servidor/registrar_solicitud_admin.php" method="POST">
 
                 <fieldset><b>Informacion general del colaborador</b></fieldset> 
                 <div class="row">
                 <div class="col">
-                <label for="nombre" class="emerge">Nombre completo:</label> <br>
-                <input type="text" name="nombre" id="nombre" class="emerge" value="<?php echo $nombrer?>">
+                <label for="nombre" class="emerge"><b>Nombre:</b></label> <br>
+                <input type="text" name="nombre" id="nombre" class="" value="<?php echo $nombrer?>">
                 </div>
 
 
                 <div class="col">
-                <label for="cedula" class="emerge">Cedula:</label> <br>
-                <input type="number" name="cedula" id="cedula" class="emerge" value="<?php echo $cedular ?>"> 
+                <label for="segundonombre" class="emerge">Segundo Nombre:</label> <br>
+                <input type="text" name="segundonombre" id="segundonombre class="" value="<?php echo $segundonombrer ?>"> 
                 </div>
               
 
                 <div class="col">
-                <label for="cargo" class="emerge">Cargo:</label> <br>
-                <input type="text" name="cargo" id="cargo" class="emerge" value="<?php echo $cargor ?>">  
+                <label for="primerapellido" class="emerge"><b>Primer apellido:</b></label> <br>
+                <input type="text" name="primerapellido" id="primerapellido" class="" value="<?php echo $primerapellidor ?>">  
+                </div>
+
+                <div class="col">
+                <label for="segundoapellido" class="emerge">Segundo apellido:</label> <br>
+                <input type="text" name="segundoapellido" id="segundoapellido" class="" value="<?php echo $segundoapellidor ?>">  
+                </div>
+
+                </div>
+
+                <div class="row">
+                <div class="col">
+                <label for="supervisor" class="emerge"><b>Supervisor o jefe inmediato:</b></label> <br>
+                <input type="text" name="supervisor" id="supervisor" class="" value="<?php echo $supervisorr?>">
+                </div>
+
+
+                <div class="col">
+                <label for="fechafinalcontrato" class="">Fecha final contrato:</label> <br>
+                <input type="number" name="fechafinalcontrato" id="fechafinalcontrato" class="" placeholder="25/01/2023" value="<?php echo $fechafinalcontrator ?>"> 
+                </div>
+              
+
+                <div class="col">
+                <label for="cargo" class="emerge">Cedula:</label> <br>
+                <input type="text" name="cedula" id="cedula" class="" value="<?php echo $cedular ?>">  
+                </div>
+
+                <div class="col">
+                <label for="cargo" class="emerge"><b>Cargo o N° contrato:</b></label> <br>
+                <input type="text" name="cargo" id="cargo" class="" value="<?php echo $cargor ?>">  
                 </div>
                 </div>
 
 
-                <br> 
+                <hr>
                 <h6><b>Sistema de informacion requerido</b></h6> 
                 <div class="row">
                 <div class="col">
@@ -247,43 +297,41 @@ if($totalr<1){
                 </div>
                
                 <div class="col">
-                <label for="observaciones" class="emerge">Explicacion de los permisos</label> <br>
-                <input type="text" name="observaciones" id="observaciones" class="obs emerge" value="<?php echo $observacionesr  ?>">  <br> <br>
-                <textarea name="" id="" cols="2" rows="2" class="obs emerge"  style="color: black; background: #ECEFE4;"  value="<?php echo $observacionesr ?>" placeholder="<?php echo $observaciones_supervisorr ?>"></textarea>
-                </div>
+                <label for="observaciones" class="">Explicacion de los permisos</label> <br>
+                <input type="text" name="observaciones" id="observaciones" class="" value="<?php echo $observacionesr?>">  <br> <br>
+
                 </div>
 
 
-                <!-- -->
-                <?php $consulta2="SELECT * from usuarios_registrados WHERE cedula=$cedular;";
-                $resultado2=mysqli_query($mysqli,$consulta2);
-                if($resultado2){ while($row = $resultado2->fetch_array()){
-                $fechafinalcontrator = $row['fechafinalcontrato'];
-                $supervisorr = $row['supervisor'];
-                }
-   
-                } 
-                ?>
-                <!-- -->
-                <div class="row">
-                <div class="col">
-                <label for="">Id:</label> <br>
-                <input type="text"  name="id" id="id"  value="<?php echo $idr?>">
-                </div>
 
                 <div class="col">
-                <label for="">Supervisor:</label> <br>
-                <input type="text" name="supervisor" id="supervisor"  value="<?php echo $supervisorr ?>">
+                <label for="id_solicitud">Id de solicitud:</label> <br>
+                <input type="text" name="id_solicitud" id="id_solicitud" value="<?php echo $id_solicitudr ?>">
                 </div>
 
-                <div class="col">
-                <label for="">Permisos hasta:</label> <br>
-                <input type="text"  name="fechafinalcontrato" id="fechafinalcontrato" placeholder="fecha final del permiso" value="<?php echo $fechafinalcontrator?>">
                 </div>
-                </div>
+
+
+
+
+              <div class="row">
+             
+              <div class="col"> 
+                <center>
+                <b> <label for="">Validacion del supervisor</label><b><br>
+                <input  class="obs" type="text" name="observaciones_supervisor" id="observaciones_supervisor" value="<?php echo $observaciones_supervisorr ?>" style="color: green;" placeholder="Explique los permisos del sistema" required>
+                </center>
+              
+              </div>
+
+            
+
+              </div>
+
 
 <br>
-                <div class="row">
+
+              <div class="row">
                 <div class="col">
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked required>
@@ -294,27 +342,22 @@ if($totalr<1){
                 </div>
 
                 <div class="col">
-                <button type="submit" class="btn btn-success" name="registro" id="registro">Aprobarlo</button>
+                <button type="submit"  class="btn btn-success" name="registro" id="registro" onclick="envio();">Validarlo</button>
                 </div>
-
+                
                 <div class="col">
-                <button type="submit" class="btn btn-danger" name="eliminar" id="eliminar">Rechazarlo</button>
+                <button type="submit" class="btn btn-danger"  name="eliminar" id="eliminar"  onclick="envio();">Rechazarlo</button>
                 </div>
 
-
-                </form>
-              </div>
-
+  </form>
+  </div>
 
 
            
 
+           
 
-            </div>
-          </div>
-          </div>
-  </div>
-
+                
 
     
 <script>

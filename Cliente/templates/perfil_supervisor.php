@@ -39,7 +39,9 @@ if($totalr<1){
         <nav class="navbar navbar-expand-lg navbar-light bg-light" >
 
             <div class="container-fluid">
-              <a class="far fa-user-cog navbar-brand " href="perfil.php">Mi perfil</a>
+              
+            
+            <a class="far fa-user-cog navbar-brand " href="perfil.php">Mi perfil</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -50,12 +52,17 @@ if($totalr<1){
                     <a class="fas fa-phone-laptop nav-link" aria-current="page" href="sistemas_solicitud_usuario.php">Sistemas</a>
                   </li>
                   <li class="nav-item">
-                    <a class="fas fa-id-card nav-link" href="paz_salvo.php" disabled>Paz y salvo</a>
-                  
+                    <a class="fas fa-id-card nav-link" href="pazysalvo.php" disabled>Paz y salvo</a>
                   </li>
                 </ul>
-              </div>
+             </div>
             
+
+
+
+
+
+
               <div class="user">
               <?php $tomador=$_SESSION['nombre']?>
                 <span class="typed"></span>  <?php echo $_SESSION['nombre'];?>
@@ -125,15 +132,13 @@ if($totalr<1){
       
 
             
-            
-               
-              
+              <div class="col">
+                <label for="nombre" class="">Nombre</label>
+                <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Digite nombre" value="<?php echo $nombrer;?>"><br>
+              </div>
           
                   
               <div class="col">
-              
-              <input type="hidden" class="form-control" name="nombre" id="nombre" placeholder="Digite nombre" value="<?php echo $nombrer;?>">
-              
                 <label for="cargo" class="">Cargo</label>
                 <input type="text" class="form-control" name="cargo" id="cargo" placeholder="Digite cargo" value="<?php echo $cargor;?>"><br>
               </div>

@@ -3,31 +3,33 @@
 include 'conexion.php';
 
 $nombre='';
-$segundonombre='';
+//$segundonombre='';
 $primerapellido='';
-$segundoapellido='';
+//$segundoapellido='';
 $cargo='';
-$email='';
-$supervisor='';
-$cedula='';
+//$email='';
+//$supervisor='';
 $tipodocumento='';
-$rol = '';
+$cedula='';
+
+
 ////////////////////////////////VLIDACION DE LOS SUBMIT
 if (isset($_POST['registro'])) {
 $nombre = $_REQUEST["nombre"];
-$segundonombre = $_REQUEST["segundonombre"];
+//$segundonombre = $_REQUEST["segundonombre"];
 $primerapellido = $_REQUEST["primerapellido"];
-$segundoapellido = $_REQUEST["segundoapellido"];
+//$segundoapellido = $_REQUEST["segundoapellido"];
 $cargo = $_REQUEST["cargo"];
-$email = $_REQUEST["email"];
-$supervisor = $_REQUEST["supervisor"];
-$cedula = $_REQUEST["cedula"];
+//$email = $_REQUEST["email"];
+//$supervisor = $_REQUEST["supervisor"];
 $tipodocumento = $_REQUEST["tipodocumento"];
+$cedula = $_REQUEST["cedula"];
 
 //$email = $_REQUEST["email"];
 //$rol = $_REQUEST["rol"];
 
-$sql="INSERT INTO usuarios_registrados (nombre,segundonombre,primerapellido,segundoapellido,cargo,email,supervisor,cedula,tipodocumento,rol,password) VALUES('$nombre','$segundonombre','$primerapellido','$segundoapellido','$cargo','$email,','$supervisor',$cedula,'$tipodocumento','$rol',cedula)";
+//$sql="INSERT INTO usuarios_registrados (nombre,segundonombre,primerapellido,segundoapellido,cargo,email,supervisor,cedula,tipodocumento,password) VALUES('$nombre','$segundonombre','$primerapellido','$segundoapellido','$cargo','$email,','$supervisor',$cedula,'$tipodocumento',cedula)";
+$sql="INSERT INTO usuarios_registrados (nombre,primerapellido,cargo,tipodocumento,cedula,password) VALUES('$nombre','$primerapellido','$cargo','$tipodocumento',$cedula,cedula)";
 $resultado=$mysqli ->query($sql);
 
 $sql2="DELETE FROM solicitud_usuario WHERE cedula = $cedula;";

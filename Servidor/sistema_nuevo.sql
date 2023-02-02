@@ -173,3 +173,11 @@ insert into pazysalvo_aprobar (cedula,rfid,equipos) values(1090492324,'SI','SI')
 --UNA FORMA DE HACER EL PAZYSALVO ES GENERAR POR DEFECTO EL NO Y EL SUPERVISOR LE HACE EL UPDATE DEL SI
 --UNA VEZ ESTE EL SIS, GENERA EL BOTON DE DESCARGA DEL PDF 
 
+creta table sede (
+    nombre varchar(40));
+
+INSERT INTO sede values ('UBA COMUNEROS');
+INSERT INTO sede values ('UBA LOMA BOLIVAR');
+INSERT INTO sede values ('ADMINISTRATIVA');
+INSERT INTO sede values ('UBA LIBERTAD');
+INSERT INTO sede values ('UBA POLICLINICO');

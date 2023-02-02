@@ -249,8 +249,8 @@ if($totalr<1){
                
 
                 <div class="col">
-                <label for="sede" class="emerge">Sede:</label> <br>
-                <input type="text" name="sede" id="sede" class="emerge" value="" placeholder="Digite sede">
+                <label for="campo" class="emerge">Sede:</label> <br>
+                <input type="text" name="campo" id="campo" class="emerge" value="" placeholder="Digite sede">
                 <ul id=lista></ul>
 
                 </div>

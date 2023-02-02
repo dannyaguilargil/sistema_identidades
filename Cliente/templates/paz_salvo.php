@@ -37,7 +37,7 @@ if($totalr<1){
         <nav class="navbar navbar-expand-lg navbar-light bg-light" >
 
             <div class="container-fluid">
-              <a class="fas fa-id-card navbar-brand " href="pazysalvo.php">Paz y salvo</a>
+              <a class="fas fa-id-card navbar-brand " href="paz_salvo.php">Paz y salvo</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -94,12 +94,12 @@ if($totalr<1){
 
          
             <div class="form-control form-contro" >
-
+            <center><h5 class="">Generar paz y salvo</h5></center>
         <div class="imagen">
             <img  src="../imgs/logoimsaludrecortado.png"  alt="" style="width: 200px; text-align: center;">
         </div>
         <br>
-            <center><h6 class="">Generar paz y salvo</h6></center>
+           
             <!-- AQUI DEBO CARGAR LOS DATOS ANTERIORES DEL MISMO USUARIO-->
 
            
@@ -144,96 +144,67 @@ if($resultado){ while($row = $resultado->fetch_array()){
 
 } 
 ?>
+            <form action="../../Servidor/pazysalvoregistrar_solicitud.php" method="POST" id="form">
+            <div class="row">
+                <div class="col">
+                    
 
-
-          <form action="../../Servidor/pazysalvoregistrar_solicitud.php" method="POST" id="form">
-
-            <div class="contt">
-
-            <div class="">
-              <div class="">
                <!-- <label for="nombre" class="">Nombre</label> -->
                <input  style="text-align: center;" type="hidden" class="form-control" name="nombre" id="nombre" value="<?php echo $nombrer?>">  
-              </div>
-              
-              <div class="">
-              <!--  <label  for="cedula"  class="">Cedula</label> -->
-                <input style="text-align: center;" type="hidden" class="form-control" name="cedula" id="cedula" value="<?php echo $cedular ?>">
-              </div>
-
-           </div>
-
-
-
-            <div class="">
-
-            <div class="">
-                <label for="revocar_permisos">Revocar permisos</label> 
+                 <!--  <label  for="cedula"  class="">Cedula</label> -->
+                 <input style="text-align: center;" type="hidden" class="form-control" name="cedula" id="cedula" value="<?php echo $cedular ?>">
+       
+                <label for="revocar_permisos">Revocar permisos</label> <br>
                 <?php
                 //CODIGO PHP PARA DESABILITAR EL DISABLED O HABILITARLO
                 if($revocar_permisos=='SI' or $revocar_permisos=='INACTIVO'){
-                  ?><input class="check"  type="checkbox"  value="SI" disabled checked id="revoca_permisos">
+                  ?><input class=""  type="checkbox"  value="SI" disabled checked id="revoca_permisos"><br>
                   <?php
                 }
                 else{
-                  ?><input class="check"  type="checkbox" name="revocar_permisos" value="SI" id="revocar_permisos" onclick="envioo();">
+                  ?><input class=""  type="checkbox" name="revocar_permisos" value="SI" id="revocar_permisos" onclick="envioo();"><br>
                   <?php
                 }
-
-
                 ?>
 
 
                 
-              </div>
-              
-              <div class="textoI1">
-                <label for="">Entrega de tarjeta RFID</label>
-                <input class="check"  type="checkbox" value=""
+       
+             
+                <label for="">Entrega de tarjeta RFID</label> <br>
+                <input class=""  type="checkbox" value=""
                 <?php
                 //AQUI VAN VALIDACIONES DE LOS SELECTED
                 if($rfid=='SI' && $cedular=$cedular){
-                  ?><input class="check"  type="checkbox"  value="" disabled checked>
+                  ?><input class=""  type="checkbox"  value="" disabled checked><br>
                   <?php
                 }
                 else{
-                  ?><input class="check"  type="checkbox" value="" disabled>
+                  ?><input class=""  type="checkbox" value="" disabled><br>
                   <?php
                 }
-
-
                 ?>
                 
-                
-                
-              </div>
+            
              
               <!-- CHECKED ES PARA HABILIAR EL BOTON DE CHEK -->
-              <div class="textoI1">
-                <label for="">Entrega de equipos en buen estado</label>
+          
+                <label for="">Entrega de equipos en buen estado</label><br>
                
                 <?php
                 //AQUI VAN VALIDACIONES DE LOS SELECTED
                 if($equipos=='SI' && $cedular=$cedular){
-                  ?><input class="check"  type="checkbox"  value="" disabled checked>
+                  ?><input class=""  type="checkbox"  value="" disabled checked><br>
                   <?php
                 }
                 else{
-                  ?><input class="check"  type="checkbox" value="" disabled>
+                  ?><input class=""  type="checkbox" value="" disabled><br>
                   <?php
                 }
 
 
                 ?>
-              </div>
-
-
-            </div>
-
-
-            
-          </div>
-
+<br> <br>
               <!--BOTON QUE APARECE SOLO SI EL PAZ Y SALVO ESTA APROBADO -->
           <?php
 
@@ -242,56 +213,21 @@ if($resultado){ while($row = $resultado->fetch_array()){
                 <!-- ANTIGUO DESCARGA DEL PAZ Y SALVO
                 <a target="_blank" href="../../Servidor/generapdf.php" class="btn btn-warning">Descargar</a>
               -->
-                <button type="submit" class="btn btn-success" name="generar" id="generar"><b>Descargar paz y salvo</b></button>
+                <button type="submit" class="btn btn-success" name="generar" id="generar"><b>Descargar paz y salvo</b></button> 
                 <?php
               }
               else{
-                ?><button type="submit"  class="text-left btn btn-success" onclick="envio()" name="solicitar" id="solicitar">Solicitar</button> <?php
+                ?><button type="submit"  class="btn btn-success" onclick="envio()" name="solicitar" id="solicitar">Solicitar</button> <?php
               }
              
 ?>
 
-
-
-
-
-              
-
-              <!--
-
-              AQUI VA EL CODIGO JAVASCRIPT PARA REALIZAR LA VALIDACION DEL PAZ Y SALVO Y GENERAR EL BOTON
-              -->
-              <?php 
-                
-
-
-
-            ?>
-
-
-      </form>
-           
+                </div>
             </div>
-        </div>
-
-      </div>
-
-        <!--SI AL USUARIO SE LE VALIDA UN PERMISO DE UNA APP ESE PERMISO DE LA APP DEBE REGISTRARSE EN LA BASE DATOS -->
-
-
-
-
-
-
-
-
-<!---
-<script>
-      function envio(){
-        alert("PAZ Y SALVO SOLICITADO");
-      }
-     </script>
-    -->
+          
+            </form>
+           
+         
 
 <script>
       function envio(){

@@ -117,12 +117,14 @@ include '../../Servidor/conexion.php';
            
 
             <?php $nombrer='';
-                  $cedular='';
+                  $segundonombrer='';
+                  $primerapellidor='';
+                  $segundoapellidor='';
                   $cargor='';
-                  $fechafinalcontrator='';
-                  $supervisorr='';
                   $emailr='';
-                  $rolr='';
+                  $supervisorr='';
+                  $cedular='';
+                  $tipodocumentor='';
 
             ?>
                     <div class="row">
@@ -134,12 +136,15 @@ include '../../Servidor/conexion.php';
             $resultado=mysqli_query($mysqli,$consulta);
                     if($resultado){ while($row = $resultado->fetch_array()){
                         $nombrer = $row['nombre'];
-                        $cedular = $row['cedula'];
+                        $segundonombrer = $row['segundonombre'];
+                        $primerapellidor = $row['primerapellido'];
+                        $segundoapellidor = $row['segundoapellido'];
                         $cargor = $row['cargo'];
-                        $fechafinalcontrator = $row['fechafinalcontrato'];
-                        $supervisorr = $row['supervisor'];
                         $emailr = $row['email'];
-                        $rolr = $row['rol'];
+                        $supervisorr = $row['supervisor'];
+                        $cedular = $row['cedula'];
+                        $tipodocumentor = $row['tipodocumento'];
+                 
                         
                         //$aux= $nombrer;
                         ?>
@@ -151,7 +156,7 @@ include '../../Servidor/conexion.php';
                   } ?>
 
                   <?php if($nombrer==''){
-                  ?><center style="color: grey;"> <b class=""> <?php echo "No hay solicitudes actuales"; }?> </b>
+                  ?><center style="color: red;"> <b> <?php echo "No hay solicitudes actuales"; }?> </b>
               </center> 
 
 
@@ -160,23 +165,35 @@ include '../../Servidor/conexion.php';
                       <br>
                    
                       <div class="row">
+
                       <div class="col">
-                      <label class="">Nombre:</label> <br>
+                      <label class=""><b>Primer nombre:</b></label> <br>
                       <input type="text" name="nombre" id="nombre" class="emerge" value="<?php echo $nombrer?>">
                       </div>
 
                       <div class="col">
-                      <label class="">Cedula:</label> <br>
-                      <input type="text" name="cedula" id="cedula" class="emerge" value="<?php echo $cedular?>">
+                      <label class=""><b>Segundo Nombre:</b></label> <br>
+                      <input type="text" name="segundonombre" id="segundonombre" class="emerge" value="<?php echo $segundonombrer?>">
                       </div>
 
                       <div class="col">
-                      <label class="">Cargo:</label> <br>
-                      <input type="text" name="cargo" id="cargo" class="emerge" value="<?php  echo $cargor?>">
+                      <label class=""><b>Primer apellido:</b></label> <br>
+                      <input type="text" name="primerapellido" id="primerapellido" class="emerge" value="<?php  echo $primerapellidor?>">
                       </div>
 
 
-                      
+                      <div class="col">
+                      <label class=""><b>Segundo apellido:</b></label> <br>
+                      <input type="text" name="segundoapellido" id="segundoapellido" class="emerge" value="<?php  echo $segundoapellidor?>">
+                      </div>
+
+
+
+                      <div class="col">
+                      <label class=""><b>Cargo /N° contrato:</b></label> <br>
+                      <input type="text" name="cargo" id="cargo" class="emerge" value="<?php echo $cargor?>">
+                      </div>
+
 
                       <div class="col">
                         <br>
@@ -190,20 +207,28 @@ include '../../Servidor/conexion.php';
 
                       <br>
                       <div class="row">
+                    
+
                       <div class="col">
-                      <label class="">Fecha final de contrato:</label> <br>
-                      <input type="text" name="fechafinalcontrato" id="fechafinalcontrato" class="emerge" value="<?php echo $fechafinalcontrator?>">
+                      <label class=""><b>Email:</b></label> <br>
+                      <input type="text" name="email" id="email" class="emerge" value="<?php echo $emailr?>">
                       </div>
 
                       <div class="col">
-                      <label class="">Supervisor:</label> <br>
+                      <label class=""><b>Supervisor:</b></label> <br>
                       <input type="text" name="supervisor" id="supervisor" class="emerge" value="<?php echo $supervisorr?>">
                       </div>
 
+
                       <div class="col">
-                      <label class="">Rol:</label> <br>
-                      <input type="text" name="rol" id="rol" class="emerge" value="<?php echo $rolr?>">
+                      <label class=""><b>Cedula:</b></label> <br>
+                      <input type="number" name="cedula" id="cedula" class="emerge" value="<?php echo $cedular?>">
                       </div>
+                      <div class="col">
+                      <label class=""><b>Tipo de documento:</b></label> <br>
+                      <input type="text" name="tipodocumento" id="tipodocumento" class="emerge" value="<?php echo $tipodocumentor?>">
+                      </div>
+
 
                       <div class="col">
                         <br>
@@ -214,10 +239,7 @@ include '../../Servidor/conexion.php';
                     
                     
                     
-                    <!-- OCULTO PARA LA GESTION RESPONSIVE
-                    <input type="text" name="email" id="email" class="emerge" value="<?php echo $emailr?>">
-                  -->
-
+             
 
 
                      <br> <br>
@@ -293,7 +315,7 @@ include '../../Servidor/conexion.php';
 
           form.addEventListener("submit", e=>{
          
-            if(nombre.value.length<6){
+            if(nombre.value.length<3){
               console.log("entro al condicional")
               e.preventDefault()
               swal("NO ENVIADO!", "NO HAY USUARIOS PENDIENTES!", "error");

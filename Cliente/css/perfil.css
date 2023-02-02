@@ -338,3 +338,8 @@ main {
     border-color: rgb(41, 160, 41);
     border-style: outset;
 }
+.ultimo{
+    position: absolute;
+    bottom: 10px;
+ 
+}

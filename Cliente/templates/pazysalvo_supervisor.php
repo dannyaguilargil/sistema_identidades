@@ -37,7 +37,7 @@ if($totalr<1){
         <nav class="navbar navbar-expand-lg navbar-light bg-light" >
 
             <div class="container-fluid">
-              <a class="fas fa-id-card navbar-brand " href="pazysalvo.php">Paz y salvo</a>
+              <a class="fas fa-id-card navbar-brand " href="pazysalvo_supervisor.php">Paz y salvo</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -150,25 +150,25 @@ if($resultado){ while($row = $resultado->fetch_array()){
 
             <div class="contt">
 
-            <div class="">
+            <div class="textoI">
               <div class="">
-               <!-- <label for="nombre" class="">Nombre</label> -->
-               <input  style="text-align: center;" type="hidden" class="form-control" name="nombre" id="nombre" value="<?php echo $nombrer?>">  
+                <label for="nombre" class="">Nombre</label> 
+                <input  style="text-align: center;" type="text" class="form-control" name="nombre" id="nombre" value="<?php echo $nombrer?>"> <br>
               </div>
               
               <div class="">
-              <!--  <label  for="cedula"  class="">Cedula</label> -->
-                <input style="text-align: center;" type="hidden" class="form-control" name="cedula" id="cedula" value="<?php echo $cedular ?>">
+                <label  for="cedula"  class="">Cedula</label>
+                <input style="text-align: center;" type="text" class="form-control" name="cedula" id="cedula" value="<?php echo $cedular ?>">
               </div>
 
            </div>
 
 
 
-            <div class="">
+            <div class="textoI">
 
-            <div class="">
-                <label for="revocar_permisos">Revocar permisos</label> 
+            <div class="textoI1">
+                <label for="revocar_permisos">Revocar permisos</label>
                 <?php
                 //CODIGO PHP PARA DESABILITAR EL DISABLED O HABILITARLO
                 if($revocar_permisos=='SI' or $revocar_permisos=='INACTIVO'){

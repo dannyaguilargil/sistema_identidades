@@ -33,7 +33,6 @@ if($totalr<1){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="../css/sistemas_supervisor.css">
@@ -53,12 +52,12 @@ if($totalr<1){
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-
-
-          
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-               
+           
+            
+           
+            
               <li class="nav-item dropdown">
                 <a class="fas fa-phone-laptop nav-link dropdown-toggle btn-lg" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Sistemas 
@@ -66,24 +65,55 @@ if($totalr<1){
 
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="sistemas_solicitud_supervisor.php">Solicitud</a></li>
-                  <li><a class="dropdown-item" href="sistemas_supervisor.php">Pendientes</a></li>
-                  <!--
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" target="_blank" href="https://github.com/dannyaguilargil">GITHUB</a></li>
-                  -->
+                  <li><a class="dropdown-item" href="sistemas_administrador_pendientes.php">Administrador pendientes</a></li>
+                  <li><a class="dropdown-item" href="sistemas_supervisor.php">Supervisor</a></li>    
+
+
+                  <li><hr class="dropdown-divider">
+                
+                  <li><a class="dropdown-item" href="sistemas_admin_aprobados.php">Aprobados</a></li>
+                  <li><a class="dropdown-item" href="sistemas_solicitud_supervisor.php">Notificar sistema</a></li>
+
+                
+                
+                 </li>
+                            
                 </ul> 
               </li>
 
 
-              
-              <li class="nav-item">
-                <a class="fas fa-user-cog nav-link" href="perfil_supervisor.php">Mi perfil</a>
-              </li>
-              <li class="nav-item">
-                <a class="fas fa-id-card nav-link" href="pazysalvo_supervisor.php">Paz y salvo</a>
+              <li class="nav-item dropdown">
+                <a class="fas fa-id-card nav-link dropdown-toggle btn-lg" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Paz y salvos
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="pazysalvo_aprobados.php">Aprobados</a></li>
+                  <li><a class="dropdown-item" href="sistemas_administrador_pendientes.php">Pendientes</a></li>
+                  
+                 
+                </ul> 
               </li>
 
 
+
+              <li class="nav-item dropdown">
+                <a class="fas fa-users nav-link dropdown-toggle btn-lg" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Usuarios
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="gestionar_usuarios.php">Aprobados</a></li>
+                  <li><a class="dropdown-item" href="usuario_pendientes.php">Pendientes</a></li>
+                  <li><hr class="dropdown-divider">
+                  <a class="far fa-user-cog nav-link" href="perfil.php" disabled>Mi perfil</a>
+
+                </li>
+                 
+                </ul> 
+              </li>
+
+                    
                 
             </ul>
          
@@ -202,7 +232,7 @@ if($totalr<1){
 
         <div class="row py-2">
                 <div class="col">
-                    <table class="table table-light table-striped" name="tabla" id="tabla">
+                    <table class="table table-light table-striped" name="tabla" name="tabla">
                         <thead>
                             <th>VER</th>
                             <th>ID</th>
@@ -351,6 +381,7 @@ if($totalr<1){
           </div>
 </div>
 
+<hr>
           <div class="row">
             <div class="col">
               <div class="mb-1">
@@ -405,190 +436,6 @@ if($totalr<1){
    </div>
  </div>
 
- 
-
- <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
- <div class="modal-dialog modal-lg">
-   <div class="modal-content">
-     <div class="modal-header">
-       <h5 class="modal-title" id="exampleModalLabel"><b>Informacion general del colaborador</b></h5>
-       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-     </div>
-     <div class="modal-body">
-       <form  action="../../Servidor/registrar_usuario.php" method="POST" enctype="multipart/form-data" >
-
-        <!--
-         <div class="mb-1">
-           <label for="id" class="col-form-label">Id</label> <br> 
-           <input type="text" class="form-control-sm" id="id"  name="id" disabled> 
-         </div> -->
-          <div class="row">
-            <div class="col">
-              <div class="mb-1">
-                <label for="nombre" class="emerge col-form-label"><b>Primer nombre:</b></label> 
-                <input type="text" class="emerge form-control-sm" id="nombre" name="nombre" required value="<?php echo $nombrer; ?>"> 
-              </div>
-            </div>
-            <div class="col">
-              <div class="mb-1">
-                <label for="nombre" class="emerge col-form-label">Segundo nombre:</label>
-                <input type="text" class="emerge form-control-sm" id="segundonombre" name="segundonombre" required value="<?php echo $segundonombrer; ?>"> 
-              </div>
-            </div>
-            <div class="col">
-              <div class="mb-1">
-                <label for="nombre" class="emerge col-form-label"><b>Primer apellido:</b></label>
-                <input type="text" class="emerge form-control-sm" id="primerapellido" name="primerapellido" required value="<?php echo $primerapellidor; ?>">
-              </div>
-          </div>
-
-          <div class="row">
-            <div class="col">
-              <div class="mb-1">
-                <label for="nombre" class="emerge col-form-label">Segundo apellido:</label> 
-                <input type="text" class="emerge form-control-sm" id="segundoapellido" name="segundoapellido" required value="<?php echo $segundoapellidor; ?>">
-              </div>
-            </div>
-            <div class="col">
-              <div class="mb-1">
-                <label for="nombre" class="emerge col-form-label"><b>Tipo de documento:</b></label>
-                <input type="text" class="emerge form-control-sm" id="tipodocumento" name="tipodocumento" required value="<?php echo $tipodocumentor; ?>">
-              </div>
-            </div>
-            <div class="col">
-              <div class="mb-1">
-                <label for="nombre" class="emerge col-form-label"><b>Cedula:</b></label>
-                <input type="text" class="emerge form-control-sm" id="cedula" name="cedula" required value="<?php echo $cedular; ?>"> 
-              </div>
-          </div>
-
-          <div class="row">
-            <div class="col">
-              <div class="mb-1">
-                <label for="nombre" class="emerge col-form-label"><b>Lugar de expedicion:</b></label>
-                <input type="text" class="emerge form-control-sm" id="lugarexpedicion" name="lugarexpedicion" required value="<?php echo $lugarexpedicionr; ?>"> 
-              </div>
-            </div>
-            <div class="col">
-              <div class="mb-1">
-                <label for="nombre" class="emerge col-form-label"><b>Sexo:</b></label> 
-                <input type="text" class="emerge form-control-sm" id="nombre" name="nombre" required value="<?php echo $sexor; ?>"> 
-              </div>
-            </div>
-            <div class="col">
-              <div class="mb-1">
-                <label for="nombre" class="emerge col-form-label">Telefono:</label> 
-                <input type="text" class="emerge form-control-sm" id="nombre" name="nombre" required value="<?php echo $telefonor; ?>"> 
-              </div>
-          </div>
-      </div>
-
-        <div class="row">
-            <div class="col">
-              <div class="mb-1">
-                <label for="nombre" class="emerge col-form-label"><b>Celular:</b></label> 
-                <input type="text" class="emerge form-control-sm" id="nombre" name="nombre" required value="<?php echo $celularr; ?>"> 
-              </div>
-            </div>
-            <div class="col">
-              <div class="mb-1">
-                <label for="nombre" class="emerge col-form-label"><b>Direccion:</b></label> 
-                <input type="text" class="emerge form-control-sm" id="nombre" name="nombre" required value="<?php echo $direccionr; ?>"> 
-              </div>
-            </div>
-            <div class="col">
-              <div class="mb-1">
-                <label for="nombre" class="emerge col-form-label"><b>Cargo:</b></label> 
-                <input type="text" class="emerge form-control-sm" id="nombre" name="nombre" required value="<?php echo $cargor; ?>"> 
-              </div>
-          </div>
-        </div>
-
-
-        <div class="row">
-            <div class="col">
-              <div class="mb-1">
-                <label for="nombre" class="emerge col-form-label"><b>Supervisor:</b></label> 
-                <input type="text" class="emerge form-control-sm" id="nombre" name="nombre" required value="<?php echo $supervisorr; ?>"> 
-              </div>
-            </div>
-            <div class="col">
-              <div class="mb-1">
-                <label for="nombre" class="emerge col-form-label"><b>Correo:</b></label> 
-                <input type="text" class="emerge form-control-sm" id="nombre" name="nombre" required value="<?php echo $correor; ?>"> 
-              </div>
-            </div>
-            <div class="col">
-              <div class="mb-1">
-                <label for="nombre" class="emerge col-form-label"><b>Ubicacion laboral:</b></label> 
-                <input type="text" class="emerge form-control-sm" id="nombre" name="nombre" required value="<?php echo $ubicacion_laboralr; ?>"> 
-              </div>
-          </div>
-</div>
-
-          <div class="row">
-            <div class="col">
-              <div class="mb-1">
-                <label for="nombre" class="emerge col-form-label"><b>Dependencia:</b></label> 
-                <input type="text" class="emerge form-control-sm" id="nombre" name="nombre" required value="<?php echo $dependenciar; ?>"> 
-              </div>
-            </div>
-            <div class="col">
-              <div class="mb-1">
-                <label for="nombre" class="emerge col-form-label"><b>Tipo de solicitud:</b></label> 
-                <input type="text" class="emerge form-control-sm" id="nombre" name="nombre" required value="<?php echo $tiposolicitudr; ?>">
-              </div>
-            </div>
-            <div class="col">
-              <div class="mb-1">
-                <label for="nombre" class="emerge col-form-label"><b>Aplicativo:</b></label> 
-                <input type="text" class="emerge form-control-sm" id="nombre" name="nombre" required value="<?php echo $aplicativor; ?>"> 
-              </div>
-          </div>
-      </div>
-
-        <div class="row">
-            <div class="col">
-              <div class="mb-1">
-                <label for="nombre" class="emerge col-form-label"><b>Observaciones del solicitante</b></label> 
-                <input type="text" class="emerge form-control-sm" id="nombre" name="nombre" required value="<?php echo $observacionesr; ?>"> 
-          </div>
-            </div>
-            <div class="col">
-              <div class="mb-1">
-                <label for="nombre" style="color: green;" class="emerge col-form-label"><b>Observaciones supervisor:</b></label> 
-                <input type="text" class="obs emerge form-control-sm" id="nombre" name="nombre" required placeholder="Digite observaciones obligatorio"> 
-              </div>
-            </div>
-      </div>
-       <div class="row">
-            <div class="col">
-              <div class="mb-1">
-                <label for="nombre" style="" class="emerge col-form-label"><b>Firma:</b></label> 
-                <input type="text" class="emerge form-control-sm" id="nombre" name="nombre" required value="Firma si lo requiere"> 
-              </div>
-            </div>
-            
-      
-      </div>
-     <div class="modal-footer">
-       <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
-       <button type="submit" class="btn btn-outline-success">Aceptar</button>
-       <button type="submit" class="btn btn-outline-danger">Rechazar</button>
-     </div>
-     </form>
-   </div>
- </div>
-
-
-
- <?php 
- //cuantas filas hay
- echo $totalr; 
- //ahora saber que boton es el que presione
-
- 
- ?>
 
 <!-- EJEMPLO DEL LLAMADO DEL BOTON -->
 <!--SCRIPT PARA RECORRER EL ARRAY DE LA TABLA  -->
@@ -624,32 +471,8 @@ if($totalr<1){
 //echo $row["nombre"]; ?>
 
 <script>
-  //SCRIPT PARA RECORRER LA TABLA Y SABER EL CONTENIDO CON JQUERY
-  $(document).ready(function(){
-
-    console.log("funcionado jquery");
-  //  var nombre $('#nombre').val();
-  //RECORRER LA TABLA Y SABER DONDE PRESIONE, DE SABER DONDE PRESIONE ME TRAIGO LA CEDULA
-
-
-  const nombre = document.getElementById("nombre");
-  const tabla = document.getElementById("tabla");
-  const filas = tabla.getElementsByTagName("tbody")[0];
-  //console.log(nombre.value)// OBTIENE EL ULTIM VALOR DEL ID;
-  console.log(filas);
-  console.log(filas.length)//
-
-  //SABER EL TOTAL DE LA TABLA
-
-
-
-
-
-
-    //console.log("nombre");
-  });
-
-//SCRIP PARA RECORRER LA TABLA Y SABER EL CONTENIDO
+  //SCRIPT PARA RECORRER LA TABLA Y SABER EL CONTENIDO
+  var x = document.getElementById("tabla").rows[0].cells.length;
 </script>
 
 
@@ -688,7 +511,8 @@ if($totalr<1){
         }
       </script>
 
-      <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
       <script src="../js/main3.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>

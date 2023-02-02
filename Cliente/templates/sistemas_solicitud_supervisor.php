@@ -29,7 +29,6 @@ if($totalr<1){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">    
@@ -55,7 +54,7 @@ if($totalr<1){
                     <a class="far fa-user-cog nav-link" aria-current="page" href="perfil.php">Mi perfil</a>
                   </li>
                   <li class="nav-item">
-                    <a class="fas fa-id-card nav-link" href="paz_salvo.php" disabled>Paz y salvo</a>
+                    <a class="fas fa-id-card nav-link" href="pazysalvo.php" disabled>Paz y salvo</a>
                   </li>
                 </ul>
               </div>
@@ -168,7 +167,7 @@ if($totalr<1){
               <div class="row">
 
               <div class="col">
-                <label for="" class="emerge"><b>Tipo de documento:</b></label> <br>
+                <label for="" class="emerge">Tipo de documento:</label> <br>
                 <select name="tipodocumento" id="tipodocumento" class="emerge">
                   <option value="CC" class="emerge" selected>CC</option>
                   <option value="CE" class="emerge">CE</option>
@@ -178,16 +177,16 @@ if($totalr<1){
                 </div>
 
                 <div class="col">
-                <label for="cedula" class="emerge"><b>Cedula:</b></label> <br>
+                <label for="cedula" class="emerge">Cedula:</label> <br>
                 <input type="number" name="cedula" id="cedula" class="emerge" value="<?php echo $cedular?>"> 
                 </div>
                 <div class="col">
-                <label for="lugarexpedicion" class="emerge"><b>Lugar  de expedicion:</b></label> <br>
+                <label for="lugarexpedicion" class="emerge">Lugar  de expedicion:</label> <br>
                 <input type="text" name="lugarexpedicion" id="lugarexpedicion" class="emerge" placeholder="Digite Lugar expedicion" required >
                 </div>
 
                 <div class="col">
-                <label for="sexo" class="emerge"><b>Sexo:</b></label> <br>
+                <label for="sexo" class="emerge">Sexo:</label> <br>
                 <select name="sexo" id="sexo" class="emerge">
                   <option value="M" class="emerge">M</option>
                   <option value="F" selected class="emerge">F</option>
@@ -203,7 +202,7 @@ if($totalr<1){
                 </div>
                 
                 <div class="col">
-                <label for="celular" class="emerge"><b> Celular:</b></label> <br>
+                <label for="celular" class="emerge"> Celular:</label> <br>
                 <input type="number" name="celular" id="celular" class="emerge" placeholder="Digite celular">
                 </div>
 
@@ -227,18 +226,18 @@ if($totalr<1){
 
 
                 <div class="col">
-                <label  for="correo" class="emerge"><b>Correo personal:</b></label> <br>
+                <label  for="correo" class="emerge">Correo personal:</label> <br>
                 <input type="email" name="correo" id="correo" class="emerge" value="<?php echo $emailr?>" placeholder="Digite correo personal"> 
                 </div>
 
 
                 <div class="col">
-                <label for="ubicacion_laboral" class="emerge"><b>Ubicacion laboral:</b></label><br>
+                <label for="ubicacion_laboral" class="emerge">Ubicacion laboral:</label><br>
                 <input type="text" name="ubicacion_laboral" id="ubicacion_laboral" class="emerge" placeholder="Ubicacion laboral o area"> 
                 </div>
 
                 <div class="col">
-                <label for="dependencia" class="emerge"><b>Dependencia o servicio:</b></label><br>
+                <label for="dependencia" class="emerge">Dependencia o servicio:</label><br>
                 <input type="text" name="dependencia" id="dependencia" class="emerge" placeholder="Dependencia o servicio"> 
                 </div>
 
@@ -249,22 +248,21 @@ if($totalr<1){
                
 
                 <div class="col">
-                <label for="sede" class="emerge">Sede:</label> <br>
-                <input type="text" name="sede" id="sede" class="emerge" value="" placeholder="Digite sede">
-                <ul id=lista></ul>
 
                 </div>
                
                 <div class="col">
+                  
                 <label for="supervisor" class="emerge"><b>Supervisor o jefe inmediato:</b></label> <br>
                 <input type="text" name="supervisor" id="supervisor" class="emerge" value="<?php echo $supervisorr?>">
+                
                 </div>
 
 
 
                 <div class="col">
                   
-                  <label for="" class=""><b>Fecha final de contrato</b></label> <br>
+                  <label for="" class="">Fecha final de contrato</label> <br>
                   <input type="date" name="observaciones" id="observaciones" class="" placeholder="Digite para que requiere el permiso del sistema?" required> 
                   
                 </div>
@@ -325,7 +323,7 @@ if($totalr<1){
 
 
                 <div class="col">
-                <label for="observaciones" class=""><b>Observaciones</b></label> <br>
+                <label for="observaciones" class="">Observaciones</label> <br>
                 <input style="color: green; height: 40px;" type="text" name="observaciones" id="observaciones" class="obs" placeholder="Digite para que requiere el permiso del sistema?" required> 
                 </div>
 
@@ -380,14 +378,7 @@ if($totalr<1){
       
 </div>
 
-<script>
-  //SCRIPT PARA AUTOCOMPLETAR SEDE,UBICACION LABORAL,DEPENDENCIA
-  //IPS OSPINA PEREZ, UBA PUENTE BARCO, ADMINISTRATIVA, IPS BOCONO, UBA AGUA CLARA
 
-
-
-
-</script>
 
 
 
@@ -499,16 +490,10 @@ if($totalr<1){
         }
       </script>
 
-
-
-
-      <script src="../js/peticiones.js"></script> <!--PRUEBA DE AUTOCOMPLETE -->
-      <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
       <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
       <script src="../js/main.js"></script>
-
       <script src="../js/repetirdiv.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>

@@ -4,14 +4,16 @@ include 'conexion.php';
 
 
 $nombre = $_POST["nombre"];
+$segundonombre = $_POST["segundonombre"];
+$primerapellido = $_POST["primerapellido"];
+$segundoapellido = $_POST["segundoapellido"];
 $cargo = $_POST["cargo"];
-$fechafinalcontrato = $_POST["fechafinalcontrato"]; 
-$cedula = $_POST["cedula"];
-$supervisor = $_POST["supervisor"];
 $email = $_POST["email"];
-$rol = $_POST["rol"];
+$supervisor = $_POST["supervisor"];
+$cedula = $_POST["cedula"];
+$tipodocumento = $_POST["tipodocumento"];
 
-$sql="INSERT INTO solicitud_usuario VALUES('$nombre','$cargo','$fechafinalcontrato','$cedula','$supervisor','$email','$rol',cedula)";
+$sql="INSERT INTO solicitud_usuario (nombre,segundonombre,primerapellido,segundoapellido,cargo,email,supervisor,cedula,tipodocumento) VALUES('$nombre','$segundonombre','$primerapellido','$segundoapellido','$cargo','$email','$supervisor',$cedula,'$tipodocumento')";
 
 $resultado=$mysqli ->query($sql);
 

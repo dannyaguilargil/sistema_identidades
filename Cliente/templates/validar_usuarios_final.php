@@ -71,7 +71,7 @@ session_start();
 
 
 <br>
-<form action="../../Servidor/registrar_usuarios_validados.php" method="POST" class="container form-control" id="envio">
+<form action="../../Servidor/registrarusuarios_validados2.php" method="POST" class="container form-control" id="envio">
            
 
             <?php $nombrer='';
@@ -119,7 +119,7 @@ session_start();
                     <input type="text" name="fechafinalcontrato" id="fechafinalcontrato" class="emerge" value="<?php echo $fechafinalcontrator?>">
                     <input type="text" name="supervisor" id="supervisor" class="emerge" value="<?php echo $supervisorr?>">
                     <input type="text" name="email" id="email" class="emerge" value="<?php echo $emailr?>">
-                    <input type="text" name="rol" id="rol" class="emerge" value="<?php echo $rolr?>">
+                  
                     
                     <button type="submit" class="fa-sharp fa-solid fa-check btn btn-success" name="registro" id="registro"  onclick="envio();"></button>
                     <button type="submit" class="fa-sharp fa-solid fa-x btn btn-danger" name="eliminar" id="eliminar" onclick="envio2();"></button>

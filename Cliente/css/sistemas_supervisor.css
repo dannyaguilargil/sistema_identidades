@@ -30,7 +30,8 @@ input{
 }
 
 .obs{
-    width: 380px;
+    width: 440px;
+    text-align: center;
 }
 .centrar{
     display: flex;
@@ -86,3 +87,8 @@ input{
     color: white;
 }
 /* FINALIZA MODO DARK*/
+.emerge{
+    display: table-cell;
+    text-align: center;
+    color: black;
+}

@@ -1,9 +1,6 @@
 <?php
 /*
-LOAD VIDEO
-*/
-
-
+LOAD VIDEO]]*/
 require 'config.php';
 
 /* Un arreglo de las columnas a mostrar en la tabla */
@@ -86,6 +83,7 @@ if ($num_rows > 0) {
         $output['data'] .= '<td>' . $row['supervisor'] . '</td>';
         $output['data'] .= '<td>' . $row['email'] . '</td>';
         $output['data'] .= '<td>' . $row['rol'] . '</td>';
+        $output['data'] .= '<td>' . '<button class="btn btn-success"> Ver </button>'.'</td>'; // aqui va el boton de editar
         //$output['data'] .= '<td><a href="">Editar</a></td>';
        // $output['data'] .= '<td><a href="">Eliminar</a></td>';
         $output['data'] .= '</tr>';

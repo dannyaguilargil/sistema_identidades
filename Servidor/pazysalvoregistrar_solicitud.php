@@ -169,7 +169,7 @@ if($resultado>0){
    // header("Location:../Vista/vuelos.html");
    
 
-echo header("Location:../Cliente/templates/sistemas_solicitud_usuario.php");
+echo header("Location:../Cliente/templates/paz_salvo.php");
 
 
 //exit();
