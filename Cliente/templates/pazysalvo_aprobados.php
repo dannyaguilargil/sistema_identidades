@@ -34,7 +34,7 @@
                   Sistemas
                 </a>
                 <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Pendientes</a></li>
+                  <li><a class="dropdown-item" href="administra.php">Pendientes</a></li>
                   <li><a class="dropdown-item" target="_blank" href="sistemas_solicitud_supervisor.php">Solicitud</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" target="_blank" href="sistemas_solicitud_supervisor.php">Notificar</a></li>

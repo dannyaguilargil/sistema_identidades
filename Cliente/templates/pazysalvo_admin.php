@@ -31,10 +31,10 @@
                   Sistemas
                 </a>
                 <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Pendientes</a></li>
+                  <li><a class="dropdown-item" href="administra.php">Pendientes</a></li>
                   <li><a class="dropdown-item" target="_blank" href="sistemas_solicitud_supervisor.php">Solicitud</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" target="_blank" href="sistemas_solicitud_supervisor.php">Notificar</a></li>
+                  <li><a class="dropdown-item" target="_blank" href="notificar_sistema.php">Notificar</a></li>
                 </ul>
               </li>
 
@@ -78,118 +78,73 @@
 
 
 
+            <div class="imagen">
+                <img  src="../imgs/153.png"  alt="" style="width: 200px; text-align: center;">
+            </div>
 
+       
+            <div class="row">
+              <div class="col">
+               
+              </div>
+
+ 
+
+
+            <div class="col form-control">
+
+            <a class="btn btn-outline-success" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+            Solicitudes
+            </a>
+                                
+                            <div class="collapse" id="collapseExample">
+                            <div class="card card-body">
+                            <!-- AQUI VA CONTENIDO PHP-->
+                            <?php
+                            include '../../Servidor/conexion.php'; 
+                            $nombre='';
+                            $cedula='';
+                            $consulta="SELECT * from pazysalvo_solicitud;";
+                            $resultado=mysqli_query($mysqli,$consulta);
+                            if($resultado){ while($row = $resultado->fetch_array()){
+                            $nombre = $row['nombre'];
+                            $cedula = $row['cedula'];
+                            echo $nombre, " "; 
+                            echo $cedula; ?> <br> <?php
+                            }
+                            } 
+                            ?>
+                            </div>
+                            </div>
+
+<form  action="../../Servidor/pazysalvoregistrar_aprobado.php" class="" method="POST">
+
+        <label class="" for="cedula">Cedula: </label> 
+        <input type="text" class="form-control" name="cedula" id="cedula" required><br>
+
+        <label for="rfid">Entrega de tarjeta RFID</label> 
+        <input type="checkbox" value="SI" name="rfid" id="rfid" selected required><br>
+
+        <label for="equipos">Equipos en buen estado</label>
+        <input type="checkbox" value="SI" name="equipos" id="equipos" selected required>
     
-   
-<div class="imagen">
-            <img  src="../imgs/153.png"  alt="" style="width: 200px; text-align: center;">
-        </div>
 
-
-<div class="centrar">
-
-
-
-
-<div class="centrar1 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-<div class="form-control form-contro" >
-    <a class="btn btn-outline-success" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-    Solicitudes
-    </a>
+    <button type="submit" class="text-center btn btn-danger bnn" onclick="envio()">Generar</button>
+ 
   
-
-
-    
-<div class="collapse" id="collapseExample">
-  <div class="card card-body">
-  <!-- AQUI VA CONTENIDO PHP-->
-  <?php
-include '../../Servidor/conexion.php'; 
-$nombre='';
-$cedula='';
-
-$consulta="SELECT * from pazysalvo_solicitud;";
-$resultado=mysqli_query($mysqli,$consulta);
-if($resultado){ while($row = $resultado->fetch_array()){
- $nombre = $row['nombre'];
- $cedula = $row['cedula'];
-
-
-echo $nombre, " "; 
-echo $cedula; ?> <br> <?php
-}
-} 
-
-
-?>
-
-   <!-- AQUI VAN LAS SOLICITUDES DE LOS PAZ Y SALVOS SOLICITUDES -->
-
-
-  </div>
-</div>
-
-
-            <!-- AQUI VA UN POPUP QUE SE DESLIZA PARA VER QUIEN SOLICITO PAZ Y SALVO-->
-            <!-- Y CON ESA CEDULA SE LE APRUEBA  -->
-<br>
-      
+</form>
           
-            <!-- AQUI DEBO CARGAR LOS DATOS ANTERIORES DEL MISMO USUARIO-->
-
-            <div class="contt">
-
-            <form  action="../../Servidor/pazysalvoregistrar_aprobado.php" method="POST">
-
-
-
-            <div class="">
+        
+            </div>
                 
-              <div class="">
-                <label class="TT3" for="cedula">Cedula: </label> <br>
-                <input type="text" class="form-control" name="cedula" id="cedula" required><br>
-              </div>
 
-            <!-- AQUI DEBO HACERLO CON AJAX PARA HCER LA BUSQUEDA AUTOMATICA Y SABER QUE USUARIO ES-->
-           </div>
-
-            <div class="textoI">
-              
-              <div class="">
-                <label for="rfid">Entrega de tarjeta RFID</label> 
-                <input type="checkbox" value="SI" name="rfid" id="rfid" selected required>
-              </div>
-             <br>
-              <div class="">
-                <label for="equipos">Entrega de equipos</label>
-                <input type="checkbox" value="SI" name="equipos" id="equipos" selected required>
-              </div>
+          <div class="col">
+            
+          </div>
 
 
-              
-              <button type="submit" class=" btn btn-danger bnn" onclick="envio()">Generar</button>
-              </div>
-              
-              
-
-      
-          
-              <!--
-
-                EL CUADRO DEBE IR MAS PEQUEÑO POR QUE ES SOLO ACCESO
-
-              -->
-              </form>
-           
-              </div>
-              </div>
-
-              </div>
-
-
-
-        <!--SI AL USUARIO SE LE VALIDA UN PERMISO DE UNA APP ESE PERMISO DE LA APP DEBE REGISTRARSE EN LA BASE DATOS -->
-
+</div>
+            
 
 
       <script>

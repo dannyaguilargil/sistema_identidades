@@ -250,8 +250,8 @@ if($totalr<1){
 
                 <div class="col">
                 <label for="sede" class="emerge">Sede:</label> <br>
-                <input type="text" name="sede" id="sede" class="emerge" value="" placeholder="Digite sede">
-                <ul id=lista></ul>
+                <input type="text" name="sede" id="input" class="emerge" value="" placeholder="Digite sede UBA o IPS">
+                <ul class="list"></ul>
 
                 </div>
                
@@ -501,8 +501,8 @@ if($totalr<1){
 
 
 
-
-      <script src="../js/peticiones.js"></script> <!--PRUEBA DE AUTOCOMPLETE -->
+    <script src="../js/apps.js"></script>
+    <!--  <script src="../js/peticiones.js"></script> --PRUEBA DE AUTOCOMPLETE -->
       <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
       <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
