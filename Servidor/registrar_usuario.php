@@ -1,18 +1,32 @@
 <?php
 
 include 'conexion.php';
+//AGREGARE LA R PARA EVITAR DAÑOS EN LOS DATOS
+
+$nombrer = '';
+$segundonombrer = '';
+$primerapellidor = '';
+$segundoapellidor = '';
+$cargor = '';
+$fechafinalcontrator = '';
+$tipodocumentor = '';
+$cedular = '';
+$supervisorr = '';
+$emailr = '';
+$rolr = '';
 
 
-$nombre = $_POST["nombre"];
-$segundonombre = $_POST["segundonombre"];
-$primerapellido = $_POST["primerapellido"];
-$segundoapellido = $_POST["segundoapellido"];
-$cargo = $_POST["cargo"];
-$fechafinalcontrato = $_POST["fechafinalcontrato"]; 
-$cedula = $_POST["cedula"];
-$supervisor = $_POST["supervisor"];
-$email = $_POST["email"];
-$rol = $_POST["rol"];
+$nombrer = $_POST["nombrer"];
+$segundonombrer = $_POST["segundonombrer"];
+$primerapellidor = $_POST["primerapellidor"];
+$segundoapellidor = $_POST["segundoapellidor"];
+$cargor = $_POST["cargor"];
+$fechafinalcontrator = $_POST["fechafinalcontrator"]; 
+$tipodocumentor = $_POST["tipodocumentor"];
+$cedular = $_POST["cedular"];
+$supervisorr = $_POST["supervisorr"];
+$emailr = $_POST["emailr"];
+$rolr = $_POST["rolr"];
 
 
 
@@ -26,7 +40,7 @@ $email = $_POST["email"];
 $rol = $_POST["rol"];
 */
 
-$sql="INSERT INTO usuarios_registrados(nombre,segundonombre,primerapellido,segundoapellido,cargo,fechafinalcontrato,cedula,supervisor,email,rol,password) VALUES('$nombre','$segundonombre','$primerapellido','$segundoapellido','$cargo','$fechafinalcontrato','$cedula','$supervisor','$email','$rol',$cedula)";
+$sql="INSERT INTO usuarios_registrados(nombre,segundonombre,primerapellido,segundoapellido,cargo,fechafinalcontrato,tipodocumento,cedula,supervisor,email,rol,password) VALUES('$nombrer','$segundonombrer','$primerapellidor','$segundoapellidor','$cargor','$fechafinalcontrator','$tipodocumentor',$cedular,'$supervisorr','$emailr','$rolr',$cedular)";
 
 //$sql="INSERT INTO usuarios_registrados(nombre,cedula) VALUES('$nombre',$cedula)";
 

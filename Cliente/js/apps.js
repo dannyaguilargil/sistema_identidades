@@ -19,27 +19,37 @@ let names = [
     "IPS SAN MARTIN",
     "IPS SAN MATEO",
     "IPS SANTA ANA",
-    "IPS CLARET",
     "IPS CUNDINAMARCA",
+    "IPS BELEN",
+    "IPS DIVINA PASTORA",
+    "IPS EL RODEO",
+    "IPS NIÑA CECI",
+    "IPS PALMERAS",
+    "IPS EL PORTICO",
+    "IPS EL CERRITO",
+    "IPS CUNDINAMARCA",
+    "IPS EL SALADO",
+    "IPS GUAIMARAL",
+
 ];
 
 let sortedNames = names.sort();
 console.log("sortedNames");
-let input = document.getElementById("input");
+let sede = document.getElementById("sede");
 //removeElements();
-input.addEventListener("keyup", (e) => {
+sede.addEventListener("keyup", (e) => {
     
     removeElements();
     for (let i of sortedNames){
         //removeElements();
         //console.log(i);
-        if(i.toLowerCase().startsWith(input.value.toLowerCase()) && input.value !=""){
+        if(i.toLowerCase().startsWith(sede.value.toLowerCase()) && sede.value !=""){
             let listItem = document.createElement("li");
             listItem.classList.add("list-items");
             listItem.style.cursor = "pointer";
             listItem.setAttribute("onclick", "displayNames('"+i+"')");
-            let word = "<b>" + i.substr(0, input.value.length) +"</b>";
-            word += i.substr(input.value.length);
+            let word = "<b>" + i.substr(0, sede.value.length) +"</b>";
+            word += i.substr(sede.value.length);
            // console.log(word);
            listItem. innerHTML = word;
            document.querySelector(".list").appendChild(listItem);
@@ -48,7 +58,7 @@ input.addEventListener("keyup", (e) => {
 });
 
 function displayNames(value){
-    input.value = value;
+    sede.value = value;
     removeElements();
 }
 function removeElements(){

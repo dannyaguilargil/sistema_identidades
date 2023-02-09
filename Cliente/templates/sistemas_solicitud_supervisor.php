@@ -54,7 +54,7 @@ if($totalr<1){
                     <a class="far fa-user-cog nav-link" aria-current="page" href="perfil.php">Mi perfil</a>
                   </li>
                   <li class="nav-item">
-                    <a class="fas fa-id-card nav-link" href="pazysalvo.php" disabled>Paz y salvo</a>
+                    <a class="fas fa-id-card nav-link" href="paz_salvo.php" disabled>Paz y salvo</a>
                   </li>
                 </ul>
               </div>
@@ -248,7 +248,8 @@ if($totalr<1){
                
 
                 <div class="col">
-
+                <label for="sede" class="emerge">Sede</label> <br>
+                <input type="text" name="sede" id="sede" class="emerge" placeholder="Digite uba o ips">
                 </div>
                
                 <div class="col">

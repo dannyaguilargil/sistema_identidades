@@ -213,6 +213,8 @@ if($totalr<1){
        <center><h6 class=""><b>Gestion de permisos asignados</b></h6> </center>
 
  
+<!-- AQUI VA LA CONSULTA DE TODO LOS SISTEMAS APORBADOS PARA VALIDARLOS EN LA TABLA -->
+
 
     
 <!-- parte derecha de modficar datos de perfil --->

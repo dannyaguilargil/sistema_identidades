@@ -53,7 +53,7 @@ if($totalr<1){
                   Sistemas
                 </a>
                 <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Pendientes</a></li>
+                  <li><a class="dropdown-item" href="administra.php">Pendientes</a></li>
                   <li><a class="dropdown-item" target="_blank" href="sistemas_solicitud_supervisor.php">Solicitud</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" target="_blank" href="notificar_sistema.php">Notificar</a></li>
@@ -130,7 +130,7 @@ if($totalr<1){
          </div>
          <div class="mb-1">
            <label for="primerapellidor" class="emerge col-form-label">Primer apellido:</label> <br>
-           <input type="text" class="emerge form-control-sm" id="primerapellidor" name="primerapellido" required> 
+           <input type="text" class="emerge form-control-sm" id="primerapellidor" name="primerapellidor" required> 
          </div>
          <div class="mb-1">
            <label for="segundoapellidor" class="emerge col-form-label">Segundo apellido:</label> <br>
@@ -141,10 +141,22 @@ if($totalr<1){
            <input type="text" class="emerge form-control-sm" id="cargor" name="cargor" required>
          </div>
          <div class="mb-1">
-           <label for="fechafinalcontrato" class="emerge col-form-label">Fecha final de contrato:</label><br>
-           <input type="date" class="emerge form-control-sm" id="fechafinalcontrato" name="fechafinalcontrato" required>
+           <label for="fechafinalcontrator" class="emerge col-form-label">Fecha final de contrato:</label><br>
+           <input type="date" class="emerge form-control-sm" id="fechafinalcontrator" name="fechafinalcontrator" required>
          </div>
         
+         <div class="mb-1">
+         <div class="col">
+                <label for="tipodocumentor" class="emerge">Tipo de documento:</label> <br>
+                <select name="tipodocumentor" id="tipodocumentor" class="emerge">
+                  <option value="CC" class="emerge" selected>CC</option>
+                  <option value="CE" class="emerge">CE</option>
+                  <option value="PASAPORTE" class="emerge">PASAPORTE</option>
+                  <option value="RESIDENCIA" class="emerge">RESIDENCIA</option>
+                </select>
+         </div>
+        </div>
+
          <div class="mb-1">
          <label for="cedular" class="emerge col-form-label">Cedula:</label> <br>
            <input type="number" class="emerge" id="cedular" name="cedular" required class="form-control-sm"> 
@@ -161,7 +173,7 @@ if($totalr<1){
 
 
          <div class="mb-1">
-         <label for="rol" class="">Rol</label> <br>
+         <label for="rolr" class="">Rol</label> <br>
                 <select name="rolr" id="rolr" class="">
                   <option value="" selected class="">NORMAL</option>
                   <option value="SUPERVISOR" class="">SUPERVISOR</option>
@@ -571,7 +583,7 @@ if($totalr<1){
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Eliminar solicitud de sistema</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Eliminar usuario del sistema</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>

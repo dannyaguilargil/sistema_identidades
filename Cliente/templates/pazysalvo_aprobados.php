@@ -58,8 +58,8 @@
                   Usuarios
                 </a>
                 <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Pendientes</a></li>
-                  <li><a class="dropdown-item" href="#">Registrados</a></li>
+                  <li><a class="dropdown-item" href="usuarios_pendientes.php">Pendientes</a></li>
+                  <li><a class="dropdown-item" href="usuarios.php">Registrados</a></li>
                 </ul>
               </li>
 

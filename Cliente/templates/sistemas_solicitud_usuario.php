@@ -250,7 +250,7 @@ if($totalr<1){
 
                 <div class="col">
                 <label for="sede" class="emerge">Sede:</label> <br>
-                <input type="text" name="sede" id="input" class="emerge" value="" placeholder="Digite sede UBA o IPS">
+                <input type="text" name="sede" id="sede" class="emerge" value="" placeholder="Digite sede UBA o IPS">
                 <ul class="list"></ul>
 
                 </div>

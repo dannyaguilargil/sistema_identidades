@@ -13,7 +13,7 @@ $id = 0;
 
 
 // DEBO CARGAR LOS DATOS PREVIOS DEL USUARIO Y POSTERIOR A ESO HACER EL REGISTRO DEL SISTEMA
-if (isset($_POST['registro'])){
+//if (isset($_POST['registro'])){
 $nombre = $_REQUEST["nombre"];
 $cedula = $_REQUEST["cedula"]; 
 $cargo = $_REQUEST["cargo"];
@@ -29,13 +29,13 @@ $resultado=$mysqli ->query($sql);
 
 $sql2="DELETE FROM sistema_validado_supervisor WHERE cedula = $cedula;";
 $resultado2=$mysqli ->query($sql2);
-}
+//}
 
-elseif (isset($_POST['eliminar'])){
-$id = $_REQUEST["id"];
-$sql2="DELETE FROM sistema_validado_supervisor WHERE id = $id;";
-$resultado=$mysqli ->query($sql2);
-}
+//elseif (isset($_POST['eliminar'])){
+//$id = $_REQUEST["id"];
+//$sql2="DELETE FROM sistema_validado_supervisor WHERE id = $id;";
+//$resultado=$mysqli ->query($sql2);
+//}
 
 if($resultado>0){
    

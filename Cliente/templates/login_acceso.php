@@ -87,6 +87,7 @@
                 <div class="col">
                     <label class="">Supervisor o jefe inmediato</label>
                     <input type="text" class="form-control" name="supervisor" id="supervisor" required><br>
+                    <ul class="list"></ul>
             </div>
 
 
@@ -207,7 +208,7 @@ alert("SE ENVIO CORRECTAMENTE, SE NOTIFICARA AL ADMINISTRADOR");
      
      </script>
         
-
+<script src="../js/supervisores.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>

@@ -673,26 +673,26 @@ if($totalr<1){
       let id =$('#id').val();
       let nombre=$('#nombre_laboratorio').val();
       let segundonombre=$('#segundonombre').val();
-      let primerapellido=$('#primerapellido').val(data.primerapellido);
-      let segundoapellido=$('#segundoapellido').val(data.segundoapellido);
-      let tipodocumento=$('#tipodocumento').val(data.tipodocumento);
-      let cedula=$('#cedula').val(data.cedula);
-      let lugarexpedicion=$('#lugarexpedicion').val(data.lugarexpedicion);
-      let sexo=$('#sexo').val(data.sexo);
-      let telefono=$('#telefono').val(data.telefono);
-      let celular=$('#celular').val(data.celular);
-      let direccion=$('#direccion').val(data.direccion);
-      let cargo=$('#cargo').val(data.cargo);
-      let supervisor=$('#supervisor').val(data.supervisor);
-      let correo=$('#correo').val(data.correo);
-      let ubicacion_laboral=$('#ubicacion_laboral').val(data.ubicacion_laboral);
-      let dependencia=$('#dependencia').val(data.dependencia);
-      let tiposolicitud=$('#tiposolicitud').val(data.tiposolicitud);
-      let aplicativo=$('#aplicativo').val(data.aplicativo);
-      let observaciones=$('#observaciones').val(data.observaciones);
-     // let observaciones=$('#observaciones_supervisor').val(data.observaciones_supervisor);
+      let primerapellido=$('#primerapellido').val();
+      let segundoapellido=$('#segundoapellido').val();
+      let tipodocumento=$('#tipodocumento').val();
+      let cedula=$('#cedula').val();
+      let lugarexpedicion=$('#lugarexpedicion').val();
+      let sexo=$('#sexo').val();
+      let telefono=$('#telefono').val();
+      let celular=$('#celular').val();
+      let direccion=$('#direccion').val();
+      let cargo=$('#cargo').val();
+      let supervisor=$('#supervisor').val();
+      let correo=$('#correo').val();
+      let ubicacion_laboral=$('#ubicacion_laboral').val();
+      let dependencia=$('#dependencia').val();
+      let tiposolicitud=$('#tiposolicitud').val();
+      let aplicativo=$('#aplicativo').val();
+      let observaciones=$('#observaciones').val();
+      let observaciones_supervisor=$('#observaciones_supervisor').val();
       funcion='editar';
-      $.post('controlador/AdministraController.php',{id,nombre,segundonombre,funcion},(response)=>{
+      $.post('controlador/AdministraController.php',{nombre,segundonombre,primerapellido,segundoapellido,tipodocumento,lugarexpedicion,cedula,funcion},(response)=>{
         
       })
       
