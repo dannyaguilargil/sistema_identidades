@@ -36,6 +36,35 @@ if($totalr<1){
     <link rel="stylesheet" href="../css/solicitud_usuario.css">
     <link rel="icon" href="../imgs/escudito.ico">
     <title>Solicitar sistema</title>
+
+
+    <script>
+  //SCRIPT PARA LA SELECCION DE LA FIRMA VALIDADA CON EL APLICATIVO KUBAPP
+  function aplicativos(){
+
+  
+  var aux='KUBAPP';
+  var aplicativo=document.getElementById("aplicativo");
+  var display=aplicativo.options[aplicativo.selectedIndex].text;
+
+  if(aplicativo.value==="KUBAPP"){
+    console.log("ES IGUAL");
+    const $firma = document.querySelector("#firma");
+    $firma.style.display = "";
+    
+  }
+  else{
+    console.log(aplicativo.value);
+    const $firma = document.querySelector("#firma");
+    $firma.style.display = "none";
+    $("firma" ).removeClass("firma");// remover la clase para pasar observaciones al lado izquierdo
+  }
+}
+
+
+</script>
+
+
 </head>
 <body>
   
@@ -294,9 +323,15 @@ if($totalr<1){
                 </select>
                 </div>
 
-                <div class="col">
+
+                        <!--CONDICIONAL DEL APLICATIVO SI SELECCIONA KUB APP-->
+
+                     
+
+
+                <div class="col aplica" id="aplica">
                 <label for="">Aplicativo</label> <br>
-                <select name="aplicativo" id="aplicativo" class="emerge">
+                <select name="aplicativo" id="aplicativo" class="emerge" onchange="aplicativos();">
                   <option value="ALDEAMO SMS" class="emerge">ALDEAMO SMS</option>
                   <option value="ALMERA" class="emerge">ALMERA</option>
                   <option value="EMAIL" class="emerge">EMAIL</option>
@@ -308,6 +343,7 @@ if($totalr<1){
                   <option value="AULA VIRTUAL" class="emerge">AULA VIRTUAL</option>
                   <option value="TNS" class="emerge">TNS</option>
                   <option value="KUBAPP" class="emerge">OTRO</option>
+                  <option value="ANNARLARB" class="emerge">ANNARLAB</option>
                 </select> 
 
                  </div>
@@ -316,11 +352,11 @@ if($totalr<1){
 
 
 
-<div class="col">
-<div class="col">
-                <label for="tarjetaprofesional" class="">Adjunte firma fondo blanco</label>
-                <input type="file" name="observaciones" id="" class="" placeholder="Seleccione"> 
-                </div>
+
+<div class="col firma" id="firma">
+                <label for="firma" class="">Adjunte firma fondo blanco</label>
+                <input type="file" name="firma" id="firma" class="" placeholder="Seleccione" required> 
+          
 </div>
 
 
@@ -380,14 +416,7 @@ if($totalr<1){
       
 </div>
 
-<script>
-  //SCRIPT PARA AUTOCOMPLETAR SEDE,UBICACION LABORAL,DEPENDENCIA
-  //IPS OSPINA PEREZ, UBA PUENTE BARCO, ADMINISTRATIVA, IPS BOCONO, UBA AGUA CLARA
 
-
-
-
-</script>
 
 
 
