@@ -3,6 +3,8 @@
 include 'conexion.php';
 
 
+
+
 $nombre = $_POST["nombre"];
 $segundonombre = $_POST["segundonombre"];
 $primerapellido = $_POST["primerapellido"];
