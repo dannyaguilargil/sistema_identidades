@@ -97,8 +97,23 @@
             Solicitudes
             </a>
                                 
+
+
+                            <!--AQUI VAN LAS SOLICITUDES PERO EN TABLA -->
+
+                          
+
+
                             <div class="collapse" id="collapseExample">
                             <div class="card card-body">
+                            
+                            <!--
+                            <table class="table table-light table-striped">
+                            <tr class="tre">
+                            <th>NOMBRE</th>
+                            <th>CEDULA</th>
+-->
+
                             <!-- AQUI VA CONTENIDO PHP-->
                             <?php
                             include '../../Servidor/conexion.php'; 

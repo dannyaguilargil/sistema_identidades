@@ -529,6 +529,8 @@ if($totalr<1){
           
               </div>
 
+<!--AQUI VA LA CONSULTA DE LA FIRMA -->
+
               <div class="row">
                 <div class="col">
                   <div class="form-group">

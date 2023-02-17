@@ -1,4 +1,5 @@
 <?php
+//MISMO PERFIL PERO CON LA GESTION DE LOS PERMISOS ASIGNADOS
 session_start();
 include '../../Servidor/conexion.php'; 
 $tomador=$_SESSION['nombre'];
