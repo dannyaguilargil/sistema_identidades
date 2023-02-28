@@ -34,7 +34,7 @@ if($totalr<1){
 
     <link rel="stylesheet" href="../css/solicitud_usuario.css">
     <link rel="icon" href="../imgs/escudito.ico">
-    <title>Gestion de Administrador</title>
+    <title>Usuarios pendientes</title>
 </head>
 <body>
 
@@ -84,7 +84,7 @@ if($totalr<1){
                 </ul>
               </li>
 
-
+          
 
             </ul>
             <a class="far fa-user-cog navbar-brand " href="perfil_admin.php">Mi perfil</a>
@@ -93,10 +93,12 @@ if($totalr<1){
               </button>
             <a class="btn btn-light fas fa-sign-out-alt" href="../../Servidor/logout.php"></a>
 
-          </div>
+          </div> 
         </div>
+       
       </nav>
       <!--NAVBAR-->
+ 
                     
 </header>
 
@@ -107,6 +109,9 @@ if($totalr<1){
 <div class="imagen">
     <img  src="../imgs/logocompleto.png"  alt="" style="width: 120px; text-align: center;height: 50px">
     </div>
+    <center>
+              <h6>USUARIOS PENDIENTES</h6>
+              </center>
     <!-- Modal -->
 <div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -142,7 +147,7 @@ if($totalr<1){
 
               <div class="col">
                 <div class="form-group">
-                <label for="primerapellido">Primer apellido: </label>
+                <label for="primerapellido"><b>Primer apellido: </b></label>
                 <input type="text" id="primerapellido" class="form-control">
                 
                  </div>
@@ -162,7 +167,7 @@ if($totalr<1){
 
               <div class="col">
                 <div class="form-group">
-                <label for="">Tipo de documento: </label>
+                <label for=""><b>Tipo de documento: </b></label>
                 <input type="text" id="tipodocumento" class="form-control">
                 
                  </div>
@@ -171,7 +176,7 @@ if($totalr<1){
 
               <div class="col">
                 <div class="form-group">
-                <label for="">Cedula</label>
+                <label for=""><b>Cedula: </b></label>
                 <input type="text" id="cedula" class="form-control">
                 
                  </div>
@@ -181,149 +186,75 @@ if($totalr<1){
 
               <div class="row">
                 <div class="col">
-                  <div class="form-group">
-                    <label for="">Lugar de expedicion: </label>
-                    <input type="text" id="lugarexpedicion" class="form-control">
-                   
-                 </div>
+                  
                </div>
 
 
 
               <div class="col">
-                <div class="form-group">
-                <label for="">Sexo: </label>
-                <input type="text" id="sexo" class="form-control">
                 
-                 </div>
               </div>
 
 
               <div class="col">
-                <div class="form-group">
-                <label for="">Telefono</label>
-                <input type="text" id="telefono" class="form-control">
                 
-                 </div>
               </div>
+
               </div>
 
               <div class="row">
                 <div class="col">
-                  <div class="form-group">
-                    <label for="">Celular: </label>
-                    <input type="text" id="celular" class="form-control">
-                   
-                 </div>
+                  
                </div>
 
 
 
               <div class="col">
-                <div class="form-group">
-                <label for="">Direccion: </label>
-                <input type="text" id="direccion" class="form-control">
                 
-                 </div>
               </div>
 
 
               <div class="col">
-                <div class="form-group">
-                <label for="">Cargo</label>
-                <input type="text" id="cargo" class="form-control">
-                
-                 </div>
+              
               </div>
    
             </div>
 
+
               <div class="row">
+
                 <div class="col">
                   <div class="form-group">
                     <label for="">Supervisor: </label>
                     <input type="text" id="supervisor" class="form-control">
-                   
                  </div>
                </div>
 
                <div class="col">
-                <div class="form-group">
-                  <label for="">Correo: </label>
-                  <input type="text" id="correo" class="form-control">
-                 
+                  <div class="form-group">
+                    <label for="">Correo personal: </label>
+                    <input type="text" id="email" class="form-control">
+                 </div>
                </div>
-             </div>
-             <div class="col">
-              <div class="form-group">
-                <label for="">Ubicacion laboral: </label>
-                <input type="text" id="ubicacion_laboral" class="form-control">
-               
-             </div>
-           </div>
 
               </div>
 
               <div class="row">
-                <div class="col">
-                  <div class="form-group">
-                    <label for="">Dependencia: </label>
-                    <input type="text" id="dependencia" class="form-control">
-                   
-                 </div>
-               </div>
 
-               <div class="col">
-                <div class="form-group">
-                  <label for="">Tipo de solicitud: </label>
-                  <input type="text" id="tiposolicitud" class="form-control">
-                 
-               </div>
-             </div>
-             <div class="col">
-              <div class="form-group">
-                <label for="">Aplicativo: </label>
-                <input type="text" id="aplicativo" class="form-control">
-               
-             </div>
-           </div>
+<div class="col">
+  <div class="form-group">
+    <label for="">Cargo o N° de contrato: </label>
+    <input type="text" id="cargo" class="form-control">
+ </div>
+</div>
 
-              </div>
+<div class="col">
 
-             
+</div>
 
-              <div class="row">
-                <div class="col">
-                  <div class="form-group">
-                    <label for="">Observaciones del solicitante: </label>
-                    <input type="text" id="observaciones" class="form-control">
-                   
-                 </div>
-               </div>
+</div>
 
-               <div class="col">
-                <div class="form-group">
-                  <label for=""><b>Observaciones supervisor:</b></label>
-                  <input type="text" id="observaciones_supervisor" class="form-control" placeholder="Digite aqui las observaciones obligatorias">
-                 
-               </div>
-             </div>
-          
-              </div>
-
-              <div class="row">
-                <div class="col">
-                  <div class="form-group">
-                    <label for="">Firma: </label>
-                    <input type="text" id="firma" class="form-control">
-                   
-                 </div>
-               </div>
-
-               <div class="col">
-                
-               </div>
-              </div>
+        
            
           
         </div>
@@ -336,235 +267,9 @@ if($totalr<1){
     </div>
   </div>
 
-  <!-- EDITARR QUE ES INSERTAR-->
-<div class="modal fade" id="editarr" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Informacion general del colaborador</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form id="form-editarr" action="" method="">
-
-              <div class="row">
-                <div class="col">
-                  <div class="form-group">
-                    <label for="">Primer nombre: </label>
-                    <input type="text" id="nombre_laboratorio" class="form-control">
-                    <input type="text" id="id">
-                 </div>
-               </div>
 
 
 
-              <div class="col">
-                <div class="form-group">
-                <label for="">Segundo nombre: </label>
-                <input type="text" id="segundonombre" class="form-control">
-                
-                 </div>
-              </div>
-
-
-              <div class="col">
-                <div class="form-group">
-                <label for="primerapellido">Primer apellido: </label>
-                <input type="text" id="primerapellido" class="form-control">
-                
-                 </div>
-              </div>
-              </div>
-
-              <div class="row">
-                <div class="col">
-                  <div class="form-group">
-                    <label for="">Segundo apellido: </label>
-                    <input type="text" id="segundoapellido" class="form-control">
-                   
-                 </div>
-               </div>
-
-
-
-              <div class="col">
-                <div class="form-group">
-                <label for="">Tipo de documento: </label>
-                <input type="text" id="tipodocumento" class="form-control">
-                
-                 </div>
-              </div>
-
-
-              <div class="col">
-                <div class="form-group">
-                <label for="">Cedula</label>
-                <input type="text" id="cedula" class="form-control">
-                
-                 </div>
-              </div>
-              </div>
-             
-
-              <div class="row">
-                <div class="col">
-                  <div class="form-group">
-                    <label for="">Lugar de expedicion: </label>
-                    <input type="text" id="lugarexpedicion" class="form-control">
-                   
-                 </div>
-               </div>
-
-
-
-              <div class="col">
-                <div class="form-group">
-                <label for="">Sexo: </label>
-                <input type="text" id="sexo" class="form-control">
-                
-                 </div>
-              </div>
-
-
-              <div class="col">
-                <div class="form-group">
-                <label for="">Telefono</label>
-                <input type="text" id="telefono" class="form-control">
-                
-                 </div>
-              </div>
-              </div>
-
-              <div class="row">
-                <div class="col">
-                  <div class="form-group">
-                    <label for="">Celular: </label>
-                    <input type="text" id="celular" class="form-control">
-                   
-                 </div>
-               </div>
-
-
-
-              <div class="col">
-                <div class="form-group">
-                <label for="">Direccion: </label>
-                <input type="text" id="direccion" class="form-control">
-                
-                 </div>
-              </div>
-
-
-              <div class="col">
-                <div class="form-group">
-                <label for="">Cargo</label>
-                <input type="text" id="cargo" class="form-control">
-                
-                 </div>
-              </div>
-   
-            </div>
-
-              <div class="row">
-                <div class="col">
-                  <div class="form-group">
-                    <label for="">Supervisor: </label>
-                    <input type="text" id="supervisor" class="form-control">
-                   
-                 </div>
-               </div>
-
-               <div class="col">
-                <div class="form-group">
-                  <label for="">Correo: </label>
-                  <input type="text" id="correo" class="form-control">
-                 
-               </div>
-             </div>
-             <div class="col">
-              <div class="form-group">
-                <label for="">Ubicacion laboral: </label>
-                <input type="text" id="ubicacion_laboral" class="form-control">
-               
-             </div>
-           </div>
-
-              </div>
-
-              <div class="row">
-                <div class="col">
-                  <div class="form-group">
-                    <label for="">Dependencia: </label>
-                    <input type="text" id="dependencia" class="form-control">
-                   
-                 </div>
-               </div>
-
-               <div class="col">
-                <div class="form-group">
-                  <label for="">Tipo de solicitud: </label>
-                  <input type="text" id="tiposolicitud" class="form-control">
-                 
-               </div>
-             </div>
-             <div class="col">
-              <div class="form-group">
-                <label for="">Aplicativo: </label>
-                <input type="text" id="aplicativo" class="form-control">
-               
-             </div>
-           </div>
-
-              </div>
-
-             
-
-              <div class="row">
-                <div class="col">
-                  <div class="form-group">
-                    <label for="">Observaciones del solicitante: </label>
-                    <input type="text" id="observaciones" class="form-control" required>
-                   
-                 </div>
-               </div>
-
-               <div class="col">
-                <div class="form-group">
-                  <label for=""><b>Observaciones supervisor:</b></label>
-                  <input type="text" id="observaciones_supervisor" name="observaciones_supervisor" class="form-control" placeholder="Digite aqui las observaciones obligatorias" required>
-                 
-               </div>
-             </div>
-          
-              </div>
-
-              <div class="row">
-                <div class="col">
-                  <div class="form-group">
-                    <label for="">Firma: </label>
-                    <input type="text" id="firma" class="form-control">
-                   
-                 </div>
-               </div>
-
-               <div class="col">
-                
-               </div>
-              </div>
-           
-          
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-success">Aprobarlo</button>
-        </form>
-        </div>
-      </div>
-    </div>
-  </div>
-<!-- EDITAR QUE ES INSERTARR-->
   <div class="modal fade" id="eliminar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -596,13 +301,14 @@ if($totalr<1){
         <table id="example"class="display table table-hover text-nowrap table-bordered">
             <thead>
                 <tr>
-                    <th>Id</th>
+                    
                     <th>Nombre</th>
                     <th>Primer apellido</th> <!-- AGREGUE ESTO-->
                     <th>Segundo apellido</th> <!-- AGREGUE ESTO-->
+                <!--    <th>Tipo de documento</th> -->
                     <th>Cedula</th> <!-- AGREGUE ESTO-->
-                    <th>Aplicativo</th> <!-- AGREGUE ESTO-->
-                    <th>Tipo de solicitud</th>
+                    <th>Cargo o N° de contrato</th> <!-- AGREGUE ESTO-->
+                    <th>Supervisor</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
@@ -619,23 +325,26 @@ if($totalr<1){
             var funcion='listar';
     let datatable = $('#example').DataTable({
         "ajax": {
-            "url": "controlador/AdministraController.php", // "url": "controlador/LaboratorioController.php",
+            "url": "controlador/usuariopendienteController.php", // "url": "controlador/LaboratorioController.php",
             "method": "POST",
             "data":{funcion:funcion}
         },
         "columns": [
-            { "data": "id" },
+          
             { "data": "nombre" },
             //{ "data": "segundonombre" },
             { "data": "primerapellido" }, //Este campo es igual al nombre del campo de la bd
             { "data": "segundoapellido" }, //Este campo es igual al nombre del campo de la bd
+           // { "data": "tipodocumento" }, //Este campo es igual al nombre del campo de la bd
             { "data": "cedula" }, //Este campo es igual al nombre del campo de la bd
-            { "data": "aplicativo" }, //Este campo es igual al nombre del campo de la bd
-            { "data": "tiposolicitud" }, //Este campo es igual al nombre del campo de la bd
+         //   { "data": "cargo" }, //Este campo es igual al nombre del campo de la bd
+            { "data": "cargo" }, //Este campo es igual al nombre del campo de la bd
+            { "data": "supervisor" }, //Este campo es igual al nombre del campo de la bd
+         //   { "data": "supervisor" }, //Este campo es igual al nombre del campo de la bd
             
            // { "defaultContent": ``}, //tengo que mirar como me traigo esa data
-            { "defaultContent": `<button class="editar btn btn-outline-success fas fa-user-check" type="button" data-toggle="modal" data-target="#editar"></button>
-                                <button class="eliminar btn btn-outline-danger fas fa-user-times"type="button" data-toggle="modal" data-target="#eliminar"></button>` }
+            { "defaultContent": `<button class="editar btn btn-outline-success fas fa-check" type="button" data-toggle="modal" data-target="#editar"></button>
+                                <button class="eliminar btn btn-outline-danger fas fa-times "type="button" data-toggle="modal" data-target="#eliminar"></button>` }
         ],
         "language": espanol
     });
@@ -653,24 +362,24 @@ if($totalr<1){
       $('#segundoapellido').val(data.segundoapellido);
       $('#tipodocumento').val(data.tipodocumento);
       $('#cedula').val(data.cedula);
-      $('#lugarexpedicion').val(data.lugarexpedicion);
+    //  $('#lugarexpedicion').val(data.lugarexpedicion);
       $('#sexo').val(data.sexo);
-      $('#telefono').val(data.telefono);
-      $('#celular').val(data.celular);
-      $('#direccion').val(data.direccion);
+    //  $('#telefono').val(data.telefono);
+    //  $('#celular').val(data.celular);
+    //  $('#direccion').val(data.direccion);
       $('#cargo').val(data.cargo);
       $('#supervisor').val(data.supervisor);
-      $('#correo').val(data.correo);
-      $('#ubicacion_laboral').val(data.ubicacion_laboral);
-      $('#dependencia').val(data.dependencia);
-      $('#tiposolicitud').val(data.tiposolicitud);
-      $('#aplicativo').val(data.aplicativo);
-      $('#observaciones').val(data.observaciones);
-      $('#observaciones_supervisor').val(data.observaciones_supervisor);
+      $('#email').val(data.email);
+     // $('#ubicacion_laboral').val(data.ubicacion_laboral);
+     // $('#dependencia').val(data.dependencia);
+     // $('#tiposolicitud').val(data.tiposolicitud);
+    //  $('#aplicativo').val(data.aplicativo);
+    //  $('#observaciones').val(data.observaciones);
+    //  $('#observaciones_supervisor').val(data.observaciones_supervisor);
      // $('#id').val(data.id);
     })
     $('#form-editar').submit(e=>{ //Aqui obtiene los datos que quiere editar
-      let id =$('#id').val();
+     // let id =$('#id').val();
       let nombre=$('#nombre_laboratorio').val();
       let segundonombre=$('#segundonombre').val();
       let primerapellido=$('#primerapellido').val();
@@ -678,34 +387,38 @@ if($totalr<1){
       let tipodocumento=$('#tipodocumento').val();
       let cedula=$('#cedula').val();
       let lugarexpedicion=$('#lugarexpedicion').val();
-      let sexo=$('#sexo').val();
-      let telefono=$('#telefono').val();
+    //  let sexo=$('#sexo').val();
+    //  let telefono=$('#telefono').val();
       let celular=$('#celular').val();
-      let direccion=$('#direccion').val();
+    //  let direccion=$('#direccion').val();
       let cargo=$('#cargo').val();
       let supervisor=$('#supervisor').val();
-      let correo=$('#correo').val();
-      let ubicacion_laboral=$('#ubicacion_laboral').val();
-      let dependencia=$('#dependencia').val();
-      let tiposolicitud=$('#tiposolicitud').val();
-      let aplicativo=$('#aplicativo').val();
-      let observaciones=$('#observaciones').val();
-      let observaciones_supervisor=$('#observaciones_supervisor').val();
+      let email=$('#email').val();
+    //  let ubicacion_laboral=$('#ubicacion_laboral').val();
+    //  let dependencia=$('#dependencia').val();
+    //  let tiposolicitud=$('#tiposolicitud').val();
+    //  let aplicativo=$('#aplicativo').val();
+    //  let observaciones=$('#observaciones').val();
+    //  let observaciones_supervisor=$('#observaciones_supervisor').val();
       funcion='editar';
-      $.post('controlador/AdministraController.php',{nombre,segundonombre,primerapellido,segundoapellido,tipodocumento,lugarexpedicion,cedula,aplicativo,tiposolicitud,funcion},(response)=>{
+      //EJEMPLO SOLO CON PRIMER NOMBRE Y SEGUNDO NOMBRE
+      $.post('controlador/usuariopendienteController.php',{nombre,segundonombre,primerapellido,segundoapellido,tipodocumento,cedula,supervisor,email,cargo,funcion},(response)=>{
         
       })
       
     })
+    //primero hare la parte que eliminar la solicitud
     $('#example tbody').on('click','.eliminar', function(){
       let data = datatable.row($(this).parents()).data();
       $('#laboratorio_eliminar').html(data.nombre);
-      $('#id_laboratorio').val(data.id);
+      //$('#id_laboratorio').val(data.id);
+      $('#cedula').val(data.cedula);
     })
-    $('#form-eliminar').submit(e=>{
-      let id =$('#id_laboratorio').val();
+    $('#form-eliminar').submit(e=>{// AQUI MODIFICARE PARA ELIMINAR EL USUARIO
+     // let id =$('#id_laboratorio').val();
+     let cedula =$('#cedula').val();
       funcion='eliminar';
-      $.post('controlador/AdministraController.php',{id,funcion},(response)=>{
+      $.post('controlador/usuariopendienteController.php',{cedula,funcion},(response)=>{
         
       })
       
@@ -716,7 +429,7 @@ let espanol = {
     "sLengthMenu":     "Mostrar _MENU_ registros",
     "sZeroRecords":    "No se encontraron resultados",
     "sEmptyTable":     "Ningún dato disponible en esta tabla",
-    "sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+    "sInfo":           "Mostrando usuarios pendientes del _START_ al _END_ de un total de _TOTAL_ registros",
     "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
     "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
     "sInfoPostFix":    "",

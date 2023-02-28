@@ -135,18 +135,18 @@ if($totalr<1){
               
               <input type="hidden" class="form-control" name="nombre" id="nombre" placeholder="Digite nombre" value="<?php echo $nombrer;?>">
               
-                <label for="cargo" class="">Cargo</label>
-                <input type="text" class="form-control" name="cargo" id="cargo" placeholder="Digite cargo" value="<?php echo $cargor;?>"><br>
+                <label for="cargo" class="">Cargo o N° del contrato</label>
+                <input type="text text-center" class="form-control" name="cargo" id="cargo" placeholder="Digite cargo" value="<?php echo $cargor;?>"><br>
               </div>
                   
 
-
+<!--
               <div class="col">
                 <label for="supervisor" class="">Supervisor</label>
                 <input type="text" class="form-control" name="supervisor" id="supervisor" placeholder="Supervisor" value="<?php echo $supervisorr;?>"><br>
               </div>
 
-
+                  -->
              
         </div>
 
@@ -199,7 +199,6 @@ if($totalr<1){
 
 
   <div class="col">
-    <form action="../../Servidor/actualizar_usuario_perfil.php" method="POST"  id="formulario">
        <div class="container form-control" >
        <center><h6 class=""><b>Gestion de permisos asignados</b></h6> </center>
 
@@ -208,9 +207,16 @@ if($totalr<1){
         <div class="row">
 
     
-        <table class="table caption-top">
+  <table class="table caption-top">
   <caption>Sistemas aprobados</caption>
-  <thead>
+  <tr class="tre">
+                    <th>APLICATIVO</th>
+                    <th>PERMISO</th> <!-- -->
+                    <th>PERFIL</th>
+                  <!--  <th>EQUIPOS</th> -->
+                    <th>VENCIMIENTO</th>
+                    <th>ACCION</th>
+    </tr>
 
   <!-- LOGICA PHP PARA LA GESTION DE LOS PERMISOS-->
   <?php
@@ -218,7 +224,9 @@ if($totalr<1){
             INNER JOIN sistema_validado_admin ON pazysalvo_aprobar.cedula=sistema_validado_admin.cedula
             INNER JOIN usuarios_registrados ON sistema_validado_admin.cedula=usuarios_registrados.cedula;";*/
 
-
+            //cambiarlo por el nombre completo
+            ////pendiente perfil,fechafinalcontrato
+            //select aplicativo,tiposolicitud
             $consulta3="SELECT * FROM sistema_validado_admin WHERE nombre='$tomador';";
             $resultado3=mysqli_query($mysqli,$consulta3);
 
@@ -229,56 +237,31 @@ if($totalr<1){
 
             $resultado3=mysqli_query($mysqli,$consulta3);
             if($resultado3){ while($row = $resultado3->fetch_array()){
-                $nombre = $row['nombre'];
-                $cedula = $row['cedula'];
+                $aplicativo = $row['aplicativo']; //aqui va aplicativo
+                $tiposolicitud = $row['tiposolicitud'];
                 
                 
               //CONSULTA PARA TRAER LOS APLICATIVOS QUE TIENE YA ASIGNADO 
+?>
 
+              <td><?php echo $aplicativo;?></td>
+              <td><?php echo $tiposolicitud; ?></td>
+              <td><?php echo 'USUARI0'; ?></td>
+              <td><?php echo '31 DE JUNIO 2022'; ?></td>
+              <td> <button class="btn btn-success">RENOVAR</button>  </td>
 
+            </tr>
+
+<?php
             }
           }
+        
+          
             ?>
 
 
- 
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Sistema autorizado</th>
-      <th scope="col">Permiso</th>
-      <th scope="col">Perfil</th>
-      <th scope="col">Vencimiento</th>
-      <th scope="col">Renovar</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>KUBAPP</td>
-      <td>CREAR</td>
-      <td>USUARIO</td>
-      <td>30/01/2023</td>
-      <td><button class="btn btn-success">Renovar</button></td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>MESA DE AYUDA</td>
-      <td>CREAR</td>
-      <td>USUARIO</td>
-      <td><b class="style=color: red;">CADUCADO</b></td>
-      <td><button class="btn btn-success">Renovar</button></td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>HIKCENTRAL</td>
-      <td>CONSULTAS</td>
-      <td>USUARIO</td>
-      <td>EN ESPERA</td>
-      <td>...</td>
-    </tr>
 
-     
-  </tbody>
+
    
 </table>
              
@@ -286,7 +269,7 @@ if($totalr<1){
         
         </div>
          
-    </form>
+   
   </div>
   </div>
   

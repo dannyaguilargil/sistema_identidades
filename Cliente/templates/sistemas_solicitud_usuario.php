@@ -131,7 +131,7 @@ if($totalr<1){
          
 
 
-            <form action="../../Servidor/registrar_solicitud_sistema.php" method="POST" id="form">
+            <form action="../../Servidor/registrar_solicitud_sistema.php" method="POST" id="form" autocomplete="OFF">
 
 
                 <!--
@@ -355,7 +355,7 @@ if($totalr<1){
 
 <div class="col firma" id="firma">
                 <label for="firma" class="">Adjunte firma fondo blanco</label>
-                <input type="file" name="firma" id="firma" class="" placeholder="Seleccione" required> 
+                <input type="file" name="imagen" id="imagen" class="" placeholder="Seleccione"> 
           
 </div>
 

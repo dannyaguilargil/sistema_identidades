@@ -584,7 +584,7 @@ if($totalr<1){
   </div>
     <div class="container">
        
-        <table id="example"class="display table table-hover text-nowrap">
+        <table id="example"class="display table table-hover text-nowrap table-bordered">
             <thead>
                 <tr>
                     <th>Id</th>

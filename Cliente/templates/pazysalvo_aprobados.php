@@ -109,8 +109,9 @@
                             <th>EQUIPOS</th>
                             <th>PERMISO REVOCADO</th>
                             <th>PDF DE PAZ Y SALVO</th>
-                            <th>ESTADO</th>
+                       
                             <th>APLICATIVO</th>
+                            <th>SOLICITUD</th>
                          <!--   <th>PAZ Y SALVO GENERADO</th> -->
                          <!-- AQUI DEBE IR EL PDF DEL PAZ Y SALVO GENERADOS-->
                         </thead>

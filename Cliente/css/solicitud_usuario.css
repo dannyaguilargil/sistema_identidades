@@ -44,15 +44,18 @@ input{
 
 /* MODO DARK*/
 .darkmode{
-    background-color: #292929;
+   /* background-color: #292929; */
+    background-color: #0e9754;
     color: white;
 }
 .darkmode nav{
-    background: #292929;
+    /*background: #292929; */
+    background: #0e9754;
     color: white;
 }
 .darkmode body{
-    background-color: #292929;
+   /* background-color: #292929; */
+   background-color: #0e9754;
     color: white;
 }
 /* ESTE DARKMODE SOLO APLICA PARA EL TITULO DE CENTRAR
@@ -69,13 +72,15 @@ input{
 }
 
 .darkmode .form-control{
-    background-color: #292929;
+    /*
+    background-color: #292929; */
+    background-color: #0e9754;
     color: white;
-    border-color: rgb(41, 160, 41);
+    color: rgb(227, 231, 227);
     border-style: outset;
 }
 .darkmode .form-control hr{
-    color: rgb(23, 226, 23);
+    color: rgb(227, 231, 227);
     border-style: dotted;
 }
 .darkmode .navbar .navbar-expand-lg .navbar-light .bg-light{

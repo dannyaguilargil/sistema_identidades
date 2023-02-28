@@ -55,7 +55,7 @@
                   Usuarios
                 </a>
                 <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="usuarios_pendientes.php">Pendientes</a></li>
+                  <li><a class="dropdown-item" href="usuario_pendiente.php">Pendientes</a></li>
                   <li><a class="dropdown-item" href="usuarios.php">Registrados</a></li>
                 </ul>
               </li>
@@ -63,7 +63,7 @@
 
 
             </ul>
-            <a class="far fa-user-cog navbar-brand " href="perfil_admin.php">Mi perfil</a>
+            <a class="far fa-user-cog navbar-brand " href="perfil.php">Mi perfil</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>

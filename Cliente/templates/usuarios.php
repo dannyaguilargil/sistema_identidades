@@ -77,7 +77,7 @@ if($totalr<1){
                   Usuarios
                 </a>
                 <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="usuarios_pendientes.php">Pendientes</a></li>
+                  <li><a class="dropdown-item" href="usuario_pendiente.php">Pendientes</a></li>
                   <li><a class="dropdown-item" href="usuarios.php">Registrados</a></li>
                 </ul>
               </li>
@@ -207,7 +207,9 @@ if($totalr<1){
    <button style="padding: 5px;margin: 3px" type="button" class="fas fa-user-plus modals btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal1" data-bs-whatever="@mdo"></button> 
 
     </div>
-
+    <center>
+              <h6>USUARIOS REGISTRADOS</h6>
+              </center>
 
     <!-- Modal  DE ACTUALIZACION COMPROBADO-->
 <div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

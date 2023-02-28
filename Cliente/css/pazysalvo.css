@@ -1,11 +1,15 @@
 body{
-    background: #0e9754;
+    /*
+    background: #0e9754; */
+    background: white;
 }
 h3{
     text-align: center;
 }
 .containe{
-   background: #0e9754;
+    /*
+   background: #0e9754; */
+   background: white;;
 }
 .conn{
     display: flex;
@@ -20,7 +24,10 @@ h3{
 }
 .centrar{
     display: flex;
+    /*
     background: #0e9754;
+    */
+    background: white;
     justify-content: center;
     margin-top: 30px;
     align-items: center;

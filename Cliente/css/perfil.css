@@ -136,16 +136,17 @@ colores : #97d700
 }
 /* MODO DARK*/
 .darkmode{
-    background-color: #292929;
-    color: white;
+    background-color: white; 
+
+    color: black;
 }
 .darkmode nav{
-    background: #292929;
-    color: white;
+    background: white;
+    color: black;
 }
 .darkmode body{
-    background-color: #292929;
-    color: white;
+    background-color: white;
+    color: black;
 }
 /* ESTE DARKMODE SOLO APLICA PARA EL TITULO DE CENTRAR
 .darkmode .centrar{
@@ -160,8 +161,8 @@ colores : #97d700
     cursor: pointer;
 }
 .darkmode .centrar1{
-	background-color: #292929;
-    color: white;
+	background-color: white;
+    color: black;
 }
 
 /* FINALIZA MODO DARK*/
@@ -333,8 +334,12 @@ main {
 	}
 }
 .darkmode .form-control{
+    /*
     background-color: #292929;
-    color: white;
+    */
+    background-color: white;
+    color: black;
+
     border-color: rgb(41, 160, 41);
     border-style: outset;
 }

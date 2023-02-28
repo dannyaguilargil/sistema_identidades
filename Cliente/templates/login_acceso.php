@@ -20,7 +20,7 @@
 
 -->
         
-
+<br> <br>
     
     <div class="imagen">
         <img  src="../imgs/logocompleto.png"  alt="" style="width: 200px; text-align: center;">
