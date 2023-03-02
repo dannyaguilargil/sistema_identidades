@@ -45,7 +45,7 @@
                 </a>
                 <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="pazysalvo_admin.php">Pendientes</a></li>
-                  <li><a class="dropdown-item" target="_blank" href="pazysalvo_aprobados.php">Aprobados</a></li>
+                  <li><a class="dropdown-item" target="_blank" href="paprobados.php">Aprobados</a></li>
                 </ul>
               </li>
                 

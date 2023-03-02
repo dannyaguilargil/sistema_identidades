@@ -1,5 +1,5 @@
 <?php // AQUI QUIERO HACER INSERT INTO Y DELETE
-include '../modelo/usuario_pendientes.php';
+include '../modelo/pazysalvo.php';
 $laboratorio = new Laboratorio();
 if($_POST['funcion']=="listar"){
     $laboratorio->mostrar();
@@ -18,24 +18,18 @@ if($_POST['funcion']=="editar"){ // Voy a cambiarlo por insert into
    $segundonombre = $_POST['segundonombre'];
    $primerapellido = $_POST['primerapellido']; // 
    $segundoapellido = $_POST['segundoapellido']; // 
-   $tipodocumento = $_POST['tipodocumento']; // 
+ //  $tipodocumento = $_POST['tipodocumento']; // 
 
-   $lugarexpedicion = $_POST['lugarexpedicion']; // sirve hasta segundo apellido por ahora
+  // $lugarexpedicion = $_POST['lugarexpedicion']; // sirve hasta segundo apellido por ahora
    $cedula = $_POST['cedula']; // 
+   $rfid = $_POST['rfid']; // 
+   $equipos = $_POST['equipos']; // 
 
-   $cargo = $_POST['cargo']; // 
-   $supervisor = $_POST['supervisor']; // 
-   $email = $_POST['email']; // 
-
-   $rol = $_POST['rol']; // 
-
-  // $observaciones_supervisor = $_POST['observaciones_supervisor']; // agregado
-   $laboratorio->editar($nombre,$segundonombre,$primerapellido,$segundoapellido,$tipodocumento,$cedula,$supervisor,$email,$cargo,$rol);
+   $laboratorio->editar($cedula,$rfid,$equipos);
    
 }
+//primero hare la opcion de eliminar esa solicitud de paz y salvo
 if($_POST['funcion']=="eliminar"){
-   //CAMBIARE A LA OPCION DE ELIMINAr EL USUARIO
-   // $id = $_POST['id'];
     $cedula = $_POST['cedula'];
     $laboratorio->eliminar($cedula);
     

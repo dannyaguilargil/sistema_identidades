@@ -113,12 +113,20 @@ if($totalr<1){
 
   -->
 <?php include '../../Servidor/conexion.php'; 
-//CODIGO PHP DE CONSULTAS
-//PRIMERO HAGO LA VALIDACION CON LA CEDULA
-$consulta="SELECT nombre,cedula from usuarios_registrados WHERE nombre = '$tomador';";
+
+$segundonombrer = '';
+$primerapellidor = '';
+$segundoapellidor = '';
+
+
+
+$consulta="SELECT nombre,segundonombre,primerapellido,segundoapellido,cedula from usuarios_registrados WHERE nombre = '$tomador';";
 $resultado=mysqli_query($mysqli,$consulta);
         if($resultado){ while($row = $resultado->fetch_array()){
             $nombrer = $row['nombre'];
+            $segundonombrer = $row['segundonombre'];
+            $primerapellidor = $row['primerapellido'];
+            $segundoapellidor = $row['segundoapellido'];
             $cedular = $row['cedula'];
           
           }
@@ -149,11 +157,19 @@ if($resultado){ while($row = $resultado->fetch_array()){
                 <div class="col">
                     
 
-               <!-- <label for="nombre" class="">Nombre</label> -->
+               <!-- LOS OCULTO PARA PODER LLEVAR ESA SOLICITUD AL REGISTRO -->
                <input  style="text-align: center;" type="hidden" class="form-control" name="nombre" id="nombre" value="<?php echo $nombrer?>">  
-                 <!--  <label  for="cedula"  class="">Cedula</label> -->
+               <input style="text-align: center;" type="hidden" class="form-control" name="segundonombre" id="segundonombre" value="<?php echo $segundonombrer ?>">
+               <input style="text-align: center;" type="hidden" class="form-control" name="primerapellido" id="primerapellido" value="<?php echo $primerapellidor ?>">
+               <input style="text-align: center;" type="hidden" class="form-control" name="segundoapellido" id="segundoapellido" value="<?php echo $segundoapellidor ?>">
+
+
+                 
                  <input style="text-align: center;" type="hidden" class="form-control" name="cedula" id="cedula" value="<?php echo $cedular ?>">
-       
+                 
+
+
+
                 <label for="revocar_permisos">Revocar permisos</label> <br>
                 <?php
                 //CODIGO PHP PARA DESABILITAR EL DISABLED O HABILITARLO
@@ -219,7 +235,7 @@ if($resultado){ while($row = $resultado->fetch_array()){
               else{
                 ?><button type="submit"  class="btn btn-success" onclick="envio()" name="solicitar" id="solicitar">Solicitar</button> <?php
               }
-             
+            
 ?>
 
                 </div>

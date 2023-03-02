@@ -1,5 +1,18 @@
 
 <?php
+
+/////@developer DANNYAGUILARGIL
+/*
+##################################################
+----------| |----------|     |#    |  ---------  #
+          | |          |    |  |   |      #      # 
+          | |----------|   |    |  |      #      #
+          | |          |  |      | |      #      #
+----------| |          | |        #   ---------  #
+################################################## 
+
+*/
+//DEBO CAMBIAR EL FLUJO DE TRABAJO DE SOLICITUD SISTEMA LLEGA AQUI Y DE SOLICITUD DE AQUI LLEGA AL ADMINISTRADOR
 session_start();
 include '../../Servidor/conexion.php'; 
 
@@ -14,7 +27,7 @@ $resultado3=mysqli_query($mysqli,$consulta3);
       $totalr = $row['COUNT(*)'];
       }
     } 
-if($totalr<1){
+if($totalr!=1){
   header("Location: ../../index.php");
 }?>
 
@@ -55,8 +68,8 @@ if($totalr<1){
                   Sistemas
                 </a>
                 <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" target="_blank" href="sistemas_solicitud_supervisor.php">Solicitud</a></li>
-                <li><a class="dropdown-item" href="#">Pendientes</a></li>
+                <li><a class="dropdown-item" target="_blank" href="sistemas_solicitud_usuario.php">Solicitud</a></li>
+                <li><a class="dropdown-item" href="supervisa.php">Pendientes</a></li>
 
            
                 </ul>
@@ -96,6 +109,9 @@ if($totalr<1){
 <div class="imagen">
     <img  src="../imgs/logocompleto.png"  alt="" style="width: 120px; text-align: center;height: 50px">
     </div>
+    <center>
+              <h6>Sistemas pendientes del supervisor</h6>
+              </center>
     <!-- Modal -->
 <div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -535,7 +551,7 @@ if($totalr<1){
                 <div class="col">
                   <div class="form-group">
                     <label for="">Firma: </label>
-                    <input type="text" id="firma" class="form-control">
+                 <!--   <input type="text" id="firma" class="form-control"> -->
                    
                  </div>
                </div>
@@ -666,9 +682,26 @@ if($totalr<1){
       let segundonombre=$('#segundonombre').val();
       let primerapellido=$('#primerapellido').val();
       let segundoapellido=$('#segundoapellido').val();
+      let tipodocumento=$('#tipodocumento').val();
+      let cedula=$('#cedula').val();
+      let lugarexpedicion=$('#lugarexpedicion').val();
+      let sexo=$('#sexo').val();
+      let telefono=$('#telefono').val();
+      let celular=$('#celular').val();
+      let direccion=$('#direccion').val();
+      let cargo=$('#cargo').val();
+      let supervisor=$('#supervisor').val();
+      let correo=$('#correo').val();
+      let ubicacion_laboral=$('#ubicacion_laboral').val();
+      let dependencia=$('#dependencia').val();
+
+      let tiposolicitud=$('#tiposolicitud').val();
+      let aplicativo=$('#aplicativo').val();
+      let observaciones=$('#observaciones').val();
+
       let observaciones_supervisor=$('#observaciones_supervisor').val();
       funcion='editar';
-      $.post('controlador/LaboratorioController.php',{id,nombre,segundonombre,primerapellido,segundoapellido,observaciones_supervisor,funcion},(response)=>{
+      $.post('controlador/LaboratorioController.php',{id,nombre,segundonombre,primerapellido,segundoapellido,tipodocumento,cedula,lugarexpedicion,sexo,telefono,celular,direccion,cargo,supervisor,correo,ubicacion_laboral,dependencia,tiposolicitud,aplicativo,observaciones,observaciones_supervisor,funcion},(response)=>{
         
       })
       

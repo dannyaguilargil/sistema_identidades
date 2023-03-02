@@ -55,10 +55,14 @@ if($totalr<1){
                   Sistemas
                 </a>
                 <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Pendientes</a></li>
+                <li><a class="dropdown-item" href="supervisa.php">Pendientes supervisor</a></li>
+                <li><a class="dropdown-item" target="_blank" href="sistemas_admin_aprobados.php">Aprobados</a></li>
+                 
+      
                   <li><a class="dropdown-item" target="_blank" href="sistemas_solicitud_supervisor.php">Solicitud</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" target="_blank" href="notificar_sistema.php">Notificar</a></li>
+                 
                 </ul>
               </li>
 
@@ -68,8 +72,8 @@ if($totalr<1){
                   Paz y salvo
                 </a>
                 <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="pazysalvo_admin.php">Pendientes</a></li>
-                  <li><a class="dropdown-item" target="_blank" href="pazysalvo_aprobados.php">Aprobados</a></li>
+                  <li><a class="dropdown-item" href="pazysalvo_adm.php">Pendientes</a></li>
+                  <li><a class="dropdown-item" target="_blank" href="paprobados.php">Aprobados</a></li>
                 </ul>
               </li>
                 
@@ -107,6 +111,10 @@ if($totalr<1){
 <div class="imagen">
     <img  src="../imgs/logocompleto.png"  alt="" style="width: 120px; text-align: center;height: 50px">
     </div>
+
+    <center>
+              <h6>Sistemas pendientes del administrador</h6>
+              </center>
     <!-- Modal -->
 <div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -142,7 +150,7 @@ if($totalr<1){
 
               <div class="col">
                 <div class="form-group">
-                <label for="primerapellido">Primer apellido: </label>
+                <label for="primerapellido"><b>Primer apellido: </b></label>
                 <input type="text" id="primerapellido" class="form-control">
                 
                  </div>
@@ -171,7 +179,7 @@ if($totalr<1){
 
               <div class="col">
                 <div class="form-group">
-                <label for="">Cedula</label>
+                <label for="">Cedula: </label>
                 <input type="text" id="cedula" class="form-control">
                 
                  </div>
@@ -182,7 +190,7 @@ if($totalr<1){
               <div class="row">
                 <div class="col">
                   <div class="form-group">
-                    <label for="">Lugar de expedicion: </label>
+                    <label for="">Lugar de expedicion:  </label>
                     <input type="text" id="lugarexpedicion" class="form-control">
                    
                  </div>
@@ -646,7 +654,7 @@ if($totalr<1){
     $('#example tbody').on('click','.editar', function(){ // Aqui obtiene los datos que quiere mostrar
       let data = datatable.row($(this).parents()).data();
       $('#nombre_laboratorio').val(data.nombre);
-     // $('#id').val(data.id);
+      $('#id').val(data.id);
       //AQUI PUEDE IR CONSULTA Y METERLO EN EL VALOR
       $('#segundonombre').val(data.segundonombre);
       $('#primerapellido').val(data.primerapellido);
@@ -682,17 +690,17 @@ if($totalr<1){
       let telefono=$('#telefono').val();
       let celular=$('#celular').val();
       let direccion=$('#direccion').val();
-      let cargo=$('#cargo').val();
+      let cargo=$('#cargo').val();//
       let supervisor=$('#supervisor').val();
       let correo=$('#correo').val();
       let ubicacion_laboral=$('#ubicacion_laboral').val();
       let dependencia=$('#dependencia').val();
       let tiposolicitud=$('#tiposolicitud').val();
       let aplicativo=$('#aplicativo').val();
-      let observaciones=$('#observaciones').val();
+      let observaciones=$('#observaciones').val();//
       let observaciones_supervisor=$('#observaciones_supervisor').val();
       funcion='editar';
-      $.post('controlador/AdministraController.php',{nombre,segundonombre,primerapellido,segundoapellido,tipodocumento,lugarexpedicion,cedula,aplicativo,tiposolicitud,funcion},(response)=>{
+      $.post('controlador/AdministraController.php',{id,nombre,segundonombre,primerapellido,segundoapellido,tipodocumento,lugarexpedicion,cedula,aplicativo,tiposolicitud,cargo,observaciones,funcion},(response)=>{
         
       })
       

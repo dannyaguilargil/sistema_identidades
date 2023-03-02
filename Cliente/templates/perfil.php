@@ -160,7 +160,7 @@ if($totalr<1){
           <div class="col" id=grupo__password>
               <label class="" for="password">Cambio de contraseña</label>
               <div class="formulario__grupo-input">
-                <input type="password" class="form-control formulario__input" name="password" id="password" placeholder="Digite contraseña nueva">
+                <input type="password" class="form-control formulario__input" name="password" id="password" placeholder="Digite contraseña nueva" required>
                 <i class="formulario__validacion-estado fas fa-time-circle"></i>
               </div>
               <p class="formulario__input-error">La contraseña debe ser de 4 a 12 digitos</p> 
@@ -174,7 +174,7 @@ if($totalr<1){
               <div class="col" id=grupo__password2>
                 <label for="password2" class="">Cambio de contraseña</label>
                 <div class="formulario__grupo-input">
-                <input type="password" class="form-control formulario__input" name="password2" id="password2" placeholder="Repetir contraseña nueva">
+                <input type="password" class="form-control formulario__input" name="password2" id="password2" placeholder="Repetir contraseña nueva" required>
                 <i class="formulario__validacion-estado fas fa-time-circle"></i>
                 </div>
                 <p class="formulario__input-error">Ambas contraseñas deben ser iguales</p> 
@@ -246,7 +246,7 @@ if($totalr<1){
               <td><?php echo $tiposolicitud; ?></td>
               <td><?php echo 'USUARI0'; ?></td>
               <td><?php echo '31 DE JUNIO 2022'; ?></td>
-              <td> <button class="btn btn-success">RENOVAR</button>  </td>
+              <td> <a class="btn btn-success"  href="sistemas_solicitud_usuario.php">RENOVAR</a>  </td>
 
             </tr>
 

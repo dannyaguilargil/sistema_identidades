@@ -67,7 +67,7 @@
 
 
             </ul>
-            <a class="far fa-user-cog navbar-brand " href="perfil_admin.php">Mi perfil</a>
+            <a class="far fa-user-cog navbar-brand " href="perfil.php">Mi perfil</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -87,6 +87,9 @@
     <img  src="../imgs/logocompleto.png"  alt="" style="width: 150px; text-align: center;height: 50px">
     </div>
 
+    <center>
+      <h6>Paz y salvos aprobados</h6>
+    </center>
 
     <div class="centrar">
         
@@ -97,7 +100,7 @@
 
       
            
-            <table class="table table-light table-striped">
+            <table class="table table-hover table-bordered">
             <form action="">   
 
                     <tr class="tre">
@@ -146,7 +149,7 @@
                     <td><?php echo $cedula; ?></td>
                     <td><?php echo $rfid; ?></td>
                     <td><span style="color:red;"><?php echo $revocar_permisos; ?> </span></td>
-                    <td><?php echo "link"; ?></td>
+                    <td> <a href="" class="btn btn-light fas fa-file-pdf"></a> </td>
                     <td><?php echo $tiposolicitud; ?></td>
                     <td><?php echo $aplicativo; ?></td>
                     <td><?php echo $fechafinalcontrato; ?></td>

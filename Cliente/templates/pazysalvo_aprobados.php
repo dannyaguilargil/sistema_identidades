@@ -30,11 +30,11 @@
             
             
               <li class="nav-item dropdown">
-                <a class="fas fa-phone-laptop nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="fas fa-phone-laptop nav-link dropdown-toggle" href="administra.php" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Sistemas
                 </a>
                 <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="administra.php">Pendientes</a></li>
+                  <li><a class="dropdown-item"" href="administra.php">Pendientes</a></li>
                   <li><a class="dropdown-item" target="_blank" href="sistemas_solicitud_supervisor.php">Solicitud</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" target="_blank" href="sistemas_solicitud_supervisor.php">Notificar</a></li>
@@ -58,7 +58,7 @@
                   Usuarios
                 </a>
                 <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="usuarios_pendientes.php">Pendientes</a></li>
+                  <li><a class="dropdown-item" href="usuario_pendiente.php">Pendientes</a></li>
                   <li><a class="dropdown-item" href="usuarios.php">Registrados</a></li>
                 </ul>
               </li>

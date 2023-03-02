@@ -1,4 +1,8 @@
 <?php
+//02/03/2023 SE HARAN PEQUEÑOS CAMBIOS EN EL REGISTRO DEL PAZ Y SALVO PARA AGREGAR 
+// SEGUNDONOMBRE,PRIMERAPELLIDO Y SEGUNDO APELLIDO
+
+
 //AQUI VAYA TODO LO DE PAZ Y SALVO YA SEA QUE SE REGISTRE O GENERA EL PDF
 //VALIDAR AQUI SOLO EL REGISTRO Y INLCUIRLO
 //EN GENERARPDF VALIDAR EL BOTON SOLO DE GENERARLO
@@ -7,23 +11,39 @@ include 'conexion.php';
 
 // DEBO CARGAR LOS DATOS PREVIOS DEL USUARIO Y POSTERIOR A ESO HACER EL REGISTRO DEL SISTEMA
 $nombre = '';
+$segundonombre = '';
+$primerapellido = '';
+$segundoapellido = '';
 $cedula = 0;
 $revocar_permisos = '';
 
 if (isset($_POST['solicitar'])){
 $nombre = $_POST["nombre"];
+$segundonombre = $_POST["segundonombre"];
+$primerapellido = $_POST["primerapellido"];
+$segundoapellido= $_POST["segundoapellido"];
+
 $cedula = $_POST["cedula"]; 
 $revocar_permisos = $_POST["revocar_permisos"]; 
 
-$sql="INSERT INTO pazysalvo_solicitud VALUES('$nombre',$cedula,'$revocar_permisos')";
+
+//SE HARAN CAMBIOS EN EL REGISTRO DE LA SOLICITUD 02/03/2023
+$sql="INSERT INTO pazysalvo_solicitud VALUES('$nombre','$segundonombre','$primerapellido','$segundoapellido',$cedula,'$revocar_permisos')";
 $resultado=$mysqli ->query($sql);
 
-$sql2="INSERT INTO pazysalvo_aprobar(nombre,cedula,revocar_permisos) VALUES('$nombre',$cedula,'$revocar_permisos')";
+
+//SE HARAN CAMBIOS EN EL REGISTRO DEL PAZ Y SALVO APROBADOS 02/03/2023
+$sql2="INSERT INTO pazysalvo_aprobar(nombre,segundonombre,primerapellido,segundoapellido,cedula,revocar_permisos) VALUES ('$nombre','$segundonombre','$primerapellido','$segundoapellido',$cedula,'$revocar_permisos')";
 $resultado2=$mysqli ->query($sql2);
 }
 
 elseif (isset($_POST['generar'])){
     $nombre = $_POST["nombre"];
+    //AGREGUE CAMPOS PARA EL PAZ Y SALVO
+    $segundonombre = $_POST["segundonombre"];
+    $primerapellido = $_POST["primerapellido"];
+    $segundoapellido = $_POST["segundoapellido"];
+    ////////////////////////////
     $cedula = $_POST["cedula"]; 
    
 
@@ -105,7 +125,7 @@ function Footer()
     // Arial italic 8
     $this->SetFont('Arial','I',8);
     // Número de página
-    $this->Cell(0,10,utf8_decode('Sistema de identidad id:$01 ©').$this->PageNo().'/{nb}',0,0,'C');
+    $this->Cell(0,10,utf8_decode('Sistema de identidad ©').$this->PageNo().'/{nb}',0,0,'C');
 }
 }
 
@@ -130,7 +150,7 @@ $pdf->SetFont('Arial','B',12);
 $pdf->Cell(20,10,utf8_decode('HACE CONSTAR'));
 $pdf->Ln(20);
 $pdf->SetFont('Arial','',10);
-$pdf->Cell(20,10,utf8_decode('Que, revisado el contrato de prestacion de servicios  asignado al contratista '.$nombre));
+$pdf->Cell(20,10,utf8_decode('Que, revisado el contrato de prestacion de servicios  asignado al contratista '.$nombre." ".$primerapellido." ".$segundoapellido));
 $pdf->Ln(4);
 $pdf->Cell(20,10,utf8_decode('Con cedula de ciudadania '.$cedula.'  presenta terminacion en el perodo de ' .$mes.' por lo tanto se expide el presente '));
 $pdf->Ln(4);

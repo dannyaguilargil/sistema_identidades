@@ -13,10 +13,10 @@ class Laboratorio{
     }
 
     //EDITAR QUE ES INSERTAR
-    function editar($nombre,$segundonombre,$primerapellido,$segundoapellido,$tipodocumento,$cedula,$supervisor,$email,$cargo){
+    function editar($nombre,$segundonombre,$primerapellido,$segundoapellido,$tipodocumento,$cedula,$supervisor,$email,$cargo,$rol){
         //function editar($nombre,$segundonombre){
         //CAMBIAR EL UPDATE POR UN INSERT INTO
-        $sql="INSERT INTO usuarios_registrados (nombre,segundonombre,primerapellido,segundoapellido,tipodocumento,cedula,supervisor,email,cargo,password) VALUES ('$nombre','$segundonombre','$primerapellido','$segundoapellido','$tipodocumento',$cedula,'$supervisor','$email','$cargo',cedula)";
+        $sql="INSERT INTO usuarios_registrados (nombre,segundonombre,primerapellido,segundoapellido,tipodocumento,cedula,supervisor,email,cargo,password,rol) VALUES ('$nombre','$segundonombre','$primerapellido','$segundoapellido','$tipodocumento',$cedula,'$supervisor','$email','$cargo',cedula,'$rol')";
         $resultado = $this->acceso->query($sql);
 
         //VAMOS A ELIMINARLO NORMAL CON PHP

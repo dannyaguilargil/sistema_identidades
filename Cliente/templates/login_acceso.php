@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- voy validar la peticion ajax para verificar que el usuario no se encuentre registrado en la base de datos-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,7 +38,7 @@
                 <h5>Solicitud de usuario</h5> <br>
             </center>
             
-            <form  action="../../Servidor/solicitud_usuario.php" method="POST">
+            <form  action="../../Servidor/solicitud_usuario.php" method="POST" autocomplete="off">
             <div class="row">
             
                 <div class="col">
@@ -94,22 +95,23 @@
 
 
             <div class="col">
-                <label for="" class="emerge">Tipo de documento:</label> <br>
+                <label for="" class="">Tipo de documento:</label> <br>
                 <select name="tipodocumento" id="tipodocumento" class="emerge">
-                  <option value="CC" class="emerge" selected>CC</option>
-                  <option value="CE" class="emerge">CE</option>
-                  <option value="PASAPORTE" class="emerge">PASAPORTE</option>
-                  <option value="RESIDENCIA" class="emerge">RESIDENCIA</option>
+                  <option value="CC" class="emerge" selected>Cedula de ciudadania</option>
+                  <option value="CE" class="emerge">Cedula de extranjeria</option>
+                  <option value="PASAPORTE" class="emerge">Pasaporte</option>
+                  <option value="RESIDENCIA" class="emerge">Residencia</option>
+                  <option value="RUMV" class="emerge">RUMV</option>
+                  <option value="PPT" class="emerge">PPT</option>
                 </select>
             </div>
 
             
             <div class="col">
-                    <label class="">Numero de documento</label>
-                    <input type="text" class="form-control" name="cedula" id="cedula" required><br>
+                    <label class="">Numero de documento</label> <!--CAMBIE DE TYPE TEXT A NUMBER -->
+                    <input type="number" class="form-control" name="cedula" id="cedula" required><br>
             </div>
             
-          
 
         </div>
 
@@ -128,27 +130,6 @@
 
             </div>
 
-            
-
-           
-            <!--
-             <h3 class="text-center">Iniciar sesion</h3> 
-            <div class="textoI">
-            <label class="TT">Usuario</label>
-            <input type="text" class="form-control" name="nombre_usuario1" id="nombre_usuario1"><br>
-            <label class="TT">Contraseña</label>
-            <input type="password" class="form-control" name="Contrasena1" id="Contrasena1"><br>
-            </div>
-            <div class="textoI1">
-            
-            <div class="boton">
-            <button type="submit" class="text-center btn btn-success" onclick="inicioS()">Iniciar sesion</button>
-            </div>
-            <p><a  class="TT1" href="/Cliente/gestion-usuarios/Registro.html" id="">Solicitar usuario</a></p>
-            </div>
-          
-
-            -->
         </form>
           </div>
         </div>
@@ -202,8 +183,9 @@ $('#supervisor').autocomplete({
 //.then((value) => {
 //  swal(`The returned value is: ${value}`);
 //});
+swal("ENVIADO!", "YA REALIZO SOLICITUD, EL ADMINISTRADOR DEBE APROBAR EL USUARIO", "info");
 
-alert("SE ENVIO CORRECTAMENTE, SE NOTIFICARA AL ADMINISTRADOR");
+
       }
      
      </script>

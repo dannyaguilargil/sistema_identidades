@@ -1,4 +1,17 @@
 <?php
+
+
+/////@developer DANNYAGUILARGIL
+/*
+##################################################
+----------| |----------|     |#    |  ---------  #
+          | |          |    |  |   |      #      # 
+          | |----------|   |    |  |      #      #
+          | |          |  |      | |      #      #
+----------| |          | |        #   ---------  #
+################################################## 
+
+*/
 session_start();
 include 'Servidor/conexion.php';
 ?>
@@ -167,6 +180,10 @@ Todo los derechos reservados E.S.E IMSALUD &copy / SISTEMAS
 </center>        
         
 </footer>
+
+
+
+
 </body>
 </html>
 

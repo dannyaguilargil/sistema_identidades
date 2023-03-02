@@ -13,7 +13,7 @@ if($_POST['funcion']=="listar"){
 
 // EDITAR QUE ES INSERTAR
 if($_POST['funcion']=="editar"){ // Voy a cambiarlo por insert into 
-   //$id = $_POST['id'];
+   $id = $_POST['id'];
    $nombre = $_POST['nombre'];
    $segundonombre = $_POST['segundonombre'];
    $primerapellido = $_POST['primerapellido']; // 
@@ -26,8 +26,10 @@ if($_POST['funcion']=="editar"){ // Voy a cambiarlo por insert into
    $aplicativo = $_POST['aplicativo']; // 
    $tiposolicitud = $_POST['tiposolicitud']; // 
 
+   $cargo = $_POST['cargo']; // 
+   $observaciones = $_POST['observaciones']; // 
   // $observaciones_supervisor = $_POST['observaciones_supervisor']; // agregado
-   $laboratorio->editar($nombre,$segundonombre,$primerapellido,$segundoapellido,$tipodocumento,$lugarexpedicion,$cedula,$aplicativo,$tiposolicitud);
+   $laboratorio->editar($id,$nombre,$segundonombre,$primerapellido,$segundoapellido,$tipodocumento,$lugarexpedicion,$cedula,$aplicativo,$tiposolicitud,$cargo,$observaciones);
    
 }
 if($_POST['funcion']=="eliminar"){

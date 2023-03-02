@@ -1,5 +1,22 @@
 
 <?php
+//COPIA DE PAZ Y SALVO ADMIN PERO CAMBIADO A TABLA PARA VALIDAR DE FORMA MAS SENCILLA
+
+/////@developer DANNYAGUILARGIL
+/*
+##################################################
+----------| |----------|     |#    |  ---------  #
+          | |          |    |  |   |      #      # 
+          | |----------|   |    |  |      #      #
+          | |          |  |      | |      #      #
+----------| |          | |        #   ---------  #
+################################################## 
+
+*/
+
+?>
+
+<?php
 session_start();
 include '../../Servidor/conexion.php'; 
 
@@ -34,7 +51,7 @@ if($totalr<1){
 
     <link rel="stylesheet" href="../css/solicitud_usuario.css">
     <link rel="icon" href="../imgs/escudito.ico">
-    <title>Usuarios pendientes</title>
+    <title>Gestion de Administrador</title>
 </head>
 <body>
 
@@ -55,10 +72,14 @@ if($totalr<1){
                   Sistemas
                 </a>
                 <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="administra.php">Pendientes</a></li>
+                <li><a class="dropdown-item" href="supervisa.php">Pendientes supervisor</a></li>
+                <li><a class="dropdown-item" target="_blank" href="sistemas_admin_aprobados.php">Aprobados</a></li>
+                 
+      
                   <li><a class="dropdown-item" target="_blank" href="sistemas_solicitud_supervisor.php">Solicitud</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" target="_blank" href="notificar_sistema.php">Notificar</a></li>
+                 
                 </ul>
               </li>
 
@@ -69,7 +90,7 @@ if($totalr<1){
                 </a>
                 <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="pazysalvo_admin.php">Pendientes</a></li>
-                  <li><a class="dropdown-item" target="_blank" href="pazysalvo_aprobados.php">Aprobados</a></li>
+                  <li><a class="dropdown-item" target="_blank" href="paprobados.php">Aprobados</a></li>
                 </ul>
               </li>
                 
@@ -84,7 +105,7 @@ if($totalr<1){
                 </ul>
               </li>
 
-          
+
 
             </ul>
             <a class="far fa-user-cog navbar-brand " href="perfil_admin.php">Mi perfil</a>
@@ -93,12 +114,10 @@ if($totalr<1){
               </button>
             <a class="btn btn-light fas fa-sign-out-alt" href="../../Servidor/logout.php"></a>
 
-          </div> 
+          </div>
         </div>
-       
       </nav>
       <!--NAVBAR-->
- 
                     
 </header>
 
@@ -109,15 +128,16 @@ if($totalr<1){
 <div class="imagen">
     <img  src="../imgs/logocompleto.png"  alt="" style="width: 120px; text-align: center;height: 50px">
     </div>
+
     <center>
-              <h6>USUARIOS PENDIENTES</h6>
+              <h6>Paz y salvos pendientes</h6>
               </center>
     <!-- Modal -->
 <div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Informacion general del colaborador</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Informacion del paz y salvo</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -165,74 +185,29 @@ if($totalr<1){
 
 
 
-              <div class="col">
-                <div class="form-group">
-                <label for=""><b>Tipo de documento: </b></label>
-                <input type="text" id="tipodocumento" class="form-control">
-                
-                 </div>
-              </div>
-
 
               <div class="col">
                 <div class="form-group">
-                <label for=""><b>Cedula: </b></label>
+                <label for="">Cedula: </label>
                 <input type="text" id="cedula" class="form-control">
                 
                  </div>
               </div>
               </div>
              
-              <!-- -->
               <div class="row">
-
                 <div class="col">
-                  <div class="form-group">
-                    <label for="">Supervisor: </label>
-                    <input type="text" id="supervisor" class="form-control">
+                  <label for="rfid">Entrega de tarjeta RFID</label>
+                 <input type="checkbox" value="SI" name="rfid" id="rfid" checked required>
+                 </div>
+
+
+                 <div class="col">
+                <label for="equipos">Equipos en buen estado</label> 
+                 <input type="checkbox" value="SI" name="equipos" id="equipos" checked required>
                  </div>
                </div>
 
-               <div class="col">
-                  <div class="form-group">
-                    <label for="">Correo personal: </label>
-                    <input type="text" id="email" class="form-control">
-                 </div>
-               </div>
-
-
-
-              </div>
-
-              <div class="row">
-
-<div class="col">
-  <div class="form-group">
-    <label for="">Cargo o N° de contrato: </label>
-    <input type="text" id="cargo" class="form-control">
- </div>
-</div>
-
-<div class="col">
-         <label for="rol" class="">Rol</label> <br>
-                <select name="rol" id="rol" class="">
-                  <option value="" selected class="">NORMAL</option>
-                  <option value="SUPERVISOR" class="">SUPERVISOR</option>
-                  <option value="ADMINISTRADOR" class="">ADMINISTRADOR</option>
-                </select>
-          </div>
-
-<div class="col">
-
-</div>
-
-
-
-
-</div>
-
-        
-           
           
         </div>
         <div class="modal-footer">
@@ -244,14 +219,12 @@ if($totalr<1){
     </div>
   </div>
 
-
-
-
+ 
   <div class="modal fade" id="eliminar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Eliminar solicitud de sistema</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Eliminar solicitud de paz y salvo</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -280,12 +253,10 @@ if($totalr<1){
                 <tr>
                     
                     <th>Nombre</th>
+                    <th>Segundo nombre</th>
                     <th>Primer apellido</th> <!-- AGREGUE ESTO-->
                     <th>Segundo apellido</th> <!-- AGREGUE ESTO-->
-                <!--    <th>Tipo de documento</th> -->
                     <th>Cedula</th> <!-- AGREGUE ESTO-->
-                    <th>Cargo o N° de contrato</th> <!-- AGREGUE ESTO-->
-                    <th>Supervisor</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
@@ -302,26 +273,22 @@ if($totalr<1){
             var funcion='listar';
     let datatable = $('#example').DataTable({
         "ajax": {
-            "url": "controlador/usuariopendienteController.php", // "url": "controlador/LaboratorioController.php",
+            "url": "controlador/pazysalvoController.php", // "url": "controlador/LaboratorioController.php",
             "method": "POST",
             "data":{funcion:funcion}
         },
         "columns": [
-          
+           
             { "data": "nombre" },
-            //{ "data": "segundonombre" },
+            { "data": "segundonombre" },
             { "data": "primerapellido" }, //Este campo es igual al nombre del campo de la bd
             { "data": "segundoapellido" }, //Este campo es igual al nombre del campo de la bd
-           // { "data": "tipodocumento" }, //Este campo es igual al nombre del campo de la bd
             { "data": "cedula" }, //Este campo es igual al nombre del campo de la bd
-         //   { "data": "cargo" }, //Este campo es igual al nombre del campo de la bd
-            { "data": "cargo" }, //Este campo es igual al nombre del campo de la bd
-            { "data": "supervisor" }, //Este campo es igual al nombre del campo de la bd
-         //   { "data": "supervisor" }, //Este campo es igual al nombre del campo de la bd
+           
             
            // { "defaultContent": ``}, //tengo que mirar como me traigo esa data
-            { "defaultContent": `<button class="editar btn btn-outline-success fas fa-check" type="button" data-toggle="modal" data-target="#editar"></button>
-                                <button class="eliminar btn btn-outline-danger fas fa-times "type="button" data-toggle="modal" data-target="#eliminar"></button>` }
+            { "defaultContent": `<button class="editar btn btn-outline-success fas fa-user-check" type="button" data-toggle="modal" data-target="#editar"></button>
+                                <button class="eliminar btn btn-outline-danger fas fa-user-times"type="button" data-toggle="modal" data-target="#eliminar"></button>` }
         ],
         "language": espanol
     });
@@ -337,66 +304,52 @@ if($totalr<1){
       $('#segundonombre').val(data.segundonombre);
       $('#primerapellido').val(data.primerapellido);
       $('#segundoapellido').val(data.segundoapellido);
-      $('#tipodocumento').val(data.tipodocumento);
+    //  $('#tipodocumento').val(data.tipodocumento);
       $('#cedula').val(data.cedula);
     //  $('#lugarexpedicion').val(data.lugarexpedicion);
-      $('#sexo').val(data.sexo);
+    //  $('#sexo').val(data.sexo);
     //  $('#telefono').val(data.telefono);
     //  $('#celular').val(data.celular);
     //  $('#direccion').val(data.direccion);
-      $('#cargo').val(data.cargo);
-      $('#supervisor').val(data.supervisor);
-      $('#email').val(data.email);
-     // $('#ubicacion_laboral').val(data.ubicacion_laboral);
-     // $('#dependencia').val(data.dependencia);
-     // $('#tiposolicitud').val(data.tiposolicitud);
+    //  $('#cargo').val(data.cargo);
+    //  $('#supervisor').val(data.supervisor);
+    //  $('#correo').val(data.correo);
+    //  $('#ubicacion_laboral').val(data.ubicacion_laboral);
+    //  $('#dependencia').val(data.dependencia);
+    //  $('#tiposolicitud').val(data.tiposolicitud);
     //  $('#aplicativo').val(data.aplicativo);
     //  $('#observaciones').val(data.observaciones);
     //  $('#observaciones_supervisor').val(data.observaciones_supervisor);
      // $('#id').val(data.id);
     })
     $('#form-editar').submit(e=>{ //Aqui obtiene los datos que quiere editar
-     // let id =$('#id').val();
+      let id =$('#id').val();
       let nombre=$('#nombre_laboratorio').val();
       let segundonombre=$('#segundonombre').val();
       let primerapellido=$('#primerapellido').val();
       let segundoapellido=$('#segundoapellido').val();
-      let tipodocumento=$('#tipodocumento').val();
+      //let tipodocumento=$('#tipodocumento').val();
       let cedula=$('#cedula').val();
-      let lugarexpedicion=$('#lugarexpedicion').val();
-    //  let sexo=$('#sexo').val();
-    //  let telefono=$('#telefono').val();
-      let celular=$('#celular').val();
-    //  let direccion=$('#direccion').val();
-      let cargo=$('#cargo').val();
-      let supervisor=$('#supervisor').val();
-      let email=$('#email').val();
-      let rol=$('#rol').val();
-    //  let ubicacion_laboral=$('#ubicacion_laboral').val();
-    //  let dependencia=$('#dependencia').val();
-    //  let tiposolicitud=$('#tiposolicitud').val();
-    //  let aplicativo=$('#aplicativo').val();
-    //  let observaciones=$('#observaciones').val();
-    //  let observaciones_supervisor=$('#observaciones_supervisor').val();
+
+      ///////////////////////////////
+      let rfid=$('#rfid').val();
+      let equipos=$('#equipos').val();
+    
       funcion='editar';
-      //EJEMPLO SOLO CON PRIMER NOMBRE Y SEGUNDO NOMBRE
-      $.post('controlador/usuariopendienteController.php',{nombre,segundonombre,primerapellido,segundoapellido,tipodocumento,cedula,supervisor,email,cargo,rol,funcion},(response)=>{
+      $.post('controlador/pazysalvoController.php',{cedula,rfid,equipos,funcion},(response)=>{
         
       })
       
     })
-    //primero hare la parte que eliminar la solicitud
     $('#example tbody').on('click','.eliminar', function(){
       let data = datatable.row($(this).parents()).data();
       $('#laboratorio_eliminar').html(data.nombre);
-      //$('#id_laboratorio').val(data.id);
       $('#cedula').val(data.cedula);
     })
-    $('#form-eliminar').submit(e=>{// AQUI MODIFICARE PARA ELIMINAR EL USUARIO
-     // let id =$('#id_laboratorio').val();
-     let cedula =$('#cedula').val();
+    $('#form-eliminar').submit(e=>{
+      let cedula =$('#cedula').val();
       funcion='eliminar';
-      $.post('controlador/usuariopendienteController.php',{cedula,funcion},(response)=>{
+      $.post('controlador/pazysalvoController.php',{cedula,funcion},(response)=>{
         
       })
       
@@ -407,7 +360,7 @@ let espanol = {
     "sLengthMenu":     "Mostrar _MENU_ registros",
     "sZeroRecords":    "No se encontraron resultados",
     "sEmptyTable":     "Ningún dato disponible en esta tabla",
-    "sInfo":           "Mostrando usuarios pendientes del _START_ al _END_ de un total de _TOTAL_ registros",
+    "sInfo":           "Paz y salvos pendientes del _START_ al _END_ de un total de _TOTAL_ registros",
     "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
     "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
     "sInfoPostFix":    "",
