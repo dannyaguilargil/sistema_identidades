@@ -55,10 +55,14 @@ if($totalr<1){
                   Sistemas
                 </a>
                 <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="administra.php">Pendientes</a></li>
-                  <li><a class="dropdown-item" target="_blank" href="sistemas_solicitud_supervisor.php">Solicitud</a></li>
+                  <li><a class="far fa-user-crown dropdown-item" href="administra.php">Pendientes Administrador</a></li>
+                  <li><a class="fas fa-user-hard-hat dropdown-item" href="supervisa.php">Pendientes supervisor</a></li>
+                  <li><a class="fal fa-vote-yea  dropdown-item" target="_blank" href="sistemas_admin_aprobados.php">Sistemas aprobados</a></li>
+                  <li><a class="far fa-user-md-chat dropdown-item" target="_blank" href="sistemas_solicitud_usuario.php">Solicitud</a></li>
+
+
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" target="_blank" href="notificar_sistema.php">Notificar</a></li>
+                  <li><a class="fal fa-comment-check dropdown-item" target="_blank" href="notificador.php">Notificar</a></li>
                 </ul>
               </li>
 
@@ -68,8 +72,8 @@ if($totalr<1){
                   Paz y salvo
                 </a>
                 <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="pazysalvo_admin.php">Pendientes</a></li>
-                  <li><a class="dropdown-item" target="_blank" href="pazysalvo_aprobados.php">Aprobados</a></li>
+                  <li><a class="far fa-file-check dropdown-item" href="pazysalvo_adm.php">Pendientes</a></li>
+                  <li><a class="fal fa-file-pdf dropdown-item" target="_blank" href="pazysalvo_aprobados.php">Aprobados</a></li>
                 </ul>
               </li>
                 
@@ -79,8 +83,8 @@ if($totalr<1){
                   Usuarios
                 </a>
                 <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="usuario_pendiente.php">Pendientes</a></li>
-                  <li><a class="dropdown-item" href="usuarios.php">Registrados</a></li>
+                  <li><a class="far fa-user-secret dropdown-item" href="usuario_pendiente.php">Pendientes</a></li>
+                  <li><a class="fal fa-users dropdown-item" href="usuarios.php">Registrados</a></li>
                 </ul>
               </li>
 

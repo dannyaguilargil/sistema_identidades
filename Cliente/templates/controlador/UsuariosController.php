@@ -18,8 +18,10 @@ if($_POST['funcion']=="editar"){
    $segundonombre = $_POST['segundonombre'];
    $primerapellido = $_POST['primerapellido'];
    $segundoapellido = $_POST['segundoapellido'];
-   $observaciones_supervisor = $_POST['observaciones_supervisor'];
-   $laboratorio->editar($cedula,$nombre,$segundonombre,$primerapellido,$segundoapellido,$observaciones_supervisor);
+   $rol = $_POST['rol'];
+   $email = $_POST['email'];
+   //$observaciones_supervisor = $_POST['observaciones_supervisor'];
+   $laboratorio->editar($cedula,$nombre,$segundonombre,$primerapellido,$segundoapellido,$rol,$email);
    
 }
 if($_POST['funcion']=="eliminar"){

@@ -152,7 +152,7 @@ $pdf->Ln(20);
 $pdf->SetFont('Arial','',10);
 $pdf->Cell(20,10,utf8_decode('Que, revisado el contrato de prestacion de servicios  asignado al contratista '.$nombre." ".$primerapellido." ".$segundoapellido));
 $pdf->Ln(4);
-$pdf->Cell(20,10,utf8_decode('Con cedula de ciudadania '.$cedula.'  presenta terminacion en el perodo de ' .$mes.' por lo tanto se expide el presente '));
+$pdf->Cell(20,10,utf8_decode('Con cedula de ciudadania '.$cedula.'  presenta terminacion en el periodo de ' .$mes.' por lo tanto se expide el presente '));
 $pdf->Ln(4);
 $pdf->Cell(20,10,utf8_decode('certificado para tramite de cuentas y procesos que se requieran en la entidad.'));
 $pdf->Ln(25);

@@ -63,7 +63,7 @@ if($totalr<1){
       
                   <li><a class="dropdown-item" target="_blank" href="sistemas_solicitud_usuario.php">Solicitud</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" target="_blank" href="notificar_sistema.php">Notificar</a></li>
+                  <li><a class="dropdown-item" target="_blank" href="notificador.php">Notificar</a></li>
                  
                 </ul>
               </li>

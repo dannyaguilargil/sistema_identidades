@@ -323,7 +323,8 @@ if($totalr<1){
               </div>
 
               <div class="col">
-              <!-- PASSWORD-->
+              <label for=""><i>Contraseña: </i></label>
+              <input type="text" name="password" id="password" class="form-control">
               </div>
 
               <div class="col">
@@ -455,8 +456,12 @@ if($totalr<1){
       let cedula =$('#cedula').val();
       let nombre=$('#nombre_laboratorio').val();
       let segundonombre=$('#segundonombre').val();
+      let primerapellido=$('#primerapellido').val();// agregare primer apellido, segundo apellido y rol
+      let segundoapellido=$('#segundoapellido').val();//
+      let rol=$('#rol').val();//
+      let email=$('#email').val();//
       funcion='editar';
-      $.post('controlador/UsuariosController.php',{cedula,nombre,segundonombre,funcion},(response)=>{
+      $.post('controlador/UsuariosController.php',{cedula,nombre,segundonombre,primerapellido,segundoapellido,rol,email,funcion},(response)=>{
         
       })
       

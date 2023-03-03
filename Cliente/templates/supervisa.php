@@ -110,7 +110,7 @@ if($totalr!=1){
     <img  src="../imgs/logocompleto.png"  alt="" style="width: 120px; text-align: center;height: 50px">
     </div>
     <center>
-              <h6>Sistemas pendientes del supervisor</h6>
+              <h5><i>Sistemas pendientes del supervisor </i></h5>
               </center>
     <!-- Modal -->
 <div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -319,8 +319,8 @@ if($totalr!=1){
               <div class="row">
                 <div class="col">
                   <div class="form-group">
-                    <label for="">Firma: </label>
-                    <input type="text" id="firma" class="form-control">
+                    <label for=""><i> Firma: </i></label>
+                  
                    
                  </div>
                </div>

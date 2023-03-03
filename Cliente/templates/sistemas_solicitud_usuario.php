@@ -355,7 +355,7 @@ if($totalr<1){
 
 <div class="col firma" id="firma">
                 <label for="firma" class="">Adjunte firma fondo blanco</label>
-                <input type="file" name="imagen" id="imagen" class="" placeholder="Seleccione"> 
+                <input type="file" name="firma" id="firma" class="" placeholder="Seleccione" value="NO REQUIERE"> 
           
 </div>
 
@@ -384,7 +384,7 @@ if($totalr<1){
                 </div>
 
                 <div class="col">
-                <button class="btn btn-success" type="submit" onclick="envio();">Solicitar</button>
+                <button class="btn btn-success" type="submit" onclick="envio();" name="solicitar" id="solicitar">Solicitar</button>
                 </div>
 
 

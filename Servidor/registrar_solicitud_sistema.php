@@ -2,7 +2,9 @@
 
 include 'conexion.php';
 
-$imagen = '';
+
+if(isset($_POST['solicitar'])){
+$firma = '';
 // DEBO CARGAR LOS DATOS PREVIOS DEL USUARIO Y POSTERIOR A ESO HACER EL REGISTRO DEL SISTEMA
 $nombre = $_POST["nombre"];
 $segundonombre = $_POST["segundonombre"];
@@ -23,9 +25,10 @@ $dependencia = $_POST["dependencia"];
 $tiposolicitud = $_POST["tiposolicitud"];
 $aplicativo = $_POST["aplicativo"];
 $observaciones = $_POST["observaciones"];
-//AGREGAR OPCION DE LA FIRMA
+
+//AGREGAR OPCION DE LA FIRMA lo hare con rutas
 //$imagen = addslashes(file_get_contents($_FILES['imagen']['tmp_name']));
-//$imagen= addcslashes(file_get_contents($_FILES['imagen']['tmp_name'])); //EJEMPLO PARA LA INSERCCION DE IMAGEN, TENGO ERROR DE WARNING
+//$firma= addcslashes(file_get_contents($_FILES['firma']['tmp_name'])); //EJEMPLO PARA LA INSERCCION DE IMAGEN, TENGO ERROR DE WARNING
 
 $sql="INSERT INTO solicitud_sistema (nombre,segundonombre,primerapellido,segundoapellido,tipodocumento,cedula,lugarexpedicion,sexo,telefono,celular,direccion,cargo,supervisor,correo,ubicacion_laboral,dependencia,tiposolicitud,aplicativo,observaciones) VALUES('$nombre','$segundonombre','$primerapellido','$segundoapellido','$tipodocumento',$cedula,'$lugarexpedicion','$sexo',$telefono,$celular,'$direccion','$cargo','$supervisor','$correo','$ubicacion_laboral','$dependencia','$tiposolicitud','$aplicativo','$observaciones')";
 $resultado=$mysqli ->query($sql);
@@ -34,7 +37,7 @@ $sql2="INSERT INTO sistema_validado_supervisor (nombre,segundonombre,primerapell
 $resultado2=$mysqli ->query($sql2);
 //AQUI DECIDO HACER INSERCCION EN SUPERVISOR TAMBIEN PARA EVITAR EL INSERT INTO
 
-
+}
 if($resultado>0){
  
 echo header("Location:../Cliente/templates/sistemas_solicitud_usuario.php");

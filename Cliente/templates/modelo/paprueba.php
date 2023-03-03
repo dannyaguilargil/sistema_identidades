@@ -15,18 +15,18 @@ class Laboratorio{
         $this->laboratorios = $resultado->fetch_all(MYSQLI_ASSOC);
         return $this->laboratorios;
     }
- // agregare cargo y observaciones
-    function editar($id,$nombre,$segundonombre,$primerapellido,$segundoapellido,$tipodocumento,$lugarexpedicion,$cedula,$aplicativo,$tiposolicitud,$cargo,$observaciones){
+ // CAMBIARE AQUI POR LA ACTUALIZACION DEL PERMISO
+    function editar($cedula,$revocar_permiso){
         //$sql="UPDATE sistema_validado_supervisor SET nombre='$nombre',segundonombre='$segundonombre',primerapellido='$primerapellido',segundoapellido='$segundoapellido',observaciones_supervisor='$observaciones_supervisor' where id='$id'";
-        $sql="INSERT INTO sistema_validado_admin (nombre,segundonombre,primerapellido,segundoapellido,tipodocumento,lugarexpedicion,cedula,aplicativo,tiposolicitud,cargo,observaciones) VALUES ('$nombre','$segundonombre','$primerapellido','$segundoapellido','$tipodocumento','$lugarexpedicion',$cedula,'$aplicativo','$tiposolicitud','$cargo','$observaciones')";
+        $sql="UPDATE pazysalvo_aprobar SET revocar_permisos = '$revocar_permiso' WHERE cedula='$cedula'";
         $resultado = $this->acceso->query($sql);
 
             //VAMOS A ELIMINARLO NORMAL CON PHP
         //    include '../../../Servidor/conexion.php';
         //    $sql2="DELETE FROM sistema_validado_supervisor WHERE id ='$id'";
         //    $resultado2=$mysqli ->query($sql2);
-        $sql="DELETE FROM sistema_validado_supervisor where id='$id'";
-        $resultado = $this->acceso->query($sql);
+     //   $sql="DELETE FROM sistema_validado_supervisor where id='$id'";
+     //   $resultado = $this->acceso->query($sql);
 
     }
     function eliminar($id){

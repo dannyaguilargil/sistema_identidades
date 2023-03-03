@@ -13,23 +13,25 @@ if($_POST['funcion']=="listar"){
 
 // EDITAR QUE ES INSERTAR
 if($_POST['funcion']=="editar"){ // Voy a cambiarlo por insert into 
-   $id = $_POST['id'];
-   $nombre = $_POST['nombre'];
-   $segundonombre = $_POST['segundonombre'];
-   $primerapellido = $_POST['primerapellido']; // 
-   $segundoapellido = $_POST['segundoapellido']; // 
-   $tipodocumento = $_POST['tipodocumento']; // 
+  // $id = $_POST['id'];
+  $cedula = $_POST['cedula']; // 
+  $revocar_permiso = $_POST['revocar_permiso'];
+// $nombre = $_POST['nombre'];
+ //  $segundonombre = $_POST['segundonombre'];
+ //  $primerapellido = $_POST['primerapellido']; // 
+ //  $segundoapellido = $_POST['segundoapellido']; // 
+ //  $tipodocumento = $_POST['tipodocumento']; // 
 
-   $lugarexpedicion = $_POST['lugarexpedicion']; // sirve hasta segundo apellido por ahora
-   $cedula = $_POST['cedula']; // 
+ //  $lugarexpedicion = $_POST['lugarexpedicion']; // sirve hasta segundo apellido por ahora
+ 
 
-   $aplicativo = $_POST['aplicativo']; // 
-   $tiposolicitud = $_POST['tiposolicitud']; // 
+ //  $aplicativo = $_POST['aplicativo']; // 
+ //  $tiposolicitud = $_POST['tiposolicitud']; // 
 
-   $cargo = $_POST['cargo']; // 
-   $observaciones = $_POST['observaciones']; // 
+ //  $cargo = $_POST['cargo']; // 
+ //  $observaciones = $_POST['observaciones']; // 
   // $observaciones_supervisor = $_POST['observaciones_supervisor']; // agregado
-   $laboratorio->editar($id,$nombre,$segundonombre,$primerapellido,$segundoapellido,$tipodocumento,$lugarexpedicion,$cedula,$aplicativo,$tiposolicitud,$cargo,$observaciones);
+   $laboratorio->editar($cedula,$revocar_permiso);
    
 }
 if($_POST['funcion']=="eliminar"){

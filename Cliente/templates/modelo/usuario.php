@@ -12,8 +12,8 @@ class Laboratorio{
         return $this->laboratorios;
     }
 
-    function editar($cedula,$nombre,$segundonombre){
-        $sql="UPDATE usuarios_registrados SET nombre='$nombre',segundonombre='$segundonombre' where cedula='$cedula'";
+    function editar($cedula,$nombre,$segundonombre,$primerapellido,$segundoapellido,$rol,$email){
+        $sql="UPDATE usuarios_registrados SET nombre='$nombre',segundonombre='$segundonombre',primerapellido='$primerapellido',segundoapellido='$segundoapellido',rol='$rol',email='$email' where cedula='$cedula'";
         $resultado = $this->acceso->query($sql);
     }
     function eliminar($cedula){

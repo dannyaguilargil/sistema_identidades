@@ -200,10 +200,26 @@ if($totalr<1){
        <div class="container form-control" >
        <center><h6 class=""><b>Gestion de permisos asignados</b></h6> </center>
 
- 
+      <!--
+<center style="color:red;"> <b class="fal fa-frown-open"> <?php  //echo "ERROR DE CREDENCIALES"; ?></center></b> 
+
+                  -->
 
         <div class="row">
+<?php
+        $totalr2 = '';  //cCONSULTA PARA NOTIFICAR SI NO TIENE SISTEMAS ASIGNADOS
+            $consulta4="SELECT COUNT(*) FROM sistema_validado_admin WHERE nombre='$tomador';";
+            $resultado4=mysqli_query($mysqli,$consulta4);
+               if($resultado4){ while($row = $resultado4->fetch_array()){
+                  $totalr2 = $row['COUNT(*)'];
+                  }
+                } 
+                   //cCONSULTA PARA NOTIFICAR SI NO TIENE SISTEMAS ASIGNADOS  
 
+                   if($totalr2<1){
+                    ?><center style="color:red;"> <b class="fal fa-frown-open"> <?php  echo "NO TIENE SISTEMAS APROBADOS"; ?></center></b> 
+                   <?php }
+?>
     
   <table class="table caption-top">
   <caption>Sistemas aprobados</caption>
@@ -228,12 +244,6 @@ if($totalr<1){
             $consulta3="SELECT * FROM sistema_validado_admin WHERE nombre='$tomador';";
             $resultado3=mysqli_query($mysqli,$consulta3);
 
-            //select aplicativo, tiposolicitud,
-            //fechafinalcontrato de usuarios_registrados
-            //permiso o perfil asignado 
-
-
-            $resultado3=mysqli_query($mysqli,$consulta3);
             if($resultado3){ while($row = $resultado3->fetch_array()){
                 $aplicativo = $row['aplicativo']; //aqui va aplicativo
                 $tiposolicitud = $row['tiposolicitud'];
@@ -241,7 +251,13 @@ if($totalr<1){
                 
               //CONSULTA PARA TRAER LOS APLICATIVOS QUE TIENE YA ASIGNADO 
 ?>
-
+              <?php //consulta para no mostrar tabla y decir que no tiene perfiles asignados
+         
+          
+              
+              
+              
+              ?>
               <td><?php echo $aplicativo;?></td>
               <td><?php echo $tiposolicitud; ?></td>
               <td><?php echo 'USUARI0'; ?></td>

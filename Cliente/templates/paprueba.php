@@ -61,7 +61,7 @@ if($totalr<1){
       
                   <li><a class="far fa-user-md-chat dropdown-item" target="_blank" href="sistemas_solicitud_supervisor.php">Solicitud</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="fal fa-comment-check dropdown-item" target="_blank" href="notificar_sistema.php">Notificar</a></li>
+                  <li><a class="fal fa-comment-check dropdown-item" target="_blank" href="notificador.php">Notificar</a></li>
                  
                 </ul>
               </li>
@@ -161,7 +161,7 @@ if($totalr<1){
               <div class="col">
                 <div class="form-group">
                 <label for="">Cedula: </label>
-                <input type="text" id="cedula" class="form-control" disabled>
+                <input type="text" id="cedula" class="form-control">
                 
                  </div>
               </div>
@@ -171,11 +171,11 @@ if($totalr<1){
               <div class="col">
                 <div class="form-group">
                 <label for="">Renovar permiso</label> <br>
-                <select name="aplicativo" id="aplicativo" class="emerge" onchange="aplicativos();">
-                  <option value="ALDEAMO SMS" class="emerge">INACTIVO</option>
-                  <option value="AULA VIRTUAL" class="emerge">ACTIVO</option>
-                  <option value="TNS" class="emerge">REVOCADO</option>
-                  <option value="TNS" class="emerge">POR REVOCAR</option>
+                <select name="revocar_permiso" id="revocar_permiso" class="">
+                  <option value="INACTIVO" class="">INACTIVO</option>
+                  <option value="ACTIVO" class="">ACTIVO</option>
+                  <option value="REVOCADO" class="" selected>REVOCADO</option>
+                  <option value="POR REVOCAR" class="">POR REVOCAR</option>
               
                 </select> 
                 
@@ -203,7 +203,7 @@ if($totalr<1){
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-success">Aprobarlo</button>
+          <button type="submit" class="btn btn-success">Renovar permiso</button>
         </form>
         </div>
       </div>
@@ -214,7 +214,7 @@ if($totalr<1){
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Eliminar solicitud de sistema</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Eliminar paz y salvo aprobado</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -319,6 +319,7 @@ if($totalr<1){
       $('#aplicativo').val(data.aplicativo);
       $('#observaciones').val(data.observaciones);
       $('#observaciones_supervisor').val(data.observaciones_supervisor);
+      $('#revocar_permiso').val(data.revocar_permiso);
      // $('#id').val(data.id);
     })
     $('#form-editar').submit(e=>{ //Aqui obtiene los datos que quiere editar
@@ -343,8 +344,9 @@ if($totalr<1){
       let aplicativo=$('#aplicativo').val();
       let observaciones=$('#observaciones').val();//
       let observaciones_supervisor=$('#observaciones_supervisor').val();
+      let revocar_permiso=$('#revocar_permiso').val();
       funcion='editar';
-      $.post('controlador/papruebaController.php',{id,nombre,segundonombre,primerapellido,segundoapellido,tipodocumento,lugarexpedicion,cedula,aplicativo,tiposolicitud,cargo,observaciones,funcion},(response)=>{
+      $.post('controlador/papruebaController.php',{cedula,revocar_permiso,funcion},(response)=>{
         
       })
       
