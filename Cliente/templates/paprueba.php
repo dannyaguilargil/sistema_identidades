@@ -1,22 +1,5 @@
 
 <?php
-//COPIA DE PAZ Y SALVO ADMIN PERO CAMBIADO A TABLA PARA VALIDAR DE FORMA MAS SENCILLA
-
-/////@developer DANNYAGUILARGIL
-/*
-##################################################
-----------| |----------|     |#    |  ---------  #
-          | |          |    |  |   |      #      # 
-          | |----------|   |    |  |      #      #
-          | |          |  |      | |      #      #
-----------| |          | |        #   ---------  #
-################################################## 
-
-*/
-
-?>
-
-<?php
 session_start();
 include '../../Servidor/conexion.php'; 
 
@@ -72,13 +55,13 @@ if($totalr<1){
                   Sistemas
                 </a>
                 <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="supervisa.php">Pendientes supervisor</a></li>
-                <li><a class="dropdown-item" target="_blank" href="sistemas_admin_aprobados.php">Aprobados</a></li>
+                <li><a class="fas fa-user-hard-hat dropdown-item" href="supervisa.php">Pendientes supervisor</a></li>
+                <li><a class="fal fa-vote-yea  dropdown-item" target="_blank" href="sistemas_admin_aprobados.php">Aprobados</a></li>
                  
       
-                  <li><a class="dropdown-item" target="_blank" href="sistemas_solicitud_supervisor.php">Solicitud</a></li>
+                  <li><a class="far fa-user-md-chat dropdown-item" target="_blank" href="sistemas_solicitud_supervisor.php">Solicitud</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" target="_blank" href="notificar_sistema.php">Notificar</a></li>
+                  <li><a class="fal fa-comment-check dropdown-item" target="_blank" href="notificar_sistema.php">Notificar</a></li>
                  
                 </ul>
               </li>
@@ -89,8 +72,8 @@ if($totalr<1){
                   Paz y salvo
                 </a>
                 <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="pazysalvo_admin.php">Pendientes</a></li>
-                  <li><a class="dropdown-item" target="_blank" href="paprueba.php">Aprobados</a></li>
+                  <li><a class="far fa-file-check dropdown-item" href="pazysalvo_adm.php">Pendientes</a></li>
+                  <li><a class="fal fa-file-pdf dropdown-item" target="_blank" href="paprobados.php">Aprobados</a></li>
                 </ul>
               </li>
                 
@@ -100,8 +83,8 @@ if($totalr<1){
                   Usuarios
                 </a>
                 <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="usuario_pendiente.php">Pendientes</a></li>
-                  <li><a class="dropdown-item" href="usuarios.php">Registrados</a></li>
+                  <li><a class="far fa-user-secret dropdown-item" href="usuario_pendiente.php">Pendientes</a></li>
+                  <li><a class="fal fa-users dropdown-item" href="usuarios.php">Registrados</a></li>
                 </ul>
               </li>
 
@@ -130,14 +113,14 @@ if($totalr<1){
     </div>
 
     <center>
-              <h5><i>Paz y salvos pendientes</i></h5>
+              <h5><i>Paz y salvo aprobados</i></h5>
               </center>
     <!-- Modal -->
 <div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Informacion del paz y salvo</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Informacion general del paz y salvo</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -149,7 +132,7 @@ if($totalr<1){
                 <div class="col">
                   <div class="form-group">
                     <label for=""><b>Primer nombre:</b> </label>
-                    <input type="text" id="nombre_laboratorio" class="form-control">
+                    <input type="text" id="nombre_laboratorio" class="form-control" disabled>
                     <input type="hidden" id="id">
                  </div>
                </div>
@@ -159,7 +142,7 @@ if($totalr<1){
               <div class="col">
                 <div class="form-group">
                 <label for="">Segundo nombre: </label>
-                <input type="text" id="segundonombre" class="form-control">
+                <input type="text" id="segundonombre" class="form-control" disabled>
                 
                  </div>
               </div>
@@ -168,46 +151,54 @@ if($totalr<1){
               <div class="col">
                 <div class="form-group">
                 <label for="primerapellido"><b>Primer apellido: </b></label>
-                <input type="text" id="primerapellido" class="form-control">
+                <input type="text" id="primerapellido" class="form-control" disabled>
                 
                  </div>
               </div>
               </div>
 
               <div class="row">
-                <div class="col">
-                  <div class="form-group">
-                    <label for="">Segundo apellido: </label>
-                    <input type="text" id="segundoapellido" class="form-control">
-                   
+              <div class="col">
+                <div class="form-group">
+                <label for="">Cedula: </label>
+                <input type="text" id="cedula" class="form-control" disabled>
+                
                  </div>
-               </div>
-
+              </div>
 
 
 
               <div class="col">
                 <div class="form-group">
-                <label for="">Cedula: </label>
-                <input type="text" id="cedula" class="form-control">
+                <label for="">Renovar permiso</label> <br>
+                <select name="aplicativo" id="aplicativo" class="emerge" onchange="aplicativos();">
+                  <option value="ALDEAMO SMS" class="emerge">INACTIVO</option>
+                  <option value="AULA VIRTUAL" class="emerge">ACTIVO</option>
+                  <option value="TNS" class="emerge">REVOCADO</option>
+                  <option value="TNS" class="emerge">POR REVOCAR</option>
+              
+                </select> 
                 
                  </div>
               </div>
+
+                <div class="col"></div>
+             
               </div>
              
-              <div class="row">
-                <div class="col">
-                  <label for="rfid">Entrega de tarjeta RFID</label>
-                 <input type="checkbox" value="SI" name="rfid" id="rfid" checked required>
-                 </div>
+
+           
+
+        
 
 
-                 <div class="col">
-                <label for="equipos">Equipos en buen estado</label> 
-                 <input type="checkbox" value="SI" name="equipos" id="equipos" checked required>
-                 </div>
-               </div>
+              
 
+             
+
+
+             
+           
           
         </div>
         <div class="modal-footer">
@@ -219,12 +210,11 @@ if($totalr<1){
     </div>
   </div>
 
- 
   <div class="modal fade" id="eliminar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Eliminar solicitud de paz y salvo</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Eliminar solicitud de sistema</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -251,13 +241,16 @@ if($totalr<1){
         <table id="example"class="display table table-hover text-nowrap table-bordered">
             <thead>
                 <tr>
-                    
+                  
                     <th>Nombre</th>
-                    <th>Segundo nombre</th>
                     <th>Primer apellido</th> <!-- AGREGUE ESTO-->
-                    <th>Segundo apellido</th> <!-- AGREGUE ESTO-->
+                    <th>Permisos</th> <!-- AGREGUE ESTO-->
                     <th>Cedula</th> <!-- AGREGUE ESTO-->
+                    <th>Aplicativo</th> <!-- AGREGUE ESTO-->
+                    <th>Tipo de solicitud</th>
+                  
                     <th>Acciones</th>
+                   
                 </tr>
             </thead>
             <tbody>
@@ -273,18 +266,24 @@ if($totalr<1){
             var funcion='listar';
     let datatable = $('#example').DataTable({
         "ajax": {
-            "url": "controlador/pazysalvoController.php", // "url": "controlador/LaboratorioController.php",
+            "url": "controlador/papruebaController.php", // "url": "controlador/LaboratorioController.php",
             "method": "POST",
             "data":{funcion:funcion}
         },
         "columns": [
-           
+       
             { "data": "nombre" },
-            { "data": "segundonombre" },
+            //{ "data": "segundonombre" },
             { "data": "primerapellido" }, //Este campo es igual al nombre del campo de la bd
-            { "data": "segundoapellido" }, //Este campo es igual al nombre del campo de la bd
+            { "data":  "revocar_permisos",
+              "render": function ( data, type, row ) {
+                         return ""+data+"! "; //para cambiar valor en tabla o concatenar
+                        }},
+                        
             { "data": "cedula" }, //Este campo es igual al nombre del campo de la bd
-           
+            { "data": "aplicativo" }, //Este campo es igual al nombre del campo de la bd
+            { "data": "tiposolicitud" }, //Este campo es igual al nombre del campo de la bd
+            
             
            // { "defaultContent": ``}, //tengo que mirar como me traigo esa data
             { "defaultContent": `<button class="editar btn btn-outline-success fas fa-user-check" type="button" data-toggle="modal" data-target="#editar"></button>
@@ -299,27 +298,27 @@ if($totalr<1){
     $('#example tbody').on('click','.editar', function(){ // Aqui obtiene los datos que quiere mostrar
       let data = datatable.row($(this).parents()).data();
       $('#nombre_laboratorio').val(data.nombre);
-     // $('#id').val(data.id);
+      $('#id').val(data.id);
       //AQUI PUEDE IR CONSULTA Y METERLO EN EL VALOR
       $('#segundonombre').val(data.segundonombre);
       $('#primerapellido').val(data.primerapellido);
       $('#segundoapellido').val(data.segundoapellido);
-    //  $('#tipodocumento').val(data.tipodocumento);
+      $('#tipodocumento').val(data.tipodocumento);
       $('#cedula').val(data.cedula);
-    //  $('#lugarexpedicion').val(data.lugarexpedicion);
-    //  $('#sexo').val(data.sexo);
-    //  $('#telefono').val(data.telefono);
-    //  $('#celular').val(data.celular);
-    //  $('#direccion').val(data.direccion);
-    //  $('#cargo').val(data.cargo);
-    //  $('#supervisor').val(data.supervisor);
-    //  $('#correo').val(data.correo);
-    //  $('#ubicacion_laboral').val(data.ubicacion_laboral);
-    //  $('#dependencia').val(data.dependencia);
-    //  $('#tiposolicitud').val(data.tiposolicitud);
-    //  $('#aplicativo').val(data.aplicativo);
-    //  $('#observaciones').val(data.observaciones);
-    //  $('#observaciones_supervisor').val(data.observaciones_supervisor);
+      $('#lugarexpedicion').val(data.lugarexpedicion);
+      $('#sexo').val(data.sexo);
+      $('#telefono').val(data.telefono);
+      $('#celular').val(data.celular);
+      $('#direccion').val(data.direccion);
+      $('#cargo').val(data.cargo);
+      $('#supervisor').val(data.supervisor);
+      $('#correo').val(data.correo);
+      $('#ubicacion_laboral').val(data.ubicacion_laboral);
+      $('#dependencia').val(data.dependencia);
+      $('#tiposolicitud').val(data.tiposolicitud);
+      $('#aplicativo').val(data.aplicativo);
+      $('#observaciones').val(data.observaciones);
+      $('#observaciones_supervisor').val(data.observaciones_supervisor);
      // $('#id').val(data.id);
     })
     $('#form-editar').submit(e=>{ //Aqui obtiene los datos que quiere editar
@@ -328,15 +327,24 @@ if($totalr<1){
       let segundonombre=$('#segundonombre').val();
       let primerapellido=$('#primerapellido').val();
       let segundoapellido=$('#segundoapellido').val();
-      //let tipodocumento=$('#tipodocumento').val();
+      let tipodocumento=$('#tipodocumento').val();
       let cedula=$('#cedula').val();
-
-      ///////////////////////////////
-      let rfid=$('#rfid').val();
-      let equipos=$('#equipos').val();
-    
+      let lugarexpedicion=$('#lugarexpedicion').val();
+      let sexo=$('#sexo').val();
+      let telefono=$('#telefono').val();
+      let celular=$('#celular').val();
+      let direccion=$('#direccion').val();
+      let cargo=$('#cargo').val();//
+      let supervisor=$('#supervisor').val();
+      let correo=$('#correo').val();
+      let ubicacion_laboral=$('#ubicacion_laboral').val();
+      let dependencia=$('#dependencia').val();
+      let tiposolicitud=$('#tiposolicitud').val();
+      let aplicativo=$('#aplicativo').val();
+      let observaciones=$('#observaciones').val();//
+      let observaciones_supervisor=$('#observaciones_supervisor').val();
       funcion='editar';
-      $.post('controlador/pazysalvoController.php',{cedula,rfid,equipos,funcion},(response)=>{
+      $.post('controlador/papruebaController.php',{id,nombre,segundonombre,primerapellido,segundoapellido,tipodocumento,lugarexpedicion,cedula,aplicativo,tiposolicitud,cargo,observaciones,funcion},(response)=>{
         
       })
       
@@ -344,12 +352,12 @@ if($totalr<1){
     $('#example tbody').on('click','.eliminar', function(){
       let data = datatable.row($(this).parents()).data();
       $('#laboratorio_eliminar').html(data.nombre);
-      $('#cedula').val(data.cedula);
+      $('#id_laboratorio').val(data.id);
     })
     $('#form-eliminar').submit(e=>{
-      let cedula =$('#cedula').val();
+      let id =$('#id_laboratorio').val();
       funcion='eliminar';
-      $.post('controlador/pazysalvoController.php',{cedula,funcion},(response)=>{
+      $.post('controlador/papruebaController.php',{id,funcion},(response)=>{
         
       })
       
@@ -360,7 +368,7 @@ let espanol = {
     "sLengthMenu":     "Mostrar _MENU_ registros",
     "sZeroRecords":    "No se encontraron resultados",
     "sEmptyTable":     "Ningún dato disponible en esta tabla",
-    "sInfo":           "Paz y salvos pendientes del _START_ al _END_ de un total de _TOTAL_ registros",
+    "sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
     "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
     "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
     "sInfoPostFix":    "",

@@ -109,7 +109,7 @@
                     <th>RFID</th>
                   <!--  <th>EQUIPOS</th> -->
                     <th>PERMISOS</th>
-                    <th>PDF</th>
+              
                     <th>TIPO</th>
                     <th>APLICATIVO</th>
                     <th>FECHA FINAL DE CONTRATO</th>
@@ -149,7 +149,7 @@
                     <td><?php echo $cedula; ?></td>
                     <td><?php echo $rfid; ?></td>
                     <td><span style="color:red;"><?php echo $revocar_permisos; ?> </span></td>
-                    <td> <a href="" class="btn btn-light fas fa-file-pdf"></a> </td>
+                <!--    <td> <a href="" class="btn btn-light fas fa-file-pdf"></a> </td> -->
                     <td><?php echo $tiposolicitud; ?></td>
                     <td><?php echo $aplicativo; ?></td>
                     <td><?php echo $fechafinalcontrato; ?></td>

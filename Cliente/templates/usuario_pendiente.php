@@ -110,7 +110,7 @@ if($totalr<1){
     <img  src="../imgs/logocompleto.png"  alt="" style="width: 120px; text-align: center;height: 50px">
     </div>
     <center>
-              <h6>USUARIOS PENDIENTES</h6>
+              <h5><i>USUARIOS PENDIENTES</i></h5>
               </center>
     <!-- Modal -->
 <div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

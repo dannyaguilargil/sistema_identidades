@@ -55,13 +55,13 @@ if($totalr<1){
                   Sistemas
                 </a>
                 <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="supervisa.php">Pendientes supervisor</a></li>
-                <li><a class="dropdown-item" target="_blank" href="sistemas_admin_aprobados.php">Aprobados</a></li>
+                <li><a class="fas fa-user-hard-hat dropdown-item" href="supervisa.php">Pendientes supervisor</a></li>
+                <li><a class="fal fa-vote-yea  dropdown-item" target="_blank" href="sistemas_admin_aprobados.php">Aprobados</a></li>
                  
       
-                  <li><a class="dropdown-item" target="_blank" href="sistemas_solicitud_supervisor.php">Solicitud</a></li>
+                  <li><a class="far fa-user-md-chat dropdown-item" target="_blank" href="sistemas_solicitud_supervisor.php">Solicitud</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" target="_blank" href="notificar_sistema.php">Notificar</a></li>
+                  <li><a class="fal fa-comment-check dropdown-item" target="_blank" href="notificador.php">Notificar</a></li>
                  
                 </ul>
               </li>
@@ -72,8 +72,8 @@ if($totalr<1){
                   Paz y salvo
                 </a>
                 <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="pazysalvo_adm.php">Pendientes</a></li>
-                  <li><a class="dropdown-item" target="_blank" href="paprobados.php">Aprobados</a></li>
+                  <li><a class="far fa-file-check dropdown-item" href="pazysalvo_adm.php">Pendientes</a></li>
+                  <li><a class="fal fa-file-pdf dropdown-item" target="_blank" href="paprueba.php">Aprobados</a></li>
                 </ul>
               </li>
                 
@@ -83,8 +83,8 @@ if($totalr<1){
                   Usuarios
                 </a>
                 <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="usuario_pendiente.php">Pendientes</a></li>
-                  <li><a class="dropdown-item" href="usuarios.php">Registrados</a></li>
+                  <li><a class="far fa-user-secret dropdown-item" href="usuario_pendiente.php">Pendientes</a></li>
+                  <li><a class="fal fa-users dropdown-item" href="usuarios.php">Registrados</a></li>
                 </ul>
               </li>
 
@@ -113,7 +113,7 @@ if($totalr<1){
     </div>
 
     <center>
-              <h6>Sistemas pendientes del administrador</h6>
+              <h5><i>Sistemas pendientes del administrador</i></h5>
               </center>
     <!-- Modal -->
 <div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

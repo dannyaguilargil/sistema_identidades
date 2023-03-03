@@ -1,5 +1,5 @@
 <?php
-
+//SOLUCINA ERROR DE EXPORTACION DE LA BD https://www.youtube.com/watch?v=WE2s1lEpmwg
 
 /////@developer DANNYAGUILARGIL
 /*

@@ -66,8 +66,8 @@ if($totalr<1){
                   Paz y salvo
                 </a>
                 <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="pazysalvo_admin.php">Pendientes</a></li>
-                  <li><a class="dropdown-item" target="_blank" href="sistemas_solicitud_supervisor.php">Solicitud</a></li>
+                  <li><a class="dropdown-item" href="pazysalvo_adm.php">Pendientes</a></li>
+                  <li><a class="dropdown-item" target="_blank" href="sistemas_solicitud_usuario.php">Solicitud</a></li>
                 </ul>
               </li>
                 
@@ -85,7 +85,7 @@ if($totalr<1){
 
 
             </ul>
-            <a class="far fa-user-cog navbar-brand " href="perfil_admin.php">Mi perfil</a>
+            <a class="far fa-user-cog navbar-brand " href="perfil.php">Mi perfil</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -207,9 +207,9 @@ if($totalr<1){
    <button style="padding: 5px;margin: 3px" type="button" class="fas fa-user-plus modals btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal1" data-bs-whatever="@mdo"></button> 
 
     </div>
-     <br>
+     
     <center>
-              <h6>Usuarios registrados</h6>
+              <h5><i>Usuarios registrados</i></h5>
               </center>
 
     <!-- Modal  DE ACTUALIZACION COMPROBADO-->
@@ -382,7 +382,7 @@ if($totalr<1){
   </div>
     <div class="container">
        
-        <table id="example"class="display table table-hover text-nowrap">
+        <table id="example"class="display table table-hover text-nowrap table-bordered">
             <thead>
                 <tr>
                 
