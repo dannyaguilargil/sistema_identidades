@@ -26,8 +26,9 @@ if($totalr<1){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kodchasan">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-
     <link rel="stylesheet" href="lib/datatables.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
@@ -48,8 +49,8 @@ if($totalr<1){
            
             
             
-              <li class="nav-item dropdown">
-                <a class="fas fa-phone-laptop nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <li class="nav-item dropdown" style="font-family: Lato;">
+                <a class="fas fa-phone-laptop nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"">
                   Sistemas
                 </a>
                 <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
@@ -85,6 +86,8 @@ if($totalr<1){
 
 
             </ul>
+            <button style="padding: 5px;margin: 3px" type="button" class="fas fa-user-plus modals btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal1" data-bs-whatever="@mdo">Agregar usuario</button> 
+
             <a class="far fa-user-cog navbar-brand " href="perfil.php">Mi perfil</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -103,14 +106,14 @@ if($totalr<1){
 
 <!-- FIN DE MODALES --> 
 <!--Modal de inserccion SUCCESS -->
-<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="font-famyly: Lato">
  <div class="modal-dialog">
    <div class="modal-content">
      <div class="modal-header">
-       <h5 class="modal-title" id="exampleModalLabel"><b>Agregar un usuario</b></h5>
+       <h5 class="modal-title" id="exampleModalLabel" style="font-family: Kodchasan">Agregar un usuario</h5>
        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
      </div>
-     <div class="modal-body">
+     <div class="modal-body" style="font-family: Lato;">
        <form  action="../../Servidor/registrar_usuario.php" method="POST" enctype="multipart/form-data" >
 
         <!--
@@ -184,8 +187,8 @@ if($totalr<1){
 
      </div>
      <div class="modal-footer">
-       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-       <button type="submit" class="btn btn-success">Insertar</button>
+       <button type="button" class="btn btn-outline-secondary fal fa-window-close" data-bs-dismiss="modal">Salir</button>
+       <button type="submit" class="btn btn-success fal fa-plus">Insertar</button>
        
      </div>
      </form>
@@ -204,20 +207,22 @@ if($totalr<1){
 
 <div class="imagen">
     <img  src="../imgs/logocompleto.png"  alt="" style="width: 120px; text-align: center;height: 50px">
-   <button style="padding: 5px;margin: 3px" type="button" class="fas fa-user-plus modals btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal1" data-bs-whatever="@mdo"></button> 
 
     </div>
      
     <center>
-              <h5><i>Usuarios registrados</i></h5>
+              <h5 style="font-family: Kodchasan;">Usuarios registrados </h5>
+
               </center>
+              
+              
 
     <!-- Modal  DE ACTUALIZACION COMPROBADO-->
 <div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Informacion general del colaborador</h5>
+          <h5 class="modal-title" id="exampleModalLabel" style="font-family: Kodchasan;">Informacion general del colaborador</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -225,7 +230,7 @@ if($totalr<1){
         <div class="modal-body">
           <form id="form-editar">
 
-              <div class="row">
+              <div class="row" style="font-family: Lato;">
                 <div class="col">
                   <div class="form-group">
                     <label for=""><b>Primer nombre:</b> </label>
@@ -346,8 +351,8 @@ if($totalr<1){
           
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-primary">Actualizar</button>
+          <button type="button" class="btn btn-outline-secondary fal fa-window-close" data-dismiss="modal">Salir</button>
+          <button type="submit" class="btn btn-primary far fa-user-edit">Actualizar</button>
         </form>
         </div>
       </div>
@@ -374,7 +379,7 @@ if($totalr<1){
           
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Salir</button>
           <button type="submit" class="btn btn-danger">Eliminarlo</button>
         </form>
         </div>
@@ -383,11 +388,11 @@ if($totalr<1){
   </div>
     <div class="container">
        
-        <table id="example"class="display table table-hover text-nowrap table-bordered">
+        <table id="example"class="display table table-hover text-nowrap table-bordered" style="font-family: Lato">
             <thead>
                 <tr>
                 
-                    <th>Nombre</th>
+                    <th style="Kodchasan">Nombre</th>
                     <th>Primer apellido</th> <!-- AGREGUE ESTO-->
                     <th>Segundo apellido</th> <!-- AGREGUE ESTO-->
                     <th>Cargo</th> <!-- AGREGUE ESTO-->
@@ -424,7 +429,7 @@ if($totalr<1){
             { "data": "cedula" }, //Este campo es igual al nombre del campo de la bd
             
            // { "defaultContent": ``}, //tengo que mirar como me traigo esa data
-            { "defaultContent": `<button class="editar btn btn-outline-primary fas fa-user-edit" type="button" data-toggle="modal" data-target="#editar"></button>
+            { "defaultContent": `<button class="editar btn btn-outline-primary fas fa-eye" type="button" data-toggle="modal" data-target="#editar"></button>
                                 <button class="eliminar btn btn-outline-danger fas fa-user-times"type="button" data-toggle="modal" data-target="#eliminar"></button>` }
         ],
         "language": espanol

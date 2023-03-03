@@ -130,14 +130,14 @@ if($totalr<1){
     </div>
 
     <center>
-              <h5><i>Paz y salvos pendientes</i></h5>
+              <h5 style="font-family: Kodchasan">Paz y salvos pendientes</h5>
               </center>
     <!-- Modal -->
 <div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Informacion del paz y salvo</h5>
+          <h5 class="modal-title" id="exampleModalLabel" style="font-family: Kodchasan">Informacion del paz y salvo</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -197,13 +197,13 @@ if($totalr<1){
              
               <div class="row">
                 <div class="col">
-                  <label for="rfid">Entrega de tarjeta RFID</label>
+                  <label for="rfid">Entrega de tarjeta RFID:</label>
                  <input type="checkbox" value="SI" name="rfid" id="rfid" checked required>
                  </div>
 
 
                  <div class="col">
-                <label for="equipos">Equipos en buen estado</label> 
+                <label for="equipos">Entrega de carnet:</label> <br>
                  <input type="checkbox" value="SI" name="equipos" id="equipos" checked required>
                  </div>
                </div>
@@ -287,7 +287,7 @@ if($totalr<1){
            
             
            // { "defaultContent": ``}, //tengo que mirar como me traigo esa data
-            { "defaultContent": `<button class="editar btn btn-outline-success fas fa-user-check" type="button" data-toggle="modal" data-target="#editar"></button>
+            { "defaultContent": `<button class="editar btn btn-outline-success fas fa-eye" type="button" data-toggle="modal" data-target="#editar"></button>
                                 <button class="eliminar btn btn-outline-danger fas fa-user-times"type="button" data-toggle="modal" data-target="#eliminar"></button>` }
         ],
         "language": espanol

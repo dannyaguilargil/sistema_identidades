@@ -26,8 +26,9 @@ if($totalr<1){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kodchasan">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-
     <link rel="stylesheet" href="lib/datatables.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="lib/bootstrap.css">
@@ -114,14 +115,14 @@ if($totalr<1){
     <img  src="../imgs/logocompleto.png"  alt="" style="width: 120px; text-align: center;height: 50px">
     </div>
     <center>
-              <h5><i>USUARIOS PENDIENTES</i></h5>
+              <h5 style="font-family: kodchasan">Usuarios pendientes</h5>
               </center>
     <!-- Modal -->
 <div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Informacion general del colaborador</h5>
+          <h5 class="modal-title" id="exampleModalLabel" style="font-family: Kodchasan;">Informacion general del colaborador</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -240,8 +241,8 @@ if($totalr<1){
           
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-success">Aprobarlo</button>
+          <button type="button" class="btn btn-outline-secondary fal fa-window-close" data-dismiss="modal">Salir</button>
+          <button type="submit" class="btn btn-success fas fa-check">Aprobarlo</button>
         </form>
         </div>
       </div>
@@ -324,7 +325,7 @@ if($totalr<1){
          //   { "data": "supervisor" }, //Este campo es igual al nombre del campo de la bd
             
            // { "defaultContent": ``}, //tengo que mirar como me traigo esa data
-            { "defaultContent": `<button class="editar btn btn-outline-success fas fa-check" type="button" data-toggle="modal" data-target="#editar"></button>
+            { "defaultContent": `<button class="editar btn btn-outline-success fas fa-eye" type="button" data-toggle="modal" data-target="#editar"></button>
                                 <button class="eliminar btn btn-outline-danger fas fa-times "type="button" data-toggle="modal" data-target="#eliminar"></button>` }
         ],
         "language": espanol

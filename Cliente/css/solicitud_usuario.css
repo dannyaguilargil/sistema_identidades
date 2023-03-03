@@ -1,9 +1,11 @@
 *{
     background-color: f8f8f8;
+    font-family: Lato;
+
  
 }
 .container-fliud a{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Lato;
 }
 .centrar{
     display: flex;
@@ -89,3 +91,9 @@ input{
 }
 
 /* FINALIZA MODO DARK*/
+th {
+    font-family: Kodchasan;
+}
+input{
+    font-family: Lato;
+}
