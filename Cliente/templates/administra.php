@@ -26,6 +26,8 @@ if($totalr<1){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kodchasan">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
     <link rel="stylesheet" href="lib/datatables.min.css">
@@ -52,16 +54,14 @@ if($totalr<1){
             
               <li class="nav-item dropdown">
                 <a class="fas fa-phone-laptop nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Sistemas
+                 <span style="font-family: Lato;">  Sistemas </span>
                 </a>
                 <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="fas fa-user-hard-hat dropdown-item" href="supervisa.php">Pendientes supervisor</a></li>
-                <li><a class="fal fa-vote-yea  dropdown-item" target="_blank" href="sistemas_admin_aprobados.php">Aprobados</a></li>
-                 
-      
-                  <li><a class="far fa-user-md-chat dropdown-item" target="_blank" href="sistemas_solicitud_usuario.php">Solicitud</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="fal fa-comment-check dropdown-item" target="_blank" href="notificador.php">Notificar</a></li>
+                <li><a class="fas fa-user-hard-hat dropdown-item" href="supervisa.php"><span style="font-family: Lato;"> Pendientes supervisor </span></a></li>
+                <li><a class="fal fa-vote-yea  dropdown-item" target="_blank" href="sistemas_admin_aprobados.php"> <span style="font-family: Lato;"> Aprobados </span></a></li>
+                  <li><a class="far fa-user-md-chat dropdown-item" target="_blank" href="sistemas_solicitud_usuario.php"> <span style="font-family: Lato;"> Solicitud </span></a></li>
+                  <li><hr class="dropdown-divider" style="color: green;"></li>
+                  <li><a class="fal fa-comment-check dropdown-item" target="_blank" href="notificador.php"><span style="font-family: Lato;">  Notificar </span> </a></li>
                  
                 </ul>
               </li>
@@ -69,29 +69,29 @@ if($totalr<1){
             
               <li class="nav-item dropdown">
                 <a class="fas fa-id-card nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Paz y salvo
+                 <span style="font-family: Lato;"> Paz y salvo </span>
                 </a>
                 <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="far fa-file-check dropdown-item" href="pazysalvo_adm.php">Pendientes</a></li>
-                  <li><a class="fal fa-file-pdf dropdown-item" target="_blank" href="paprueba.php">Aprobados</a></li>
+                  <li><a class="far fa-file-check dropdown-item" href="pazysalvo_adm.php"> <span style="font-family: Lato;"> Pendientes</span></a></li>
+                  <li><a class="fal fa-file-pdf dropdown-item" target="_blank" href="paprueba.php"> <span style="font-family: Lato;">  Aprobados </span> </a></li>
                 </ul>
               </li>
                 
 
               <li class="nav-item dropdown">
                 <a class="fas fa-user-cog nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Usuarios
+                 <span style="font-family: Lato"> Usuarios</span>
                 </a>
                 <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="far fa-user-secret dropdown-item" href="usuario_pendiente.php">Pendientes</a></li>
-                  <li><a class="fal fa-users dropdown-item" href="usuarios.php">Registrados</a></li>
+                  <li><a class="far fa-user-secret dropdown-item" href="usuario_pendiente.php"> <span style="font-family: Lato"> Pendientes </span></a></li>
+                  <li><a class="fal fa-users dropdown-item" href="usuarios.php"><span style="font-family: Lato"> Registrados </span></a></li>
                 </ul>
               </li>
 
 
 
             </ul>
-            <a class="far fa-user-cog navbar-brand " href="perfil.php">Mi perfil</a>
+            <a class="far fa-user-cog navbar-brand " href="perfil.php"><span style="font-family: Lato"> Mi perfil </span></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -113,14 +113,14 @@ if($totalr<1){
     </div>
 
     <center>
-              <h5><i>Sistemas pendientes del administrador</i></h5>
+              <h5 style="font-family: Kodchasan">Sistemas pendientes del administrador</h5>
               </center>
     <!-- Modal -->
 <div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Informacion general del colaborador</h5>
+          <h5 class="modal-title" id="exampleModalLabel" style="font-family: Kodchasan;">Aprobar y notificar el sistema</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -155,19 +155,19 @@ if($totalr<1){
                 
                  </div>
               </div>
-              </div>
 
-              <div class="row">
-                <div class="col">
+
+              <div class="col">
                   <div class="form-group">
                     <label for="">Segundo apellido: </label>
                     <input type="text" id="segundoapellido" class="form-control">
                    
                  </div>
                </div>
+              
+              </div>
 
-
-
+              <div class="row">
               <div class="col">
                 <div class="form-group">
                 <label for="">Tipo de documento: </label>
@@ -177,6 +177,7 @@ if($totalr<1){
               </div>
 
 
+
               <div class="col">
                 <div class="form-group">
                 <label for="">Cedula: </label>
@@ -184,11 +185,9 @@ if($totalr<1){
                 
                  </div>
               </div>
-              </div>
-             
 
-              <div class="row">
-                <div class="col">
+
+              <div class="col">
                   <div class="form-group">
                     <label for="">Lugar de expedicion:  </label>
                     <input type="text" id="lugarexpedicion" class="form-control">
@@ -196,17 +195,18 @@ if($totalr<1){
                  </div>
                </div>
 
-
-
-              <div class="col">
+               <div class="col">
                 <div class="form-group">
                 <label for="">Sexo: </label>
                 <input type="text" id="sexo" class="form-control">
                 
                  </div>
               </div>
+               
+              </div>
+             
 
-
+              <div class="row">
               <div class="col">
                 <div class="form-group">
                 <label for="">Telefono</label>
@@ -214,10 +214,9 @@ if($totalr<1){
                 
                  </div>
               </div>
-              </div>
 
-              <div class="row">
-                <div class="col">
+
+              <div class="col">
                   <div class="form-group">
                     <label for="">Celular: </label>
                     <input type="text" id="celular" class="form-control">
@@ -226,8 +225,7 @@ if($totalr<1){
                </div>
 
 
-
-              <div class="col">
+               <div class="col">
                 <div class="form-group">
                 <label for="">Direccion: </label>
                 <input type="text" id="direccion" class="form-control">
@@ -243,8 +241,10 @@ if($totalr<1){
                 
                  </div>
               </div>
-   
-            </div>
+
+
+              </div>
+
 
               <div class="row">
                 <div class="col">
@@ -258,7 +258,7 @@ if($totalr<1){
                <div class="col">
                 <div class="form-group">
                   <label for="">Correo: </label>
-                  <input type="text" id="correo" class="form-control">
+                  <input type="text" id="correo" class="form-control" style="color: green;">
                  
                </div>
              </div>
@@ -291,7 +291,7 @@ if($totalr<1){
              <div class="col">
               <div class="form-group">
                 <label for="">Aplicativo: </label>
-                <input type="text" id="aplicativo" class="form-control">
+                <input type="text" id="aplicativo" class="form-control" style="color: green;">
                
              </div>
            </div>
@@ -332,12 +332,49 @@ if($totalr<1){
                 
                </div>
               </div>
+              <hr style="color: green;">
+              <h5 style="font-family: Kodchasan;"><b>Notificar el sistema</b></h5>
            
-          
+              <div class="row">
+                <div class="col">
+                <label for="" class="">Perfil o Usuario asignado:</label>
+                <input type="text" placeholder="Digite perfil o usuario" class="form-control" name="perfil" id="perfil">
+                </div>
+
+                <div class="col">
+                <label for="">Contraseña:</label>
+                <input type="text" placeholder="Digite contraseña" class="form-control" name="password" id="password">
+                </div>
+
+              </div>
+
+<br>
+              <div class="row">
+                <div class="col">
+                 <center> <label for="">Mensaje:</label> </center>
+                  <input type="text" class="form-control" value="Se ha creado su usuario del aplicativo $aplicativo con el usuario: $usuario y contraseña: $contraseña">
+                
+
+                  <center>
+                  <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"  required>
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Acepto el envio  
+                    </label> 
+                </div>
+                </center>
+                  
+                </div>
+
+              </div>
+<br>
+
+
+
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-success">Aprobarlo</button>
+          <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-success fas fa-check">Aprobarlo</button>
         </form>
         </div>
       </div>
@@ -363,7 +400,7 @@ if($totalr<1){
           
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Salir</button>
           <button type="submit" class="btn btn-danger">Rechazarlo</button>
         </form>
         </div>
@@ -376,12 +413,13 @@ if($totalr<1){
             <thead>
                 <tr>
                     <th>Id</th>
-                    <th>Nombre</th>
+                    <th>Primer nombre</th>
+                    <th>Segundo nombre</th>
                     <th>Primer apellido</th> <!-- AGREGUE ESTO-->
                     <th>Segundo apellido</th> <!-- AGREGUE ESTO-->
                     <th>Cedula</th> <!-- AGREGUE ESTO-->
                     <th>Aplicativo</th> <!-- AGREGUE ESTO-->
-                    <th>Tipo de solicitud</th>
+                   
                     <th>Acciones</th>
                 </tr>
             </thead>
@@ -405,15 +443,15 @@ if($totalr<1){
         "columns": [
             { "data": "id" },
             { "data": "nombre" },
-            //{ "data": "segundonombre" },
+            { "data": "segundonombre" },
             { "data": "primerapellido" }, //Este campo es igual al nombre del campo de la bd
             { "data": "segundoapellido" }, //Este campo es igual al nombre del campo de la bd
             { "data": "cedula" }, //Este campo es igual al nombre del campo de la bd
             { "data": "aplicativo" }, //Este campo es igual al nombre del campo de la bd
-            { "data": "tiposolicitud" }, //Este campo es igual al nombre del campo de la bd
+          //  { "data": "tiposolicitud" }, //Este campo es igual al nombre del campo de la bd
             
            // { "defaultContent": ``}, //tengo que mirar como me traigo esa data
-            { "defaultContent": `<button class="editar btn btn-outline-success fas fa-user-check" type="button" data-toggle="modal" data-target="#editar"></button>
+            { "defaultContent": `<button class="editar btn btn-outline-success fas fa-eye" type="button" data-toggle="modal" data-target="#editar"></button>
                                 <button class="eliminar btn btn-outline-danger fas fa-user-times"type="button" data-toggle="modal" data-target="#eliminar"></button>` }
         ],
         "language": espanol
@@ -470,8 +508,12 @@ if($totalr<1){
       let aplicativo=$('#aplicativo').val();
       let observaciones=$('#observaciones').val();//
       let observaciones_supervisor=$('#observaciones_supervisor').val();
+
+      let perfil=$('#perfil').val(); // estos dos son necesarios para generar la notificacion al correo
+      let password=$('#password').val(); // estos dos son necesarios para generar la notificacion al correo
+
       funcion='editar';
-      $.post('controlador/AdministraController.php',{id,nombre,segundonombre,primerapellido,segundoapellido,tipodocumento,lugarexpedicion,cedula,aplicativo,tiposolicitud,cargo,observaciones,funcion},(response)=>{
+      $.post('controlador/AdministraController.php',{id,nombre,segundonombre,primerapellido,segundoapellido,tipodocumento,lugarexpedicion,cedula,aplicativo,tiposolicitud,cargo,observaciones,perfil,password,funcion},(response)=>{
         
       })
       

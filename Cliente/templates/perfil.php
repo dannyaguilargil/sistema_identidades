@@ -29,6 +29,8 @@ if($totalr<1){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kodchasan">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="../css/perfil.css">
@@ -40,7 +42,7 @@ if($totalr<1){
         <nav class="navbar navbar-expand-lg navbar-light bg-light" >
 
             <div class="container-fluid">
-              <a class="far fa-user-cog navbar-brand " href="perfil.php">Mi perfil</a>
+              <a class="far fa-user-cog navbar-brand " href="perfil.php"> <span style="font-family: Kodchasan;"> Mi perfil </span></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -48,10 +50,10 @@ if($totalr<1){
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="fas fa-phone-laptop nav-link" aria-current="page" href="sistemas_solicitud_usuario.php">Sistemas</a>
+                    <a class="fas fa-phone-laptop nav-link" aria-current="page" href="sistemas_solicitud_usuario.php"><span style="font-family: Kodchasan;"> Sistemas</span></a>
                   </li>
                   <li class="nav-item">
-                    <a class="fas fa-id-card nav-link" href="paz_salvo.php" disabled>Paz y salvo</a>
+                    <a class="fas fa-id-card nav-link" href="paz.php" disabled> <span style="font-family: Kodchasan;"> Paz y salvo</span></a>
                   
                   </li>
                 </ul>
@@ -106,15 +108,15 @@ if($totalr<1){
 
 
 <div class="imagen">
-            <img  src="../imgs/153.png"  alt="" style="width: 200px; text-align: center;">
+            <img  src="../imgs/153.png"  alt="" style="width: 200px; text-align: center;" class="imgs">
         </div>
 <br>
 <div class="container">
   <div class="row">
   <div class="col">
-    <form action="../../Servidor/actualizar_usuario_perfil.php" method="POST"  id="formulario">
+    <form action="../../Servidor/actualizar_usuario_perfil.php" method="POST"  id="formulario" style="font-family: Lato">
        <div class="container form-control" >
-       <center><h6 class=""><b>Modificacion de datos del perfil</b></h6> </center>
+       <center><h5 class="" style="font-family: Kodchasan">Modificacion de datos del perfil</h5> </center>
 
 
        <br>
@@ -132,22 +134,22 @@ if($totalr<1){
                   
               <div class="col">
                 <input type="hidden" class="form-control" name="nombre" id="nombre" placeholder="Digite nombre" value="<?php echo $nombrer;?>">
-                <label for="cargo" class="">Cargo o N° del contrato</label>
+                <label for="cargo" class="">Cargo</label>
                 <input type="text text-center" class="form-control" name="cargo" id="cargo" placeholder="Digite cargo" value="<?php echo $cargor;?>"><br>
               </div>
                   
               <div class="col">
-                <label for="fechafinalcontrato" class="">Fecha final de contrato</label>
+                <label for="fechafinalcontrato" class="">Fecha final contrato</label>
                 <input type="date" class="form-control" name="fechafinalcontrato" id="fechafinalcontrato" value="<?php echo $fechafinalcontrator;?>"><br>
               </div>
+<!-- HABIA QUITADO EL SUPERVISOR PERO EL  ING PIDIO AGREGARLO-->
 
-<!--
               <div class="col">
                 <label for="supervisor" class="">Supervisor</label>
                 <input type="text" class="form-control" name="supervisor" id="supervisor" placeholder="Supervisor" value="<?php echo $supervisorr;?>"><br>
               </div>
 
-                  -->
+                  
              
         </div>
 
@@ -196,16 +198,24 @@ if($totalr<1){
 
 
 
+
+
+
   <div class="col">
        <div class="container form-control" >
-       <center><h6 class=""><b>Gestion de permisos asignados</b></h6> </center>
+       <center><h5 class=""><span style="font-family: Kodchasan">Gestion de permisos asignados</span></h5> </center>
 
-      <!--
-<center style="color:red;"> <b class="fal fa-frown-open"> <?php  //echo "ERROR DE CREDENCIALES"; ?></center></b> 
 
-                  -->
+      <!-- MENU DESPLEGANTE DE SISTEMAS APROBADOS -->
+      <p>
+  <a class="btn btn-outline-success fas fa-eye  " data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+   <span style="font-family: Lato;"> Ver permisos </span>
+  </a>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
 
-        <div class="row">
+  <div class="row">
 <?php
         $totalr2 = '';  //cCONSULTA PARA NOTIFICAR SI NO TIENE SISTEMAS ASIGNADOS
             $consulta4="SELECT COUNT(*) FROM sistema_validado_admin WHERE nombre='$tomador';";
@@ -221,15 +231,15 @@ if($totalr<1){
                    <?php }
 ?>
     
-  <table class="table caption-top">
-  <caption>Sistemas aprobados</caption>
+  <table class="table caption-top table-bordered table-hover" style="font-family: Lato" >
+ <!-- <caption style="font-family: Kodchasan">Sistemas aprobados</caption> -->
   <tr class="tre">
-                    <th>APLICATIVO</th>
-                    <th>PERMISO</th> <!-- -->
-                    <th>PERFIL</th>
+                    <th style="font-family: Kodchasan;">APLICATIVO</th>
+                    <th style="font-family: Kodchasan;">PERMISO</th> <!-- -->
+                    <th style="font-family: Kodchasan;">PERFIL</th>
                   <!--  <th>EQUIPOS</th> -->
-                    <th>VENCIMIENTO</th>
-                    <th>ACCION</th>
+                    <th style="font-family: Kodchasan;">VENCIMIENTO</th>
+                    <th style="font-family: Kodchasan;">ACCION</th>
     </tr>
 
   <!-- LOGICA PHP PARA LA GESTION DE LOS PERMISOS-->
@@ -247,6 +257,7 @@ if($totalr<1){
             if($resultado3){ while($row = $resultado3->fetch_array()){
                 $aplicativo = $row['aplicativo']; //aqui va aplicativo
                 $tiposolicitud = $row['tiposolicitud'];
+                $perfil = $row['perfil'];
                 
                 
               //CONSULTA PARA TRAER LOS APLICATIVOS QUE TIENE YA ASIGNADO 
@@ -260,9 +271,9 @@ if($totalr<1){
               ?>
               <td><?php echo $aplicativo;?></td>
               <td><?php echo $tiposolicitud; ?></td>
-              <td><?php echo 'USUARI0'; ?></td>
-              <td><?php echo '31 DE JUNIO 2022'; ?></td>
-              <td> <a class="btn btn-success"  href="sistemas_solicitud_usuario.php">RENOVAR</a>  </td>
+              <td><?php echo $perfil; ?></td>
+              <td><?php echo '31 DE JUNIO 2023'; ?></td>
+              <td> <a class="btn btn-outline-secondary"  href="sistemas_solicitud_usuario.php">RENOVAR</a>  </td>
 
             </tr>
 
@@ -285,6 +296,15 @@ if($totalr<1){
          
    
   </div>
+
+  </div>
+</div>
+    <!-- MENU DESPLEGANTE DE SISTEMAS APROBADOS -->
+
+
+
+
+  
   </div>
   
 </div>

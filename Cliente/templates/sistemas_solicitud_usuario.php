@@ -29,6 +29,8 @@ if($totalr<1){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kodchasan">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
@@ -73,7 +75,7 @@ if($totalr<1){
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
             <div class="container-fluid">
-              <a class="fas fa-phone-laptop navbar-brand" href="sistemas_solicitud_usuario.php">Sistemas</a>
+              <a class="fas fa-phone-laptop navbar-brand" href="sistemas_solicitud_usuario.php"><span style="font-family: Kodchasan;"> Sistemas</span></a>
               <button class=" navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -81,10 +83,10 @@ if($totalr<1){
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="far fa-user-cog nav-link" aria-current="page" href="perfil.php">Mi perfil</a>
+                    <a class="far fa-user-cog nav-link" aria-current="page" href="perfil.php"> <span style="Font-family: Kodchasan;"> Mi perfil </span></a>
                   </li>
                   <li class="nav-item">
-                    <a class="fas fa-id-card nav-link" href="paz_salvo.php" disabled>Paz y salvo</a>
+                    <a class="fas fa-id-card nav-link" href="paz.php" disabled> <span style="font-family: Kodchasan;"> Paz y salvo</span></a>
                   </li>
                 </ul>
               </div>
@@ -124,7 +126,7 @@ if($totalr<1){
     </header>
 
 
-    <h5 class="centrar">Solicitud de sistemas</h5>
+    <h4 class="centrar titulito" style="font-family: Kodchasan">Solicitud de sistemas</h4>
 <div class="centrar">
         <div class="centrar1 col-sm-10 col-md-10 col-lg-10 col-xl-10">
             <div class="container form-control form-control" >
@@ -168,7 +170,7 @@ if($totalr<1){
                 <!-- SEGUNDA CONSULTA DE PHP SOLO PARA TRERME LA FECHA FINAL DE CONTRATO -->
 
 
-                <fieldset><b>Informacion general del colaborador</b></fieldset> 
+                <fieldset><span style="font-family: Kodchasan">Informacion general del colaborador</span></fieldset> 
               <div class="row">
 
                 <div class="col">
@@ -309,16 +311,16 @@ if($totalr<1){
                 
              
                 <hr>
-                <h6><b>Sistema de informacion requerido</b></h6> 
+                <h6><b style="font-family: Kodchasan">Sistema de informacion requerido</b></h6> 
                 <div class="row">
 
                 <div class="col">
-                <label for="tiposolicitud" class="emerge">Tipo de solicitud</label> <br>
-                <select name="tiposolicitud" id="tiposolicitud" class="emerge">
-                  <option value="CREAR" class="emerge">CREAR</option>
-                  <option value="ACTUALIZAR" selected class="emerge">ACTUALIZAR</option>
-                  <option value="ELIMINAR" class="emerge">ELIMINAR</option>
-                  <option value="CONSULTAS" class="emerge">CONSULTAS</option>
+                <label for="tiposolicitud" class=""> <span style="font-family: Lato;"></span> Tipo de solicitud</label> <br>
+                <select name="tiposolicitud" id="tiposolicitud" class="form-control">
+                  <option value="CREAR" class="form-control">CREAR</option>
+                  <option value="ACTUALIZAR" selected class="form-control">ACTUALIZAR</option>
+                  <option value="ELIMINAR" class="form-control">ELIMINAR</option>
+                  <option value="CONSULTAS" class="form-control">CONSULTAS</option>
                  
                 </select>
                 </div>
@@ -331,69 +333,68 @@ if($totalr<1){
 
                 <div class="col aplica" id="aplica">
                 <label for="">Aplicativo</label> <br>
-                <select name="aplicativo" id="aplicativo" class="emerge" onchange="aplicativos();">
-                  <option value="ALDEAMO SMS" class="emerge">ALDEAMO SMS</option>
-                  <option value="ALMERA" class="emerge">ALMERA</option>
-                  <option value="EMAIL" class="emerge">EMAIL</option>
-                  <option value="KUBAPP" class="emerge" selected>KUBAPP</option>
-                  <option value="HIKCENTRAL" class="emerge">HIKCENTRAL</option>
-                  <option value="NUBE" class="emerge">NUBE</option>
-                  <option value="ORTHANC" class="emerge">ORTHANC</option>
-                  <option value="MESA DE AYUDA" class="emerge">MESA DE AYUDA</option>
-                  <option value="AULA VIRTUAL" class="emerge">AULA VIRTUAL</option>
-                  <option value="TNS" class="emerge">TNS</option>
-                  <option value="KUBAPP" class="emerge">OTRO</option>
-                  <option value="ANNARLARB" class="emerge">ANNARLAB</option>
+                <select name="aplicativo" id="aplicativo" class="form-control" onchange="aplicativos();">
+                  <option value="ALDEAMO SMS" class="form-control">ALDEAMO SMS</option>
+                  <option value="ALMERA" class="form-control">ALMERA</option>
+                  <option value="EMAIL" class="form-control">EMAIL</option>
+                  <option value="KUBAPP" class="form-control" selected>KUBAPP</option>
+                  <option value="HIKCENTRAL" class="form-control">HIKCENTRAL</option>
+                  <option value="NUBE" class="form-control">NUBE</option>
+                  <option value="ORTHANC" class="form-control">ORTHANC</option>
+                  <option value="MESA DE AYUDA" class="form-control">MESA DE AYUDA</option>
+                  <option value="AULA VIRTUAL" class="form-control">AULA VIRTUAL</option>
+                  <option value="TNS" class="form-control">TNS</option>
+                  <option value="OTRO" class="form-control">OTRO</option>
+                  <option value="ANNARLARB" class="form-control">ANNARLAB</option>
                 </select> 
 
                  </div>
                
            
 
-
-
-
 <div class="col firma" id="firma">
                 <label for="firma" class="">Adjunte firma fondo blanco</label>
-                <input type="file" name="firma" id="firma" class="" placeholder="Seleccione" value="NO REQUIERE"> 
+                <input type="file" name="firma" id="firma" class="form-control" placeholder="Seleccione" value="NO REQUIERE"> 
           
 </div>
 
 
                 <div class="col">
-                <label for="observaciones" class=""><b>Observaciones</b></label> <br>
+                <label for="observaciones" class=""><b>Observaciones</b></label>  <br>
                 <input style="color: green; height: 40px;" type="text" name="observaciones" id="observaciones" class="obs" placeholder="Digite para que requiere el permiso del sistema?" required> 
                 </div>
 
 
                     
+<br> <br> <br>
 
 
-                <br>
                 <div class="row">
 
                 <div class="col">
                 <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked required>
                     <label class="form-check-label" for="flexCheckChecked">
-                      Acepto tratamiento de datos  <br>
-                       <a class="btn btn-white fad fa-eye" href="https://www.imsalud.gov.co/web/gobierno-digital/politicas-de-proteccion-de-datos-personales/"   target="_blank" ></a>
+                      Acepto tratamiento de datos  
+                       <a class="btn btn-white fad fa-eye botonsito" href="https://www.imsalud.gov.co/web/gobierno-digital/politicas-de-proteccion-de-datos-personales/"   target="_blank" ></a>
                     </label> <br>
                    
                 </div>
                 </div>
 
-                <div class="col">
-                <button class="btn btn-success" type="submit" onclick="envio();" name="solicitar" id="solicitar">Solicitar</button>
-                </div>
-
-
 
                 <div class="col">
+                <button class="btn btn-outline-primary botonsito">Agregar otro</button>
                 </div>
 
-                  <div class="col">
+                <div class="col">
+                <button class="btn btn-outline-success botonsito" type="submit" onclick="envio();" name="solicitar" id="solicitar">Solicitar</button>
                 </div>
+
+
+
+               
+
 
                 </div>
 

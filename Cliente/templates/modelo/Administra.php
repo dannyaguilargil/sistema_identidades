@@ -13,15 +13,11 @@ class Laboratorio{
         return $this->laboratorios;
     }
  // agregare cargo y observaciones
-    function editar($id,$nombre,$segundonombre,$primerapellido,$segundoapellido,$tipodocumento,$lugarexpedicion,$cedula,$aplicativo,$tiposolicitud,$cargo,$observaciones){
+    function editar($id,$nombre,$segundonombre,$primerapellido,$segundoapellido,$tipodocumento,$lugarexpedicion,$cedula,$aplicativo,$tiposolicitud,$cargo,$observaciones,$perfil,$password){
         //$sql="UPDATE sistema_validado_supervisor SET nombre='$nombre',segundonombre='$segundonombre',primerapellido='$primerapellido',segundoapellido='$segundoapellido',observaciones_supervisor='$observaciones_supervisor' where id='$id'";
-        $sql="INSERT INTO sistema_validado_admin (nombre,segundonombre,primerapellido,segundoapellido,tipodocumento,lugarexpedicion,cedula,aplicativo,tiposolicitud,cargo,observaciones) VALUES ('$nombre','$segundonombre','$primerapellido','$segundoapellido','$tipodocumento','$lugarexpedicion',$cedula,'$aplicativo','$tiposolicitud','$cargo','$observaciones')";
+        $sql="INSERT INTO sistema_validado_admin (nombre,segundonombre,primerapellido,segundoapellido,tipodocumento,lugarexpedicion,cedula,aplicativo,tiposolicitud,cargo,observaciones,perfil,password) VALUES ('$nombre','$segundonombre','$primerapellido','$segundoapellido','$tipodocumento','$lugarexpedicion',$cedula,'$aplicativo','$tiposolicitud','$cargo','$observaciones','$perfil','$password')";
         $resultado = $this->acceso->query($sql);
 
-            //VAMOS A ELIMINARLO NORMAL CON PHP
-        //    include '../../../Servidor/conexion.php';
-        //    $sql2="DELETE FROM sistema_validado_supervisor WHERE id ='$id'";
-        //    $resultado2=$mysqli ->query($sql2);
         $sql="DELETE FROM sistema_validado_supervisor where id='$id'";
         $resultado = $this->acceso->query($sql);
 

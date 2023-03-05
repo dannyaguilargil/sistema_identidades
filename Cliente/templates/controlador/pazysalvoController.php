@@ -28,7 +28,7 @@ if($_POST['funcion']=="editar"){ // Voy a cambiarlo por insert into
    $laboratorio->editar($cedula,$rfid,$equipos);
    
 }
-//primero hare la opcion de eliminar esa solicitud de paz y salvo
+//primero hare la opcion de eliminar esa solicitud de paz y salvo Y LUEGO HACER EL UPDTE A APROBAR_PAZ YSALVO
 if($_POST['funcion']=="eliminar"){
     $cedula = $_POST['cedula'];
     $laboratorio->eliminar($cedula);

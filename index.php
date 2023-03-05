@@ -1,6 +1,5 @@
 <?php
-//SOLUCINA ERROR DE EXPORTACION DE LA BD https://www.youtube.com/watch?v=WE2s1lEpmwg
-
+//REALIZAR CAMBIOS EN EL INDEX DE FORMA QUE EL LOGIN QUEDE AL LADO DERECHO Y DARLE UN DINAMISMO DE PIXELADO 
 /////@developer DANNYAGUILARGIL
 /*
 ##################################################
@@ -22,6 +21,8 @@ include 'Servidor/conexion.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kodchasan">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="Cliente/css/index2.css">
@@ -43,7 +44,7 @@ include 'Servidor/conexion.php';
             <img  src="Cliente/imgs/logocompleto.png"  alt="" style="width: 170px; text-align: center;height: 70px">
             </div> 
             <!-- <h3 class="text-center">Iniciar sesion</h3> -->
-            <div class="form-control textoI">
+            <div class="form-control textoI" style="font-family: Lato">
             <form action="index.php" method="post">
             <label class="TT" for="nombre"><b>Usuario</b></label>
             <input type="text" class="form-control" name="nombre" id="nombre" required><br>
@@ -55,10 +56,10 @@ include 'Servidor/conexion.php';
 
             
             <div class="boton">
-            <input type="submit" class="text-center btn btn-success" name="login" value="Login"> <!--negrilla -->
+            <input type="submit" class="text-center btn btn-success" name="login" value="Login" style="font-family: Lato;"> <!--negrilla -->
             </div> <br>
         
-            <a  class="" href="Cliente/templates/login_acceso.php" id="" style="color: grey;">Para solicitar usuario de  gestion de identidades primero registrese aqui.</a>
+            <a  class="" href="Cliente/templates/login_acceso.php" id="" style="color: grey; font-family: Lato">Para solicitar usuario de  gestion de identidades primero registrese aqui.</a>
             </form>
             
           
@@ -173,7 +174,7 @@ include 'Servidor/conexion.php';
 <footer >
         
  <center>
-<div class="container ultimo">
+<div class="container ultimo" style="font-family: Lato">
 Todo los derechos reservados E.S.E IMSALUD &copy / SISTEMAS
 
 </div>

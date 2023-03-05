@@ -21,14 +21,12 @@ class Laboratorio{
         $sql="INSERT INTO sistema_validado_supervisor (id,nombre,segundonombre,primerapellido,segundoapellido,tipodocumento,cedula,lugarexpedicion,sexo,telefono,celular,direccion,cargo,supervisor,correo,ubicacion_laboral,dependencia,tiposolicitud,aplicativo,observaciones,observaciones_supervisor) VALUES ($id,'$nombre','$segundonombre','$primerapellido','$segundoapellido','$tipodocumento',$cedula,'$lugarexpedicion','$sexo',$telefono,$celular,'$direccion','$cargo','$supervisor','$correo','$ubicacion_laboral','$dependencia','$tiposolicitud','$aplicativo','$observaciones','$observaciones_supervisor')";
         $resultado = $this->acceso->query($sql);
 
-       // $sql="INSERT INTO usuarios_registrados (nombre,segundonombre,primerapellido,segundoapellido,tipodocumento,cedula,supervisor,email,cargo,password) VALUES ('$nombre','$segundonombre','$primerapellido','$segundoapellido','$tipodocumento',$cedula,'$supervisor','$email','$cargo',cedula)";
-     //   $resultado = $this->acceso->query($sql);
-
-
          //VAMOS A ELIMINARLO NORMAL CON PHP
         include '../../../Servidor/conexion.php';
         $sql2="DELETE FROM solicitud_sistema WHERE id ='$id'";
-       $resultado2=$mysqli ->query($sql2);
+        $resultado2=$mysqli ->query($sql2);
+
+        
     }
     function eliminar($id){
         $sql="DELETE FROM solicitud_sistema where id='$id'";

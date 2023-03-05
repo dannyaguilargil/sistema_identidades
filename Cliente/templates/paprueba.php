@@ -73,7 +73,7 @@ if($totalr<1){
                 </a>
                 <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="far fa-file-check dropdown-item" href="pazysalvo_adm.php">Pendientes</a></li>
-                  <li><a class="fal fa-file-pdf dropdown-item" target="_blank" href="paprobados.php">Aprobados</a></li>
+                  <li><a class="fal fa-file-pdf dropdown-item" target="_blank" href="paz.php">Aprobados</a></li>
                 </ul>
               </li>
                 

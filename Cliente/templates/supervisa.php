@@ -39,6 +39,8 @@ if($totalr!=1){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kodchasan">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
     <link rel="stylesheet" href="lib/datatables.min.css">
@@ -65,11 +67,11 @@ if($totalr!=1){
             
               <li class="nav-item dropdown">
                 <a class="fas fa-phone-laptop nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Sistemas
+                <span style="font-family: Kodchasan;">  Sistemas</span>
                 </a>
                 <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" target="_blank" href="sistemas_solicitud_usuario.php">Solicitud</a></li>
-                <li><a class="dropdown-item" href="supervisa.php">Pendientes</a></li>
+                <li><a class="dropdown-item far fa-user-md-chat" target="_blank" href="sistemas_solicitud_usuario.php"> <span style="font-family: Lato;">Solicitud</span> </a></li>
+               <!--  <li><a class="dropdown-item" href="supervisa.php">Pendientes</a></li> -->
 
            
                 </ul>
@@ -78,10 +80,10 @@ if($totalr!=1){
 
               <li class="nav-item dropdown">
                 <a class="fas fa-phone-laptop nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Paz y salvo
+                 <span style="font-family: Kodchasan"> Paz y salvo </span>
                 </a>
                 <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item"  target="_blank"  href="paz_salvo.php">Solicitar</a></li>
+                <li><a class="dropdown-item fas fa-id-card"  target="_blank"  href="paz.php"><span style="font-family: Kodchasan;"> Solicitar </span></a></li>
               </li>
            
                
@@ -90,7 +92,7 @@ if($totalr!=1){
           </div>
 
 
-          <a class="far fa-user-cog navbar-brand " href="perfil.php">Mi perfil</a>
+          <a class="far fa-user-cog navbar-brand " target="_blank" href="perfil.php"><span style="font-family: Kodchasan"> Mi perfil</span></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -110,14 +112,14 @@ if($totalr!=1){
     <img  src="../imgs/logocompleto.png"  alt="" style="width: 120px; text-align: center;height: 50px">
     </div>
     <center>
-              <h5><i>Sistemas pendientes del supervisor </i></h5>
+              <h5 style="font-family: Kodchasan;">Sistemas pendientes del supervisor</h5>
               </center>
     <!-- Modal -->
 <div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Informacion general del colaborador / Aprobar sistema</h5>
+          <h5 class="modal-title" id="exampleModalLabel" style="font-family: Kodchasan;">Informacion general del colaborador / Aprobar sistema</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -308,8 +310,9 @@ if($totalr!=1){
 
                <div class="col">
                 <div class="form-group">
-                  <label for=""><b>Observaciones supervisor:</b></label>
-                  <input type="text" id="observaciones_supervisor" class="form-control" placeholder="Digite aqui las observaciones obligatorias">
+                  <label for=""><b>Observaciones supervisor:</b></label> 
+                  <input type="text" id="observaciones_supervisor" class="form-control" placeholder="Digite aqui las observaciones obligatorias" style="color: green;">
+                  <label for="tratamiento">Acepto tratamientos de datos  <input type="checkbox" name="tratamiento" id="tratamiento" required> </label>
                  
                </div>
              </div>
@@ -333,245 +336,14 @@ if($totalr!=1){
           
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-success">Aprobarlo</button>
+          <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Salir</button>
+          <button type="submit" class="btn btn-success fa fa-check">Aprobarlo</button>
         </form>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- EDITARR QUE ES INSERTAR-->
-<div class="modal fade" id="editarr" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Informacion general del colaborador</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form id="form-editarr" action="" method="">
-
-              <div class="row">
-                <div class="col">
-                  <div class="form-group">
-                    <label for="">Primer nombre: </label>
-                    <input type="text" id="nombre_laboratorio" class="form-control">
-                    <input type="text" id="id">
-                 </div>
-               </div>
-
-
-
-              <div class="col">
-                <div class="form-group">
-                <label for="">Segundo nombre: </label>
-                <input type="text" id="segundonombre" class="form-control">
-                
-                 </div>
-              </div>
-
-
-              <div class="col">
-                <div class="form-group">
-                <label for="primerapellido">Primer apellido: </label>
-                <input type="text" id="primerapellido" class="form-control">
-                
-                 </div>
-              </div>
-              </div>
-
-              <div class="row">
-                <div class="col">
-                  <div class="form-group">
-                    <label for="">Segundo apellido: </label>
-                    <input type="text" id="segundoapellido" class="form-control">
-                   
-                 </div>
-               </div>
-
-
-
-              <div class="col">
-                <div class="form-group">
-                <label for="">Tipo de documento: </label>
-                <input type="text" id="tipodocumento" class="form-control">
-                
-                 </div>
-              </div>
-
-
-              <div class="col">
-                <div class="form-group">
-                <label for="">Cedula</label>
-                <input type="text" id="cedula" class="form-control">
-                
-                 </div>
-              </div>
-              </div>
-             
-
-              <div class="row">
-                <div class="col">
-                  <div class="form-group">
-                    <label for="">Lugar de expedicion: </label>
-                    <input type="text" id="lugarexpedicion" class="form-control">
-                   
-                 </div>
-               </div>
-
-
-
-              <div class="col">
-                <div class="form-group">
-                <label for="">Sexo: </label>
-                <input type="text" id="sexo" class="form-control">
-                
-                 </div>
-              </div>
-
-
-              <div class="col">
-                <div class="form-group">
-                <label for="">Telefono</label>
-                <input type="text" id="telefono" class="form-control">
-                
-                 </div>
-              </div>
-              </div>
-
-              <div class="row">
-                <div class="col">
-                  <div class="form-group">
-                    <label for="">Celular: </label>
-                    <input type="text" id="celular" class="form-control">
-                   
-                 </div>
-               </div>
-
-
-
-              <div class="col">
-                <div class="form-group">
-                <label for="">Direccion: </label>
-                <input type="text" id="direccion" class="form-control">
-                
-                 </div>
-              </div>
-
-
-              <div class="col">
-                <div class="form-group">
-                <label for="">Cargo</label>
-                <input type="text" id="cargo" class="form-control">
-                
-                 </div>
-              </div>
-   
-            </div>
-
-              <div class="row">
-                <div class="col">
-                  <div class="form-group">
-                    <label for="">Supervisor: </label>
-                    <input type="text" id="supervisor" class="form-control">
-                   
-                 </div>
-               </div>
-
-               <div class="col">
-                <div class="form-group">
-                  <label for="">Correo: </label>
-                  <input type="text" id="correo" class="form-control">
-                 
-               </div>
-             </div>
-             <div class="col">
-              <div class="form-group">
-                <label for="">Ubicacion laboral: </label>
-                <input type="text" id="ubicacion_laboral" class="form-control">
-               
-             </div>
-           </div>
-
-              </div>
-
-              <div class="row">
-                <div class="col">
-                  <div class="form-group">
-                    <label for="">Dependencia: </label>
-                    <input type="text" id="dependencia" class="form-control">
-                   
-                 </div>
-               </div>
-
-               <div class="col">
-                <div class="form-group">
-                  <label for="">Tipo de solicitud: </label>
-                  <input type="text" id="tiposolicitud" class="form-control">
-                 
-               </div>
-             </div>
-             <div class="col">
-              <div class="form-group">
-                <label for="">Aplicativo: </label>
-                <input type="text" id="aplicativo" class="form-control">
-               
-             </div>
-           </div>
-
-              </div>
-
-             
-
-              <div class="row">
-                <div class="col">
-                  <div class="form-group">
-                    <label for="">Observaciones del solicitante: </label>
-                    <input type="text" id="observaciones" class="form-control" required>
-                   
-                 </div>
-               </div>
-
-               <div class="col">
-                <div class="form-group">
-                  <label for=""><b>Observaciones supervisor:</b></label>
-                  <input type="text" id="observaciones_supervisor" name="observaciones_supervisor" class="form-control" placeholder="Digite aqui las observaciones obligatorias" required>
-                 
-               </div>
-             </div>
-          
-              </div>
-
-<!--AQUI VA LA CONSULTA DE LA FIRMA -->
-
-              <div class="row">
-                <div class="col">
-                  <div class="form-group">
-                    <label for="">Firma: </label>
-                 <!--   <input type="text" id="firma" class="form-control"> -->
-                   
-                 </div>
-               </div>
-
-               <div class="col">
-                
-               </div>
-              </div>
-           
-          
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-success">Aprobarlo</button>
-        </form>
-        </div>
-      </div>
-    </div>
-  </div>
-<!-- EDITAR QUE ES INSERTARR-->
   <div class="modal fade" id="eliminar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -600,16 +372,17 @@ if($totalr!=1){
   </div>
     <div class="container">
        
-        <table id="example"class="display table table-hover text-nowrap table-bordered">
-            <thead>
+        <table id="example"class="display table table-hover text-nowrap table-bordered" style="font-family: Lato;">
+            <thead style="font-family: Kodchasan;">
                 <tr>
                     <th>Id</th>
-                    <th>Nombre</th>
+                    <th>Primer nombre</th>
+                    <th>Segundo nombre</th>
                     <th>Primer apellido</th> <!-- AGREGUE ESTO-->
                     <th>Segundo apellido</th> <!-- AGREGUE ESTO-->
                     <th>Cedula</th> <!-- AGREGUE ESTO-->
                     <th>Aplicativo</th> <!-- AGREGUE ESTO-->
-                    <th>Tipo de solicitud</th>
+                   <!-- <th>Tipo de solicitud</th> -->
                     <th>Acciones</th>
                 </tr>
             </thead>
@@ -633,15 +406,15 @@ if($totalr!=1){
         "columns": [
             { "data": "id" },
             { "data": "nombre" },
-            //{ "data": "segundonombre" },
+            { "data": "segundonombre" },
             { "data": "primerapellido" }, //Este campo es igual al nombre del campo de la bd
             { "data": "segundoapellido" }, //Este campo es igual al nombre del campo de la bd
             { "data": "cedula" }, //Este campo es igual al nombre del campo de la bd
             { "data": "aplicativo" }, //Este campo es igual al nombre del campo de la bd
-            { "data": "tiposolicitud" }, //Este campo es igual al nombre del campo de la bd
+           // { "data": "tiposolicitud" }, //Este campo es igual al nombre del campo de la bd
             
            // { "defaultContent": ``}, //tengo que mirar como me traigo esa data
-            { "defaultContent": `<button class="editar btn btn-outline-success fas fa-user-check" type="button" data-toggle="modal" data-target="#editar"></button>
+            { "defaultContent": `<button class="editar btn btn-outline-success fas fa-eye" type="button" data-toggle="modal" data-target="#editar"></button>
                                 <button class="eliminar btn btn-outline-danger fas fa-user-times"type="button" data-toggle="modal" data-target="#eliminar"></button>` }
         ],
         "language": espanol

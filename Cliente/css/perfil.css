@@ -164,7 +164,11 @@ colores : #97d700
 	background-color: white;
     color: black;
 }
-
+/*PENDIENTE PROBAR EL CAMBIO DE IMAGEN
+.darkmode .imgs{
+    display: none;
+}
+*/
 /* FINALIZA MODO DARK*/
 
 /* =================================================================

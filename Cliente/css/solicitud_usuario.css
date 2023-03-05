@@ -89,7 +89,13 @@ input{
     color: rgb(41, 160, 41);
     
 }
-
+.darkmode .botonsito{
+    background: white;
+    color: black;
+}
+.darkmode .titulito{
+    color: white;
+}
 /* FINALIZA MODO DARK*/
 th {
     font-family: Kodchasan;

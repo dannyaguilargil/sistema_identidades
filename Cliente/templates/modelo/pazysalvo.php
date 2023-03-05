@@ -27,10 +27,15 @@ class Laboratorio{
 
         */
 
-    }
+    }//quiero eliminar el paz y salvo aprobar 
     function eliminar($cedula){
         $sql="DELETE FROM pazysalvo_solicitud where cedula='$cedula'";
         $resultado = $this->acceso->query($sql);
+
+        $sql="DELETE FROM pazysalvo_aprobar where cedula='$cedula'";
+        $resultado = $this->acceso->query($sql);
+
+
     }
     
 

@@ -1,6 +1,5 @@
 <?php
-//02/03/2023 SE HARAN PEQUEÑOS CAMBIOS EN EL REGISTRO DEL PAZ Y SALVO PARA AGREGAR 
-// SEGUNDONOMBRE,PRIMERAPELLIDO Y SEGUNDO APELLIDO
+//BACKUP DE REGSTRAR SOLICITUD YA QUE EL PRIMERO LE ESTOY HACIENDO LOS CAMBIOS DE PERMISOS
 
 
 //AQUI VAYA TODO LO DE PAZ Y SALVO YA SEA QUE SE REGISTRE O GENERA EL PDF
@@ -16,14 +15,7 @@ $primerapellido = '';
 $segundoapellido = '';
 $cedula = 0;
 $revocar_permisos = '';
-$aplicativo2 = '';
 
-
-//AQUI VA LA MAGIA DE COMO REALIZAR UNA INSERCCIONES DEPENDIENDO DEL CICLO RECORRIDO POR INPUTS
-$j=1; //para saber si toma valor de j
-$k=2;
-$l=3;
-$m=4;
 
 //$aplicativo = '';
 
@@ -34,19 +26,10 @@ $primerapellido = $_POST["primerapellido"];
 $segundoapellido= $_POST["segundoapellido"];
 $cedula = $_POST["cedula"]; 
 $revocar_permisos = $_POST["revocar_permisos"]; 
-
-
-$aplicativo1 = $_POST["aplicativo$j"]; 
-$aplicativo2 = $_POST["aplicativo$k"]; 
-$aplicativo3 = $_POST["aplicativo$l"];
-$aplicativo4 = $_POST["aplicativo$m"];
-$tiposolicitud1 = $_POST["tiposolicitud$j"];
-$tiposolicitud2 = $_POST["tiposolicitud$k"];
-$tiposolicitud3 = $_POST["tiposolicitud$l"];
-$perfil1 = $_POST["perfil$j"]; 
+//$aplicativo1 = $_POST["aplicativo$j"]; 
 
 //SE HARAN CAMBIOS EN EL REGISTRO DE LA SOLICITUD 04/03/2023
-$sql="INSERT INTO pazysalvo_solicitud (nombre,segundonombre,primerapellido,segundoapellido,cedula,revocar_permisos,aplicativo1,aplicativo2,aplicativo3,aplicativo4,tiposolicitud1,tiposolicitud2,tiposolicitud3,perfil1) VALUES('$nombre','$segundonombre','$primerapellido','$segundoapellido',$cedula,'$revocar_permisos','$aplicativo1','$aplicativo2','$aplicativo3','$aplicativo4','$tiposolicitud1','$tiposolicitud2','$tiposolicitud3','$perfil1')";
+$sql="INSERT INTO pazysalvo_solicitud (nombre,segundonombre,primerapellido,segundoapellido,cedula,revocar_permisos) VALUES('$nombre','$segundonombre','$primerapellido','$segundoapellido',$cedula,'$revocar_permisos')";
 $resultado=$mysqli ->query($sql);
 
 
@@ -207,7 +190,7 @@ if($resultado>0){
    // header("Location:../Vista/vuelos.html");
    
 
-echo header("Location:../Cliente/templates/paz.php");
+echo header("Location:../Cliente/templates/paz_salvo.php");
 
 
 //exit();

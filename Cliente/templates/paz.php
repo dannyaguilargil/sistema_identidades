@@ -1,6 +1,6 @@
 
 <?php
-
+//FORMULARIO ANTERIOR A ESTE PAZ_SALVO.PHP, ESTE TIENE LA GESTION DE PERMISOS
 session_start();
 include '../../Servidor/conexion.php'; 
 $tomador=$_SESSION['nombre'];
@@ -39,7 +39,7 @@ if($totalr<1){
         <nav class="navbar navbar-expand-lg navbar-light bg-light" >
 
             <div class="container-fluid">
-              <a class="fas fa-id-card navbar-brand " href="paz_salvo.php">Paz y salvo</a>
+              <a class="fas fa-id-card navbar-brand " href="paz.php"><span style="font-family: Kodchasan;"> Paz y salvo </span></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -47,10 +47,10 @@ if($totalr<1){
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="fas fa-phone-laptop nav-link" aria-current="page" href="sistemas_solicitud_usuario.php">Sistemas</a>
+                    <a class="fas fa-phone-laptop nav-link" aria-current="page" href="sistemas_solicitud_usuario.php"><span style="font-family: Kodchasan;"> Sistemas </span></a>
                   </li>
                   <li class="nav-item">
-                    <a class="far fa-user-cog nav-link" href="perfil.php" disabled>Mi perfil</a>
+                    <a class="far fa-user-cog nav-link" href="perfil.php" disabled><span style="font-family: Kodchasan;"> Mi perfil </span></a>
                   </li>
                 </ul>
               </div>
@@ -80,13 +80,6 @@ if($totalr<1){
     </header>
 
 
-
-
-    
-   
-
-<br> <br> 
-
 <div class="centrar">
 
 
@@ -96,11 +89,11 @@ if($totalr<1){
 
          
             <div class="form-control form-contro" >
-            <center><h5 class="" style="font-family: Kodchasan">Generar paz y salvo</h5></center>
+        <center><h5 class="" style="font-family: Kodchasan">Generar paz y salvo</h5></center>
+            
         <div class="imagen">
             <img  src="../imgs/logoimsaludrecortado.png"  alt="" style="width: 200px; text-align: center;">
         </div>
-        <br>
            
             <!-- AQUI DEBO CARGAR LOS DATOS ANTERIORES DEL MISMO USUARIO-->
 
@@ -151,26 +144,116 @@ if($resultado){ while($row = $resultado->fetch_array()){
  $equipos = $row['equipos'];
  $revocar_permisos = $row['revocar_permisos'];
 }
-
 } 
 ?>
+
+<?php
+/*
+AQUI GESTIONARE LA CONSULTA DE LA BD DE LOS SISTEMAS APROBADOS QUE TIENE EL PERFIL
+ANTES DE REALIZAR LA SOLICITUD Y LUEGO EN ESA SOLICITUD REGISTRARE LOS APLICATIVOS
+//DEBO TOMAR DE AQUI APLICATIVO,TIPO DE SOLICITUD, PERFIL, CONTRASEÑA, OBSERVACIONES FECHA FINAL ES OPCIONAL
+*/
+//por ahora lo intentare solo con un sistema, la idea es con 5 , colocandole limites
+//por ahora lo guardare en un boton oculto, despues miro como lo guardo en json o xml esa consulta
+
+
+//AQUI PUEDO HACER EL CICLO QUE RECORRA LA 5 CANTIDADES DE LOS INPUTS
+//primero debo saber cuantos sistemas tiene
+//segundo debo crear el ciclo dependiento de los sistemas que tiene 
+//tercero muestro esos inputs
+//Debo mostrar la consulta dependiendo del la cantidad de interacciones
+//primero haga la interaccion para saber cuantos hay
+//luego haga la consulta dependiendo del la cantidad de interacciones
+//y guarde esa consulta en cada interaccion
+//resgistrar la las interacciones en la base de datos
+
+//SELECT COUNT(*) FROM sistema_validado_admin WHERE nombre='DANNY';
+
+
+$cantidad_inputs = ''; 
+$consulta_cant="SELECT COUNT(*) FROM sistema_validado_admin WHERE nombre='$tomador';";
+$resultado_cant=mysqli_query($mysqli,$consulta_cant);
+   if($resultado_cant){ while($row = $resultado_cant->fetch_array()){
+      $cantidad_inputs = $row['COUNT(*)'];
+      }
+    } 
+if($totalr<1){
+  echo 'No tiene sistemas creados';
+}
+else{
+  //echo $cant; //cantidad de sistemas que tiene la persona
+}
+?>
+
+
             <form action="../../Servidor/pazysalvoregistrar_solicitud.php" method="POST" id="form" style="font-family: Lato">
             <div class="row">
-                <div class="col">
-                    
+             
+                <?php
+  // Creamos el input
+  $i = 0;
+  $cadena = '';
+  $cadena2 = '';
+  $j=0;  
+  //SOLUCIONADO ERROR DE TRUNCAMIENTO DE DATOS CON LA NUEVA VARIABLE
+$consultas="SELECT aplicativo,tiposolicitud,perfil from sistema_validado_admin WHERE nombre = '$tomador';";
+$resultados=mysqli_query($mysqli,$consultas);
+if($resultados){ 
+  while($row = $resultados->fetch_array()){
+  //CICLO QUE RECORRE SEGUN LA CANTIDAD DE INTERACCIONES DE LOS APLICATIVOS
 
-               <!-- LOS OCULTO PARA PODER LLEVAR ESA SOLICITUD AL REGISTRO -->
+  for ($i = 1; $i <= $cantidad_inputs; $i++) {
+    for ($k = 1; $k <= $cantidad_inputs; $k++) {
+      for ($l = 1; $l <= $cantidad_inputs; $l++) {
+
+
+    $i = $row['aplicativo'];
+    $k = $row['tiposolicitud'];
+    $l = $row['perfil'];
+    $cadena = $i; //esta variable evita error de truncamiento de datos
+    $cadena2 = $k; 
+    $cadena3 = $l; 
+    $j++;//auxiliar de contador para darle una variable al input
+
+   }
+  }
+
+   //MANERA RPROVISIONAL DE HACER LA INSERCCION A LA BD, PENDIIENTE EL GUARDADO POR JSON
+   ?>
+  <div class="col"><?php
+   echo "<input type='hidden' name='aplicativo$j' id='aplicativo$j' Value='$cadena' style=''>"; //primero lo intentare con este
+   ?>
+  </div>
+  
+   <div class="col"> <?php
+   echo "<input type='hidden' name='tiposolicitud$j' id='tiposolicitud$j' Value='$cadena2' style=''><br>"; 
+   ?>
+   </div>
+  
+   <div class="col"> <?php
+   echo "<input type='hidden' name='perfil$j' id='perfil$j' Value='$cadena3' style=''><br>"; //para gestionar el perfil del sistema creado anteriormente
+   ?>
+   </div>
+
+ <?php
+}
+}
+}
+?>
+</div>
+  
+
+         
+           <!-- <input style="text-align: center;" type="text" class="form-control" name="aplicativo" id="aplicativo" value="<?php //echo $cadena ?>"> 
+            
+
+                LOS OCULTO PARA PODER LLEVAR ESA SOLICITUD AL REGISTRO -->
                <input  style="text-align: center;" type="hidden" class="form-control" name="nombre" id="nombre" value="<?php echo $nombrer?>">  
                <input style="text-align: center;" type="hidden" class="form-control" name="segundonombre" id="segundonombre" value="<?php echo $segundonombrer ?>">
                <input style="text-align: center;" type="hidden" class="form-control" name="primerapellido" id="primerapellido" value="<?php echo $primerapellidor ?>">
                <input style="text-align: center;" type="hidden" class="form-control" name="segundoapellido" id="segundoapellido" value="<?php echo $segundoapellidor ?>">
-
-
-                 
-                 <input style="text-align: center;" type="hidden" class="form-control" name="cedula" id="cedula" value="<?php echo $cedular ?>">
-                 
-
-
+                <!-- LOS OCULTO PARA PODER LLEVAR ESA SOLICITUD AL REGISTRO -->
+                <input style="text-align: center;" type="hidden" class="form-control" name="cedula" id="cedula" value="<?php echo $cedular ?>">
 
                 <label for="revocar_permisos">Revocar permisos</label> <br>
                 <?php
@@ -190,7 +273,7 @@ if($resultado){ while($row = $resultado->fetch_array()){
        
              
                 <label for="">Entrega de tarjeta RFID</label> <br>
-            <!--    <input class=""  type="checkbox" value=""> PROBANLE ERROR LO DESABILITE 04/03/2023-->
+               <!-- <input class=""  type="checkbox" value=""> AQUI PUEDE HABER UN PROBABLE ERROR-->
                 <?php
                 //AQUI VAN VALIDACIONES DE LOS SELECTED
                 if($rfid=='SI' && $cedular=$cedular){
@@ -207,7 +290,7 @@ if($resultado){ while($row = $resultado->fetch_array()){
              
               <!-- CHECKED ES PARA HABILIAR EL BOTON DE CHEK -->
           
-                <label for="">Entrega de equipos en buen estado</label><br>
+                <label for="">Entrega de Carnet</label><br>
                
                 <?php
                 //AQUI VAN VALIDACIONES DE LOS SELECTED
@@ -222,7 +305,7 @@ if($resultado){ while($row = $resultado->fetch_array()){
 
 
                 ?>
-<br> <br>
+<br> 
               <!--BOTON QUE APARECE SOLO SI EL PAZ Y SALVO ESTA APROBADO -->
           <?php
 
@@ -235,7 +318,9 @@ if($resultado){ while($row = $resultado->fetch_array()){
                 <?php
               }
               else{
-                ?><button type="submit"  class="btn btn-success" onclick="envio()" name="solicitar" id="solicitar">Solicitar</button> <?php
+                echo 'Se revocaran los permisos de '.$cantidad_inputs.' aplicativos';//indica cantidades de aplicativos por revocar
+                ?><br>
+                <button type="submit"  class="btn btn-success" onclick="envio()" name="solicitar" id="solicitar">Solicitar</button> <?php
               }
             
 ?>

@@ -43,6 +43,8 @@ if($totalr<1){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kodchasan">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
     <link rel="stylesheet" href="lib/datatables.min.css">
@@ -69,16 +71,18 @@ if($totalr<1){
             
               <li class="nav-item dropdown">
                 <a class="fas fa-phone-laptop nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Sistemas
+                <span style="font-family: Lato;">  Sistemas </span>
                 </a>
                 <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="supervisa.php">Pendientes supervisor</a></li>
-                <li><a class="dropdown-item" target="_blank" href="sistemas_admin_aprobados.php">Aprobados</a></li>
+                <li><a class="fas fa-user-hard-hat dropdown-item" target="_blank" href="supervisa.php"><span style="font-family: Lato;"> Pendientes Supervisor </span></a></li>
+                <li><a class="far fa-user-crown dropdown-item" target="_blank" href="supervisa.php"><span style="font-family: Lato;"> Pendientes Administrador </span></a></li>
+
+                <li><a class="fal fa-vote-yea  dropdown-item" target="_blank" href="sistemas_admin_aprobados.php"> <span style="font-family: Lato;"> Aprobados </span></a></li>
                  
       
-                  <li><a class="dropdown-item" target="_blank" href="sistemas_solicitud_supervisor.php">Solicitud</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" target="_blank" href="notificador.php">Notificar</a></li>
+                <li><a class="far fa-user-md-chat dropdown-item" target="_blank" href="sistemas_solicitud_usuario.php"> <span style="font-family: Lato;"> Solicitud </span></a></li>
+                  <li><hr class="dropdown-divider" style="color: green;"></li>
+                  <li><a class="fal fa-comment-check dropdown-item" target="_blank" href="notificador.php"><span style="font-family: Lato;">Historial del notificador </span> </a></li>
                  
                 </ul>
               </li>
@@ -86,29 +90,29 @@ if($totalr<1){
             
               <li class="nav-item dropdown">
                 <a class="fas fa-id-card nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Paz y salvo
+                <span style="font-family: Lato;"> Paz y salvo </span>
                 </a>
                 <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="pazysalvo_admin.php">Pendientes</a></li>
-                  <li><a class="dropdown-item" target="_blank" href="paprueba.php">Aprobados</a></li>
+                <li><a class="far fa-file-check dropdown-item" href="pazysalvo_adm.php"> <span style="font-family: Lato;"> Pendientes</span></a></li>
+                <li><a class="fal fa-file-pdf dropdown-item" href="paprueba.php"> <span style="font-family: Lato;">  Aprobados </span> </a></li>
                 </ul>
               </li>
                 
 
               <li class="nav-item dropdown">
                 <a class="fas fa-user-cog nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Usuarios
+                 <span style="font-family: Lato;"> Usuarios </span>
                 </a>
                 <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="usuario_pendiente.php">Pendientes</a></li>
-                  <li><a class="dropdown-item" href="usuarios.php">Registrados</a></li>
+                <li><a class="far fa-user-secret dropdown-item" href="usuario_pendiente.php"> <span style="font-family: Lato;"> Pendientes </span></a></li>
+                <li><a class="fal fa-users dropdown-item" href="usuarios.php"><span style="font-family: Lato;"> Registrados </span></a></li>
                 </ul>
               </li>
 
 
 
             </ul>
-            <a class="far fa-user-cog navbar-brand " href="perfil_admin.php">Mi perfil</a>
+            <a class="far fa-user-cog navbar-brand " href="perfil.php"> <span style="font-family: Lato"> Mi perfil </span></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -137,13 +141,13 @@ if($totalr<1){
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel" style="font-family: Kodchasan">Informacion del paz y salvo</h5>
+          <h5 class="modal-title" id="exampleModalLabel" style="font-family: Kodchasan">Aprobar Paz y salvo</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          <form id="form-editar">
+          <form id="form-editar" style="font-family: Lato;">
 
               <div class="row">
                 <div class="col">
@@ -172,29 +176,25 @@ if($totalr<1){
                 
                  </div>
               </div>
-              </div>
 
-              <div class="row">
-                <div class="col">
+              <div class="col">
                   <div class="form-group">
                     <label for="">Segundo apellido: </label>
                     <input type="text" id="segundoapellido" class="form-control">
                    
                  </div>
-               </div>
-
-
-
+              </div>
 
               <div class="col">
                 <div class="form-group">
-                <label for="">Cedula: </label>
+                <label for=""><b>Cedula: </b></label>
                 <input type="text" id="cedula" class="form-control">
                 
                  </div>
               </div>
+
               </div>
-             
+
               <div class="row">
                 <div class="col">
                   <label for="rfid">Entrega de tarjeta RFID:</label>
@@ -204,15 +204,95 @@ if($totalr<1){
 
                  <div class="col">
                 <label for="equipos">Entrega de carnet:</label> <br>
-                 <input type="checkbox" value="SI" name="equipos" id="equipos" checked required>
+                 <input type="checkbox" value="SI" name="equipos" id="equipos" required>
                  </div>
                </div>
 
-          
+         
+        
+<hr style="color: green;">
+      
+
+      <div class="row">
+        <div class="col">
+        <div class="container">
+       <h6 style="font-family: Kodchasan;">Gestion de sistemas aprobados</h6>
+
+
+      <!-- deplegar sistemas aprobados -->
+
+      <p>
+  <a class="btn btn-outline-success fas fa-eye" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Ver permisos
+  </a>
+ 
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+   
+  <table id=""class="display table table-hover text-nowrap table-bordered" style="font-family: Lato;">
+           <thead style="font-family: Kodchasan;">
+               <tr>
+                   
+                   <th>Aplicativo</th>
+                   <th>Tipo de solicitud</th>
+                   <th>Perfil</th> <!-- PENDIENTE -->
+                 
+                  
+               </tr>
+           </thead>
+           <tbody>
+            <tr>
+              <!--DEBO HACER UN TIPO DE CONTADOR AQUI DEPENDIENDO DE LOS SITEMAS APROBADOS Y OCULTAR LAS COLUMNAS -->
+          <th scope="row"> <input type="text" name="aplicativo1" id="aplicativo1" placeholder="No tiene aplicativo creados" class="form-control" disabled style="color: green;"></th>
+          <td> <input type="text" name="tiposolicitud1" id="tiposolicitud1" placeholder="No tiene creados" class="form-control" disabled></th>
+          <td> <input type="text" name="perfil1" id="perfil1" placeholder="No tiene asignado" class="form-control" disabled></th>
+          </tr>
+          <tr>
+          <th scope="row"> <input type="text" name="aplicativo2" id="aplicativo2" placeholder="No tiene aplicativo creados" class="form-control" disabled style="color: green;"></th>
+          <td> <input type="text" name="tiposolicitud22" id="tiposolicitud2" placeholder="No tiene creados" class="form-control" disabled></th>
+          <td> <input type="text" name="perfil2" id="perfil2" placeholder="No tiene asignado" class="form-control" disabled></th>
+          </tr>
+          <tr>
+          <th scope="row"> <input type="text" name="aplicativo3" id="aplicativo3" placeholder="No tiene aplicativo creados" class="form-control" disabled style="color: green;"></th>
+          <td> <input type="text" name="tiposolicitud3" id="tiposolicitud3" placeholder="No tiene creados" class="form-control" disabled></th>
+          <td> <input type="text" name="perfil3" id="perfil3" placeholder="No tiene asignado" class="form-control" disabled></th>
+          </tr>
+          <tr>
+          <tr>
+          <th scope="row"> <input type="text" name="aplicativo4" id="aplicativo4" placeholder="No tiene aplicativo creados" class="form-control" disabled style="color: green;"></th>
+          <td> <input type="text" name="tiposolicitud4" id="tiposolicitud4" placeholder="No tiene creados" class="form-control" disabled></th>
+          <td> <input type="text" name="perfil4" id="perfil4" placeholder="No tiene asignado" class="form-control" disabled></th>
+          </tr>
+          <tr>
+          <tr>
+          <th scope="row"> <input type="text" name="aplicativo5" id="aplicativo5" placeholder="No tiene aplicativo creados" class="form-control" disabled style="color: green;"></th>
+          <td> <input type="text" name="tiposolicitud5" id="tiposolicitud5" placeholder="No tiene creados" class="form-control" disabled></th>
+          <td> <input type="text" name="perfil5" id="perfil5" placeholder="No tiene asignado" class="form-control" disabled></th>
+          </tr>
+          <tr>
+         
+           </tbody>
+       </table>
+  </div>
+</div>
+
+      <!-- -->
+    
+
+
+
+
+
+   </div>
         </div>
+      </div>
+
+</div>
+
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-success">Aprobarlo</button>
+          <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Salir</button>
+          <button type="submit" class="btn btn-success fas fa-check">Aprobarlo</button>
         </form>
         </div>
       </div>
@@ -248,11 +328,11 @@ if($totalr<1){
   </div>
     <div class="container">
        
-        <table id="example"class="display table table-hover text-nowrap table-bordered">
-            <thead>
+        <table id="example"class="display table table-hover text-nowrap table-bordered" style="font-family: Lato;">
+            <thead style="font-family: Kodchasan;">
                 <tr>
                     
-                    <th>Nombre</th>
+                    <th>Primer nombre</th>
                     <th>Segundo nombre</th>
                     <th>Primer apellido</th> <!-- AGREGUE ESTO-->
                     <th>Segundo apellido</th> <!-- AGREGUE ESTO-->
@@ -306,21 +386,23 @@ if($totalr<1){
       $('#segundoapellido').val(data.segundoapellido);
     //  $('#tipodocumento').val(data.tipodocumento);
       $('#cedula').val(data.cedula);
-    //  $('#lugarexpedicion').val(data.lugarexpedicion);
-    //  $('#sexo').val(data.sexo);
-    //  $('#telefono').val(data.telefono);
-    //  $('#celular').val(data.celular);
-    //  $('#direccion').val(data.direccion);
-    //  $('#cargo').val(data.cargo);
-    //  $('#supervisor').val(data.supervisor);
-    //  $('#correo').val(data.correo);
-    //  $('#ubicacion_laboral').val(data.ubicacion_laboral);
-    //  $('#dependencia').val(data.dependencia);
-    //  $('#tiposolicitud').val(data.tiposolicitud);
-    //  $('#aplicativo').val(data.aplicativo);
-    //  $('#observaciones').val(data.observaciones);
-    //  $('#observaciones_supervisor').val(data.observaciones_supervisor);
-     // $('#id').val(data.id);
+      $('#aplicativo1').val(data.aplicativo1);
+      $('#aplicativo2').val(data.aplicativo2);
+      $('#aplicativo3').val(data.aplicativo3);
+      $('#aplicativo4').val(data.aplicativo4);
+      $('#aplicativo5').val(data.aplicativo5);
+      $('#tiposolicitud1').val(data.tiposolicitud1);
+      $('#tiposolicitud2').val(data.tiposolicitud2);
+      $('#tiposolicitud3').val(data.tiposolicitud3);
+      $('#tiposolicitud4').val(data.tiposolicitud4);
+      $('#tiposolicitud5').val(data.tiposolicitud5);
+      $('#perfil1').val(data.perfil1);
+      $('#perfil2').val(data.perfil2);
+      $('#perfil3').val(data.perfil3);
+      $('#perfil4').val(data.perfil4);
+      $('#perfil5').val(data.perfil5);
+
+
     })
     $('#form-editar').submit(e=>{ //Aqui obtiene los datos que quiere editar
       let id =$('#id').val();
@@ -334,6 +416,8 @@ if($totalr<1){
       ///////////////////////////////
       let rfid=$('#rfid').val();
       let equipos=$('#equipos').val();
+
+      //let equipos=$('#equipos').val();
     
       funcion='editar';
       $.post('controlador/pazysalvoController.php',{cedula,rfid,equipos,funcion},(response)=>{

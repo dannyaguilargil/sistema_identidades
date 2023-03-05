@@ -51,35 +51,38 @@ if($totalr<1){
             
               <li class="nav-item dropdown" style="font-family: Lato;">
                 <a class="fas fa-phone-laptop nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"">
-                  Sistemas
+                 <span style="font-family: Lato;"> Sistemas </span>
                 </a>
                 <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="administra.php">Pendientes</a></li>
-                  <li><a class="dropdown-item" target="_blank" href="sistemas_solicitud_supervisor.php">Solicitud</a></li>
+                <li><a class="fas fa-user-hard-hat dropdown-item" target="_blank" href="supervisa.php"><span style="font-family: Lato;"> Pendientes Supervisor </span></a></li>
+                <li><a class="far fa-user-crown dropdown-item" target="_blank" href="supervisa.php"><span style="font-family: Lato;"> Pendientes Administrador </span></a></li>
+
+                <li><a class="fal fa-vote-yea  dropdown-item" target="_blank" href="sistemas_admin_aprobados.php"> <span style="font-family: Lato;"> Aprobados </span></a></li>
+                <li><a class="far fa-user-md-chat dropdown-item" target="_blank" href="sistemas_solicitud_usuario.php"> <span style="font-family: Lato;"> Solicitud </span></a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" target="_blank" href="notificar_sistema.php">Notificar</a></li>
+                  <li><a class="fal fa-comment-check dropdown-item" target="_blank" href="notificador.php"><span style="font-family: Lato;">  Notificar </span> </a></li>
                 </ul>
               </li>
 
             
               <li class="nav-item dropdown">
                 <a class="fas fa-id-card nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Paz y salvo
+                 <span style="font-family: Lato"> Paz y salvo </span>
                 </a>
                 <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="pazysalvo_adm.php">Pendientes</a></li>
-                  <li><a class="dropdown-item" target="_blank" href="sistemas_solicitud_usuario.php">Solicitud</a></li>
+                <li><a class="far fa-file-check dropdown-item" href="pazysalvo_adm.php"> <span style="font-family: Lato;"> Pendientes</span></a></li>
+                <li><a class="fal fa-file-pdf dropdown-item" target="_blank" href="paprueba.php"> <span style="font-family: Lato;">  Aprobados </span> </a></li>
                 </ul>
               </li>
                 
 
               <li class="nav-item dropdown">
                 <a class="fas fa-user-cog nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Usuarios
+                 <span style="font-family: Lato" > Usuarios </span>
                 </a>
                 <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="usuario_pendiente.php">Pendientes</a></li>
-                  <li><a class="dropdown-item" href="usuarios.php">Registrados</a></li>
+                <li><a class="far fa-user-secret dropdown-item" href="usuario_pendiente.php"> <span style="font-family: Lato"> Pendientes </span></a></li>
+                  <li><a class="fal fa-users dropdown-item" href="usuarios.php"><span style="font-family: Lato"> Registrados </span></a></li>
                 </ul>
               </li>
 
@@ -88,7 +91,7 @@ if($totalr<1){
             </ul>
             <button style="padding: 5px;margin: 3px" type="button" class="fas fa-user-plus modals btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal1" data-bs-whatever="@mdo">Agregar usuario</button> 
 
-            <a class="far fa-user-cog navbar-brand " href="perfil.php">Mi perfil</a>
+            <a class="far fa-user-cog navbar-brand " href="perfil.php"> <span style="font-family: Lato;"> Mi perfil </span></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -110,7 +113,7 @@ if($totalr<1){
  <div class="modal-dialog">
    <div class="modal-content">
      <div class="modal-header">
-       <h5 class="modal-title" id="exampleModalLabel" style="font-family: Kodchasan">Agregar un usuario</h5>
+       <h5 class="modal-title" id="exampleModalLabel" style="font-family: Lato">Agregar un usuario</h5>
        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
      </div>
      <div class="modal-body" style="font-family: Lato;">
@@ -389,10 +392,11 @@ if($totalr<1){
     <div class="container">
        
         <table id="example"class="display table table-hover text-nowrap table-bordered" style="font-family: Lato">
-            <thead>
+            <thead style="font-family: Kodchasan;">
                 <tr>
                 
-                    <th style="Kodchasan">Nombre</th>
+                    <th>Primer Nombre</th>
+                    <th>Segundo Nombre</th>
                     <th>Primer apellido</th> <!-- AGREGUE ESTO-->
                     <th>Segundo apellido</th> <!-- AGREGUE ESTO-->
                     <th>Cargo</th> <!-- AGREGUE ESTO-->
@@ -421,7 +425,7 @@ if($totalr<1){
         "columns": [
             //{ "data": "id" },
             { "data": "nombre" },
-            //{ "data": "segundonombre" },
+            { "data": "segundonombre" },
             { "data": "primerapellido" }, //Este campo es igual al nombre del campo de la bd
             { "data": "segundoapellido" }, //Este campo es igual al nombre del campo de la bd
             { "data": "cargo" }, //Este campo es igual al nombre del campo de la bd

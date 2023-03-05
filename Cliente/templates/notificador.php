@@ -67,7 +67,7 @@ if($totalr<1){
                 </a>
                 <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="pazysalvo_adm.php">Pendientes</a></li>
-                  <li><a class="dropdown-item" target="_blank" href="sistemas_solicitud_usuario.php">Solicitud</a></li>
+                  <li><a class="dropdown-item" target="_blank" href="paz.php">Solicitud</a></li>
                 </ul>
               </li>
                 

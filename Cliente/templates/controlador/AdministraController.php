@@ -1,4 +1,5 @@
-<?php // AQUI QUIERO HACER INSERT INTO Y DELETE
+<?php // REALIZA REGISTRO EN sistema_validado_admin con la informacion del usuario
+      // Y Notifica al usuario por el correo con las credenciales creadas
 include '../modelo/Administra.php';
 $laboratorio = new Laboratorio();
 if($_POST['funcion']=="listar"){
@@ -28,8 +29,12 @@ if($_POST['funcion']=="editar"){ // Voy a cambiarlo por insert into
 
    $cargo = $_POST['cargo']; // 
    $observaciones = $_POST['observaciones']; // 
+
+   $perfil = $_POST['perfil']; // 
+   $password = $_POST['password']; // 
+
   // $observaciones_supervisor = $_POST['observaciones_supervisor']; // agregado
-   $laboratorio->editar($id,$nombre,$segundonombre,$primerapellido,$segundoapellido,$tipodocumento,$lugarexpedicion,$cedula,$aplicativo,$tiposolicitud,$cargo,$observaciones);
+   $laboratorio->editar($id,$nombre,$segundonombre,$primerapellido,$segundoapellido,$tipodocumento,$lugarexpedicion,$cedula,$aplicativo,$tiposolicitud,$cargo,$observaciones,$perfil,$password);
    
 }
 if($_POST['funcion']=="eliminar"){
