@@ -57,7 +57,7 @@ if($totalr<1){
                 <li><a class="fas fa-user-hard-hat dropdown-item" target="_blank" href="supervisa.php"><span style="font-family: Lato;"> Pendientes Supervisor </span></a></li>
                 <li><a class="far fa-user-crown dropdown-item" target="_blank" href="supervisa.php"><span style="font-family: Lato;"> Pendientes Administrador </span></a></li>
 
-                <li><a class="fal fa-vote-yea  dropdown-item" target="_blank" href="sistemas_admin_aprobados.php"> <span style="font-family: Lato;"> Aprobados </span></a></li>
+                <li><a class="fal fa-vote-yea  dropdown-item" target="_blank" href="sis_aprobados.php"> <span style="font-family: Lato;"> Aprobados </span></a></li>
                 <li><a class="far fa-user-md-chat dropdown-item" target="_blank" href="sistemas_solicitud_usuario.php"> <span style="font-family: Lato;"> Solicitud </span></a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="fal fa-comment-check dropdown-item" target="_blank" href="notificador.php"><span style="font-family: Lato;">  Notificar </span> </a></li>

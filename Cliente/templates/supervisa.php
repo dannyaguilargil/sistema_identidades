@@ -79,7 +79,7 @@ if($totalr!=1){
 
 
               <li class="nav-item dropdown">
-                <a class="fas fa-phone-laptop nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="fas fa-id-card nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                  <span style="font-family: Kodchasan"> Paz y salvo </span>
                 </a>
                 <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">

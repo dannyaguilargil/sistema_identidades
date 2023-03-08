@@ -58,12 +58,12 @@ if($totalr<1){
                 <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="far fa-user-crown dropdown-item" href="administra.php"> <span style="font-family: Lato">Pendientes Administrador </span> </a></li>
                   <li><a class="fas fa-user-hard-hat dropdown-item" href="supervisa.php"> <span style="font-family: Lato"> Pendientes Supervisor </span> </a></li>
-                  <li><a class="fal fa-vote-yea  dropdown-item" target="_blank" href="sistemas_admin_aprobados.php"><span style="font-family: Lato">Sistemas aprobados </span> </a></li>
+                  <li><a class="fal fa-vote-yea  dropdown-item" target="_blank" href="sis_aprobados.php"><span style="font-family: Lato">Sistemas aprobados </span> </a></li>
                   <li><a class="far fa-user-md-chat dropdown-item" target="_blank" href="sistemas_solicitud_usuario.php"><span style="font-family: Lato"> Solicitud </span></a></li>
 
 
                   <li><hr class="dropdown-divider" style="color: green;"></li>
-                  <li><a class="fal fa-comment-check dropdown-item" target="_blank" href="notificador.php"> <span style="font-family: Lato;"> Notificar </span></a></li>
+                  <li><a class="fal fa-comment-check dropdown-item" target="_blank" href="notificador.php"> <span style="font-family: Lato;"> Historial del notificador</span></a></li>
                 </ul>
               </li>
 
@@ -74,7 +74,7 @@ if($totalr<1){
                 </a>
                 <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="far fa-file-check dropdown-item" href="pazysalvo_adm.php"><span style="font-family: Lato"> Pendientes </span></a></li>
-                  <li><a class="fal fa-file-pdf dropdown-item" target="_blank" href="pazysalvo_aprobados.php"><span style="font-family: Lato" > Aprobados </span></a></li>
+                  <li><a class="fal fa-file-pdf dropdown-item" target="_blank" href="paprueba.php"><span style="font-family: Lato" > Aprobados </span></a></li>
                 </ul>
               </li>
                 
@@ -92,7 +92,7 @@ if($totalr<1){
           
 
             </ul>
-            <a class="far fa-user-cog navbar-brand " href="perfil_admin.php"> <span style="font-family: Lato;">Mi perfil </span></a>
+            <a class="far fa-user-cog navbar-brand " href="perfil.php"> <span style="font-family: Lato;">Mi perfil </span></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -220,7 +220,7 @@ if($totalr<1){
 
 <div class="col">
          <label for="rol" class="">Rol</label> <br>
-                <select name="rol" id="rol" class="">
+                <select name="rol" id="rol" class="form-control">
                   <option value="" selected class="">NORMAL</option>
                   <option value="SUPERVISOR" class="">SUPERVISOR</option>
                   <option value="ADMINISTRADOR" class="">ADMINISTRADOR</option>
@@ -292,7 +292,7 @@ if($totalr<1){
                     <th>Cedula</th> <!-- AGREGUE ESTO-->
                     <th>Cargo o N° de contrato</th> <!-- AGREGUE ESTO-->
                    <!-- <th>Supervisor</th> -->
-                    <th>Acciones</th>
+                    <th>Ver</th>
                 </tr>
             </thead>
             <tbody>

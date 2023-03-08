@@ -49,7 +49,7 @@
                 </div>
 
                 <div class="col">
-                    <label class="">Segundo Nombre</lael>
+                    <label class="">Segundo Nombre</label>
                     <input type="text" class="form-control" name="segundonombre" id="segundonombre"><br>
                 </div>
 
@@ -180,15 +180,54 @@ $('#supervisor').autocomplete({
 
 
 <script>
-      function envio(){
-        //swal("Click on either the button or outside the modal.")
-//.then((value) => {
-//  swal(`The returned value is: ${value}`);
-//});
-swal("ENVIADO!", "YA REALIZO SOLICITUD, EL ADMINISTRADOR DEBE APROBAR EL USUARIO", "info");
+       function envio(){
+          console.log("se ejecuto envio alerta 1");
+          const nombre = document.getElementById("nombre");
+          const form = document.getElementById("form")
+        //  const tipodocumento = document.getElement("tipodocumento")
 
+          const segundonombre = document.getElementById("segundonombre")
+          const primerapellido = document.getElementById("primerapellido")
+          const segundoapellido = document.getElementById("segundoapellido")
+          const cargo = document.getElementById("cargo")
+          const email = document.getElementById("email")
+          const supervisor = document.getElementById("supervisor")
+          const tipodocumento = document.getElementById("tipodocumento")
+          const cedula = document.getElementById("cedula")
 
+     
+          form.addEventListener("submit", e=>{
+            if(nombre.value.length<3){
+              console.log("entro al condicional")
+              e.preventDefault()
+              swal("NO ENVIADO!", "DIGITE NOMBRE COMPLETO!", "error");
+             
+            }  
+            else if(segundonombre.value.length<3){
+              console.log("entro al condicional")
+              e.preventDefault()
+              swal("NO ENVIADO!", "DIGITE NOMBRE COMPLETO!", "error");
+             
+            }
+            else if(primerapellido.value.length<3){
+              console.log("entro al condicional")
+              e.preventDefault()
+              swal("NO ENVIADO!", "DIGITE NOMBRE COMPLETO!", "error");
+             
+            } else if(segundoapellido.value.length<3){
+              console.log("entro al condicional")
+              e.preventDefault()
+              swal("NO ENVIADO!", "DIGITE NOMBRE COMPLETO!", "error");
+             
+            }
+            else{
+              alert("ENVIADO CORRECTAMENTE SE LE NOTIFICARA AL ADMINISTRADOR");
+              
+            }
+          })
+       
       }
+
      
      </script>
         

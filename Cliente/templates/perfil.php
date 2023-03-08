@@ -80,10 +80,6 @@ if($totalr<1){
     </header>
 
 
-
-
-
-
             <!-- AQUI DEBO CARGAR LOS DATOS ANTERIORES DEL MISMO USUARIO-->
 
 
@@ -109,8 +105,11 @@ if($totalr<1){
 
 <div class="imagen">
             <img  src="../imgs/153.png"  alt="" style="width: 200px; text-align: center;" class="imgs">
-        </div>
+</div>
+
+
 <br>
+
 <div class="container">
   <div class="row">
   <div class="col">
@@ -121,17 +120,8 @@ if($totalr<1){
 
        <br>
 
-    
-<!-- parte derecha de modficar datos de perfil --->
-        <div class="row">
-
-      
-
-            
-            
-               
-    
-                  
+  
+        <div class="row">   
               <div class="col">
                 <input type="hidden" class="form-control" name="nombre" id="nombre" placeholder="Digite nombre" value="<?php echo $nombrer;?>">
                 <label for="cargo" class="">Cargo</label>
@@ -149,15 +139,9 @@ if($totalr<1){
                 <input type="text" class="form-control" name="supervisor" id="supervisor" placeholder="Supervisor" value="<?php echo $supervisorr;?>"><br>
               </div>
 
-                  
-             
         </div>
 
-
           <div class="row">
-             
-              
-             
           <!-- CAMBIOS EN LA VALIDACION DE LAS DOS CONTRASEÑAS -->
           <div class="col" id=grupo__password>
               <label class="" for="password">Cambio de contraseña</label>
@@ -168,8 +152,6 @@ if($totalr<1){
               <p class="formulario__input-error">La contraseña debe ser de 4 a 12 digitos</p> 
            </div>
            <!-- CAMBIOS EN LA VALIDACION DE LAS DOS CONTRASEÑAS -->
-
-
 
 
               <!-- CAMBIOS EN LA VALIDACION DE LAS DOS CONTRASEÑAS -->
@@ -184,20 +166,14 @@ if($totalr<1){
               
                     <!--CAMBIOS EN LA VALIDACION DE LAS DOS CONTRASEÑAS -->
               
-              </div>
+          </div>
            
-         
-
-            <br>
+         <br>
             <center><button type="submit" class="formulario__btn text-center btn btn-success" onclick="envio()">Modificar</button></center>
           
         </div>
     </form>
   </div>
-
-
-
-
 
 
 

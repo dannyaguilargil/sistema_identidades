@@ -46,6 +46,6 @@ echo header("Location:../Cliente/templates/sistemas_solicitud_usuario.php");
 //exit();
 
 }else{
-    echo 'EROOR AL AGREGAR REGISTRO';
+    echo header("Location:error.html");
 }
 ?>

@@ -58,7 +58,7 @@ if($totalr<1){
                 </a>
                 <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="fas fa-user-hard-hat dropdown-item" href="supervisa.php"><span style="font-family: Lato;"> Pendientes supervisor </span></a></li>
-                <li><a class="fal fa-vote-yea  dropdown-item" target="_blank" href="sistemas_admin_aprobados.php"> <span style="font-family: Lato;"> Aprobados </span></a></li>
+                <li><a class="fal fa-vote-yea  dropdown-item" target="_blank" href="sis_aprobados.php"> <span style="font-family: Lato;"> Aprobados </span></a></li>
                   <li><a class="far fa-user-md-chat dropdown-item" target="_blank" href="sistemas_solicitud_usuario.php"> <span style="font-family: Lato;"> Solicitud </span></a></li>
                   <li><hr class="dropdown-divider" style="color: green;"></li>
                   <li><a class="fal fa-comment-check dropdown-item" target="_blank" href="notificador.php"><span style="font-family: Lato;">  Notificar </span> </a></li>

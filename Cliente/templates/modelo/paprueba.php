@@ -6,11 +6,13 @@ class Laboratorio{
     public function __construct(){
         $this->acceso = Conexion::conectar();
     }
-    function mostrar(){ ///voy hacerlo solo que muestre
+    function mostrar(){ ///voy hacerlo solo que muestre, UNICIFACION DE PAZ Y SALVOS APROBADOS Y SISTEAS APROBADOS
+        /*CAMBION EN LA CONSULTA AHORA SOLO QUIERO VER PAZ Y SALVOS APROBADOS
         $sql="SELECT pazysalvo_aprobar.nombre,pazysalvo_aprobar.segundonombre,pazysalvo_aprobar.primerapellido,pazysalvo_aprobar.segundoapellido,pazysalvo_aprobar.cedula,sistema_validado_admin.tiposolicitud,sistema_validado_admin.aplicativo,usuarios_registrados.fechafinalcontrato,pazysalvo_aprobar.revocar_permisos,pazysalvo_aprobar.rfid from pazysalvo_aprobar
         INNER JOIN sistema_validado_admin ON pazysalvo_aprobar.cedula=sistema_validado_admin.cedula
         INNER JOIN usuarios_registrados ON sistema_validado_admin.cedula=usuarios_registrados.cedula;";
-      
+        */
+        $sql="SELECT *FROM pazysalvo_aprobar;";
         $resultado = $this->acceso->query($sql);
         $this->laboratorios = $resultado->fetch_all(MYSQLI_ASSOC);
         return $this->laboratorios;
@@ -30,7 +32,7 @@ class Laboratorio{
 
     }
     function eliminar($id){
-        $sql="DELETE FROM sistema_validado_supervisor where id='$id'";
+        $sql="DELETE FROM pazysalvo_aprobar where id='$id'";
         $resultado = $this->acceso->query($sql);
     }
     

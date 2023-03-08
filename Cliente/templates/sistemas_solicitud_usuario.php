@@ -125,8 +125,9 @@ if($totalr<1){
                     
     </header>
 
-
-    <h4 class="centrar titulito" style="font-family: Kodchasan">Solicitud de sistemas</h4>
+<center>
+    <h4 class="" style="font-family: Kodchasan">Solicitud de sistemas</h4>
+    </center>
 <div class="centrar">
         <div class="centrar1 col-sm-10 col-md-10 col-lg-10 col-xl-10">
             <div class="container form-control form-control" >
@@ -170,27 +171,27 @@ if($totalr<1){
                 <!-- SEGUNDA CONSULTA DE PHP SOLO PARA TRERME LA FECHA FINAL DE CONTRATO -->
 
 
-                <fieldset><span style="font-family: Kodchasan">Informacion general del colaborador</span></fieldset> 
+                <fieldset><span style="font-family: Kodchasan"><i><b>Informacion general del colaborador</b></i></span></fieldset> 
               <div class="row">
 
                 <div class="col">
                 <label for="nombre" class="emerge"><b>Primer Nombre:</b></label> <br>
-                <input type="text" name="nombre" id="nombre" class="emerge" value="<?php echo $nombrer?>">
+                <input type="text" name="nombre" id="nombre" class="emerge form-control" value="<?php echo $nombrer?>">
                 </div>
                 
                 <div class="col">
-                <label for="segundonombre" class="emerge">Segundo Nombre:</label> <br>
-                <input type="text" name="segundonombre" id="segundonombre" class="" value="<?php echo $segundonombrer?>" placeholder="Digite segundo apellido">
+                <label for="segundonombre" class="emerge"><b>Segundo Nombre:</b></label> <br>
+                <input type="text" name="segundonombre" id="segundonombre" class="form-control" value="<?php echo $segundonombrer?>" placeholder="Digite segundo apellido">
                 </div>
 
                 <div class="col">
                 <label for="primerapellido" class="emerge"><b>Primer apellido:</b></label> <br>
-                <input type="text" name="primerapellido" id="primerapellido" class="emerge" value="<?php echo $primerapellidor?>"> 
+                <input type="text" name="primerapellido" id="primerapellido" class="emerge form-control" value="<?php echo $primerapellidor?>"> 
                 </div>
 
                 <div class="col">
-                <label for="segundoapellido" class="emerge">Segundo apellido:</label> <br>
-                <input type="text" name="segundoapellido" id="segundoapellido" class="emerge" placeholder="Digite segundo apellido" value="<?php echo $segundoapellidor?>">
+                <label for="segundoapellido" class="emerge"><b>Segundo apellido:</b></label> <br>
+                <input type="text" name="segundoapellido" id="segundoapellido" class="emerge form-control" placeholder="Digite segundo apellido" value="<?php echo $segundoapellidor?>">
                 </div>
 
               </div>
@@ -200,8 +201,8 @@ if($totalr<1){
 
               <div class="col">
                 <label for="" class="emerge"><b>Tipo de documento:</b></label> <br>
-                <select name="tipodocumento" id="tipodocumento" class="emerge">
-                  <option value="CC" class="emerge" selected>CC</option>
+                <select name="tipodocumento" id="tipodocumento" class="emerge form-control">
+                  <option value="CC" class="emerge" selected>Cedula de ciudadania</option>
                   <option value="CE" class="emerge">CE</option>
                   <option value="PASAPORTE" class="emerge">PASAPORTE</option>
                   <option value="RESIDENCIA" class="emerge">RESIDENCIA</option>
@@ -210,18 +211,18 @@ if($totalr<1){
 
                 <div class="col">
                 <label for="cedula" class="emerge"><b>Cedula:</b></label> <br>
-                <input type="number" name="cedula" id="cedula" class="emerge" value="<?php echo $cedular?>"> 
+                <input type="number" name="cedula" id="cedula" class="emerge form-control" value="<?php echo $cedular?>"> 
                 </div>
                 <div class="col">
                 <label for="lugarexpedicion" class="emerge"><b>Lugar  de expedicion:</b></label> <br>
-                <input type="text" name="lugarexpedicion" id="lugarexpedicion" class="emerge" placeholder="Digite Lugar expedicion" required >
+                <input type="text" name="lugarexpedicion" id="lugarexpedicion" class="emerge form-control" placeholder="Digite Lugar expedicion" required >
                 </div>
 
                 <div class="col">
                 <label for="sexo" class="emerge"><b>Sexo:</b></label> <br>
-                <select name="sexo" id="sexo" class="emerge">
-                  <option value="M" class="emerge">M</option>
-                  <option value="F" selected class="emerge">F</option>
+                <select name="sexo" id="sexo" class="emerge form-control">
+                  <option value="M" selected class="emerge">M</option>
+                  <option value="F"  class="emerge">F</option>
                 </select> 
                 </div>
 
@@ -229,48 +230,48 @@ if($totalr<1){
 
                 <div class="row">
                 <div class="col">
-                <label for="telefono" class="emerge">Telefono fijo:</label> <br>
-                <input type="text" name="telefono" id="telefono" class="emerge" placeholder="Digite telefono fijo" required> 
+                <label for="telefono" class="emerge"><b>Telefono fijo:</b></label> <br>
+                <input type="text" name="telefono" id="telefono" class="emerge form-control" placeholder="Digite telefono fijo" required> 
                 </div>
                 
                 <div class="col">
                 <label for="celular" class="emerge"><b> Celular:</b></label> <br>
-                <input type="number" name="celular" id="celular" class="emerge" placeholder="Digite celular">
+                <input type="number" name="celular" id="celular" class="emerge form-control" placeholder="Digite celular">
                 </div>
 
                 <div class="col">
-                <label for="direccion" class="emerge">Direccion:</label> <br>
-                <input type="text" id="direccion" name="direccion" class="emerge" required placeholder="Digite direccion de residencia">
+                <label for="direccion" class="emerge"><b>Direccion:</b></label> <br>
+                <input type="text" id="direccion" name="direccion" class="emerge form-control" required placeholder="Digite direccion de residencia">
                 </div>
 
                 <div class="col">
                 <label for="cargo" class="emerge"><b>Cargo o N° de contrato:</b></label> <br>
-                <input type="text" name="cargo" id="cargo" class="emerge" value="<?php echo $cargor ?>">  
+                <input type="text" name="cargo" id="cargo" class="emerge form-control" value="<?php echo $cargor ?>">  
                 </div>
                 </div>
             
                 <div class="row">
                 
                 <div class="col">
-                <label for="tarjetaprofesional" class="">Tarjeta profesional</label> <br>
-                <input type="text" name="tarjetaprofesional" id="tarjetaprofesional"  placeholder="Digite tarjeta profesional">
+                <label for="tarjetaprofesional" class=""><b>Tarjeta profesional:</b></label> <br>
+                <input type="text" name="tarjetaprofesional" id="tarjetaprofesional"  placeholder="Digite tarjeta profesional" class="form-control">
                 </div>
 
 
                 <div class="col">
                 <label  for="correo" class="emerge"><b>Correo personal:</b></label> <br>
-                <input type="email" name="correo" id="correo" class="emerge" value="<?php echo $emailr?>" placeholder="Digite correo personal"> 
+                <input type="email" name="correo" id="correo" class="emerge form-control" value="<?php echo $emailr?>" placeholder="Digite correo personal"> 
                 </div>
 
 
                 <div class="col">
                 <label for="ubicacion_laboral" class="emerge"><b>Ubicacion laboral:</b></label><br>
-                <input type="text" name="ubicacion_laboral" id="ubicacion_laboral" class="emerge" placeholder="Ubicacion laboral o area"> 
+                <input type="text" name="ubicacion_laboral" id="ubicacion_laboral" class="emerge form-control" placeholder="Ubicacion laboral o area"> 
                 </div>
 
                 <div class="col">
                 <label for="dependencia" class="emerge"><b>Dependencia o servicio:</b></label><br>
-                <input type="text" name="dependencia" id="dependencia" class="emerge" placeholder="Dependencia o servicio"> 
+                <input type="text" name="dependencia" id="dependencia" class="emerge form-control" placeholder="Dependencia o servicio"> 
                 </div>
 
                 </div>
@@ -280,15 +281,15 @@ if($totalr<1){
                
 
                 <div class="col">
-                <label for="sede" class="emerge">Sede:</label> <br>
-                <input type="text" name="sede" id="sede" class="emerge" value="" placeholder="Digite sede UBA o IPS">
+                <label for="sede" class="emerge"><b>Sede:</b></label> <br>
+                <input type="text" name="sede" id="sede" class="emerge form-control" value="" placeholder="Digite sede UBA o IPS">
                 <ul class="list"></ul>
 
                 </div>
                
                 <div class="col">
                 <label for="supervisor" class="emerge"><b>Supervisor o jefe inmediato:</b></label> <br>
-                <input type="text" name="supervisor" id="supervisor" class="emerge" value="<?php echo $supervisorr?>">
+                <input type="text" name="supervisor" id="supervisor" class="emerge form-control" value="<?php echo $supervisorr?>">
                 </div>
 
 
@@ -296,7 +297,7 @@ if($totalr<1){
                 <div class="col">
                   
                   <label for="" class=""><b>Fecha final de contrato</b></label> <br>
-                  <input type="date" name="observaciones" id="observaciones" class="" placeholder="Digite para que requiere el permiso del sistema?" required> 
+                  <input type="date" name="observaciones" id="observaciones" class="form-control" placeholder="Digite para que requiere el permiso del sistema?" required> 
                   
                 </div>
 
@@ -311,28 +312,24 @@ if($totalr<1){
                 
              
                 <hr>
-                <h6><b style="font-family: Kodchasan">Sistema de informacion requerido</b></h6> 
-                <div class="row">
+                <h6><b style="font-family: Kodchasan"><i>Sistema de informacion requerido</i></b></h6> 
 
-                <div class="col">
-                <label for="tiposolicitud" class=""> <span style="font-family: Lato;"></span> Tipo de solicitud</label> <br>
+                <div class="row" id="divtiposolicitud">
+
+                <div class="col" id="">
+                <label for="tiposolicitud" class=""> <span style="font-family: Lato;"></span><b> Tipo de solicitud</b></label> <br>
                 <select name="tiposolicitud" id="tiposolicitud" class="form-control">
                   <option value="CREAR" class="form-control">CREAR</option>
                   <option value="ACTUALIZAR" selected class="form-control">ACTUALIZAR</option>
                   <option value="ELIMINAR" class="form-control">ELIMINAR</option>
                   <option value="CONSULTAS" class="form-control">CONSULTAS</option>
-                 
                 </select>
                 </div>
 
 
-                        <!--CONDICIONAL DEL APLICATIVO SI SELECCIONA KUB APP-->
-
-                     
-
 
                 <div class="col aplica" id="aplica">
-                <label for="">Aplicativo</label> <br>
+                <label for=""><b>Aplicativo</b></label> <br>
                 <select name="aplicativo" id="aplicativo" class="form-control" onchange="aplicativos();">
                   <option value="ALDEAMO SMS" class="form-control">ALDEAMO SMS</option>
                   <option value="ALMERA" class="form-control">ALMERA</option>
@@ -347,35 +344,30 @@ if($totalr<1){
                   <option value="OTRO" class="form-control">OTRO</option>
                   <option value="ANNARLARB" class="form-control">ANNARLAB</option>
                 </select> 
-
                  </div>
                
            
 
-<div class="col firma" id="firma">
-                <label for="firma" class="">Adjunte firma fondo blanco</label>
+                <div class="col firma" id="firma">
+                <label for="firma" class=""><b>Adjunte firma fondo blanco</b></label>
                 <input type="file" name="firma" id="firma" class="form-control" placeholder="Seleccione" value="NO REQUIERE"> 
-          
-</div>
-
-
-                <div class="col">
-                <label for="observaciones" class=""><b>Observaciones</b></label>  <br>
-                <input style="color: green; height: 40px;" type="text" name="observaciones" id="observaciones" class="obs" placeholder="Digite para que requiere el permiso del sistema?" required> 
                 </div>
 
 
-                    
-<br> <br> <br>
+                <div class="col" id="padreobservaciones">
+                <label for="observaciones" class=""><b>Observaciones</b></label>  <br>
+                <input style="color: green; height: 40px;" type="text" name="observaciones" id="observaciones" class="obs form-control" placeholder="Digite para que requiere el permiso del sistema?" required> 
+                </div>
+                </div>
 
+                 <br>
 
-                <div class="row">
-
+                <div class="row repetidor">
                 <div class="col">
                 <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked required>
                     <label class="form-check-label" for="flexCheckChecked">
-                      Acepto tratamiento de datos  
+                     <span style="font-family: Lato"><i> Acepto tratamiento de datos</i> </span> 
                        <a class="btn btn-white fad fa-eye botonsito" href="https://www.imsalud.gov.co/web/gobierno-digital/politicas-de-proteccion-de-datos-personales/"   target="_blank" ></a>
                     </label> <br>
                    
@@ -384,28 +376,15 @@ if($totalr<1){
 
 
                 <div class="col">
-                <button class="btn btn-outline-primary botonsito">Agregar otro</button>
+                <a class="btn btn-outline-primary botonsito" id="otro" onclick="otro();">Agregar otro</a>
                 </div>
 
                 <div class="col">
                 <button class="btn btn-outline-success botonsito" type="submit" onclick="envio();" name="solicitar" id="solicitar">Solicitar</button>
                 </div>
-
-
-
-               
-
-
                 </div>
 
-                
-
-
-
-                </div>
-
-              
-
+          
             </form>
 
 
@@ -418,7 +397,88 @@ if($totalr<1){
 </div>
 
 
+<script>
 
+function otro(){ //ESTA FUNCION CREA LOS TRES BOTONES NUEVOS PARA LA SOLICIT DE USUARIO
+  /*
+  const nombre = document.getElementById("nombre");
+  form.addEventListener("submit", e=>{
+
+  if(nombre.value.length>1){
+    console.log("entro al condicional de agregar otro")
+    e.preventDefault()
+  var solicitud = document.getElementById("tiposolicitud"); //BOTON DE TIPO DE SOLICITUD
+  //var otro = document.getElementById("otro");
+
+  // Crear una copia del botón existente
+  var clonacion = solicitud.cloneNode(true);
+  document.body.appendChild(clonacion);
+
+}
+});
+
+*/
+
+//O INTENTARE COPIANDO BOTON SINO CREANDO NUEVOS ASI NO HEREDA ATRIBUTOS
+console.log("entro a otro");
+
+//referencia de donde voy a copiar justo despues del boton
+//saber el elemento padre del boton observaciones 
+
+
+
+
+var observaciones = document.getElementById("observaciones");// justo despues de este lo copiare
+
+var padre = observaciones.parentNode;
+console.log(padre); // aqui establece que el elemento padre es el div
+
+var solicitud = document.getElementById("divtiposolicitud"); //elemento que clone
+var padreobservaciones = document.getElementById('padreobservaciones');
+
+
+var clonacion = solicitud.cloneNode(true); //clonado
+form.appendChild(clonacion);//esto lo agrega pero no lo inserta donde quiero
+
+
+
+//var otro = document.getElementById("otro"); // btoton que ejecuta accion
+//var form = document.getElementById("form"); //no lo uso por ahora
+//ELEMENTO CON LOS ATRIBUTOS, PERIMERO LO HARE CON UN BOTON COMO EJEMPLO
+//var nuevoInput = document.createElement("input");
+
+
+
+
+//form.appendChild(clonacion);
+
+
+
+/*NAVEGAR POR EL DOM Y CREAR ELMENTOS DESDE CERO
+var otro = document.getElementById("otro"); // btoton que ejecuta accion
+var clonacion = solicitud.cloneNode(true);
+*/
+
+
+
+
+
+
+
+
+
+//AQUI LOclass
+//clonacion.classList.add("btn-lg");
+//clonacion.classList.add("container"); //entro al container
+//clonacion.classList.add("col"); //entro al container
+//clonacion.classList.add("repetidor"); //entro al container
+//clonacion.setAttribute("width", "20");
+//clonacion.setAttribute("style", "color: green;"); // si funciona
+
+//var repiteApp = document.createElement("button");
+}
+
+</script>
 
 
 
