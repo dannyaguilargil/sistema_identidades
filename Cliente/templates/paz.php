@@ -203,10 +203,11 @@ if($resultados){
   //CICLO QUE RECORRE SEGUN LA CANTIDAD DE INTERACCIONES DE LOS APLICATIVOS
 
   for ($i = 1; $i <= $cantidad_inputs; $i++) {
+    
     for ($k = 1; $k <= $cantidad_inputs; $k++) {
       for ($l = 1; $l <= $cantidad_inputs; $l++) {
 
-
+    //AQUI VOY A TRATAR DE OPTIMIZAR ESTE CODIGO DE BLUCES ANIDADOS PARA EVITAR EL CALCULO REPETIDO
     $i = $row['aplicativo'];
     $k = $row['tiposolicitud'];
     $l = $row['perfil'];

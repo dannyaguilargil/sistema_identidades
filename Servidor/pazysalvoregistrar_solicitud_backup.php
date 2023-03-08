@@ -1,11 +1,5 @@
 <?php
-//02/03/2023 SE HARAN PEQUEÑOS CAMBIOS EN EL REGISTRO DEL PAZ Y SALVO PARA AGREGAR 
-// SEGUNDONOMBRE,PRIMERAPELLIDO Y SEGUNDO APELLIDO
 
-
-//AQUI VAYA TODO LO DE PAZ Y SALVO YA SEA QUE SE REGISTRE O GENERA EL PDF
-//VALIDAR AQUI SOLO EL REGISTRO Y INLCUIRLO
-//EN GENERARPDF VALIDAR EL BOTON SOLO DE GENERARLO
 include 'conexion.php';
 
 
@@ -16,6 +10,7 @@ $primerapellido = '';
 $segundoapellido = '';
 $cedula = 0;
 $revocar_permisos = '';
+$aplicativo2 = '';
 
 
 //AQUI VA LA MAGIA DE COMO REALIZAR UNA INSERCCIONES DEPENDIENDO DEL CICLO RECORRIDO POR INPUTS
@@ -24,7 +19,7 @@ $k=2;
 $l=3;
 $m=4;
 
-$aplicativo1 = '';
+//$aplicativo = '';
 
 if (isset($_POST['solicitar'])){
 $nombre = $_POST["nombre"];
@@ -43,11 +38,9 @@ $tiposolicitud1 = $_POST["tiposolicitud$j"];
 $tiposolicitud2 = $_POST["tiposolicitud$k"];
 $tiposolicitud3 = $_POST["tiposolicitud$l"];
 $perfil1 = $_POST["perfil$j"]; 
-$fechaActual = date('d-m-Y');
-
 
 //SE HARAN CAMBIOS EN EL REGISTRO DE LA SOLICITUD 04/03/2023
-$sql="INSERT INTO pazysalvo_solicitud (nombre,segundonombre,primerapellido,segundoapellido,cedula,revocar_permisos,aplicativo1,aplicativo2,aplicativo3,aplicativo4,tiposolicitud1,tiposolicitud2,tiposolicitud3,perfil1,fecha) VALUES('$nombre','$segundonombre','$primerapellido','$segundoapellido',$cedula,'$revocar_permisos','$aplicativo1','$aplicativo2','$aplicativo3','$aplicativo4','$tiposolicitud1','$tiposolicitud2','$tiposolicitud3','$perfil1','$fechaActual')";
+$sql="INSERT INTO pazysalvo_solicitud (nombre,segundonombre,primerapellido,segundoapellido,cedula,revocar_permisos,aplicativo1,aplicativo2,aplicativo3,aplicativo4,tiposolicitud1,tiposolicitud2,tiposolicitud3,perfil1) VALUES('$nombre','$segundonombre','$primerapellido','$segundoapellido',$cedula,'$revocar_permisos','$aplicativo1','$aplicativo2','$aplicativo3','$aplicativo4','$tiposolicitud1','$tiposolicitud2','$tiposolicitud3','$perfil1')";
 $resultado=$mysqli ->query($sql);
 
 
@@ -57,18 +50,7 @@ $resultado2=$mysqli ->query($sql2);
 }
 
 elseif (isset($_POST['generar'])){
-
-
-    //$aplicativo1 = '';
-   // $aplicativo1 = $_POST["aplicativo$j"]; 
-   // $aplicativo2 = $_POST["aplicativo$k"]; 
-   // $aplicativo3 = $_POST["aplicativo$l"];
-    //$aplicativo4 = $_POST["aplicativo$m"];
-
-
-
     $nombre = $_POST["nombre"];
-  //  $segundonombre = $_POST[""];
     //AGREGUE CAMPOS PARA EL PAZ Y SALVO
     $segundonombre = $_POST["segundonombre"];
     $primerapellido = $_POST["primerapellido"];
@@ -180,17 +162,11 @@ $pdf->SetFont('Arial','B',12);
 $pdf->Cell(20,10,utf8_decode('HACE CONSTAR'));
 $pdf->Ln(20);
 $pdf->SetFont('Arial','',10);
-$pdf->Cell(20,10,utf8_decode('Que, el usuario '.$nombre." ".$segundonombre." ".$primerapellido." ".$segundoapellido." identificado con cedula de ciudadania ".$cedula));
+$pdf->Cell(20,10,utf8_decode('Que, revisado el contrato de prestacion de servicios  asignado al contratista '.$nombre." ".$primerapellido." ".$segundoapellido));
 $pdf->Ln(4);
-$pdf->Cell(20,10,utf8_decode('se encuentra a paz y salvo con la oficina de informacion, sistemas y procesos en cuanto a los siguiente:'));
-$pdf->Ln(8);
-$pdf->Cell(20,10,utf8_decode('-Entrega de carnet'));
-$pdf->Ln(6);
-$pdf->Cell(20,10,utf8_decode('-Tarjeta RFID'));
-$pdf->Ln(6);
-$pdf->Cell(20,10,utf8_decode('- Aplicativos ')); //aqui deben ir los aplicativos que tenga
-//$pdf->Ln(6);
-//$pdf->Cell(20,10,utf8_decode('- Software: '.$aplicativo2));
+$pdf->Cell(20,10,utf8_decode('Con cedula de ciudadania '.$cedula.'  presenta terminacion en el periodo de ' .$mes.' por lo tanto se expide el presente '));
+$pdf->Ln(4);
+$pdf->Cell(20,10,utf8_decode('certificado para tramite de cuentas y procesos que se requieran en la entidad.'));
 $pdf->Ln(25);
 $pdf->Cell(20,10,utf8_decode('San josé de Cúcuta '.$dia. ' de '.$mes.' del '.$anio));
 $pdf->Ln(50);

@@ -332,7 +332,7 @@ if($totalr<1){
             <thead style="font-family: Kodchasan;">
                 <tr>
                     
-                 <!--   <th>Fecha</th> -->
+                    <th>Fecha de solicitud</th>
                     <th>Primer nombre</th>
                     <th>Segundo nombre</th>
                     <th>Primer apellido</th> <!-- AGREGUE ESTO-->
@@ -360,6 +360,7 @@ if($totalr<1){
         },
         "columns": [
            
+            { "data": "fecha" },
             { "data": "nombre" },
             { "data": "segundonombre" },
             { "data": "primerapellido" }, //Este campo es igual al nombre del campo de la bd
@@ -379,6 +380,7 @@ if($totalr<1){
     //
     $('#example tbody').on('click','.editar', function(){ // Aqui obtiene los datos que quiere mostrar
       let data = datatable.row($(this).parents()).data();
+      $('#fecha').val(data.fecha);
       $('#nombre_laboratorio').val(data.nombre);
      // $('#id').val(data.id);
       //AQUI PUEDE IR CONSULTA Y METERLO EN EL VALOR
