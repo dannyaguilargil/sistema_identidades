@@ -304,7 +304,21 @@ if($totalr<1){
       $('#ubicacion_laboral').val(data.ubicacion_laboral);
       $('#dependencia').val(data.dependencia);
       $('#tiposolicitud').val(data.tiposolicitud);
-      $('#aplicativo').val(data.aplicativo);
+
+
+      $('#aplicativo1').val(data.aplicativo1);
+      $('#aplicativo2').val(data.aplicativo2);
+      $('#aplicativo3').val(data.aplicativo3);
+      $('#aplicativo4').val(data.aplicativo4);
+      $('#aplicativo5').val(data.aplicativo5);
+
+      //generacion de la consulta de los sistemas aprobados, aplicativo,perfil y tipo de solicitud
+      $('#tiposolicitud1').val(data.tiposolicitud1);
+      $('#tiposolicitud2').val(data.tiposolicitud2);
+      $('#tiposolicitud3').val(data.tiposolicitud3);
+      $('#tiposolicitud4').val(data.tiposolicitud4);
+      $('#tiposolicitud5').val(data.tiposolicitud5);
+
       $('#observaciones').val(data.observaciones);
       $('#observaciones_supervisor').val(data.observaciones_supervisor);
      // $('#id').val(data.id);

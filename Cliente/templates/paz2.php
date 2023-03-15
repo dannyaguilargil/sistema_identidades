@@ -1,6 +1,6 @@
 
 <?php
-//FORMULARIO ANTERIOR A ESTE PAZ_SALVO.PHP, ESTE TIENE LA GESTION DE PERMISOS
+//BACKUUP DEL PAZ Y SALVO OPTIMIZADO
 session_start();
 include '../../Servidor/conexion.php'; 
 $tomador=$_SESSION['nombre'];
@@ -195,59 +195,53 @@ else{
   $j=0;  
 
   //SOLUCIONADO ERROR DE TRUNCAMIENTO DE DATOS CON LA NUEVA VARIABLE, QUITARE LO DE PERFIL DE FORMA PROVISIONAL
-  $consultas="SELECT aplicativo,tiposolicitud,perfil from sistema_validado_admin WHERE nombre = '$tomador';";
-  $resultados=mysqli_query($mysqli,$consultas);
-  if($resultados){ 
-    while($row = $resultados->fetch_array()){
-    //CICLO QUE RECORRE SEGUN LA CANTIDAD DE INTERACCIONES DE LOS APLICATIVOS
-  
-    for ($i = 1; $i <= $cantidad_inputs; $i++) {
-      for ($k = 1; $k <= $cantidad_inputs; $k++) {
-       // for ($l = 1; $l <= $cantidad_inputs; $l++) {
-  
-  
-      //AQUI VOY A TRATAR DE OPTIMIZAR ESTE CODIGO DE BLUCES ANIDADOS PARA EVITAR EL CALCULO REPETIDO
-          $i = $row['aplicativo'];
-          $k = $row['tiposolicitud'];
-          $l = $row['perfil'];
-          $cadena = $i; //esta variable evita error de truncamiento de datos
-          $cadena2 = $k; 
-         // $cadena3 = $l; ESTE ERA PERFIL PERO NO ES NECESARIO HACER EL REGISTRO PORQUE EL REGISTRO VA EN PAZ Y SALVO ADM
-          $j++;//auxiliar de contador para darle una variable al input
-  
-    // }
-    }
-     ?>
-    <div class="col"><?php
-     echo "<input type='hidden' name='aplicativo$j' id='aplicativo$j' Value='$cadena' style=''>"; //primero lo intentare con este
-     ?>
-    </div>
-    
-     <div class="col"> <?php
-     echo "<input type='hidden' name='tiposolicitud$j' id='tiposolicitud$j' Value='$cadena2' style=''><br>"; 
-     ?>
-     </div>
-    
-     <!--
-     <div class="col"> <?php
-     //echo "<input type='text' name='perfil$j' id='perfil$j' Value='$cadena3' style=''><br>"; //para gestionar el perfil del sistema creado anteriormente
-     ?>
-     </div>
-  -->
-  
-   <?php
+$consultas="SELECT aplicativo,tiposolicitud,perfil from sistema_validado_admin WHERE nombre = '$tomador';";
+$resultados=mysqli_query($mysqli,$consultas);
+if($resultados){ 
+  while($row = $resultados->fetch_array()){
+  //CICLO QUE RECORRE SEGUN LA CANTIDAD DE INTERACCIONES DE LOS APLICATIVOS
+
+  for ($i = 1; $i <= $cantidad_inputs; $i++) {
+    for ($k = 1; $k <= $cantidad_inputs; $k++) {
+     // for ($l = 1; $l <= $cantidad_inputs; $l++) {
+
+
+    //AQUI VOY A TRATAR DE OPTIMIZAR ESTE CODIGO DE BLUCES ANIDADOS PARA EVITAR EL CALCULO REPETIDO
+        $i = $row['aplicativo'];
+        $k = $row['tiposolicitud'];
+        $l = $row['perfil'];
+        $cadena = $i; //esta variable evita error de truncamiento de datos
+        $cadena2 = $k; 
+        $cadena3 = $l; 
+        $j++;//auxiliar de contador para darle una variable al input
+
+  // }
   }
-  }
-  }
-  ?>
+   ?>
+  <div class="col"><?php
+   echo "<input type='text' name='aplicativo$j' id='aplicativo$j' Value='$cadena' style=''>"; //primero lo intentare con este
+   ?>
+  </div>
+  
+   <div class="col"> <?php
+   echo "<input type='text' name='tiposolicitud$j' id='tiposolicitud$j' Value='$cadena2' style=''><br>"; 
+   ?>
+   </div>
+  
+   <!--
+   <div class="col"> <?php
+   //echo "<input type='text' name='perfil$j' id='perfil$j' Value='$cadena3' style=''><br>"; //para gestionar el perfil del sistema creado anteriormente
+   ?>
+   </div>
+-->
+
+ <?php
+}
+}
+}
+?>
 </div>
-  
 
-         
-           <!-- <input style="text-align: center;" type="text" class="form-control" name="aplicativo" id="aplicativo" value="<?php //echo $cadena ?>"> 
-            
-
-                LOS OCULTO PARA PODER LLEVAR ESA SOLICITUD AL REGISTRO -->
                <input  style="text-align: center;" type="hidden" class="form-control" name="nombre" id="nombre" value="<?php echo $nombrer?>">  
                <input style="text-align: center;" type="hidden" class="form-control" name="segundonombre" id="segundonombre" value="<?php echo $segundonombrer ?>">
                <input style="text-align: center;" type="hidden" class="form-control" name="primerapellido" id="primerapellido" value="<?php echo $primerapellidor ?>">
@@ -267,7 +261,7 @@ else{
                   <?php
                 }
                 ?>
-             
+
                 <label for="">Entrega de tarjeta RFID</label> <br>
                <!-- <input class=""  type="checkbox" value=""> AQUI PUEDE HABER UN PROBABLE ERROR-->
                 <?php
@@ -282,10 +276,11 @@ else{
                 }
                 ?>
                 
+            
+             
               <!-- CHECKED ES PARA HABILIAR EL BOTON DE CHEK -->
           
                 <label for="">Entrega de Carnet</label><br>
-               
                 <?php
                 //AQUI VAN VALIDACIONES DE LOS SELECTED
                 if($equipos=='SI' && $cedular=$cedular){
@@ -302,7 +297,6 @@ else{
 <br> 
               <!--BOTON QUE APARECE SOLO SI EL PAZ Y SALVO ESTA APROBADO -->
           <?php
-
               if($rfid=='SI'){
                 ?> 
                 <!-- ANTIGUO DESCARGA DEL PAZ Y SALVO
@@ -319,43 +313,31 @@ else{
             
 ?>
 
-                </div>
+            </div>
             </div>
           
-            </form>
+</form>
            
-
+         
+          
 <script>
       function envio(){
           console.log("se ejecuto envio alerta 1");
           const revoca_permisos = document.getElementById("revoca_permisos");
-
-
           form.addEventListener("submit", e=>{
-         
             if(revoca_permisos.value.length>1){
               console.log("entro al condicional")
               e.preventDefault()
               swal("NO ENVIADO!", "YA REALIZO SOLICITUD, EL ADMINISTRADOR DEBE APROBAR EL PAZ Y SALVO!", "error");
              
             }
-          
             else{
               alert("ENVIADO CORRECTAMENTE SE LE NOTIFICARA AL ADMINISTRADOR");
               
             }
-          })
-      
-        
-
-        
+          })   
       }
-
-
      </script>
-
-
-
       <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
       <script src="../js/main.js"></script>

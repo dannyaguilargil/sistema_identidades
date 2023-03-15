@@ -1,22 +1,13 @@
 <?php
-//02/03/2023 SE HARAN PEQUEÑOS CAMBIOS EN EL REGISTRO DEL PAZ Y SALVO PARA AGREGAR 
-// SEGUNDONOMBRE,PRIMERAPELLIDO Y SEGUNDO APELLIDO
-
 
 //AQUI VAYA TODO LO DE PAZ Y SALVO YA SEA QUE SE REGISTRE O GENERA EL PDF
 //VALIDAR AQUI SOLO EL REGISTRO Y INLCUIRLO
 //EN GENERARPDF VALIDAR EL BOTON SOLO DE GENERARLO
+
+
 include 'conexion.php';
 
-
-// DEBO CARGAR LOS DATOS PREVIOS DEL USUARIO Y POSTERIOR A ESO HACER EL REGISTRO DEL SISTEMA
-$nombre = '';
-$segundonombre = '';
-$primerapellido = '';
-$segundoapellido = '';
-$cedula = 0;
-$revocar_permisos = '';
-
+if (isset($_POST['solicitar'])){
 
 //AQUI VA LA MAGIA DE COMO REALIZAR UNA INSERCCIONES DEPENDIENDO DEL CICLO RECORRIDO POR INPUTS
 $j=1; //para saber si toma valor de j
@@ -24,9 +15,13 @@ $k=2;
 $l=3;
 $m=4;
 
-$aplicativo1 = '';
+$nombre = '';
+$segundonombre = '';
+$primerapellido = '';
+$segundoapellido = '';
+$cedula = 0;
+$revocar_permisos = '';
 
-if (isset($_POST['solicitar'])){
 $nombre = $_POST["nombre"];
 $segundonombre = $_POST["segundonombre"];
 $primerapellido = $_POST["primerapellido"];
@@ -45,38 +40,24 @@ $tiposolicitud3 = $_POST["tiposolicitud$l"];
 $perfil1 = $_POST["perfil$j"]; 
 $fechaActual = date('d-m-Y');
 
-
 //SE HARAN CAMBIOS EN EL REGISTRO DE LA SOLICITUD 04/03/2023
+//AHORA NO HARE EL RESGITRO DEL PERFIL PORQUE EL RESGISTRO DEL PERFIL VA EN PAZ Y SALVO ADM, EN LA SOLICICTU VA SOLO CONSULTA
 $sql="INSERT INTO pazysalvo_solicitud (nombre,segundonombre,primerapellido,segundoapellido,cedula,revocar_permisos,aplicativo1,aplicativo2,aplicativo3,aplicativo4,tiposolicitud1,tiposolicitud2,tiposolicitud3,perfil1,fecha) VALUES('$nombre','$segundonombre','$primerapellido','$segundoapellido',$cedula,'$revocar_permisos','$aplicativo1','$aplicativo2','$aplicativo3','$aplicativo4','$tiposolicitud1','$tiposolicitud2','$tiposolicitud3','$perfil1','$fechaActual')";
 $resultado=$mysqli ->query($sql);
-
 
 //SE HARAN CAMBIOS EN EL REGISTRO DEL PAZ Y SALVO APROBADOS 02/03/2023
 $sql2="INSERT INTO pazysalvo_aprobar(nombre,segundonombre,primerapellido,segundoapellido,cedula,revocar_permisos) VALUES ('$nombre','$segundonombre','$primerapellido','$segundoapellido',$cedula,'$revocar_permisos')";
 $resultado2=$mysqli ->query($sql2);
+
 }
 
 elseif (isset($_POST['generar'])){
 
-
-    //$aplicativo1 = '';
-   // $aplicativo1 = $_POST["aplicativo$j"]; 
-   // $aplicativo2 = $_POST["aplicativo$k"]; 
-   // $aplicativo3 = $_POST["aplicativo$l"];
-    //$aplicativo4 = $_POST["aplicativo$m"];
-
-
-
     $nombre = $_POST["nombre"];
-  //  $segundonombre = $_POST[""];
-    //AGREGUE CAMPOS PARA EL PAZ Y SALVO
     $segundonombre = $_POST["segundonombre"];
     $primerapellido = $_POST["primerapellido"];
     $segundoapellido = $_POST["segundoapellido"];
-    ////////////////////////////
     $cedula = $_POST["cedula"]; 
-   
-
 
 require('../Cliente/docs/fpdf.php');
 
@@ -112,11 +93,6 @@ elseif($mes==07){
 //elseif($mes==08){
 //    $mes='AGOSTO';
 //}
-
-
-
-
-
 
 class PDF extends FPDF
 {
