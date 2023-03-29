@@ -30,12 +30,12 @@ if($_POST['funcion']=="editar"){
    $correo = $_POST['correo']; 
    $ubicacion_laboral = $_POST['ubicacion_laboral']; 
    $dependencia = $_POST['dependencia']; 
-
    $tiposolicitud = $_POST['tiposolicitud']; // 
    $aplicativo = $_POST['aplicativo']; //
    $observaciones = $_POST['observaciones']; //
-
    $observaciones_supervisor = $_POST['observaciones_supervisor'];
+
+   
    $laboratorio->editar($id,$nombre,$segundonombre,$primerapellido,$segundoapellido,$tipodocumento,$cedula,$lugarexpedicion,$sexo,$telefono,$celular,$direccion,$cargo,$supervisor,$correo,$ubicacion_laboral,$dependencia,$tiposolicitud,$aplicativo,$observaciones,$observaciones_supervisor);
    
 }

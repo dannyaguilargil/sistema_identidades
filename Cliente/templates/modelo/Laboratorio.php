@@ -23,7 +23,7 @@ class Laboratorio{
 
          //VAMOS A ELIMINARLO NORMAL CON PHP
         include '../../../Servidor/conexion.php';
-        $sql2="DELETE FROM solicitud_sistema WHERE id ='$id'";
+        $sql2="DELETE FROM solicitud_sistema WHERE id =$id";
         $resultado2=$mysqli ->query($sql2);
 
         

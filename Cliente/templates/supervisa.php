@@ -130,8 +130,8 @@ if($totalr!=1){
               <div class="row">
                 <div class="col">
                   <div class="form-group">
-                    <label for=""><b>Primer nombre:</b> </label>
-                    <input type="text" id="nombre_laboratorio" class="form-control">
+                    <label for="nombre"><b>Primer nombre:</b> </label>
+                    <input type="text" id="nombre" name="nombre" class="form-control">
                     <input type="hidden" id="id">
                  </div>
                </div>
@@ -425,7 +425,7 @@ if($totalr!=1){
     //
     $('#example tbody').on('click','.editar', function(){ // Aqui obtiene los datos que quiere mostrar
       let data = datatable.row($(this).parents()).data();
-      $('#nombre_laboratorio').val(data.nombre);
+      $('#nombre').val(data.nombre);
       $('#id').val(data.id);
       //AQUI PUEDE IR CONSULTA Y METERLO EN EL VALOR
       $('#segundonombre').val(data.segundonombre);
@@ -451,7 +451,7 @@ if($totalr!=1){
     })
     $('#form-editar').submit(e=>{ //Aqui obtiene los datos que quiere editar
       let id =$('#id').val();
-      let nombre=$('#nombre_laboratorio').val();
+      let nombre=$('#nombre').val();
       let segundonombre=$('#segundonombre').val();
       let primerapellido=$('#primerapellido').val();
       let segundoapellido=$('#segundoapellido').val();
@@ -467,12 +467,12 @@ if($totalr!=1){
       let correo=$('#correo').val();
       let ubicacion_laboral=$('#ubicacion_laboral').val();
       let dependencia=$('#dependencia').val();
-
       let tiposolicitud=$('#tiposolicitud').val();
       let aplicativo=$('#aplicativo').val();
       let observaciones=$('#observaciones').val();
-
       let observaciones_supervisor=$('#observaciones_supervisor').val();
+
+
       funcion='editar';
       $.post('controlador/LaboratorioController.php',{id,nombre,segundonombre,primerapellido,segundoapellido,tipodocumento,cedula,lugarexpedicion,sexo,telefono,celular,direccion,cargo,supervisor,correo,ubicacion_laboral,dependencia,tiposolicitud,aplicativo,observaciones,observaciones_supervisor,funcion},(response)=>{
         

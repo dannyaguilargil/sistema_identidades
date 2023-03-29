@@ -337,12 +337,12 @@ if($totalr<1){
            
               <div class="row">
                 <div class="col">
-                <label for="" class="">Perfil o Usuario asignado:</label>
+                <label for="perfil" class="">Perfil o Usuario asignado:</label>
                 <input type="text" placeholder="Digite perfil o usuario" class="form-control" name="perfil" id="perfil">
                 </div>
 
                 <div class="col">
-                <label for="">Contraseña:</label>
+                <label for="password">Contraseña:</label>
                 <input type="text" placeholder="Digite contraseña" class="form-control" name="password" id="password">
                 </div>
 
